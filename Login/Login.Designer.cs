@@ -31,14 +31,14 @@ namespace VehicleServiceManagement
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.Panel = new Bunifu.UI.WinForms.BunifuPanel();
             this.DragPanel = new System.Windows.Forms.Panel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -52,7 +52,6 @@ namespace VehicleServiceManagement
             this.ButtonLogin = new Bunifu.Framework.UI.BunifuThinButton2();
             this.CheckBoxShowPassword = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.DragPanel2 = new System.Windows.Forms.Panel();
             this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
@@ -60,7 +59,7 @@ namespace VehicleServiceManagement
             // 
             // Panel
             // 
-            this.Panel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(105)))), ((int)(((byte)(112)))));
+            this.Panel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
             this.Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel.BackgroundImage")));
             this.Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Panel.BorderColor = System.Drawing.Color.Transparent;
@@ -73,7 +72,7 @@ namespace VehicleServiceManagement
             this.Panel.Location = new System.Drawing.Point(0, 0);
             this.Panel.Name = "Panel";
             this.Panel.ShowBorders = true;
-            this.Panel.Size = new System.Drawing.Size(577, 619);
+            this.Panel.Size = new System.Drawing.Size(573, 619);
             this.Panel.TabIndex = 0;
             // 
             // DragPanel
@@ -104,10 +103,11 @@ namespace VehicleServiceManagement
             this.PictureBoxLogo.AllowFocused = false;
             this.PictureBoxLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PictureBoxLogo.AutoSizeHeight = true;
+            this.PictureBoxLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
             this.PictureBoxLogo.BorderRadius = 208;
             this.PictureBoxLogo.Image = global::VehicleServiceManagement.Properties.Resources.Logo_DjoniAuto;
             this.PictureBoxLogo.IsCircle = true;
-            this.PictureBoxLogo.Location = new System.Drawing.Point(79, 99);
+            this.PictureBoxLogo.Location = new System.Drawing.Point(77, 99);
             this.PictureBoxLogo.Name = "PictureBoxLogo";
             this.PictureBoxLogo.Size = new System.Drawing.Size(417, 417);
             this.PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -149,26 +149,26 @@ namespace VehicleServiceManagement
             this.TextBoxUsername.Modified = false;
             this.TextBoxUsername.Multiline = false;
             this.TextBoxUsername.Name = "TextBoxUsername";
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxUsername.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.TextBoxUsername.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.White;
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxUsername.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Silver;
-            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            stateProperties12.ForeColor = System.Drawing.Color.White;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxUsername.OnIdleState = stateProperties12;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxUsername.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.TextBoxUsername.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.White;
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxUsername.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxUsername.OnIdleState = stateProperties4;
             this.TextBoxUsername.Padding = new System.Windows.Forms.Padding(3);
             this.TextBoxUsername.PasswordChar = '\0';
             this.TextBoxUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -222,7 +222,7 @@ namespace VehicleServiceManagement
             this.ButtonExit.FadeWhenInactive = false;
             this.ButtonExit.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
             this.ButtonExit.Image = global::VehicleServiceManagement.Properties.Resources.exit_icon;
-            this.ButtonExit.ActiveImage = null;
+            this.ButtonExit.ImageActive = null;
             this.ButtonExit.ImageLocation = null;
             this.ButtonExit.ImageMargin = 12;
             this.ButtonExit.ImageSize = new System.Drawing.Size(43, 39);
@@ -239,7 +239,7 @@ namespace VehicleServiceManagement
             this.ButtonExit.TabIndex = 4;
             this.ButtonExit.ToolTipText = "";
             this.ButtonExit.WaitOnLoad = false;
-            this.ButtonExit.ImageMargin = 12;
+            this.ButtonExit.Zoom = 12;
             this.ButtonExit.ZoomSpeed = 10;
             this.ButtonExit.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
@@ -282,26 +282,26 @@ namespace VehicleServiceManagement
             this.TextBoxPassword.Modified = false;
             this.TextBoxPassword.Multiline = false;
             this.TextBoxPassword.Name = "TextBoxPassword";
-            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxPassword.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.TextBoxPassword.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.White;
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxPassword.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Silver;
-            stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            stateProperties16.ForeColor = System.Drawing.Color.White;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxPassword.OnIdleState = stateProperties16;
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxPassword.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.TextBoxPassword.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.White;
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxPassword.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            stateProperties8.ForeColor = System.Drawing.Color.White;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxPassword.OnIdleState = stateProperties8;
             this.TextBoxPassword.Padding = new System.Windows.Forms.Padding(3);
             this.TextBoxPassword.PasswordChar = '\0';
             this.TextBoxPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -439,19 +439,12 @@ namespace VehicleServiceManagement
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = null;
-            this.bunifuDragControl1.Vertical = true;
-            // 
             // DragPanel2
             // 
             this.DragPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.DragPanel2.Location = new System.Drawing.Point(579, 3);
+            this.DragPanel2.Location = new System.Drawing.Point(569, 3);
             this.DragPanel2.Name = "DragPanel2";
-            this.DragPanel2.Size = new System.Drawing.Size(457, 93);
+            this.DragPanel2.Size = new System.Drawing.Size(467, 93);
             this.DragPanel2.TabIndex = 12;
             this.DragPanel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DragPanel2_MouseMove);
             // 
@@ -496,7 +489,6 @@ namespace VehicleServiceManagement
         private Bunifu.Framework.UI.BunifuThinButton2 ButtonLogin;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuCheckBox CheckBoxShowPassword;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private System.Windows.Forms.Panel DragPanel;
         private System.Windows.Forms.Panel DragPanel2;
