@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using System.Data.SqlClient;
 
 namespace VehicleServiceManagement
 {
@@ -21,6 +21,7 @@ namespace VehicleServiceManagement
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
+        public string connectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
 
         public Login()
         {
@@ -91,6 +92,9 @@ namespace VehicleServiceManagement
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
             if (TextBoxPassword.Text.Length == 0 || TextBoxUsername.Text.Length == 0)
             {
                 TextBoxPassword.Text = "";
@@ -99,20 +103,36 @@ namespace VehicleServiceManagement
             }
             else
             {
-                //Authentication logic (Database query)
-                if (TextBoxUsername.Text == "1" && TextBoxPassword.Text == "1")
+                if (connection.State == System.Data.ConnectionState.Open)
                 {
-                    //Action after access is granted
-                    Form1 fomm = new Form1();
-                    fomm.Show();
-                    this.Hide();
+                    SqlDataReader read = (null);
+                    string query = "SELECT * FROM users WHERE Username = '"+TextBoxUsername.Text+"' AND Password = '"+TextBoxPassword.Text+"'";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    read = command.ExecuteReader();
+
+                    string name = String.Empty;
+                    while (read.Read())
+                    {
+                       name = (read["Name"].ToString());
+                    }
+
+                    //Authentication logic (Database query)
+                    if (read.HasRows)
+                    {
+                        //Action after access is granted
+                        Main main = new Main(name);
+                        main.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        TextBoxPassword.Text = "";
+                        Notification.Show(this, "Невалидни данни!",
+                        Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Information, 2000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+
+                    }
                 }
-                else
-                {
-                    TextBoxPassword.Text = "";
-                    Notification.Show(this, "Невалидни данни!",
-                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Information, 2000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
-                }
+
             }
 
         }
