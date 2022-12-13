@@ -91,16 +91,30 @@ namespace VehicleServiceManagement
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
-            if (TextBoxUsername.Text == "1" && TextBoxPassword.Text == "1")
+            if (TextBoxPassword.Text.Length == 0 || TextBoxUsername.Text.Length == 0)
             {
-                Form1 fomm = new Form1();
-                fomm.Show();
-                this.Hide();     
+                TextBoxPassword.Text = "";
+                Notification.Show(this, "Моля попълнете всички полета!",
+                Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Information, 2000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
             }
             else
             {
-                MessageBox.Show("Data incorect!");
+                //Authentication logic (Database query)
+                if (TextBoxUsername.Text == "1" && TextBoxPassword.Text == "1")
+                {
+                    //Action after access is granted
+                    Form1 fomm = new Form1();
+                    fomm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    TextBoxPassword.Text = "";
+                    Notification.Show(this, "Невалидни данни!",
+                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Information, 2000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+                }
             }
+
         }
 
         private void Login_KeyPress(object sender, KeyPressEventArgs e)

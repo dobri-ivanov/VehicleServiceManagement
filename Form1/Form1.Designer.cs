@@ -53,7 +53,7 @@ namespace VehicleServiceManagement
             this.bunifuImageButton1.ImageSize = new System.Drawing.Size(50, 50);
             this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(90, 90);
             this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(708, 12);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(698, 3);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Rotation = 0;
             this.bunifuImageButton1.ShowActiveImage = true;

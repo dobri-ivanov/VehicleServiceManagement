@@ -117,14 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Logo_DjoniAuto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo_DjoniAuto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ProgressBarLoading.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAykAAAAdCAYAAACuaSNMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGnSURBVHhe7dmxbdVgFIbhOwYj0NkGIWWAXDuioEbKtT0B
+        A7AFFZukZYW7QRZI0BUUNCmCiyMdJTol/kXxvNJT+fwDfPJBkiRJkv7bhuPpcz8t580zAADATs7dtH7/
+        8HF9E1Okrp/WH9vxr1ePAQAA9vI4XN9+iknysmGcv/Tj/Lt4BAAAsKP55/txfRvTJNs+3NcPAAAAdjQu
+        z8O03MU0ycpjAACABrpp+RPTJKsOAQAAWolpklVHAAAArcQ0yaojAACAVmKaZNURAABAKzFNsuoIAACg
+        lZgmWXUEAADQSkyTrDoCAABoJaZJVh0BAAC0EtMkq44AAABaiWmSVUcAAACtxDTJqiMAAIBWYppk1REA
+        AEArMU2y6ggAAKCVmCZZdQQAANBKTJOsOgIAAGglpklWHQEAALQS0ySrjgAAAFqJaZJVRwAAAK3ENMm6
+        cX6oDgEAAPY3P8U0yYZpuevH6hgAAGB355gmWXdc+22kPBbHAAAAe7oM4+kmpsnL+uPpaz/Ol+IRAADA
+        Hi7dOH+LSVL37ma92g7Prx4CAAD8Y/N9/QflcPgL7/Peyv7cjtEAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="exit_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="LabelTitle.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 0px;font-family: 'Segoe UI'; font-size: 37pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: center; }</value>
   </data>
-  <data name="SplashScreenBackroung" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SplashScreenBackroung.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="Elipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>99, 17</value>
+  </metadata>
 </root>
