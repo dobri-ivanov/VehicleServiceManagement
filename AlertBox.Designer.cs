@@ -31,8 +31,8 @@ namespace VehicleServiceManagement
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlertBox));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.ButtonClose = new Bunifu.UI.WinForms.BunifuImageButton();
             this.ButtonYes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ButtonNo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -67,7 +67,7 @@ namespace VehicleServiceManagement
             this.ButtonClose.ImageSize = new System.Drawing.Size(39, 39);
             this.ButtonClose.ImageZoomSize = new System.Drawing.Size(40, 40);
             this.ButtonClose.InitialImage = ((System.Drawing.Image)(resources.GetObject("ButtonClose.InitialImage")));
-            this.ButtonClose.Location = new System.Drawing.Point(571, 6);
+            this.ButtonClose.Location = new System.Drawing.Point(489, 8);
             this.ButtonClose.Name = "ButtonClose";
             this.ButtonClose.Rotation = 0;
             this.ButtonClose.ShowActiveImage = true;
@@ -101,17 +101,17 @@ namespace VehicleServiceManagement
             this.ButtonYes.ColorContrastOnClick = 45;
             this.ButtonYes.ColorContrastOnHover = 45;
             this.ButtonYes.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.ButtonYes.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.ButtonYes.CustomizableEdges = borderEdges1;
             this.ButtonYes.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ButtonYes.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ButtonYes.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.ButtonYes.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.ButtonYes.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.ButtonYes.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Bold);
+            this.ButtonYes.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
             this.ButtonYes.ForeColor = System.Drawing.Color.White;
             this.ButtonYes.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonYes.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
@@ -129,7 +129,7 @@ namespace VehicleServiceManagement
             this.ButtonYes.IdleIconLeftImage = null;
             this.ButtonYes.IdleIconRightImage = null;
             this.ButtonYes.IndicateFocus = false;
-            this.ButtonYes.Location = new System.Drawing.Point(324, 242);
+            this.ButtonYes.Location = new System.Drawing.Point(291, 194);
             this.ButtonYes.Name = "ButtonYes";
             this.ButtonYes.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ButtonYes.OnDisabledState.BorderRadius = 40;
@@ -163,7 +163,7 @@ namespace VehicleServiceManagement
             this.ButtonYes.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.ButtonYes.OnPressedState.IconLeftImage = null;
             this.ButtonYes.OnPressedState.IconRightImage = null;
-            this.ButtonYes.Size = new System.Drawing.Size(167, 82);
+            this.ButtonYes.Size = new System.Drawing.Size(113, 69);
             this.ButtonYes.TabIndex = 7;
             this.ButtonYes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ButtonYes.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -190,17 +190,17 @@ namespace VehicleServiceManagement
             this.ButtonNo.ColorContrastOnClick = 45;
             this.ButtonNo.ColorContrastOnHover = 45;
             this.ButtonNo.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.ButtonNo.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.ButtonNo.CustomizableEdges = borderEdges2;
             this.ButtonNo.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ButtonNo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ButtonNo.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.ButtonNo.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.ButtonNo.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.ButtonNo.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Bold);
+            this.ButtonNo.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
             this.ButtonNo.ForeColor = System.Drawing.Color.White;
             this.ButtonNo.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonNo.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
@@ -218,7 +218,7 @@ namespace VehicleServiceManagement
             this.ButtonNo.IdleIconLeftImage = null;
             this.ButtonNo.IdleIconRightImage = null;
             this.ButtonNo.IndicateFocus = false;
-            this.ButtonNo.Location = new System.Drawing.Point(125, 242);
+            this.ButtonNo.Location = new System.Drawing.Point(154, 194);
             this.ButtonNo.Name = "ButtonNo";
             this.ButtonNo.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ButtonNo.OnDisabledState.BorderRadius = 40;
@@ -252,7 +252,7 @@ namespace VehicleServiceManagement
             this.ButtonNo.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.ButtonNo.OnPressedState.IconLeftImage = null;
             this.ButtonNo.OnPressedState.IconRightImage = null;
-            this.ButtonNo.Size = new System.Drawing.Size(167, 82);
+            this.ButtonNo.Size = new System.Drawing.Size(113, 69);
             this.ButtonNo.TabIndex = 8;
             this.ButtonNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ButtonNo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -277,7 +277,7 @@ namespace VehicleServiceManagement
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(622, 354);
+            this.bunifuPanel1.Size = new System.Drawing.Size(545, 286);
             this.bunifuPanel1.TabIndex = 1;
             this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
             // 
@@ -305,12 +305,12 @@ namespace VehicleServiceManagement
             this.LabelCurrentText.AutoSize = false;
             this.LabelCurrentText.Cursor = System.Windows.Forms.Cursors.Default;
             this.LabelCurrentText.CursorType = System.Windows.Forms.Cursors.Default;
-            this.LabelCurrentText.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.LabelCurrentText.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.LabelCurrentText.ForeColor = System.Drawing.Color.White;
-            this.LabelCurrentText.Location = new System.Drawing.Point(22, 55);
+            this.LabelCurrentText.Location = new System.Drawing.Point(3, 66);
             this.LabelCurrentText.Name = "LabelCurrentText";
             this.LabelCurrentText.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelCurrentText.Size = new System.Drawing.Size(572, 181);
+            this.LabelCurrentText.Size = new System.Drawing.Size(534, 111);
             this.LabelCurrentText.TabIndex = 10;
             this.LabelCurrentText.Text = "Сигурни ли сте, че искате да изтриете клиент: Иван Иванов / 0887446787";
             this.LabelCurrentText.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -328,8 +328,8 @@ namespace VehicleServiceManagement
             this.AlerBoxDragPanel.Controls.Add(this.ButtonClose);
             this.AlerBoxDragPanel.Location = new System.Drawing.Point(3, 3);
             this.AlerBoxDragPanel.Name = "AlerBoxDragPanel";
-            this.AlerBoxDragPanel.ShowBorders = true;
-            this.AlerBoxDragPanel.Size = new System.Drawing.Size(614, 66);
+            this.AlerBoxDragPanel.ShowBorders = false;
+            this.AlerBoxDragPanel.Size = new System.Drawing.Size(537, 66);
             this.AlerBoxDragPanel.TabIndex = 11;
             // 
             // bunifuLabel1
@@ -341,7 +341,7 @@ namespace VehicleServiceManagement
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.Orange;
-            this.bunifuLabel1.Location = new System.Drawing.Point(198, 14);
+            this.bunifuLabel1.Location = new System.Drawing.Point(163, 14);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(235, 49);
@@ -349,6 +349,7 @@ namespace VehicleServiceManagement
             this.bunifuLabel1.Text = "ВНИМАНИЕ";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel1.Click += new System.EventHandler(this.bunifuLabel1_Click);
             // 
             // bunifuDragControl1
             // 
@@ -366,7 +367,7 @@ namespace VehicleServiceManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 354);
+            this.ClientSize = new System.Drawing.Size(545, 286);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AlertBox";

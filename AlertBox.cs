@@ -26,5 +26,10 @@ namespace VehicleServiceManagement
         {
 
         }
+
+        private void bunifuLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
