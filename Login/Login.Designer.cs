@@ -447,6 +447,7 @@ namespace VehicleServiceManagement
             this.DragPanel2.Name = "DragPanel2";
             this.DragPanel2.Size = new System.Drawing.Size(460, 93);
             this.DragPanel2.TabIndex = 12;
+            this.DragPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.DragPanel2_Paint);
             this.DragPanel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DragPanel_MouseMove);
             // 
             // Notification

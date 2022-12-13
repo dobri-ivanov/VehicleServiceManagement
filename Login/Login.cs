@@ -159,5 +159,10 @@ namespace VehicleServiceManagement
                 ButtonLogin_Click(sender, e);
             }
         }
+
+        private void DragPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
