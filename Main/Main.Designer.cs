@@ -30,10 +30,8 @@ namespace VehicleServiceManagement
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -59,7 +57,9 @@ namespace VehicleServiceManagement
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -67,17 +67,39 @@ namespace VehicleServiceManagement
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.DragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.ControlPanel = new Bunifu.UI.WinForms.BunifuPanel();
+            this.ButtonMinimize = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.ButtonMaximize = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.ButtonCloseApplication = new Bunifu.UI.WinForms.BunifuImageButton();
             this.MainPages = new Bunifu.UI.WinForms.BunifuPages();
             this.Clients = new System.Windows.Forms.TabPage();
+            this.ButtonRefreshClients = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.PanelClientButtons = new Bunifu.UI.WinForms.BunifuPanel();
+            this.ButtonAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.ButtonEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.ButtonDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ShadowPanelCurrentClient = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.TextBoxNickname = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.ButtonCancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.ButtonSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.TextBoxPhoneNumber = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.ТextBoxFamily = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.TextBoxName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.LabelCurrentClient = new Bunifu.UI.WinForms.BunifuLabel();
-            this.DataGridViewClients = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.LabelTitle = new Bunifu.UI.WinForms.BunifuLabel();
+            this.TextBoxSearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.DataGridViewClients = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nicknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Get = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Home = new System.Windows.Forms.TabPage();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.Vehicles = new System.Windows.Forms.TabPage();
@@ -85,22 +107,6 @@ namespace VehicleServiceManagement
             this.Calendar = new System.Windows.Forms.TabPage();
             this.Settings = new System.Windows.Forms.TabPage();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.ButtonRefreshClients = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.PanelClientButtons = new Bunifu.UI.WinForms.BunifuPanel();
-            this.ButtonAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.ButtonEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.ButtonDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.TextBoxNickname = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.ButtonCancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.ButtonSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.TextBoxPhoneNumber = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.ТextBoxFamily = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.TextBoxName = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.TextBoxSearch = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.ControlPanel = new Bunifu.UI.WinForms.BunifuPanel();
-            this.ButtonMinimize = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.ButtonMaximize = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.ButtonCloseApplication = new Bunifu.UI.WinForms.BunifuImageButton();
             this.PanelButtons = new Bunifu.UI.WinForms.BunifuPanel();
             this.LabelCurrentDate = new Bunifu.UI.WinForms.BunifuLabel();
             this.ButtonSettings = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -112,24 +118,19 @@ namespace VehicleServiceManagement
             this.PanelUser = new Bunifu.UI.WinForms.BunifuPanel();
             this.LabelUserName = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBoxUserAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.Get = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nicknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Notification = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.ControlPanel.SuspendLayout();
             this.MainPages.SuspendLayout();
             this.Clients.SuspendLayout();
+            this.PanelClientButtons.SuspendLayout();
             this.ShadowPanelCurrentClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.Home.SuspendLayout();
             this.Settings.SuspendLayout();
-            this.PanelClientButtons.SuspendLayout();
-            this.ControlPanel.SuspendLayout();
             this.PanelButtons.SuspendLayout();
             this.PanelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DragControl
@@ -138,6 +139,129 @@ namespace VehicleServiceManagement
             this.DragControl.Horizontal = true;
             this.DragControl.TargetControl = this.ControlPanel;
             this.DragControl.Vertical = true;
+            // 
+            // ControlPanel
+            // 
+            this.ControlPanel.BackgroundColor = System.Drawing.Color.Transparent;
+            this.ControlPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ControlPanel.BackgroundImage")));
+            this.ControlPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ControlPanel.BorderColor = System.Drawing.Color.Transparent;
+            this.ControlPanel.BorderRadius = 3;
+            this.ControlPanel.BorderThickness = 1;
+            this.ControlPanel.Controls.Add(this.ButtonMinimize);
+            this.ControlPanel.Controls.Add(this.ButtonMaximize);
+            this.ControlPanel.Controls.Add(this.ButtonCloseApplication);
+            this.ControlPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ControlPanel.Location = new System.Drawing.Point(246, 0);
+            this.ControlPanel.Name = "ControlPanel";
+            this.ControlPanel.ShowBorders = true;
+            this.ControlPanel.Size = new System.Drawing.Size(1354, 81);
+            this.ControlPanel.TabIndex = 2;
+            // 
+            // ButtonMinimize
+            // 
+            this.ButtonMinimize.ActiveImage = null;
+            this.ButtonMinimize.AllowAnimations = true;
+            this.ButtonMinimize.AllowBuffering = false;
+            this.ButtonMinimize.AllowToggling = false;
+            this.ButtonMinimize.AllowZooming = true;
+            this.ButtonMinimize.AllowZoomingOnFocus = false;
+            this.ButtonMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonMinimize.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ButtonMinimize.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ButtonMinimize.ErrorImage")));
+            this.ButtonMinimize.FadeWhenInactive = false;
+            this.ButtonMinimize.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.ButtonMinimize.Image = global::VehicleServiceManagement.Properties.Resources.minimize;
+            this.ButtonMinimize.ImageActive = null;
+            this.ButtonMinimize.ImageLocation = null;
+            this.ButtonMinimize.ImageMargin = 0;
+            this.ButtonMinimize.ImageSize = new System.Drawing.Size(29, 29);
+            this.ButtonMinimize.ImageZoomSize = new System.Drawing.Size(30, 30);
+            this.ButtonMinimize.InitialImage = ((System.Drawing.Image)(resources.GetObject("ButtonMinimize.InitialImage")));
+            this.ButtonMinimize.Location = new System.Drawing.Point(1234, 1);
+            this.ButtonMinimize.Name = "ButtonMinimize";
+            this.ButtonMinimize.Rotation = 0;
+            this.ButtonMinimize.ShowActiveImage = true;
+            this.ButtonMinimize.ShowCursorChanges = true;
+            this.ButtonMinimize.ShowImageBorders = true;
+            this.ButtonMinimize.ShowSizeMarkers = false;
+            this.ButtonMinimize.Size = new System.Drawing.Size(30, 30);
+            this.ButtonMinimize.TabIndex = 2;
+            this.ButtonMinimize.ToolTipText = "";
+            this.ButtonMinimize.WaitOnLoad = false;
+            this.ButtonMinimize.Zoom = 0;
+            this.ButtonMinimize.ZoomSpeed = 10;
+            this.ButtonMinimize.Click += new System.EventHandler(this.ButtonMinimize_Click);
+            // 
+            // ButtonMaximize
+            // 
+            this.ButtonMaximize.ActiveImage = null;
+            this.ButtonMaximize.AllowAnimations = true;
+            this.ButtonMaximize.AllowBuffering = false;
+            this.ButtonMaximize.AllowToggling = false;
+            this.ButtonMaximize.AllowZooming = true;
+            this.ButtonMaximize.AllowZoomingOnFocus = false;
+            this.ButtonMaximize.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonMaximize.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ButtonMaximize.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ButtonMaximize.ErrorImage")));
+            this.ButtonMaximize.FadeWhenInactive = false;
+            this.ButtonMaximize.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.ButtonMaximize.Image = global::VehicleServiceManagement.Properties.Resources.maximize_1;
+            this.ButtonMaximize.ImageActive = null;
+            this.ButtonMaximize.ImageLocation = null;
+            this.ButtonMaximize.ImageMargin = 0;
+            this.ButtonMaximize.ImageSize = new System.Drawing.Size(29, 29);
+            this.ButtonMaximize.ImageZoomSize = new System.Drawing.Size(30, 30);
+            this.ButtonMaximize.InitialImage = ((System.Drawing.Image)(resources.GetObject("ButtonMaximize.InitialImage")));
+            this.ButtonMaximize.Location = new System.Drawing.Point(1275, 3);
+            this.ButtonMaximize.Name = "ButtonMaximize";
+            this.ButtonMaximize.Rotation = 0;
+            this.ButtonMaximize.ShowActiveImage = true;
+            this.ButtonMaximize.ShowCursorChanges = true;
+            this.ButtonMaximize.ShowImageBorders = true;
+            this.ButtonMaximize.ShowSizeMarkers = false;
+            this.ButtonMaximize.Size = new System.Drawing.Size(30, 30);
+            this.ButtonMaximize.TabIndex = 1;
+            this.ButtonMaximize.ToolTipText = "";
+            this.ButtonMaximize.WaitOnLoad = false;
+            this.ButtonMaximize.Zoom = 0;
+            this.ButtonMaximize.ZoomSpeed = 10;
+            this.ButtonMaximize.Click += new System.EventHandler(this.ButtonMaximize_Click);
+            // 
+            // ButtonCloseApplication
+            // 
+            this.ButtonCloseApplication.ActiveImage = null;
+            this.ButtonCloseApplication.AllowAnimations = true;
+            this.ButtonCloseApplication.AllowBuffering = false;
+            this.ButtonCloseApplication.AllowToggling = false;
+            this.ButtonCloseApplication.AllowZooming = true;
+            this.ButtonCloseApplication.AllowZoomingOnFocus = false;
+            this.ButtonCloseApplication.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonCloseApplication.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ButtonCloseApplication.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ButtonCloseApplication.ErrorImage")));
+            this.ButtonCloseApplication.FadeWhenInactive = false;
+            this.ButtonCloseApplication.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.ButtonCloseApplication.Image = global::VehicleServiceManagement.Properties.Resources.close;
+            this.ButtonCloseApplication.ImageActive = null;
+            this.ButtonCloseApplication.ImageLocation = null;
+            this.ButtonCloseApplication.ImageMargin = 0;
+            this.ButtonCloseApplication.ImageSize = new System.Drawing.Size(29, 29);
+            this.ButtonCloseApplication.ImageZoomSize = new System.Drawing.Size(30, 30);
+            this.ButtonCloseApplication.InitialImage = ((System.Drawing.Image)(resources.GetObject("ButtonCloseApplication.InitialImage")));
+            this.ButtonCloseApplication.Location = new System.Drawing.Point(1316, 3);
+            this.ButtonCloseApplication.Name = "ButtonCloseApplication";
+            this.ButtonCloseApplication.Rotation = 0;
+            this.ButtonCloseApplication.ShowActiveImage = true;
+            this.ButtonCloseApplication.ShowCursorChanges = true;
+            this.ButtonCloseApplication.ShowImageBorders = true;
+            this.ButtonCloseApplication.ShowSizeMarkers = false;
+            this.ButtonCloseApplication.Size = new System.Drawing.Size(30, 30);
+            this.ButtonCloseApplication.TabIndex = 0;
+            this.ButtonCloseApplication.ToolTipText = "";
+            this.ButtonCloseApplication.WaitOnLoad = false;
+            this.ButtonCloseApplication.Zoom = 0;
+            this.ButtonCloseApplication.ZoomSpeed = 10;
+            this.ButtonCloseApplication.Click += new System.EventHandler(this.ButtonCloseApplication_Click);
             // 
             // MainPages
             // 
@@ -193,323 +317,6 @@ namespace VehicleServiceManagement
             this.Clients.Size = new System.Drawing.Size(1346, 812);
             this.Clients.TabIndex = 1;
             this.Clients.Text = "Clients";
-            // 
-            // ShadowPanelCurrentClient
-            // 
-            this.ShadowPanelCurrentClient.BackColor = System.Drawing.Color.Transparent;
-            this.ShadowPanelCurrentClient.BorderColor = System.Drawing.Color.Black;
-            this.ShadowPanelCurrentClient.BorderRadius = 1;
-            this.ShadowPanelCurrentClient.BorderThickness = 1;
-            this.ShadowPanelCurrentClient.Controls.Add(this.bunifuLabel7);
-            this.ShadowPanelCurrentClient.Controls.Add(this.TextBoxNickname);
-            this.ShadowPanelCurrentClient.Controls.Add(this.bunifuLabel6);
-            this.ShadowPanelCurrentClient.Controls.Add(this.ButtonCancel);
-            this.ShadowPanelCurrentClient.Controls.Add(this.ButtonSave);
-            this.ShadowPanelCurrentClient.Controls.Add(this.TextBoxPhoneNumber);
-            this.ShadowPanelCurrentClient.Controls.Add(this.bunifuLabel5);
-            this.ShadowPanelCurrentClient.Controls.Add(this.ТextBoxFamily);
-            this.ShadowPanelCurrentClient.Controls.Add(this.bunifuLabel4);
-            this.ShadowPanelCurrentClient.Controls.Add(this.bunifuLabel3);
-            this.ShadowPanelCurrentClient.Controls.Add(this.TextBoxName);
-            this.ShadowPanelCurrentClient.Controls.Add(this.LabelCurrentClient);
-            this.ShadowPanelCurrentClient.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.ShadowPanelCurrentClient.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.ShadowPanelCurrentClient.Location = new System.Drawing.Point(766, 63);
-            this.ShadowPanelCurrentClient.Name = "ShadowPanelCurrentClient";
-            this.ShadowPanelCurrentClient.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.ShadowPanelCurrentClient.PanelColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.ShadowPanelCurrentClient.ShadowColor = System.Drawing.Color.DarkGray;
-            this.ShadowPanelCurrentClient.ShadowDept = 2;
-            this.ShadowPanelCurrentClient.ShadowDepth = 5;
-            this.ShadowPanelCurrentClient.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.ShadowPanelCurrentClient.ShadowTopLeftVisible = false;
-            this.ShadowPanelCurrentClient.Size = new System.Drawing.Size(572, 746);
-            this.ShadowPanelCurrentClient.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.ShadowPanelCurrentClient.TabIndex = 5;
-            // 
-            // bunifuLabel7
-            // 
-            this.bunifuLabel7.AllowParentOverrides = false;
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel7.Location = new System.Drawing.Point(127, 334);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(138, 28);
-            this.bunifuLabel7.TabIndex = 18;
-            this.bunifuLabel7.Text = "(Опционално)";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel6
-            // 
-            this.bunifuLabel6.AllowParentOverrides = false;
-            this.bunifuLabel6.AutoEllipsis = false;
-            this.bunifuLabel6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel6.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel6.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel6.Location = new System.Drawing.Point(41, 334);
-            this.bunifuLabel6.Name = "bunifuLabel6";
-            this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(80, 28);
-            this.bunifuLabel6.TabIndex = 16;
-            this.bunifuLabel6.Text = "ПРЯКОР";
-            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel5
-            // 
-            this.bunifuLabel5.AllowParentOverrides = false;
-            this.bunifuLabel5.AutoEllipsis = false;
-            this.bunifuLabel5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel5.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel5.Location = new System.Drawing.Point(45, 208);
-            this.bunifuLabel5.Name = "bunifuLabel5";
-            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(200, 28);
-            this.bunifuLabel5.TabIndex = 14;
-            this.bunifuLabel5.Text = "ТЕЛЕФОНЕН НОМЕР";
-            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel4.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel4.Location = new System.Drawing.Point(319, 89);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(110, 28);
-            this.bunifuLabel4.TabIndex = 12;
-            this.bunifuLabel4.Text = "ФАМИЛИЯ";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel3.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel3.Location = new System.Drawing.Point(45, 89);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(46, 28);
-            this.bunifuLabel3.TabIndex = 11;
-            this.bunifuLabel3.Text = "ИМЕ";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // LabelCurrentClient
-            // 
-            this.LabelCurrentClient.AllowParentOverrides = false;
-            this.LabelCurrentClient.AutoEllipsis = false;
-            this.LabelCurrentClient.Cursor = System.Windows.Forms.Cursors.Default;
-            this.LabelCurrentClient.CursorType = System.Windows.Forms.Cursors.Default;
-            this.LabelCurrentClient.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.LabelCurrentClient.ForeColor = System.Drawing.Color.White;
-            this.LabelCurrentClient.Location = new System.Drawing.Point(201, 10);
-            this.LabelCurrentClient.Name = "LabelCurrentClient";
-            this.LabelCurrentClient.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelCurrentClient.Size = new System.Drawing.Size(139, 54);
-            this.LabelCurrentClient.TabIndex = 9;
-            this.LabelCurrentClient.Text = "Клиент";
-            this.LabelCurrentClient.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.LabelCurrentClient.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // DataGridViewClients
-            // 
-            this.DataGridViewClients.AllowCustomTheming = true;
-            this.DataGridViewClients.AllowUserToAddRows = false;
-            this.DataGridViewClients.AllowUserToDeleteRows = false;
-            this.DataGridViewClients.AllowUserToOrderColumns = true;
-            this.DataGridViewClients.AllowUserToResizeColumns = false;
-            this.DataGridViewClients.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.DataGridViewClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridViewClients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGridViewClients.AutoGenerateColumns = false;
-            this.DataGridViewClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridViewClients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.DataGridViewClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridViewClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
-            this.DataGridViewClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridViewClients.ColumnHeadersHeight = 40;
-            this.DataGridViewClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.phoneNumberDataGridViewTextBoxColumn,
-            this.nicknameDataGridViewTextBoxColumn,
-            this.Get});
-            this.DataGridViewClients.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.Silver;
-            this.DataGridViewClients.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.DataGridViewClients.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.DataGridViewClients.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.DataGridViewClients.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGridViewClients.CurrentTheme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.DataGridViewClients.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.DataGridViewClients.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.DataGridViewClients.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.DataGridViewClients.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DataGridViewClients.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.DataGridViewClients.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGridViewClients.CurrentTheme.Name = null;
-            this.DataGridViewClients.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.DataGridViewClients.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.DataGridViewClients.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.DataGridViewClients.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.DataGridViewClients.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataGridViewClients.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DataGridViewClients.DataSource = this.clientBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridViewClients.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DataGridViewClients.EnableHeadersVisualStyles = false;
-            this.DataGridViewClients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.DataGridViewClients.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.DataGridViewClients.HeaderBgColor = System.Drawing.Color.Empty;
-            this.DataGridViewClients.HeaderForeColor = System.Drawing.Color.White;
-            this.DataGridViewClients.Location = new System.Drawing.Point(6, 67);
-            this.DataGridViewClients.MultiSelect = false;
-            this.DataGridViewClients.Name = "DataGridViewClients";
-            this.DataGridViewClients.ReadOnly = true;
-            this.DataGridViewClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.DataGridViewClients.RowHeadersWidth = 50;
-            this.DataGridViewClients.RowTemplate.Height = 40;
-            this.DataGridViewClients.RowTemplate.ReadOnly = true;
-            this.DataGridViewClients.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridViewClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewClients.Size = new System.Drawing.Size(754, 720);
-            this.DataGridViewClients.TabIndex = 4;
-            this.DataGridViewClients.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
-            this.DataGridViewClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewClients_CellContentClick);
-            this.DataGridViewClients.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridViewClients_RowHeaderMouseClick);
-            // 
-            // LabelTitle
-            // 
-            this.LabelTitle.AllowParentOverrides = false;
-            this.LabelTitle.AutoEllipsis = false;
-            this.LabelTitle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.LabelTitle.CursorType = System.Windows.Forms.Cursors.Default;
-            this.LabelTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.LabelTitle.ForeColor = System.Drawing.Color.White;
-            this.LabelTitle.Location = new System.Drawing.Point(6, 3);
-            this.LabelTitle.Name = "LabelTitle";
-            this.LabelTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelTitle.Size = new System.Drawing.Size(164, 54);
-            this.LabelTitle.TabIndex = 3;
-            this.LabelTitle.Text = "Клиенти";
-            this.LabelTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.LabelTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // Home
-            // 
-            this.Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.Home.Controls.Add(this.bunifuLabel2);
-            this.Home.Location = new System.Drawing.Point(4, 4);
-            this.Home.Name = "Home";
-            this.Home.Padding = new System.Windows.Forms.Padding(3);
-            this.Home.Size = new System.Drawing.Size(1346, 812);
-            this.Home.TabIndex = 0;
-            this.Home.Text = "Home";
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel2.Location = new System.Drawing.Point(16, 6);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(147, 55);
-            this.bunifuLabel2.TabIndex = 1;
-            this.bunifuLabel2.Text = "Начало";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // Vehicles
-            // 
-            this.Vehicles.Location = new System.Drawing.Point(4, 4);
-            this.Vehicles.Name = "Vehicles";
-            this.Vehicles.Size = new System.Drawing.Size(1346, 812);
-            this.Vehicles.TabIndex = 2;
-            this.Vehicles.Text = "Vehicles";
-            this.Vehicles.UseVisualStyleBackColor = true;
-            // 
-            // Raports
-            // 
-            this.Raports.Location = new System.Drawing.Point(4, 4);
-            this.Raports.Name = "Raports";
-            this.Raports.Size = new System.Drawing.Size(1346, 812);
-            this.Raports.TabIndex = 3;
-            this.Raports.Text = "Raports";
-            this.Raports.UseVisualStyleBackColor = true;
-            // 
-            // Calendar
-            // 
-            this.Calendar.Location = new System.Drawing.Point(4, 4);
-            this.Calendar.Name = "Calendar";
-            this.Calendar.Size = new System.Drawing.Size(1346, 812);
-            this.Calendar.TabIndex = 4;
-            this.Calendar.Text = "Calendar";
-            this.Calendar.UseVisualStyleBackColor = true;
-            // 
-            // Settings
-            // 
-            this.Settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.Settings.Controls.Add(this.bunifuLabel1);
-            this.Settings.Location = new System.Drawing.Point(4, 4);
-            this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(1346, 812);
-            this.Settings.TabIndex = 5;
-            this.Settings.Text = "Settings";
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(15, 15);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(211, 55);
-            this.bunifuLabel1.TabIndex = 0;
-            this.bunifuLabel1.Text = "Настройки";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // ButtonRefreshClients
             // 
@@ -835,6 +642,56 @@ namespace VehicleServiceManagement
             this.ButtonDelete.UseDefaultRadiusAndThickness = true;
             this.ButtonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
             // 
+            // ShadowPanelCurrentClient
+            // 
+            this.ShadowPanelCurrentClient.BackColor = System.Drawing.Color.Transparent;
+            this.ShadowPanelCurrentClient.BorderColor = System.Drawing.Color.Black;
+            this.ShadowPanelCurrentClient.BorderRadius = 1;
+            this.ShadowPanelCurrentClient.BorderThickness = 1;
+            this.ShadowPanelCurrentClient.Controls.Add(this.bunifuLabel7);
+            this.ShadowPanelCurrentClient.Controls.Add(this.TextBoxNickname);
+            this.ShadowPanelCurrentClient.Controls.Add(this.bunifuLabel6);
+            this.ShadowPanelCurrentClient.Controls.Add(this.ButtonCancel);
+            this.ShadowPanelCurrentClient.Controls.Add(this.ButtonSave);
+            this.ShadowPanelCurrentClient.Controls.Add(this.TextBoxPhoneNumber);
+            this.ShadowPanelCurrentClient.Controls.Add(this.bunifuLabel5);
+            this.ShadowPanelCurrentClient.Controls.Add(this.ТextBoxFamily);
+            this.ShadowPanelCurrentClient.Controls.Add(this.bunifuLabel4);
+            this.ShadowPanelCurrentClient.Controls.Add(this.bunifuLabel3);
+            this.ShadowPanelCurrentClient.Controls.Add(this.TextBoxName);
+            this.ShadowPanelCurrentClient.Controls.Add(this.LabelCurrentClient);
+            this.ShadowPanelCurrentClient.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.ShadowPanelCurrentClient.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.ShadowPanelCurrentClient.Location = new System.Drawing.Point(766, 63);
+            this.ShadowPanelCurrentClient.Name = "ShadowPanelCurrentClient";
+            this.ShadowPanelCurrentClient.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.ShadowPanelCurrentClient.PanelColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.ShadowPanelCurrentClient.ShadowColor = System.Drawing.Color.DarkGray;
+            this.ShadowPanelCurrentClient.ShadowDept = 2;
+            this.ShadowPanelCurrentClient.ShadowDepth = 5;
+            this.ShadowPanelCurrentClient.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.ShadowPanelCurrentClient.ShadowTopLeftVisible = false;
+            this.ShadowPanelCurrentClient.Size = new System.Drawing.Size(572, 746);
+            this.ShadowPanelCurrentClient.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.ShadowPanelCurrentClient.TabIndex = 5;
+            // 
+            // bunifuLabel7
+            // 
+            this.bunifuLabel7.AllowParentOverrides = false;
+            this.bunifuLabel7.AutoEllipsis = false;
+            this.bunifuLabel7.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel7.Location = new System.Drawing.Point(127, 334);
+            this.bunifuLabel7.Name = "bunifuLabel7";
+            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel7.Size = new System.Drawing.Size(138, 28);
+            this.bunifuLabel7.TabIndex = 18;
+            this.bunifuLabel7.Text = "(Опционално)";
+            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // TextBoxNickname
             // 
             this.TextBoxNickname.AcceptsReturn = false;
@@ -854,7 +711,6 @@ namespace VehicleServiceManagement
             this.TextBoxNickname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextBoxNickname.DefaultFont = new System.Drawing.Font("Segoe UI", 13F);
             this.TextBoxNickname.DefaultText = "";
-            this.TextBoxNickname.Enabled = false;
             this.TextBoxNickname.FillColor = System.Drawing.Color.LightGray;
             this.TextBoxNickname.ForeColor = System.Drawing.Color.Black;
             this.TextBoxNickname.HideSelection = true;
@@ -910,6 +766,23 @@ namespace VehicleServiceManagement
             this.TextBoxNickname.TextPlaceholder = "Въведете прякор";
             this.TextBoxNickname.UseSystemPasswordChar = false;
             this.TextBoxNickname.WordWrap = true;
+            // 
+            // bunifuLabel6
+            // 
+            this.bunifuLabel6.AllowParentOverrides = false;
+            this.bunifuLabel6.AutoEllipsis = false;
+            this.bunifuLabel6.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel6.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel6.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel6.Location = new System.Drawing.Point(41, 334);
+            this.bunifuLabel6.Name = "bunifuLabel6";
+            this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel6.Size = new System.Drawing.Size(80, 28);
+            this.bunifuLabel6.TabIndex = 16;
+            this.bunifuLabel6.Text = "ПРЯКОР";
+            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // ButtonCancel
             // 
@@ -1111,7 +984,6 @@ namespace VehicleServiceManagement
             this.TextBoxPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextBoxPhoneNumber.DefaultFont = new System.Drawing.Font("Segoe UI", 13F);
             this.TextBoxPhoneNumber.DefaultText = "";
-            this.TextBoxPhoneNumber.Enabled = false;
             this.TextBoxPhoneNumber.FillColor = System.Drawing.Color.LightGray;
             this.TextBoxPhoneNumber.ForeColor = System.Drawing.Color.Black;
             this.TextBoxPhoneNumber.HideSelection = true;
@@ -1168,6 +1040,23 @@ namespace VehicleServiceManagement
             this.TextBoxPhoneNumber.UseSystemPasswordChar = false;
             this.TextBoxPhoneNumber.WordWrap = true;
             // 
+            // bunifuLabel5
+            // 
+            this.bunifuLabel5.AllowParentOverrides = false;
+            this.bunifuLabel5.AutoEllipsis = false;
+            this.bunifuLabel5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel5.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel5.Location = new System.Drawing.Point(45, 208);
+            this.bunifuLabel5.Name = "bunifuLabel5";
+            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel5.Size = new System.Drawing.Size(200, 28);
+            this.bunifuLabel5.TabIndex = 14;
+            this.bunifuLabel5.Text = "ТЕЛЕФОНЕН НОМЕР";
+            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // ТextBoxFamily
             // 
             this.ТextBoxFamily.AcceptsReturn = false;
@@ -1187,7 +1076,6 @@ namespace VehicleServiceManagement
             this.ТextBoxFamily.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ТextBoxFamily.DefaultFont = new System.Drawing.Font("Segoe UI", 13F);
             this.ТextBoxFamily.DefaultText = "";
-            this.ТextBoxFamily.Enabled = false;
             this.ТextBoxFamily.FillColor = System.Drawing.Color.LightGray;
             this.ТextBoxFamily.ForeColor = System.Drawing.Color.Black;
             this.ТextBoxFamily.HideSelection = true;
@@ -1244,6 +1132,40 @@ namespace VehicleServiceManagement
             this.ТextBoxFamily.UseSystemPasswordChar = false;
             this.ТextBoxFamily.WordWrap = true;
             // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel4.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel4.Location = new System.Drawing.Point(319, 89);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(110, 28);
+            this.bunifuLabel4.TabIndex = 12;
+            this.bunifuLabel4.Text = "ФАМИЛИЯ";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel3.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel3.Location = new System.Drawing.Point(45, 89);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(46, 28);
+            this.bunifuLabel3.TabIndex = 11;
+            this.bunifuLabel3.Text = "ИМЕ";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // TextBoxName
             // 
             this.TextBoxName.AcceptsReturn = false;
@@ -1263,7 +1185,6 @@ namespace VehicleServiceManagement
             this.TextBoxName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextBoxName.DefaultFont = new System.Drawing.Font("Segoe UI", 13F);
             this.TextBoxName.DefaultText = "";
-            this.TextBoxName.Enabled = false;
             this.TextBoxName.FillColor = System.Drawing.Color.LightGray;
             this.TextBoxName.ForeColor = System.Drawing.Color.Black;
             this.TextBoxName.HideSelection = true;
@@ -1319,6 +1240,40 @@ namespace VehicleServiceManagement
             this.TextBoxName.TextPlaceholder = "Въведете име";
             this.TextBoxName.UseSystemPasswordChar = false;
             this.TextBoxName.WordWrap = true;
+            // 
+            // LabelCurrentClient
+            // 
+            this.LabelCurrentClient.AllowParentOverrides = false;
+            this.LabelCurrentClient.AutoEllipsis = false;
+            this.LabelCurrentClient.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LabelCurrentClient.CursorType = System.Windows.Forms.Cursors.Default;
+            this.LabelCurrentClient.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.LabelCurrentClient.ForeColor = System.Drawing.Color.White;
+            this.LabelCurrentClient.Location = new System.Drawing.Point(201, 10);
+            this.LabelCurrentClient.Name = "LabelCurrentClient";
+            this.LabelCurrentClient.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelCurrentClient.Size = new System.Drawing.Size(139, 54);
+            this.LabelCurrentClient.TabIndex = 9;
+            this.LabelCurrentClient.Text = "Клиент";
+            this.LabelCurrentClient.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LabelCurrentClient.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // LabelTitle
+            // 
+            this.LabelTitle.AllowParentOverrides = false;
+            this.LabelTitle.AutoEllipsis = false;
+            this.LabelTitle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LabelTitle.CursorType = System.Windows.Forms.Cursors.Default;
+            this.LabelTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.LabelTitle.ForeColor = System.Drawing.Color.White;
+            this.LabelTitle.Location = new System.Drawing.Point(6, 3);
+            this.LabelTitle.Name = "LabelTitle";
+            this.LabelTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelTitle.Size = new System.Drawing.Size(164, 54);
+            this.LabelTitle.TabIndex = 3;
+            this.LabelTitle.Text = "Клиенти";
+            this.LabelTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LabelTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // TextBoxSearch
             // 
@@ -1396,128 +1351,232 @@ namespace VehicleServiceManagement
             this.TextBoxSearch.WordWrap = true;
             this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
             // 
-            // ControlPanel
+            // DataGridViewClients
             // 
-            this.ControlPanel.BackgroundColor = System.Drawing.Color.Transparent;
-            this.ControlPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ControlPanel.BackgroundImage")));
-            this.ControlPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ControlPanel.BorderColor = System.Drawing.Color.Transparent;
-            this.ControlPanel.BorderRadius = 3;
-            this.ControlPanel.BorderThickness = 1;
-            this.ControlPanel.Controls.Add(this.ButtonMinimize);
-            this.ControlPanel.Controls.Add(this.ButtonMaximize);
-            this.ControlPanel.Controls.Add(this.ButtonCloseApplication);
-            this.ControlPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ControlPanel.Location = new System.Drawing.Point(246, 0);
-            this.ControlPanel.Name = "ControlPanel";
-            this.ControlPanel.ShowBorders = true;
-            this.ControlPanel.Size = new System.Drawing.Size(1354, 81);
-            this.ControlPanel.TabIndex = 2;
+            this.DataGridViewClients.AllowCustomTheming = true;
+            this.DataGridViewClients.AllowUserToAddRows = false;
+            this.DataGridViewClients.AllowUserToDeleteRows = false;
+            this.DataGridViewClients.AllowUserToOrderColumns = true;
+            this.DataGridViewClients.AllowUserToResizeColumns = false;
+            this.DataGridViewClients.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.DataGridViewClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGridViewClients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataGridViewClients.AutoGenerateColumns = false;
+            this.DataGridViewClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridViewClients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.DataGridViewClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGridViewClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            this.DataGridViewClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DataGridViewClients.ColumnHeadersHeight = 40;
+            this.DataGridViewClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.nicknameDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.Get});
+            this.DataGridViewClients.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.Silver;
+            this.DataGridViewClients.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.DataGridViewClients.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.DataGridViewClients.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.DataGridViewClients.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGridViewClients.CurrentTheme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.DataGridViewClients.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.DataGridViewClients.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.DataGridViewClients.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.DataGridViewClients.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DataGridViewClients.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.DataGridViewClients.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGridViewClients.CurrentTheme.Name = null;
+            this.DataGridViewClients.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.DataGridViewClients.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.DataGridViewClients.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.DataGridViewClients.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.DataGridViewClients.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataGridViewClients.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DataGridViewClients.DataSource = this.clientBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewClients.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DataGridViewClients.EnableHeadersVisualStyles = false;
+            this.DataGridViewClients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.DataGridViewClients.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.DataGridViewClients.HeaderBgColor = System.Drawing.Color.Empty;
+            this.DataGridViewClients.HeaderForeColor = System.Drawing.Color.White;
+            this.DataGridViewClients.Location = new System.Drawing.Point(6, 67);
+            this.DataGridViewClients.MaximumSize = new System.Drawing.Size(754, 733);
+            this.DataGridViewClients.MultiSelect = false;
+            this.DataGridViewClients.Name = "DataGridViewClients";
+            this.DataGridViewClients.ReadOnly = true;
+            this.DataGridViewClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DataGridViewClients.RowHeadersVisible = false;
+            this.DataGridViewClients.RowHeadersWidth = 50;
+            this.DataGridViewClients.RowTemplate.Height = 40;
+            this.DataGridViewClients.RowTemplate.ReadOnly = true;
+            this.DataGridViewClients.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridViewClients.Size = new System.Drawing.Size(754, 733);
+            this.DataGridViewClients.TabIndex = 4;
+            this.DataGridViewClients.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
+            this.DataGridViewClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewClients_CellContentClick);
+            this.DataGridViewClients.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridViewClients_RowHeaderMouseClick);
             // 
-            // ButtonMinimize
+            // nameDataGridViewTextBoxColumn
             // 
-            this.ButtonMinimize.ActiveImage = null;
-            this.ButtonMinimize.AllowAnimations = true;
-            this.ButtonMinimize.AllowBuffering = false;
-            this.ButtonMinimize.AllowToggling = false;
-            this.ButtonMinimize.AllowZooming = true;
-            this.ButtonMinimize.AllowZoomingOnFocus = false;
-            this.ButtonMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonMinimize.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.ButtonMinimize.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ButtonMinimize.ErrorImage")));
-            this.ButtonMinimize.FadeWhenInactive = false;
-            this.ButtonMinimize.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.ButtonMinimize.Image = global::VehicleServiceManagement.Properties.Resources.minimize;
-            this.ButtonMinimize.ImageActive = null;
-            this.ButtonMinimize.ImageLocation = null;
-            this.ButtonMinimize.ImageMargin = 0;
-            this.ButtonMinimize.ImageSize = new System.Drawing.Size(29, 29);
-            this.ButtonMinimize.ImageZoomSize = new System.Drawing.Size(30, 30);
-            this.ButtonMinimize.InitialImage = ((System.Drawing.Image)(resources.GetObject("ButtonMinimize.InitialImage")));
-            this.ButtonMinimize.Location = new System.Drawing.Point(1234, 1);
-            this.ButtonMinimize.Name = "ButtonMinimize";
-            this.ButtonMinimize.Rotation = 0;
-            this.ButtonMinimize.ShowActiveImage = true;
-            this.ButtonMinimize.ShowCursorChanges = true;
-            this.ButtonMinimize.ShowImageBorders = true;
-            this.ButtonMinimize.ShowSizeMarkers = false;
-            this.ButtonMinimize.Size = new System.Drawing.Size(30, 30);
-            this.ButtonMinimize.TabIndex = 2;
-            this.ButtonMinimize.ToolTipText = "";
-            this.ButtonMinimize.WaitOnLoad = false;
-            this.ButtonMinimize.Zoom = 0;
-            this.ButtonMinimize.ZoomSpeed = 10;
-            this.ButtonMinimize.Click += new System.EventHandler(this.ButtonMinimize_Click);
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
+            this.nameDataGridViewTextBoxColumn.Frozen = true;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Име";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.nameDataGridViewTextBoxColumn.Width = 167;
             // 
-            // ButtonMaximize
+            // lastNameDataGridViewTextBoxColumn
             // 
-            this.ButtonMaximize.ActiveImage = null;
-            this.ButtonMaximize.AllowAnimations = true;
-            this.ButtonMaximize.AllowBuffering = false;
-            this.ButtonMaximize.AllowToggling = false;
-            this.ButtonMaximize.AllowZooming = true;
-            this.ButtonMaximize.AllowZoomingOnFocus = false;
-            this.ButtonMaximize.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonMaximize.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.ButtonMaximize.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ButtonMaximize.ErrorImage")));
-            this.ButtonMaximize.FadeWhenInactive = false;
-            this.ButtonMaximize.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.ButtonMaximize.Image = global::VehicleServiceManagement.Properties.Resources.maximize_1;
-            this.ButtonMaximize.ImageActive = null;
-            this.ButtonMaximize.ImageLocation = null;
-            this.ButtonMaximize.ImageMargin = 0;
-            this.ButtonMaximize.ImageSize = new System.Drawing.Size(29, 29);
-            this.ButtonMaximize.ImageZoomSize = new System.Drawing.Size(30, 30);
-            this.ButtonMaximize.InitialImage = ((System.Drawing.Image)(resources.GetObject("ButtonMaximize.InitialImage")));
-            this.ButtonMaximize.Location = new System.Drawing.Point(1275, 3);
-            this.ButtonMaximize.Name = "ButtonMaximize";
-            this.ButtonMaximize.Rotation = 0;
-            this.ButtonMaximize.ShowActiveImage = true;
-            this.ButtonMaximize.ShowCursorChanges = true;
-            this.ButtonMaximize.ShowImageBorders = true;
-            this.ButtonMaximize.ShowSizeMarkers = false;
-            this.ButtonMaximize.Size = new System.Drawing.Size(30, 30);
-            this.ButtonMaximize.TabIndex = 1;
-            this.ButtonMaximize.ToolTipText = "";
-            this.ButtonMaximize.WaitOnLoad = false;
-            this.ButtonMaximize.Zoom = 0;
-            this.ButtonMaximize.ZoomSpeed = 10;
-            this.ButtonMaximize.Click += new System.EventHandler(this.ButtonMaximize_Click);
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
+            this.lastNameDataGridViewTextBoxColumn.Frozen = true;
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastNameDataGridViewTextBoxColumn.Width = 167;
             // 
-            // ButtonCloseApplication
+            // nicknameDataGridViewTextBoxColumn
             // 
-            this.ButtonCloseApplication.ActiveImage = null;
-            this.ButtonCloseApplication.AllowAnimations = true;
-            this.ButtonCloseApplication.AllowBuffering = false;
-            this.ButtonCloseApplication.AllowToggling = false;
-            this.ButtonCloseApplication.AllowZooming = true;
-            this.ButtonCloseApplication.AllowZoomingOnFocus = false;
-            this.ButtonCloseApplication.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonCloseApplication.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.ButtonCloseApplication.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ButtonCloseApplication.ErrorImage")));
-            this.ButtonCloseApplication.FadeWhenInactive = false;
-            this.ButtonCloseApplication.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.ButtonCloseApplication.Image = global::VehicleServiceManagement.Properties.Resources.close;
-            this.ButtonCloseApplication.ImageActive = null;
-            this.ButtonCloseApplication.ImageLocation = null;
-            this.ButtonCloseApplication.ImageMargin = 0;
-            this.ButtonCloseApplication.ImageSize = new System.Drawing.Size(29, 29);
-            this.ButtonCloseApplication.ImageZoomSize = new System.Drawing.Size(30, 30);
-            this.ButtonCloseApplication.InitialImage = ((System.Drawing.Image)(resources.GetObject("ButtonCloseApplication.InitialImage")));
-            this.ButtonCloseApplication.Location = new System.Drawing.Point(1316, 3);
-            this.ButtonCloseApplication.Name = "ButtonCloseApplication";
-            this.ButtonCloseApplication.Rotation = 0;
-            this.ButtonCloseApplication.ShowActiveImage = true;
-            this.ButtonCloseApplication.ShowCursorChanges = true;
-            this.ButtonCloseApplication.ShowImageBorders = true;
-            this.ButtonCloseApplication.ShowSizeMarkers = false;
-            this.ButtonCloseApplication.Size = new System.Drawing.Size(30, 30);
-            this.ButtonCloseApplication.TabIndex = 0;
-            this.ButtonCloseApplication.ToolTipText = "";
-            this.ButtonCloseApplication.WaitOnLoad = false;
-            this.ButtonCloseApplication.Zoom = 0;
-            this.ButtonCloseApplication.ZoomSpeed = 10;
-            this.ButtonCloseApplication.Click += new System.EventHandler(this.ButtonCloseApplication_Click);
+            this.nicknameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nicknameDataGridViewTextBoxColumn.DataPropertyName = "Nickname";
+            this.nicknameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
+            this.nicknameDataGridViewTextBoxColumn.Frozen = true;
+            this.nicknameDataGridViewTextBoxColumn.HeaderText = "Прякор";
+            this.nicknameDataGridViewTextBoxColumn.Name = "nicknameDataGridViewTextBoxColumn";
+            this.nicknameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nicknameDataGridViewTextBoxColumn.Width = 167;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.FillWeight = 118.6548F;
+            this.phoneNumberDataGridViewTextBoxColumn.Frozen = true;
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Телефонен номер";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 170;
+            // 
+            // Get
+            // 
+            this.Get.FillWeight = 25.38071F;
+            this.Get.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Get.HeaderText = "Избери";
+            this.Get.Name = "Get";
+            this.Get.ReadOnly = true;
+            this.Get.Text = "[+]";
+            this.Get.ToolTipText = "Избери клиент";
+            this.Get.UseColumnTextForButtonValue = true;
+            // 
+            // clientBindingSource
+            // 
+            this.clientBindingSource.DataSource = typeof(VehicleServiceManagement.Client);
+            // 
+            // Home
+            // 
+            this.Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.Home.Controls.Add(this.bunifuLabel2);
+            this.Home.Location = new System.Drawing.Point(4, 4);
+            this.Home.Name = "Home";
+            this.Home.Padding = new System.Windows.Forms.Padding(3);
+            this.Home.Size = new System.Drawing.Size(1346, 812);
+            this.Home.TabIndex = 0;
+            this.Home.Text = "Home";
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel2.Location = new System.Drawing.Point(16, 6);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(147, 55);
+            this.bunifuLabel2.TabIndex = 1;
+            this.bunifuLabel2.Text = "Начало";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // Vehicles
+            // 
+            this.Vehicles.Location = new System.Drawing.Point(4, 4);
+            this.Vehicles.Name = "Vehicles";
+            this.Vehicles.Size = new System.Drawing.Size(1346, 812);
+            this.Vehicles.TabIndex = 2;
+            this.Vehicles.Text = "Vehicles";
+            this.Vehicles.UseVisualStyleBackColor = true;
+            // 
+            // Raports
+            // 
+            this.Raports.Location = new System.Drawing.Point(4, 4);
+            this.Raports.Name = "Raports";
+            this.Raports.Size = new System.Drawing.Size(1346, 812);
+            this.Raports.TabIndex = 3;
+            this.Raports.Text = "Raports";
+            this.Raports.UseVisualStyleBackColor = true;
+            // 
+            // Calendar
+            // 
+            this.Calendar.Location = new System.Drawing.Point(4, 4);
+            this.Calendar.Name = "Calendar";
+            this.Calendar.Size = new System.Drawing.Size(1346, 812);
+            this.Calendar.TabIndex = 4;
+            this.Calendar.Text = "Calendar";
+            this.Calendar.UseVisualStyleBackColor = true;
+            // 
+            // Settings
+            // 
+            this.Settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.Settings.Controls.Add(this.bunifuLabel1);
+            this.Settings.Location = new System.Drawing.Point(4, 4);
+            this.Settings.Name = "Settings";
+            this.Settings.Size = new System.Drawing.Size(1346, 812);
+            this.Settings.TabIndex = 5;
+            this.Settings.Text = "Settings";
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel1.Location = new System.Drawing.Point(15, 15);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(211, 55);
+            this.bunifuLabel1.TabIndex = 0;
+            this.bunifuLabel1.Text = "Настройки";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // PanelButtons
             // 
@@ -2155,65 +2214,74 @@ namespace VehicleServiceManagement
             this.PictureBoxUserAvatar.TabStop = false;
             this.PictureBoxUserAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // Get
+            // Notification
             // 
-            this.Get.FillWeight = 25.38071F;
-            this.Get.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Get.HeaderText = "Избери";
-            this.Get.Name = "Get";
-            this.Get.ReadOnly = true;
-            this.Get.Text = "[+]";
-            this.Get.ToolTipText = "Избери клиент";
-            this.Get.UseColumnTextForButtonValue = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
-            this.nameDataGridViewTextBoxColumn.Frozen = true;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Име";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.nameDataGridViewTextBoxColumn.Width = 167;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
-            this.lastNameDataGridViewTextBoxColumn.Frozen = true;
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lastNameDataGridViewTextBoxColumn.Width = 167;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.FillWeight = 118.6548F;
-            this.phoneNumberDataGridViewTextBoxColumn.Frozen = true;
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Телефонен номер";
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.phoneNumberDataGridViewTextBoxColumn.Width = 170;
-            // 
-            // nicknameDataGridViewTextBoxColumn
-            // 
-            this.nicknameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nicknameDataGridViewTextBoxColumn.DataPropertyName = "Nickname";
-            this.nicknameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
-            this.nicknameDataGridViewTextBoxColumn.Frozen = true;
-            this.nicknameDataGridViewTextBoxColumn.HeaderText = "Прякор";
-            this.nicknameDataGridViewTextBoxColumn.Name = "nicknameDataGridViewTextBoxColumn";
-            this.nicknameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nicknameDataGridViewTextBoxColumn.Width = 167;
-            // 
-            // clientBindingSource
-            // 
-            this.clientBindingSource.DataSource = typeof(VehicleServiceManagement.Client);
+            this.Notification.AllowDragging = false;
+            this.Notification.AllowMultipleViews = true;
+            this.Notification.ClickToClose = true;
+            this.Notification.DoubleClickToClose = true;
+            this.Notification.DurationAfterIdle = 3000;
+            this.Notification.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Notification.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Notification.ErrorOptions.ActionBorderRadius = 1;
+            this.Notification.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Notification.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.Notification.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.Notification.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.Notification.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.Notification.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.Notification.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.Notification.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.Notification.ErrorOptions.IconLeftMargin = 12;
+            this.Notification.FadeCloseIcon = false;
+            this.Notification.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.Notification.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.Notification.InformationOptions.ActionBorderColor = System.Drawing.Color.White;
+            this.Notification.InformationOptions.ActionBorderRadius = 25;
+            this.Notification.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Notification.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.Notification.InformationOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.Notification.InformationOptions.BorderColor = System.Drawing.Color.Black;
+            this.Notification.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.Notification.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.Notification.InformationOptions.ForeColor = System.Drawing.Color.White;
+            this.Notification.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.Notification.InformationOptions.IconLeftMargin = 12;
+            this.Notification.Margin = 40;
+            this.Notification.MaximumSize = new System.Drawing.Size(0, 0);
+            this.Notification.MaximumViews = 1;
+            this.Notification.MessageRightMargin = 10;
+            this.Notification.MinimumSize = new System.Drawing.Size(0, 0);
+            this.Notification.ShowBorders = true;
+            this.Notification.ShowCloseIcon = false;
+            this.Notification.ShowIcon = true;
+            this.Notification.ShowShadows = true;
+            this.Notification.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.Notification.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Notification.SuccessOptions.ActionBorderRadius = 25;
+            this.Notification.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Notification.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.Notification.SuccessOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.Notification.SuccessOptions.BorderColor = System.Drawing.Color.Gray;
+            this.Notification.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.Notification.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.Notification.SuccessOptions.ForeColor = System.Drawing.Color.White;
+            this.Notification.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.Notification.SuccessOptions.IconLeftMargin = 12;
+            this.Notification.ViewsMargin = 1;
+            this.Notification.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.Notification.WarningOptions.ActionBorderColor = System.Drawing.Color.White;
+            this.Notification.WarningOptions.ActionBorderRadius = 25;
+            this.Notification.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Notification.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.Notification.WarningOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.Notification.WarningOptions.BorderColor = System.Drawing.Color.Gray;
+            this.Notification.WarningOptions.CloseIconColor = System.Drawing.Color.White;
+            this.Notification.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.Notification.WarningOptions.ForeColor = System.Drawing.Color.White;
+            this.Notification.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.Notification.WarningOptions.IconLeftMargin = 12;
+            this.Notification.ZoomCloseIcon = true;
             // 
             // Main
             // 
@@ -2229,23 +2297,23 @@ namespace VehicleServiceManagement
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Resize += new System.EventHandler(this.Main_Resize);
+            this.ControlPanel.ResumeLayout(false);
             this.MainPages.ResumeLayout(false);
             this.Clients.ResumeLayout(false);
             this.Clients.PerformLayout();
+            this.PanelClientButtons.ResumeLayout(false);
             this.ShadowPanelCurrentClient.ResumeLayout(false);
             this.ShadowPanelCurrentClient.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.Home.ResumeLayout(false);
             this.Home.PerformLayout();
             this.Settings.ResumeLayout(false);
             this.Settings.PerformLayout();
-            this.PanelClientButtons.ResumeLayout(false);
-            this.ControlPanel.ResumeLayout(false);
             this.PanelButtons.ResumeLayout(false);
             this.PanelButtons.PerformLayout();
             this.PanelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2298,10 +2366,11 @@ namespace VehicleServiceManagement
         private Bunifu.UI.WinForms.BunifuPanel PanelClientButtons;
         private Bunifu.UI.WinForms.BunifuImageButton ButtonRefreshClients;
         private System.Windows.Forms.BindingSource clientBindingSource;
+        private Bunifu.UI.WinForms.BunifuSnackbar Notification;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nicknameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Get;
     }
 }

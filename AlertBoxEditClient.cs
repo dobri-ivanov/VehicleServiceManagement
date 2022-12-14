@@ -10,26 +10,21 @@ using System.Windows.Forms;
 
 namespace VehicleServiceManagement
 {
-    public partial class AlertBox : Form
+    public partial class AlertBoxEditClient : Form
     {
-        public AlertBox()
+        public AlertBoxEditClient()
         {
             InitializeComponent();
-        }
-
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void bunifuPanel1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void bunifuLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ButtonClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

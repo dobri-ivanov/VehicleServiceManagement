@@ -13,6 +13,9 @@ namespace VehicleServiceManagement
 {
     public partial class Main : Form
     {
+        private static string currentPhoneNumber = String.Empty;
+        public static string currentConnectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
+
         private bool isMaximized = false;
         private bool isMinimized = false;
         public string connectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
@@ -198,7 +201,7 @@ namespace VehicleServiceManagement
 
                 SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
-                string selectQuery = "SELECT * FROM Clients WHERE PhoneNumber = '"+phoneNumber+"'";
+                string selectQuery = "SELECT * FROM Clients WHERE PhoneNumber = '" + phoneNumber + "'";
                 command = new SqlCommand(selectQuery, connection);
 
                 SqlDataReader read = command.ExecuteReader();
@@ -214,15 +217,40 @@ namespace VehicleServiceManagement
 
                     command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
+
+                    if (TextBoxNickname.Text.Length > 0)
+                    {
+                        string nickname = TextBoxNickname.Text;
+                        Notification.Show(this, $"Успешно добавен клиент: {name} {lastName} ({nickname}) | {phoneNumber}",
+                        Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+                    }
+                    else
+                    {
+                        Notification.Show(this, $"Успешно добавен клиент: {name} {lastName} | {phoneNumber}",
+                        Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+                    }
+
                     connection.Close();
 
                     FillClientsTable();
                 }
                 else
                 {
-                    //Already has client with that phone number
-                    //Shoud be implemented
+                    Notification.Show(this, "Вече съществува клиент с тези данни!",
+                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning, 3000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+                    Clear();
+                    TextBoxName.Enabled = true;
+                    ТextBoxFamily.Enabled = true;
+                    TextBoxPhoneNumber.Enabled = true;
+                    TextBoxNickname.Enabled = true;
                 }
+                read.Close();
+                connection.Close();
+            }
+            else
+            {
+                Notification.Show(this, "Моля попълнете всички данни!",
+                Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning, 3000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
 
             }
         }
@@ -304,6 +332,7 @@ namespace VehicleServiceManagement
 
         private void DataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             int rowIndex = e.RowIndex;
             int colIndex = e.ColumnIndex;
             if (DataGridViewClients.Columns[colIndex].Name == "Get")
@@ -317,40 +346,56 @@ namespace VehicleServiceManagement
 
                 string name = DataGridViewClients.Rows[rowIndex].Cells[0].Value.ToString();
                 string fullName = DataGridViewClients.Rows[rowIndex].Cells[1].Value.ToString();
-                string phoneNumber = DataGridViewClients.Rows[rowIndex].Cells[2].Value.ToString();
-                string nickname = DataGridViewClients.Rows[rowIndex].Cells[3].Value.ToString();
+                string nickname = DataGridViewClients.Rows[rowIndex].Cells[2].Value.ToString();
+                string phoneNumber = DataGridViewClients.Rows[rowIndex].Cells[3].Value.ToString();
 
                 TextBoxName.Text = name;
                 ТextBoxFamily.Text = fullName;
                 TextBoxPhoneNumber.Text = phoneNumber;
                 TextBoxNickname.Text = nickname;
+                currentPhoneNumber = phoneNumber;
             }
         }
 
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
-            if (TextBoxName.Text.Length > 0 && ТextBoxFamily.Text.Length > 0 && TextBoxPhoneNumber.Text.Length > 0)
-            {
-                string name = TextBoxName.Text;
-                string lastName = ТextBoxFamily.Text;
-                string phoneNumber = TextBoxPhoneNumber.Text;
+            string name = TextBoxName.Text;
+            string lastName = ТextBoxFamily.Text;
+            string phoneNumber = TextBoxPhoneNumber.Text;
 
-                SqlConnection connection = new SqlConnection(connectionString);
-                connection.Open();
-                string query = "DELETE FROM Clients WHERE PhoneNumber = '" + phoneNumber + "';";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.ExecuteNonQuery();
-                connection.Close();
+            AlertBox alertBox = new AlertBox();
+            string text = $"Сигурни ли сте, че искате да изтриете клиент:{Environment.NewLine}{name} {lastName} {phoneNumber}";
+            alertBox.DeleteUser(text, this);
 
-                FillClientsTable();
-            }
+        }
+        public void DeleteUser()
+        {
+            SqlConnection connection = new SqlConnection(currentConnectionString);
+            connection.Open();
+            string query = "DELETE FROM Clients WHERE PhoneNumber = '" + currentPhoneNumber + "';";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+            FillClientsTable();
+            Clear();
 
+
+            string name = TextBoxName.Text;
+            string lastName = ТextBoxFamily.Text;
+            string phoneNumber = TextBoxPhoneNumber.Text;
+
+            Notification.Show(this, $"Успешно изтрит клиент: {name} {lastName} | {phoneNumber}",
+            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
 
         }
 
         private void DataGridViewClients_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-           
+
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
         }
     }
 }

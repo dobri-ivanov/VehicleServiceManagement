@@ -154,10 +154,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlertBox.cs">
+    <Compile Include="AlertBoxEditClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlertBox.Designer.cs">
+    <Compile Include="AlertBoxEditClient.Designer.cs">
+      <DependentUpon>AlertBoxEditClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlertBoxes\AlertBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertBoxes\AlertBox.Designer.cs">
       <DependentUpon>AlertBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Client.cs" />
@@ -187,7 +193,10 @@
     <Compile Include="SplashScreen\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AlertBox.resx">
+    <EmbeddedResource Include="AlertBoxEditClient.resx">
+      <DependentUpon>AlertBoxEditClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlertBoxes\AlertBox.resx">
       <DependentUpon>AlertBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1\Form1.resx">
