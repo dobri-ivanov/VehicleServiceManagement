@@ -418,14 +418,19 @@ namespace VehicleServiceManagement
             command.ExecuteNonQuery();
             connection.Close();
             FillClientsTable();
-            Clear();
 
-
+            ButtonDelete.Enabled = false;
+            ButtonEdit.Enabled = false;
+            TextBoxName.Enabled = true;
+            TextBoxLastName.Enabled = true;
+            TextBoxPhoneNumber.Enabled = true;
+            TextBoxNickname.Enabled = true;
 
             string name = TextBoxName.Text;
             string lastName = TextBoxLastName.Text;
             string phoneNumber = TextBoxPhoneNumber.Text;
 
+            Clear();
             Notification.Show(this, $"Успешно изтрит клиент: {name} {lastName} | {phoneNumber}",
             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
 
@@ -504,6 +509,11 @@ namespace VehicleServiceManagement
         }
 
         private void ТextBoxLastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
         {
 
         }
