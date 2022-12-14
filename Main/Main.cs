@@ -13,6 +13,11 @@ namespace VehicleServiceManagement
 {
     public partial class Main : Form
     {
+        string oldName;
+        string oldLastName;
+        string oldPhoneNumber;
+        string oldNickname;
+
         private static string currentPhoneNumber = String.Empty;
         public static string currentConnectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
 
@@ -91,6 +96,18 @@ namespace VehicleServiceManagement
             currentPoint = ButtonSettings.Location;
             currentPoint.Y += 180;
             ButtonSettings.Location = currentPoint;
+
+            currentPoint = PanelButtons.Location;
+            currentPoint.X += 320;
+            PanelButtons.Location = currentPoint;
+
+            currentPoint = ButtonDelete.Location;
+            currentPoint.X += 320;
+            ButtonDelete.Location = currentPoint;
+
+            currentPoint = ButtonEdit.Location;
+            currentPoint.X += 320;
+            ButtonEdit.Location = currentPoint;
         }
         private void ReturnControlsPosition()
         {
@@ -109,6 +126,18 @@ namespace VehicleServiceManagement
             currentPoint = ButtonSettings.Location;
             currentPoint.Y -= 180;
             ButtonSettings.Location = currentPoint;
+
+            currentPoint = ButtonAdd.Location;
+            currentPoint.X -= 320;
+            ButtonAdd.Location = currentPoint;
+
+            currentPoint = ButtonDelete.Location;
+            currentPoint.X -= 320;
+            ButtonDelete.Location = currentPoint;
+
+            currentPoint = ButtonEdit.Location;
+            currentPoint.X -= 320;
+            ButtonEdit.Location = currentPoint;
         }
 
         private void ButtonMinimize_Click(object sender, EventArgs e)
@@ -162,39 +191,47 @@ namespace VehicleServiceManagement
         private void ButtonEdit_Click_1(object sender, EventArgs e)
         {
             TextBoxName.Enabled = true;
-            ТextBoxFamily.Enabled = true;
+            TextBoxLastName.Enabled = true;
             TextBoxPhoneNumber.Enabled = true;
             ButtonSave.Enabled = true;
             ButtonCancel.Enabled = true;
             TextBoxNickname.Enabled = true;
+
+            oldName = TextBoxName.Text;
+            oldLastName = TextBoxLastName.Text;
+            oldPhoneNumber = TextBoxPhoneNumber.Text;
+            oldNickname = TextBoxNickname.Text;
         }
 
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
             TextBoxName.Enabled = false;
-            ТextBoxFamily.Enabled = false;
+            TextBoxLastName.Enabled = false;
             TextBoxPhoneNumber.Enabled = false;
             TextBoxNickname.Enabled = false;
             ButtonSave.Enabled = false;
             ButtonCancel.Enabled = false;
 
-            Clear();
+            TextBoxName.Text = oldName;
+            TextBoxLastName.Text = oldLastName;
+            TextBoxPhoneNumber.Text = oldPhoneNumber;
+            TextBoxNickname.Text = oldNickname;
         }
 
         private void Clear()
         {
             TextBoxPhoneNumber.Text = string.Empty;
             TextBoxName.Text = string.Empty;
-            ТextBoxFamily.Text = string.Empty;
+            TextBoxLastName.Text = string.Empty;
             TextBoxNickname.Text = string.Empty;
         }
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            if (TextBoxName.Text.Length > 0 && ТextBoxFamily.Text.Length > 0 && TextBoxPhoneNumber.Text.Length > 0)
+            if (TextBoxName.Text.Length > 0 && TextBoxLastName.Text.Length > 0 && TextBoxPhoneNumber.Text.Length > 0)
             {
                 string name = TextBoxName.Text;
-                string lastName = ТextBoxFamily.Text;
+                string lastName = TextBoxLastName.Text;
                 string phoneNumber = TextBoxPhoneNumber.Text;
                 string query;
                 SqlCommand command;
@@ -231,7 +268,11 @@ namespace VehicleServiceManagement
                     }
 
                     connection.Close();
-
+                    Clear();
+                    TextBoxName.Enabled = true;
+                    TextBoxLastName.Enabled = true;
+                    TextBoxPhoneNumber.Enabled = true;
+                    TextBoxNickname.Enabled = true;
                     FillClientsTable();
                 }
                 else
@@ -240,7 +281,7 @@ namespace VehicleServiceManagement
                     Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning, 3000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
                     Clear();
                     TextBoxName.Enabled = true;
-                    ТextBoxFamily.Enabled = true;
+                    TextBoxLastName.Enabled = true;
                     TextBoxPhoneNumber.Enabled = true;
                     TextBoxNickname.Enabled = true;
                 }
@@ -332,13 +373,13 @@ namespace VehicleServiceManagement
 
         private void DataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             int rowIndex = e.RowIndex;
             int colIndex = e.ColumnIndex;
             if (DataGridViewClients.Columns[colIndex].Name == "Get")
             {
                 TextBoxName.Enabled = false;
-                ТextBoxFamily.Enabled = false;
+                TextBoxLastName.Enabled = false;
                 TextBoxPhoneNumber.Enabled = false;
                 TextBoxNickname.Enabled = false;
                 ButtonEdit.Enabled = true;
@@ -350,7 +391,7 @@ namespace VehicleServiceManagement
                 string phoneNumber = DataGridViewClients.Rows[rowIndex].Cells[3].Value.ToString();
 
                 TextBoxName.Text = name;
-                ТextBoxFamily.Text = fullName;
+                TextBoxLastName.Text = fullName;
                 TextBoxPhoneNumber.Text = phoneNumber;
                 TextBoxNickname.Text = nickname;
                 currentPhoneNumber = phoneNumber;
@@ -360,7 +401,7 @@ namespace VehicleServiceManagement
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
             string name = TextBoxName.Text;
-            string lastName = ТextBoxFamily.Text;
+            string lastName = TextBoxLastName.Text;
             string phoneNumber = TextBoxPhoneNumber.Text;
 
             AlertBox alertBox = new AlertBox();
@@ -380,22 +421,91 @@ namespace VehicleServiceManagement
             Clear();
 
 
+
             string name = TextBoxName.Text;
-            string lastName = ТextBoxFamily.Text;
+            string lastName = TextBoxLastName.Text;
             string phoneNumber = TextBoxPhoneNumber.Text;
 
             Notification.Show(this, $"Успешно изтрит клиент: {name} {lastName} | {phoneNumber}",
             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
 
         }
-
-        private void DataGridViewClients_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        public void EditUser()
         {
+            string currentName = TextBoxName.Text;
+            string currentLastName = TextBoxLastName.Text;
+            string currentPhoneNumber = TextBoxPhoneNumber.Text;
+            string currentNickname = TextBoxNickname.Text;
+
+            SqlConnection connection = new SqlConnection(currentConnectionString);
+            connection.Open();
+
+            string query = "UPDATE Clients SET FirstName = '"+currentName+"', LastName = '"+currentLastName+"', PhoneNumber = '"+currentPhoneNumber+"', Nickname = '"+currentNickname+"' WHERE PhoneNumber = '"+oldPhoneNumber+"';";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+            FillClientsTable();
+
+            TextBoxName.Enabled = false;
+            TextBoxLastName.Enabled = false;
+            TextBoxPhoneNumber.Enabled = false;
+            TextBoxNickname.Enabled = false;
+
+            Notification.Show(this, $"Данните са успешно променени!",
+            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 4000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
 
         }
 
-        private void Timer_Tick(object sender, EventArgs e)
+        private void ButtonSave_Click(object sender, EventArgs e)
         {
+            if (TextBoxName.Text.Length > 0 && TextBoxLastName.Text.Length > 0 && TextBoxPhoneNumber.Text.Length > 0)
+            {
+                string currentName = TextBoxName.Text;
+                string currentLastName = TextBoxLastName.Text;
+                string currentPhoneNumber = TextBoxPhoneNumber.Text;
+                string currentNickname = TextBoxNickname.Text;
+                string text = String.Empty;
+
+                AlertBoxEditClient box = new AlertBoxEditClient();
+                if (oldNickname.Length > 0)
+                {
+                    if (currentNickname.Length > 0)
+                    {
+                        text = $"Искате ли да приложите следните промени:{Environment.NewLine}Текущи данни:   {oldName} {oldLastName} {oldNickname} {oldPhoneNumber}{Environment.NewLine}Променени данни: {currentName} {currentLastName} {currentNickname} {currentPhoneNumber}";
+                    }
+                    else
+                    {
+                        text = $"Искате ли да приложите следните промени:{Environment.NewLine}Текущи данни:   {oldName} {oldLastName} {oldNickname} {oldPhoneNumber}{Environment.NewLine}Променени данни: {currentName} {currentLastName} {currentPhoneNumber}";
+
+                    }
+                }
+                else
+                {
+                    if (currentNickname.Length > 0)
+                    {
+                        text = $"Искате ли да приложите следните промени:{Environment.NewLine}Текущи данни:   {oldName} {oldLastName} {oldPhoneNumber}{Environment.NewLine}Променени данни: {currentName} {currentLastName} {currentNickname} {currentPhoneNumber}";
+                    }
+                    else
+                    {
+
+                        text = $"Искате ли да приложите следните промени:{Environment.NewLine}Текущи данни: {oldName} {oldLastName} {oldPhoneNumber}{Environment.NewLine}Променени данни: {currentName} {currentLastName} {currentPhoneNumber}";
+
+                    }
+                }
+                box.EditUser(text, this);
+
+
+            }
+            else
+            {
+                Notification.Show(this, "Моля попълнете всички данни!",
+               Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning, 3000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+            }
+        }
+
+        private void ТextBoxLastName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

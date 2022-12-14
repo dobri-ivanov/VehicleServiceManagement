@@ -40,5 +40,10 @@ namespace VehicleServiceManagement
             LabelText.Text = text;
             this.Show();
         }
+
+        private void LabelText_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

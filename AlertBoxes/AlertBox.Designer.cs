@@ -31,8 +31,8 @@ namespace VehicleServiceManagement
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlertBox));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.LabelCurrentText = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.AlerBoxDragPanel = new Bunifu.UI.WinForms.BunifuPanel();
@@ -169,6 +169,7 @@ namespace VehicleServiceManagement
             this.LabelText.Text = "Сигурни ли сте, че искате да изтриете клиент: Иван Иванов / 0887446787";
             this.LabelText.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelText.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.LabelText.Click += new System.EventHandler(this.LabelText_Click);
             // 
             // ButtonNo
             // 
@@ -189,11 +190,11 @@ namespace VehicleServiceManagement
             this.ButtonNo.ColorContrastOnClick = 45;
             this.ButtonNo.ColorContrastOnHover = 45;
             this.ButtonNo.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.ButtonNo.CustomizableEdges = borderEdges5;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.ButtonNo.CustomizableEdges = borderEdges1;
             this.ButtonNo.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ButtonNo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ButtonNo.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -279,11 +280,11 @@ namespace VehicleServiceManagement
             this.ButtonYes.ColorContrastOnClick = 45;
             this.ButtonYes.ColorContrastOnHover = 45;
             this.ButtonYes.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.ButtonYes.CustomizableEdges = borderEdges6;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.ButtonYes.CustomizableEdges = borderEdges2;
             this.ButtonYes.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ButtonYes.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ButtonYes.DisabledFillColor = System.Drawing.Color.White;
@@ -367,6 +368,7 @@ namespace VehicleServiceManagement
             this.Name = "AlertBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AlertBox";
+            this.TopMost = true;
             this.bunifuPanel1.ResumeLayout(false);
             this.AlerBoxDragPanel.ResumeLayout(false);
             this.ResumeLayout(false);

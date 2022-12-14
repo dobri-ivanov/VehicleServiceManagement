@@ -137,6 +137,7 @@ namespace VehicleServiceManagement
             this.LabelText.AllowParentOverrides = false;
             this.LabelText.AutoEllipsis = false;
             this.LabelText.AutoSize = false;
+            this.LabelText.CausesValidation = false;
             this.LabelText.Cursor = System.Windows.Forms.Cursors.Default;
             this.LabelText.CursorType = System.Windows.Forms.Cursors.Default;
             this.LabelText.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
@@ -238,6 +239,7 @@ namespace VehicleServiceManagement
             this.ButtonNo.TextMarginLeft = 0;
             this.ButtonNo.TextPadding = new System.Windows.Forms.Padding(0);
             this.ButtonNo.UseDefaultRadiusAndThickness = true;
+            this.ButtonNo.Click += new System.EventHandler(this.ButtonNo_Click);
             // 
             // ButtonYes
             // 
@@ -327,6 +329,7 @@ namespace VehicleServiceManagement
             this.ButtonYes.TextMarginLeft = 0;
             this.ButtonYes.TextPadding = new System.Windows.Forms.Padding(0);
             this.ButtonYes.UseDefaultRadiusAndThickness = true;
+            this.ButtonYes.Click += new System.EventHandler(this.ButtonYes_Click);
             // 
             // AlertBoxEditClient
             // 
@@ -338,6 +341,7 @@ namespace VehicleServiceManagement
             this.Name = "AlertBoxEditClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AlertBoxEditClient";
+            this.TopMost = true;
             this.bunifuPanel1.ResumeLayout(false);
             this.AlerBoxDragPanel.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -12,9 +12,11 @@ namespace VehicleServiceManagement
 {
     public partial class AlertBoxEditClient : Form
     {
+        private Main mainForm;
         public AlertBoxEditClient()
         {
             InitializeComponent();
+            this.Hide();
         }
 
         private void bunifuLabel1_Click(object sender, EventArgs e)
@@ -24,7 +26,24 @@ namespace VehicleServiceManagement
 
         private void ButtonClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+        }
+        public void EditUser(string text, Main main)
+        {
+            mainForm = main;
+            LabelText.Text = text;
+            this.Show();
+        }
+
+        private void ButtonYes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainForm.EditUser();
+        }
+
+        private void ButtonNo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
