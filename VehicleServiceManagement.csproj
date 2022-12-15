@@ -154,10 +154,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlertBoxEditClient.cs">
+    <Compile Include="AlertBoxes\AlertBoxEditClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlertBoxEditClient.Designer.cs">
+    <Compile Include="AlertBoxes\AlertBoxEditClient.Designer.cs">
       <DependentUpon>AlertBoxEditClient.cs</DependentUpon>
     </Compile>
     <Compile Include="AlertBoxes\AlertBox.cs">
@@ -193,7 +193,7 @@
     <Compile Include="SplashScreen\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AlertBoxEditClient.resx">
+    <EmbeddedResource Include="AlertBoxes\AlertBoxEditClient.resx">
       <DependentUpon>AlertBoxEditClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AlertBoxes\AlertBox.resx">

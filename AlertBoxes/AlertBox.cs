@@ -21,7 +21,7 @@ namespace VehicleServiceManagement
 
         private void ButtonClose_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void ButtonYes_Click(object sender, EventArgs e)

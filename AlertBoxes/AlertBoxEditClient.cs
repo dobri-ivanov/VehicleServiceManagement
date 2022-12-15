@@ -26,7 +26,7 @@ namespace VehicleServiceManagement
 
         private void ButtonClose_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
         public void EditUser(string text, Main main)
         {
