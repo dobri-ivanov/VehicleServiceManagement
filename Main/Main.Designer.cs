@@ -96,6 +96,7 @@ namespace VehicleServiceManagement
             this.LabelTitle = new Bunifu.UI.WinForms.BunifuLabel();
             this.TextBoxSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.DataGridViewClients = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.Get = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Home = new System.Windows.Forms.TabPage();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.Vehicles = new System.Windows.Forms.TabPage();
@@ -115,12 +116,14 @@ namespace VehicleServiceManagement
             this.PanelUser = new Bunifu.UI.WinForms.BunifuPanel();
             this.LabelUserName = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBoxUserAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.Get = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nicknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.LabelCountClientsValue = new Bunifu.UI.WinForms.BunifuLabel();
             this.ControlPanel.SuspendLayout();
             this.MainPages.SuspendLayout();
             this.Clients.SuspendLayout();
@@ -132,6 +135,7 @@ namespace VehicleServiceManagement
             this.PanelButtons.SuspendLayout();
             this.PanelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).BeginInit();
+            this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -269,8 +273,8 @@ namespace VehicleServiceManagement
             // 
             this.MainPages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.MainPages.AllowTransitions = true;
-            this.MainPages.Controls.Add(this.Clients);
             this.MainPages.Controls.Add(this.Home);
+            this.MainPages.Controls.Add(this.Clients);
             this.MainPages.Controls.Add(this.Vehicles);
             this.MainPages.Controls.Add(this.Raports);
             this.MainPages.Controls.Add(this.Calendar);
@@ -279,10 +283,10 @@ namespace VehicleServiceManagement
             this.MainPages.Margin = new System.Windows.Forms.Padding(0);
             this.MainPages.Multiline = true;
             this.MainPages.Name = "MainPages";
-            this.MainPages.Page = this.Clients;
+            this.MainPages.Page = this.Home;
             this.MainPages.PageIndex = 0;
-            this.MainPages.PageName = "Clients";
-            this.MainPages.PageTitle = "Clients";
+            this.MainPages.PageName = "Home";
+            this.MainPages.PageTitle = "Home";
             this.MainPages.SelectedIndex = 0;
             this.MainPages.Size = new System.Drawing.Size(1354, 838);
             this.MainPages.TabIndex = 3;
@@ -1530,9 +1534,24 @@ namespace VehicleServiceManagement
             this.DataGridViewClients.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             this.DataGridViewClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewClients_CellContentClick);
             // 
+            // Get
+            // 
+            this.Get.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Get.FillWeight = 25.38071F;
+            this.Get.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Get.HeaderText = "";
+            this.Get.Name = "Get";
+            this.Get.ReadOnly = true;
+            this.Get.Text = "➕";
+            this.Get.ToolTipText = "Избери клиент";
+            this.Get.UseColumnTextForButtonValue = true;
+            this.Get.Width = 50;
+            // 
             // Home
             // 
             this.Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.Home.Controls.Add(this.bunifuLabel8);
+            this.Home.Controls.Add(this.bunifuPanel1);
             this.Home.Controls.Add(this.bunifuLabel2);
             this.Home.Location = new System.Drawing.Point(4, 4);
             this.Home.Name = "Home";
@@ -2316,18 +2335,20 @@ namespace VehicleServiceManagement
             this.PictureBoxUserAvatar.TabStop = false;
             this.PictureBoxUserAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // Get
+            // bunifuPanel1
             // 
-            this.Get.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Get.FillWeight = 25.38071F;
-            this.Get.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Get.HeaderText = "";
-            this.Get.Name = "Get";
-            this.Get.ReadOnly = true;
-            this.Get.Text = "➕";
-            this.Get.ToolTipText = "Избери клиент";
-            this.Get.UseColumnTextForButtonValue = true;
-            this.Get.Width = 50;
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.White;
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.LabelCountClientsValue);
+            this.bunifuPanel1.Location = new System.Drawing.Point(57, 161);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(185, 124);
+            this.bunifuPanel1.TabIndex = 2;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -2378,6 +2399,39 @@ namespace VehicleServiceManagement
             // 
             this.clientBindingSource.DataSource = typeof(VehicleServiceManagement.Client);
             // 
+            // bunifuLabel8
+            // 
+            this.bunifuLabel8.AllowParentOverrides = false;
+            this.bunifuLabel8.AutoEllipsis = false;
+            this.bunifuLabel8.CursorType = null;
+            this.bunifuLabel8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel8.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel8.Location = new System.Drawing.Point(66, 116);
+            this.bunifuLabel8.Name = "bunifuLabel8";
+            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel8.Size = new System.Drawing.Size(163, 38);
+            this.bunifuLabel8.TabIndex = 3;
+            this.bunifuLabel8.Text = "Брой клиенти";
+            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // LabelCountClientsValue
+            // 
+            this.LabelCountClientsValue.AllowParentOverrides = false;
+            this.LabelCountClientsValue.AutoEllipsis = false;
+            this.LabelCountClientsValue.AutoSize = false;
+            this.LabelCountClientsValue.CursorType = null;
+            this.LabelCountClientsValue.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.LabelCountClientsValue.ForeColor = System.Drawing.Color.White;
+            this.LabelCountClientsValue.Location = new System.Drawing.Point(3, 25);
+            this.LabelCountClientsValue.Name = "LabelCountClientsValue";
+            this.LabelCountClientsValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelCountClientsValue.Size = new System.Drawing.Size(179, 75);
+            this.LabelCountClientsValue.TabIndex = 4;
+            this.LabelCountClientsValue.Text = "5426";
+            this.LabelCountClientsValue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelCountClientsValue.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2408,6 +2462,7 @@ namespace VehicleServiceManagement
             this.PanelButtons.PerformLayout();
             this.PanelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).EndInit();
+            this.bunifuPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -2468,5 +2523,8 @@ namespace VehicleServiceManagement
         private System.Windows.Forms.DataGridViewTextBoxColumn nicknameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Get;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
+        private Bunifu.UI.WinForms.BunifuLabel LabelCountClientsValue;
     }
 }
