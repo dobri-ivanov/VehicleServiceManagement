@@ -187,6 +187,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchVehicle.Designer.cs">
+      <DependentUpon>SearchVehicle.cs</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SearchVehicle.resx">
+      <DependentUpon>SearchVehicle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>

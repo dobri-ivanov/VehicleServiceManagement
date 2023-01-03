@@ -80,7 +80,7 @@ namespace VehicleServiceManagement
             this.ButtonEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ButtonDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ShadowPanelCurrentClient = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.ButtonClientVehicles = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.ButtonCurrentClientVehicles = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.TextBoxNickname = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -98,6 +98,9 @@ namespace VehicleServiceManagement
             this.DataGridViewClients = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Get = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Home = new System.Windows.Forms.TabPage();
+            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.LabelCountClientsValue = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.Vehicles = new System.Windows.Forms.TabPage();
             this.Raports = new System.Windows.Forms.TabPage();
@@ -116,14 +119,11 @@ namespace VehicleServiceManagement
             this.PanelUser = new Bunifu.UI.WinForms.BunifuPanel();
             this.LabelUserName = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBoxUserAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nicknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.LabelCountClientsValue = new Bunifu.UI.WinForms.BunifuLabel();
             this.ControlPanel.SuspendLayout();
             this.MainPages.SuspendLayout();
             this.Clients.SuspendLayout();
@@ -131,11 +131,11 @@ namespace VehicleServiceManagement
             this.ShadowPanelCurrentClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).BeginInit();
             this.Home.SuspendLayout();
+            this.bunifuPanel1.SuspendLayout();
             this.Settings.SuspendLayout();
             this.PanelButtons.SuspendLayout();
             this.PanelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).BeginInit();
-            this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -273,8 +273,8 @@ namespace VehicleServiceManagement
             // 
             this.MainPages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.MainPages.AllowTransitions = true;
-            this.MainPages.Controls.Add(this.Home);
             this.MainPages.Controls.Add(this.Clients);
+            this.MainPages.Controls.Add(this.Home);
             this.MainPages.Controls.Add(this.Vehicles);
             this.MainPages.Controls.Add(this.Raports);
             this.MainPages.Controls.Add(this.Calendar);
@@ -283,10 +283,10 @@ namespace VehicleServiceManagement
             this.MainPages.Margin = new System.Windows.Forms.Padding(0);
             this.MainPages.Multiline = true;
             this.MainPages.Name = "MainPages";
-            this.MainPages.Page = this.Home;
+            this.MainPages.Page = this.Clients;
             this.MainPages.PageIndex = 0;
-            this.MainPages.PageName = "Home";
-            this.MainPages.PageTitle = "Home";
+            this.MainPages.PageName = "Clients";
+            this.MainPages.PageTitle = "Clients";
             this.MainPages.SelectedIndex = 0;
             this.MainPages.Size = new System.Drawing.Size(1354, 838);
             this.MainPages.TabIndex = 3;
@@ -655,7 +655,7 @@ namespace VehicleServiceManagement
             this.ShadowPanelCurrentClient.BorderColor = System.Drawing.Color.Black;
             this.ShadowPanelCurrentClient.BorderRadius = 1;
             this.ShadowPanelCurrentClient.BorderThickness = 1;
-            this.ShadowPanelCurrentClient.Controls.Add(this.ButtonClientVehicles);
+            this.ShadowPanelCurrentClient.Controls.Add(this.ButtonCurrentClientVehicles);
             this.ShadowPanelCurrentClient.Controls.Add(this.bunifuLabel7);
             this.ShadowPanelCurrentClient.Controls.Add(this.TextBoxNickname);
             this.ShadowPanelCurrentClient.Controls.Add(this.bunifuLabel6);
@@ -683,95 +683,96 @@ namespace VehicleServiceManagement
             this.ShadowPanelCurrentClient.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.ShadowPanelCurrentClient.TabIndex = 5;
             // 
-            // ButtonClientVehicles
+            // ButtonCurrentClientVehicles
             // 
-            this.ButtonClientVehicles.AllowAnimations = true;
-            this.ButtonClientVehicles.AllowMouseEffects = true;
-            this.ButtonClientVehicles.AllowToggling = false;
-            this.ButtonClientVehicles.AnimationSpeed = 200;
-            this.ButtonClientVehicles.AutoGenerateColors = false;
-            this.ButtonClientVehicles.AutoRoundBorders = false;
-            this.ButtonClientVehicles.AutoSizeLeftIcon = true;
-            this.ButtonClientVehicles.AutoSizeRightIcon = true;
-            this.ButtonClientVehicles.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonClientVehicles.BackColor1 = System.Drawing.Color.DarkCyan;
-            this.ButtonClientVehicles.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonClientVehicles.BackgroundImage")));
-            this.ButtonClientVehicles.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ButtonClientVehicles.ButtonText = "АВТОМОБИЛИ";
-            this.ButtonClientVehicles.ButtonTextMarginLeft = 0;
-            this.ButtonClientVehicles.ColorContrastOnClick = 45;
-            this.ButtonClientVehicles.ColorContrastOnHover = 45;
-            this.ButtonClientVehicles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonCurrentClientVehicles.AllowAnimations = true;
+            this.ButtonCurrentClientVehicles.AllowMouseEffects = true;
+            this.ButtonCurrentClientVehicles.AllowToggling = false;
+            this.ButtonCurrentClientVehicles.AnimationSpeed = 200;
+            this.ButtonCurrentClientVehicles.AutoGenerateColors = false;
+            this.ButtonCurrentClientVehicles.AutoRoundBorders = false;
+            this.ButtonCurrentClientVehicles.AutoSizeLeftIcon = true;
+            this.ButtonCurrentClientVehicles.AutoSizeRightIcon = true;
+            this.ButtonCurrentClientVehicles.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonCurrentClientVehicles.BackColor1 = System.Drawing.Color.DarkCyan;
+            this.ButtonCurrentClientVehicles.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonCurrentClientVehicles.BackgroundImage")));
+            this.ButtonCurrentClientVehicles.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonCurrentClientVehicles.ButtonText = "АВТОМОБИЛИ";
+            this.ButtonCurrentClientVehicles.ButtonTextMarginLeft = 0;
+            this.ButtonCurrentClientVehicles.ColorContrastOnClick = 45;
+            this.ButtonCurrentClientVehicles.ColorContrastOnHover = 45;
+            this.ButtonCurrentClientVehicles.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges4.BottomLeft = true;
             borderEdges4.BottomRight = true;
             borderEdges4.TopLeft = true;
             borderEdges4.TopRight = true;
-            this.ButtonClientVehicles.CustomizableEdges = borderEdges4;
-            this.ButtonClientVehicles.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.ButtonClientVehicles.DisabledBorderColor = System.Drawing.Color.Black;
-            this.ButtonClientVehicles.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ButtonClientVehicles.DisabledForecolor = System.Drawing.Color.White;
-            this.ButtonClientVehicles.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.ButtonClientVehicles.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.ButtonClientVehicles.ForeColor = System.Drawing.Color.White;
-            this.ButtonClientVehicles.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonClientVehicles.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonClientVehicles.IconLeftPadding = new System.Windows.Forms.Padding(9, 3, 3, 3);
-            this.ButtonClientVehicles.IconMarginLeft = 11;
-            this.ButtonClientVehicles.IconPadding = 7;
-            this.ButtonClientVehicles.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ButtonClientVehicles.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonClientVehicles.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.ButtonClientVehicles.IconSize = 25;
-            this.ButtonClientVehicles.IdleBorderColor = System.Drawing.Color.Black;
-            this.ButtonClientVehicles.IdleBorderRadius = 30;
-            this.ButtonClientVehicles.IdleBorderThickness = 1;
-            this.ButtonClientVehicles.IdleFillColor = System.Drawing.Color.DarkCyan;
-            this.ButtonClientVehicles.IdleIconLeftImage = global::VehicleServiceManagement.Properties.Resources.car;
-            this.ButtonClientVehicles.IdleIconRightImage = null;
-            this.ButtonClientVehicles.IndicateFocus = false;
-            this.ButtonClientVehicles.Location = new System.Drawing.Point(41, 452);
-            this.ButtonClientVehicles.Name = "ButtonClientVehicles";
-            this.ButtonClientVehicles.OnDisabledState.BorderColor = System.Drawing.Color.Black;
-            this.ButtonClientVehicles.OnDisabledState.BorderRadius = 30;
-            this.ButtonClientVehicles.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ButtonClientVehicles.OnDisabledState.BorderThickness = 1;
-            this.ButtonClientVehicles.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ButtonClientVehicles.OnDisabledState.ForeColor = System.Drawing.Color.White;
-            this.ButtonClientVehicles.OnDisabledState.IconLeftImage = null;
-            this.ButtonClientVehicles.OnDisabledState.IconRightImage = null;
-            this.ButtonClientVehicles.onHoverState.BorderColor = System.Drawing.Color.Black;
-            this.ButtonClientVehicles.onHoverState.BorderRadius = 30;
-            this.ButtonClientVehicles.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ButtonClientVehicles.onHoverState.BorderThickness = 1;
-            this.ButtonClientVehicles.onHoverState.FillColor = System.Drawing.Color.Gray;
-            this.ButtonClientVehicles.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.ButtonClientVehicles.onHoverState.IconLeftImage = null;
-            this.ButtonClientVehicles.onHoverState.IconRightImage = null;
-            this.ButtonClientVehicles.OnIdleState.BorderColor = System.Drawing.Color.Black;
-            this.ButtonClientVehicles.OnIdleState.BorderRadius = 30;
-            this.ButtonClientVehicles.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ButtonClientVehicles.OnIdleState.BorderThickness = 1;
-            this.ButtonClientVehicles.OnIdleState.FillColor = System.Drawing.Color.DarkCyan;
-            this.ButtonClientVehicles.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.ButtonClientVehicles.OnIdleState.IconLeftImage = global::VehicleServiceManagement.Properties.Resources.car;
-            this.ButtonClientVehicles.OnIdleState.IconRightImage = null;
-            this.ButtonClientVehicles.OnPressedState.BorderColor = System.Drawing.Color.Black;
-            this.ButtonClientVehicles.OnPressedState.BorderRadius = 30;
-            this.ButtonClientVehicles.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ButtonClientVehicles.OnPressedState.BorderThickness = 1;
-            this.ButtonClientVehicles.OnPressedState.FillColor = System.Drawing.Color.DarkCyan;
-            this.ButtonClientVehicles.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.ButtonClientVehicles.OnPressedState.IconLeftImage = null;
-            this.ButtonClientVehicles.OnPressedState.IconRightImage = null;
-            this.ButtonClientVehicles.Size = new System.Drawing.Size(220, 44);
-            this.ButtonClientVehicles.TabIndex = 9;
-            this.ButtonClientVehicles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ButtonClientVehicles.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ButtonClientVehicles.TextMarginLeft = 0;
-            this.ButtonClientVehicles.TextPadding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ButtonClientVehicles.UseDefaultRadiusAndThickness = true;
-            this.ButtonClientVehicles.Click += new System.EventHandler(this.bunifuButton1_Click);
+            this.ButtonCurrentClientVehicles.CustomizableEdges = borderEdges4;
+            this.ButtonCurrentClientVehicles.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ButtonCurrentClientVehicles.DisabledBorderColor = System.Drawing.Color.Black;
+            this.ButtonCurrentClientVehicles.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ButtonCurrentClientVehicles.DisabledForecolor = System.Drawing.Color.White;
+            this.ButtonCurrentClientVehicles.Enabled = false;
+            this.ButtonCurrentClientVehicles.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.ButtonCurrentClientVehicles.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.ButtonCurrentClientVehicles.ForeColor = System.Drawing.Color.White;
+            this.ButtonCurrentClientVehicles.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonCurrentClientVehicles.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonCurrentClientVehicles.IconLeftPadding = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.ButtonCurrentClientVehicles.IconMarginLeft = 11;
+            this.ButtonCurrentClientVehicles.IconPadding = 7;
+            this.ButtonCurrentClientVehicles.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonCurrentClientVehicles.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonCurrentClientVehicles.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.ButtonCurrentClientVehicles.IconSize = 25;
+            this.ButtonCurrentClientVehicles.IdleBorderColor = System.Drawing.Color.Black;
+            this.ButtonCurrentClientVehicles.IdleBorderRadius = 30;
+            this.ButtonCurrentClientVehicles.IdleBorderThickness = 1;
+            this.ButtonCurrentClientVehicles.IdleFillColor = System.Drawing.Color.DarkCyan;
+            this.ButtonCurrentClientVehicles.IdleIconLeftImage = global::VehicleServiceManagement.Properties.Resources.car;
+            this.ButtonCurrentClientVehicles.IdleIconRightImage = null;
+            this.ButtonCurrentClientVehicles.IndicateFocus = false;
+            this.ButtonCurrentClientVehicles.Location = new System.Drawing.Point(41, 452);
+            this.ButtonCurrentClientVehicles.Name = "ButtonCurrentClientVehicles";
+            this.ButtonCurrentClientVehicles.OnDisabledState.BorderColor = System.Drawing.Color.Black;
+            this.ButtonCurrentClientVehicles.OnDisabledState.BorderRadius = 30;
+            this.ButtonCurrentClientVehicles.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonCurrentClientVehicles.OnDisabledState.BorderThickness = 1;
+            this.ButtonCurrentClientVehicles.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ButtonCurrentClientVehicles.OnDisabledState.ForeColor = System.Drawing.Color.White;
+            this.ButtonCurrentClientVehicles.OnDisabledState.IconLeftImage = null;
+            this.ButtonCurrentClientVehicles.OnDisabledState.IconRightImage = null;
+            this.ButtonCurrentClientVehicles.onHoverState.BorderColor = System.Drawing.Color.Black;
+            this.ButtonCurrentClientVehicles.onHoverState.BorderRadius = 30;
+            this.ButtonCurrentClientVehicles.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonCurrentClientVehicles.onHoverState.BorderThickness = 1;
+            this.ButtonCurrentClientVehicles.onHoverState.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.ButtonCurrentClientVehicles.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.ButtonCurrentClientVehicles.onHoverState.IconLeftImage = null;
+            this.ButtonCurrentClientVehicles.onHoverState.IconRightImage = null;
+            this.ButtonCurrentClientVehicles.OnIdleState.BorderColor = System.Drawing.Color.Black;
+            this.ButtonCurrentClientVehicles.OnIdleState.BorderRadius = 30;
+            this.ButtonCurrentClientVehicles.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonCurrentClientVehicles.OnIdleState.BorderThickness = 1;
+            this.ButtonCurrentClientVehicles.OnIdleState.FillColor = System.Drawing.Color.DarkCyan;
+            this.ButtonCurrentClientVehicles.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.ButtonCurrentClientVehicles.OnIdleState.IconLeftImage = global::VehicleServiceManagement.Properties.Resources.car;
+            this.ButtonCurrentClientVehicles.OnIdleState.IconRightImage = null;
+            this.ButtonCurrentClientVehicles.OnPressedState.BorderColor = System.Drawing.Color.Black;
+            this.ButtonCurrentClientVehicles.OnPressedState.BorderRadius = 30;
+            this.ButtonCurrentClientVehicles.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonCurrentClientVehicles.OnPressedState.BorderThickness = 1;
+            this.ButtonCurrentClientVehicles.OnPressedState.FillColor = System.Drawing.Color.DarkCyan;
+            this.ButtonCurrentClientVehicles.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.ButtonCurrentClientVehicles.OnPressedState.IconLeftImage = null;
+            this.ButtonCurrentClientVehicles.OnPressedState.IconRightImage = null;
+            this.ButtonCurrentClientVehicles.Size = new System.Drawing.Size(220, 44);
+            this.ButtonCurrentClientVehicles.TabIndex = 9;
+            this.ButtonCurrentClientVehicles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ButtonCurrentClientVehicles.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ButtonCurrentClientVehicles.TextMarginLeft = 0;
+            this.ButtonCurrentClientVehicles.TextPadding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.ButtonCurrentClientVehicles.UseDefaultRadiusAndThickness = true;
+            this.ButtonCurrentClientVehicles.Click += new System.EventHandler(this.ButtonCurrentClientVehicles_Click);
             // 
             // bunifuLabel7
             // 
@@ -1560,6 +1561,54 @@ namespace VehicleServiceManagement
             this.Home.TabIndex = 0;
             this.Home.Text = "Home";
             // 
+            // bunifuLabel8
+            // 
+            this.bunifuLabel8.AllowParentOverrides = false;
+            this.bunifuLabel8.AutoEllipsis = false;
+            this.bunifuLabel8.CursorType = null;
+            this.bunifuLabel8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel8.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel8.Location = new System.Drawing.Point(66, 116);
+            this.bunifuLabel8.Name = "bunifuLabel8";
+            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel8.Size = new System.Drawing.Size(163, 33);
+            this.bunifuLabel8.TabIndex = 3;
+            this.bunifuLabel8.Text = "Брой клиенти";
+            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.White;
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.LabelCountClientsValue);
+            this.bunifuPanel1.Location = new System.Drawing.Point(57, 161);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(185, 124);
+            this.bunifuPanel1.TabIndex = 2;
+            // 
+            // LabelCountClientsValue
+            // 
+            this.LabelCountClientsValue.AllowParentOverrides = false;
+            this.LabelCountClientsValue.AutoEllipsis = false;
+            this.LabelCountClientsValue.AutoSize = false;
+            this.LabelCountClientsValue.CursorType = null;
+            this.LabelCountClientsValue.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.LabelCountClientsValue.ForeColor = System.Drawing.Color.White;
+            this.LabelCountClientsValue.Location = new System.Drawing.Point(3, 25);
+            this.LabelCountClientsValue.Name = "LabelCountClientsValue";
+            this.LabelCountClientsValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelCountClientsValue.Size = new System.Drawing.Size(179, 75);
+            this.LabelCountClientsValue.TabIndex = 4;
+            this.LabelCountClientsValue.Text = "5426";
+            this.LabelCountClientsValue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelCountClientsValue.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // bunifuLabel2
             // 
             this.bunifuLabel2.AllowParentOverrides = false;
@@ -2335,21 +2384,6 @@ namespace VehicleServiceManagement
             this.PictureBoxUserAvatar.TabStop = false;
             this.PictureBoxUserAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.LabelCountClientsValue);
-            this.bunifuPanel1.Location = new System.Drawing.Point(57, 161);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(185, 124);
-            this.bunifuPanel1.TabIndex = 2;
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -2399,39 +2433,6 @@ namespace VehicleServiceManagement
             // 
             this.clientBindingSource.DataSource = typeof(VehicleServiceManagement.Client);
             // 
-            // bunifuLabel8
-            // 
-            this.bunifuLabel8.AllowParentOverrides = false;
-            this.bunifuLabel8.AutoEllipsis = false;
-            this.bunifuLabel8.CursorType = null;
-            this.bunifuLabel8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel8.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel8.Location = new System.Drawing.Point(66, 116);
-            this.bunifuLabel8.Name = "bunifuLabel8";
-            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(163, 38);
-            this.bunifuLabel8.TabIndex = 3;
-            this.bunifuLabel8.Text = "Брой клиенти";
-            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // LabelCountClientsValue
-            // 
-            this.LabelCountClientsValue.AllowParentOverrides = false;
-            this.LabelCountClientsValue.AutoEllipsis = false;
-            this.LabelCountClientsValue.AutoSize = false;
-            this.LabelCountClientsValue.CursorType = null;
-            this.LabelCountClientsValue.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
-            this.LabelCountClientsValue.ForeColor = System.Drawing.Color.White;
-            this.LabelCountClientsValue.Location = new System.Drawing.Point(3, 25);
-            this.LabelCountClientsValue.Name = "LabelCountClientsValue";
-            this.LabelCountClientsValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelCountClientsValue.Size = new System.Drawing.Size(179, 75);
-            this.LabelCountClientsValue.TabIndex = 4;
-            this.LabelCountClientsValue.Text = "5426";
-            this.LabelCountClientsValue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelCountClientsValue.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2456,13 +2457,13 @@ namespace VehicleServiceManagement
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).EndInit();
             this.Home.ResumeLayout(false);
             this.Home.PerformLayout();
+            this.bunifuPanel1.ResumeLayout(false);
             this.Settings.ResumeLayout(false);
             this.Settings.PerformLayout();
             this.PanelButtons.ResumeLayout(false);
             this.PanelButtons.PerformLayout();
             this.PanelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).EndInit();
-            this.bunifuPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -2517,7 +2518,7 @@ namespace VehicleServiceManagement
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ButtonAdd;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ButtonEdit;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ButtonDelete;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton ButtonClientVehicles;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton ButtonCurrentClientVehicles;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nicknameDataGridViewTextBoxColumn;

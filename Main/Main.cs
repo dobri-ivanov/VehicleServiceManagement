@@ -24,7 +24,6 @@ namespace VehicleServiceManagement
         private bool isMaximized = false;
         private bool isMinimized = false;
         public string connectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
-        SqlConnection connection;
         public Main()
         {
             InitializeComponent();
@@ -245,11 +244,11 @@ namespace VehicleServiceManagement
                 if (!read.HasRows)
                 {
                     read.Close();
-                    query = "INSERT INTO Clients(FirstName, LastName, PhoneNumber) VALUES('" + name + "', '" + lastName + "', '" + phoneNumber + "')";
+                    query = "INSERT INTO Clients(FirstName, LastName, PhoneNumber) VALUES(N'" + name + "', N'" + lastName + "', '" + phoneNumber + "')";
                     if (TextBoxNickname.Text.Length > 0)
                     {
                         string nickname = TextBoxNickname.Text;
-                        query = "INSERT INTO Clients(FirstName, LastName, PhoneNumber, Nickname) VALUES('" + name + "', '" + lastName + "', '" + phoneNumber + "', '" + nickname + "')";
+                        query = "INSERT INTO Clients(FirstName, LastName, PhoneNumber, Nickname) VALUES(N'" + name + "', N'" + lastName + "', '" + phoneNumber + "', N'" + nickname + "')";
                     }
 
                     command = new SqlCommand(query, connection);
@@ -384,6 +383,7 @@ namespace VehicleServiceManagement
                 TextBoxNickname.Enabled = false;
                 ButtonEdit.Enabled = true;
                 ButtonDelete.Enabled = true;
+                ButtonCurrentClientVehicles.Enabled = true;
 
                 string name = DataGridViewClients.Rows[rowIndex].Cells[0].Value.ToString();
                 string fullName = DataGridViewClients.Rows[rowIndex].Cells[1].Value.ToString();
@@ -445,7 +445,7 @@ namespace VehicleServiceManagement
             SqlConnection connection = new SqlConnection(currentConnectionString);
             connection.Open();
 
-            string query = "UPDATE Clients SET FirstName = '"+currentName+"', LastName = '"+currentLastName+"', PhoneNumber = '"+currentPhoneNumber+"', Nickname = '"+currentNickname+"' WHERE PhoneNumber = '"+oldPhoneNumber+"';";
+            string query = "UPDATE Clients SET FirstName = N'"+currentName+"', LastName = N'"+currentLastName+"', PhoneNumber = '"+currentPhoneNumber+"', Nickname = N'"+currentNickname+"' WHERE PhoneNumber = '"+oldPhoneNumber+"';";
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
             connection.Close();
@@ -513,9 +513,27 @@ namespace VehicleServiceManagement
 
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
+        private void ButtonCurrentClientVehicles_Click(object sender, EventArgs e)
         {
+            int currentClientID = 0;
 
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string query = "SELECT * FROM Clients WHERE PhoneNumber = '"+currentPhoneNumber+"'";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader read = command.ExecuteReader();
+
+            while (read.Read())
+            {
+                currentClientID = int.Parse((read["ID"].ToString()));
+            }
+            read.Close();
+            connection.Close();
+
+            SearchVehicle sv = new SearchVehicle(currentClientID);
+            sv.Show();
+            
         }
     }
 }
