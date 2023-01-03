@@ -45,6 +45,40 @@ namespace VehicleServiceManagement
             connection.Close();
             string currentText = String.Format($"{firstName} {lastName} | {phoneNumber}");
             LabelClientData.Text = currentText;
+
+
+            connection.Open();
+            //DataGridViewVehicles.Rows.Clear();
+
+            read = (null);
+            query = "SELECT * FROM Vehicles WHERE ClientID = '"+currentClientId+"'";
+
+            command = new SqlCommand(query, connection);
+            read = command.ExecuteReader();
+
+            string make = String.Empty;
+            string model = String.Empty;
+            string year = String.Empty;
+            string capacity = String.Empty;
+            string hp = String.Empty;
+            string lp = String.Empty;
+
+            while (read.Read())
+            {
+                make = (read["Make"].ToString());
+                model = (read["Model"].ToString());
+                year = (read["Year"].ToString());
+                capacity = (read["Capаcity"].ToString());
+                hp = (read["HorsePower"].ToString());
+                lp = (read["LicensePlate"].ToString());
+
+                Vehicle vehicle = new Vehicle(make, model, year, capacity, hp, lp);
+
+                vehicleBindingSource.Add(vehicle);
+
+            }
+            read.Close();
+            connection.Close();
         }
 
         public SearchVehicle()
@@ -67,7 +101,22 @@ namespace VehicleServiceManagement
 
         }
 
-        private void DataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridViewVehicles_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void SearchVehicle_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonCloseApplication_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bunifuPanel1_Click(object sender, EventArgs e)
         {
 
         }

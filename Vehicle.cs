@@ -22,6 +22,15 @@ namespace VehicleServiceManagement
             Model = model;
 
         }
+        public Vehicle(string make, string model, string year, string capacity, string horsePower, string licensePlate)
+        { 
+            LicensePlate = licensePlate;
+            HorsePower = horsePower;
+            Capacity = capacity;
+            Year = year;
+            Make = make;
+            Model = model;
+        }
 
         public int Id { get; set; }
         public string LicensePlate { get; set; }

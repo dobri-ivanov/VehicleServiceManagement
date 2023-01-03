@@ -519,7 +519,8 @@ namespace VehicleServiceManagement
 
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string query = "SELECT * FROM Clients WHERE PhoneNumber = '"+currentPhoneNumber+"'";
+            string phoneNum = TextBoxPhoneNumber.Text;
+            string query = "SELECT * FROM Clients WHERE PhoneNumber = '"+phoneNum+"'";
 
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader read = command.ExecuteReader();
