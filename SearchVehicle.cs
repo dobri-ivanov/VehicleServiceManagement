@@ -66,5 +66,10 @@ namespace VehicleServiceManagement
         {
 
         }
+
+        private void DataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
