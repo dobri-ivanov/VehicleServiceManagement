@@ -117,86 +117,87 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAABAAAAAHfCAYAAADOTareAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA39SURBVHhe7d2vkxRHGIDhk5GRSGRkJBKJRMZd1M3smouM
-        jENGRiJPIiMjkUgkEsmfQLqhSQqO/K4i7L7PU/XVXg/L+n63Z+cCAAAA4DfX19df7vv+zeFwuBnzy5rX
-        xhhjjDHGGGOM+WTzZj8+9udPxut+PB7vrG37f7dt293xoY/Hh78arzczAoxr9+estwAAAACfwLv9+Nif
-        Pxz785/GvJwx4Hg8fr3e8u+MD3w05vn48G/XJQAAAOAzsmLAsxkELi8vv1iX/5553H98wDxS8P0//s8A
-        AADAJzf28fuYp9u23V2X/ty61/+ZI/4AAABwWuatAPML/b+MAPPb/rH5/9nmHwAAAE7T1dXVV/MkwPyC
-        f126bbzh0Tz2v5YAAADACRp7+zdP8VvL961jAk/d8w8AAACnb57wH3v9B2v5u/EP8xmCD9cSAAAAOGHz
-        i/6x13+2lm+Ni3fGxZdrCQAAAJyBedJ/7PfvreXFxXzO/7j4eC0BAACAMzD2+j/MWUvH/wEAAOAc3boN
-        4NaRAAAAAODk3brl/3A4vNi27e5aAgAAAGdi7Plfrz8/WAAAAABnQwAAAACAAAEAAAAAAgQAAAAACBAA
-        AAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACA
-        AAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAA
-        AAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBA
-        AAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAA
-        AAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAA
-        AAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACA
-        AAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAA
-        AAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBA
-        AAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAA
-        AAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAA
-        AAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACA
-        AAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAA
-        AAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBA
-        AAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAA
-        AAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAA
-        AAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACA
-        AAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAA
-        AAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBA
-        AAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAA
-        AAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAA
-        AAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACA
-        AAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAA
-        AAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBA
-        AAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAA
-        AAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAA
-        AAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACA
-        AAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAA
-        AAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBA
-        AAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAA
-        AAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAA
-        AAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACA
-        AAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAA
-        AAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBA
-        AAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAA
-        AAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAA
-        AAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACA
-        AAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAA
-        AAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBA
-        AAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAA
-        AAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAA
-        AAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACA
-        AAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAA
-        AAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBA
-        AAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAAAAAAIEAAAAAAgAABAAAA
-        AAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACAAAEAAAAAAgQAAAAACBAA
-        AAAAIEAAAAAAgAABAAAAAAIEAAAAAAgQAAAAACBAAAAAAIAAAQAAAAACBAAAAAAIEAAAAAAgQAAAAACA
-        AAEAAAAAAgQAAAAACBAAAAAAIOC9Pf++7y+Px+OdtQQAAADOxIcB4NnxePx6LQEAAIAzcH19/eXY879a
-        yzc14Jdt2+6vJQAAAHAGrq6uvhp7/udr+SYA/DBnLQEAAIAzsG3bt2O//3gtP1IEAAAAgJO37/vPx+Px
-        wVq+5XcAAAAA4HzMH/s/HA4vLi8vv1iX3hoXH+77/mQtAQAAgBM29vk/jn3+d2v5vhkAZghYSwAAAOAE
-        zRP+86T/Wt62jgc83bbt7roEAAAAnJD56L+5t5+/97cufdysBPONMwasSwAAAMAJWM/9fzL29O//8N8f
-        GW++N48KzNd1CQAAAPiMrSf8zS/0/97m/513twOMuXFLAAAAAHye1v79xzHP//LY/5/Z9/2b8SEv5hGC
-        8bq7NQAAAAD+X+uo/9yv36w9+8d/7f/fGB84HxP405iX4+/XxhhjjDHGGGOM+X9m7M1fjdebGQFuPecf
-        AAAAqLq4+BVwZSybJdIwfwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAA1wAAAMiCAYAAAB6zcJ1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABBjSURBVHhe7dlRihoBFETR2f963F+CEGEyUXC0L07Fc0Da
+        50f7fakPAAAAfojT6fTr8rx83G632+12u91ut/sd7vP3w339MwAAgHd0aaJD2khkAQAAXKeXAAAAfhqV
+        BgAAcL+7G0psAQAAfJ+WAgAAeBVFBgAA8LibTSW2AAAAnne1rQQXAAAAAAAAO6xbAAAAx/mrsQQXAADA
+        cQQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAA
+        ABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcA
+        AEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEF
+        AAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERw
+        AQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABAR
+        XAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABE
+        BBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAA
+        EcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAA
+        QERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUA
+        ABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXAB
+        AABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxc
+        AAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYL
+        FwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDF
+        wgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABs
+        sXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAA
+        WyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAA
+        wBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAA
+        ALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAA
+        AABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAA
+        AAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAA
+        AAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEA
+        AAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwA
+        AAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQX
+        AAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHB
+        BQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBE
+        cAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQ
+        EVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAA
+        RAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAA
+        ABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcA
+        AEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEF
+        AAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERw
+        AQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABAR
+        XAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABE
+        BBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAA
+        EcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAA
+        QERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUA
+        ABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXAB
+        AABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxc
+        AAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYL
+        FwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDF
+        wgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABs
+        sXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAA
+        WyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAA
+        wBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAA
+        ALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAA
+        AABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAA
+        AAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAA
+        AAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEA
+        AAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwA
+        AAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQX
+        AAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHB
+        BQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBE
+        cAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQ
+        EVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAA
+        RAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAA
+        ABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcA
+        AEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEF
+        AAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERw
+        AQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABAR
+        XAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABE
+        BBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAA
+        EcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAA
+        QERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEcAEAAAAAALDFwgUA
+        ABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxcAAAAEcEFAAAQEVwAAAAAAABssXAB
+        AABEBBcAAEBEcAEAAAAAALDFwgUAABARXAAAABHBBQAAAAAAwBYLFwAAQERwAQAARAQXAAAAAAAAWyxc
+        AAAAEcEFAAAQEVwAAAAAAABssXABAABEBBcAAEBEYwEAAAAAALDj6rpl8gIAAHjezbYSXQAAAI/TVAAA
+        AK+iyAAAAL7v7pYSXQAAAPd7qKGEFwAAwG1PN5PoAgAA+NdhrXR5kfgCAADe2bmJLp8/Px3r88u//pnb
+        7Xa73W632+12/8/3+QkAAMDLfXz8BrKQ0vKO50P0AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="LabelCurrentClientData.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 20pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
-  </data>
-  <data name="LabelTitle.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 30pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
-  </data>
-  <metadata name="Get.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="vehicleBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="ButtonCloseApplication.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ButtonRefreshVehicles.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAABtUSURBVHhe7d1L
@@ -319,7 +320,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAABAE/z22/8D7PeeJN72OGoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="ButtonCloseApplication.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ButtonRefreshVehicles.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAawAAAGsCAYAAACByJOsAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAEiiSURBVHhe7Z0J
@@ -636,10 +637,184 @@
         RK5CYII=
 </value>
   </data>
-  <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>185, 17</value>
-  </metadata>
-  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>345, 17</value>
-  </metadata>
+  <data name="bunifuTextBox11.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOAAAAA0CAYAAACTgjTYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVHhe7dMxDQAwDASxh1ooYZ4WQNcoiy0dhAsAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMO6+StFJa0lrfKyWNl7pX2b8QFVNu
+        WQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuLabel12.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuTextBox12.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOAAAAA0CAYAAACTgjTYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVHhe7dMxDQAwDASxh1ooYZ4WQNcoiy0dhAsAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMO6+StFJa0lrfKyWNl7pX2b8QFVNu
+        WQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuLabel14.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuTextBox8.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOAAAAA0CAYAAACTgjTYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVHhe7dMxDQAwDASxh1ooYZ4WQNcoiy0dhAsAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMO6+StFJa0lrfKyWNl7pX2b8QFVNu
+        WQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuLabel9.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuTextBox9.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOAAAAA0CAYAAACTgjTYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVHhe7dMxDQAwDASxh1ooYZ4WQNcoiy0dhAsAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMO6+StFJa0lrfKyWNl7pX2b8QFVNu
+        WQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuLabel10.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuTextBox10.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOAAAAA0CAYAAACTgjTYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVHhe7dMxDQAwDASxh1ooYZ4WQNcoiy0dhAsAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMO6+StFJa0lrfKyWNl7pX2b8QFVNu
+        WQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuLabel11.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuTextBox7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOAAAAA0CAYAAACTgjTYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVHhe7dMxDQAwDASxh1ooYZ4WQNcoiy0dhAsAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMO6+StFJa0lrfKyWNl7pX2b8QFVNu
+        WQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuLabel8.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuTextBox6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOAAAAA0CAYAAACTgjTYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVHhe7dMxDQAwDASxh1ooYZ4WQNcoiy0dhAsAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMO6+StFJa0lrfKyWNl7pX2b8QFVNu
+        WQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuLabel7.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuTextBox5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOAAAAA0CAYAAACTgjTYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVHhe7dMxDQAwDASxh1ooYZ4WQNcoiy0dhAsAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMO6+StFJa0lrfKyWNl7pX2b8QFVNu
+        WQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuLabel6.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel5.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="ButtonCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIwAAAAsCAYAAAC33FDQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMVSURBVHhe7Z27ixpRFMaHnZ0Z3R0fKAtaLOxisSkspgyC
+        IoughQQRAsJuYSlhCwsLCwuLFIF0KVKkS51/YKu0IdWWgRQLKUJCHhgTkk1iMTmfM7N5XaMTtlG/Az9x
+        8MwonI9zz50596qFtOvCcGtr60k0Gj0zTfOtHLtkeUDMEDsgx0OhJlypJSORyAPDMMY7OzujcrnsHh8f
+        u+122+12u+5wOCRLBGKG2AHEcnd3d7SxsTGRGD+SWO95If9PsyzrjlxoVK1WJ71eT/kDyPIzGAzcRqPh
+        2rY9QnKQ0Ec8BSxuye3t7afFYvGi3+8rv4SsHhAOkoPE/rloIONJYb7txePxZ0dHR99UFyWrT6fTcWOx
+        2CvRguNJYrYlIRacoLoQWR9QgiQSiTeiidl1DYYhZhYScHJygrrmXKSR9BTyi8lU+d7h4eGF6kSyvjSb
+        ze+SSE59mVxaRublYxQ9qpPIepNKpT6IRn7WM5hKoTpWORPSarVcGYEe+3LRIqZpfuT0mfwLy7I+i1am
+        U+0a7vapnAgJcBwHgulokl3u12o1pRMhAZfDEh4k4tmQyomQAEyxZVh6qcns6Jw36sg8UONubm5+0fDC
+        gpcsgtQwQFN+SMifUDAkFBQMCQUFQ0JBwZBQUDAkFBQMCQUFQ0JBwZBQUDAkFBQMCQUFQ0IxFQyWSbKX
+        lyzCVDDocUCvg8qBkAAkFSQX9MOcYWG2yomQACzin+7WIRnmYb1eVzoREoCuTHRnouht5/P5TyonQgJK
+        pdJE1/XbEEzSMIyvKidCAn5bzIZucHSFqxwJQc83er+nYvHNgYJUzoTkcjlkl4YnFd+YZYgKVXYJLBOP
+        x19w3zoSgNUkMvK8Fm1c8yTytznpdPod7/wSsL+//16yy01fG2oThxsQDTdBXF+QWSAW27Zv+bKYaw72
+        OOMd4PUDNQuGobmZRWHYZOgsm82OuJR29UHtenBwMPYL3Jk1yyJWxkUk44wLhcIEWYc1zmqAWFYqFRcb
+        dvu7ure8kF+NQXV9ZJ3pU0uvmYYsMYilrut35T3+EmAB07QfpSIN4v4YcJkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="ButtonSave.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIwAAAAsCAYAAAC33FDQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMnSURBVHhe7d0/aBNRHAfwu3tJekl6ySVpkqv9QxWHgigB
+        HbSTOhUHKf4HBwuC1D8oOBT/LBEERV0UKaIudXFQcBMXnQTRRZwUh4KDKP4hRtGqGc73zd3Vf68mJ12S
+        fH/wKQ19SQvvy8svd++uWshaLZUNO/XAyFiP9YT5Vj52qXVgzjB3IB+XpVFpQcvWU8nLutlVjS7tr6QP
+        bHMLV467hWsn3EV3p9zBZzephWDOMHeAuYytHK5oQtSMVPKGnOshb8r/s3Qrflq+UMWe3FXru39V+QdQ
+        6xt4ct3NndrvinymgsVBTr3pJaD5so1c+qE1sWm2/9G08pdQ+0FwsDgY2fRzmQHHi0LjGhLF7NOeS8e+
+        qV6U2p9z65wrCplXMgslLxLzl42w4AmqF6LOgRZE9ObeyEzM39fgbYgrCwV6b59HXzMjo2F7Cfml9LR1
+        IXVw+6zqidS5smcOfZcLyR0/JnPlGOnuKpoe1ZOos0UGih9kRn72M/gohe5YNZgof3HSNTLWPT8umqkn
+        zI/8+Ez/YnQnPsus1D9qj+Jon2oQUSC5eT0CM6HJ1WUqc3RcOYgoMPe2hBOJODekGkQUwEdsw0q81IxU
+        coYH6qgR9Lh6LPpFwxc2vNQM2cOApvwh0Z8YGAqFgaFQGBgKhYGhUBgYCoWBoVAYGAqFgaFQGBgKhYGh
+        UBgYCsULjBA17uWlZtQDgz0O2OugGkAUwKKCxUXDVfy4MFs1iCiAi/jrd+vQu5PT2fIe5SCiAHZlYncm
+        mt7x+IaRT6pBRIHU3i01LSpOIjC2bsa+qgYRBX67mA27wbErXDWQCHu+sfe7Hha/SkiQajCRObICq8uY
+        FxW/uMqQimp1CcoRTs8L3reOAriaJDLovJbZGPYi8neVIov73vHIL0HXmuXvRTq+1c+GuoRtbURoeBPE
+        zoWVBWEx8vY+PxYNq4R7nPEIcOdBz4K3oYYri6IcnDaILVtS4aW07Q+9q7luVdVvcOftWZqptXgRUcxV
+        rd1jNaw67HHaA+bSPrzTxQ27/bu67/CmfGEKqTuCVad+1tLbTEMtrD6XUXFWfo9/CdBEadoPcS/3y/by
+        76YAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuTextBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAPsAAAA0CAYAAABMzE7HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABbSURBVHhe7dQBDQAwCASxlzopOGcTMAXQJmfhAgAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG5xXSRpfWtKKvgeQNKrUBWfb
+        9PUqvIYuAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBox4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAPsAAAA0CAYAAABMzE7HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABbSURBVHhe7dQBDQAwCASxlzopOGcTMAXQJmfhAgAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG5xXSRpfWtKKvgeQNKrUBWfb
+        9PUqvIYuAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAPsAAAA0CAYAAABMzE7HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABbSURBVHhe7dQBDQAwCASxlzopOGcTMAXQJmfhAgAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG5xXSRpfWtKKvgeQNKrUBWfb
+        9PUqvIYuAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAPsAAAA0CAYAAABMzE7HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABbSURBVHhe7dQBDQAwCASxlzopOGcTMAXQJmfhAgAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG5xXSRpfWtKKvgeQNKrUBWfb
+        9PUqvIYuAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuLabel13.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="LabelTitle.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 22pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
 </root>

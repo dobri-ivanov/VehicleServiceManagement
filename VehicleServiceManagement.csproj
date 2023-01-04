@@ -154,6 +154,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewVehicle.Designer.cs">
+      <DependentUpon>AddNewVehicle.cs</DependentUpon>
+    </Compile>
     <Compile Include="AlertBoxes\AlertBoxEditClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     <Compile Include="SplashScreen\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddNewVehicle.resx">
+      <DependentUpon>AddNewVehicle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AlertBoxes\AlertBoxEditClient.resx">
       <DependentUpon>AlertBoxEditClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +316,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchClient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchClient1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
