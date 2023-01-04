@@ -14,11 +14,13 @@ namespace VehicleServiceManagement
     public partial class SearchVehicle : Form
     {
         int currentClientId;
+        Main Main;
         public string connectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
-        public SearchVehicle(int id)
+        public SearchVehicle(int clientID, Main main)
         {
             InitializeComponent();
-            currentClientId = id;
+            currentClientId = clientID;
+            Main = main;
             Setup();
         }
 
@@ -44,14 +46,14 @@ namespace VehicleServiceManagement
             read.Close();
             connection.Close();
             string currentText = String.Format($"{firstName} {lastName} | {phoneNumber}");
-            LabelClientData.Text = currentText;
+            LabelCurrentClientData.Text = currentText;
 
 
             connection.Open();
             //DataGridViewVehicles.Rows.Clear();
 
             read = (null);
-            query = "SELECT * FROM Vehicles WHERE ClientID = '"+currentClientId+"'";
+            query = "SELECT * FROM Vehicles WHERE ClientID = '" + currentClientId + "'";
 
             command = new SqlCommand(query, connection);
             read = command.ExecuteReader();
@@ -85,40 +87,9 @@ namespace VehicleServiceManagement
         {
             InitializeComponent();
         }
-
-        private void ButtonCloseApplication_Click(object sender, EventArgs e)
+        private void ButtonCloseApplication_Click_3(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void Panel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TestLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGridViewVehicles_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void SearchVehicle_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonCloseApplication_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void bunifuPanel1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

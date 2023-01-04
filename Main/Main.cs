@@ -160,11 +160,12 @@ namespace VehicleServiceManagement
         private void ButtonVehicles_Click(object sender, EventArgs e)
         {
             MainPages.SetPage("Vehicles");
+            FillVehiclesTable();
         }
 
         private void ButtonReports_Click(object sender, EventArgs e)
         {
-            MainPages.SetPage("Reports");
+            MainPages.SetPage("Raports");
         }
         private void ButtonCalendar_Click(object sender, EventArgs e)
         {
@@ -330,6 +331,50 @@ namespace VehicleServiceManagement
 
                 clientBindingSource.Add(client);
 
+            }
+            read.Close();
+            connection.Close();
+        }
+        private void FillVehiclesTable()
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            DataGridViewVehicles.Rows.Clear();
+
+            SqlDataReader read = (null);
+            string query = "SELECT Vehicles.LicensePlate, Vehicles.HorsePower, Vehicles.Capаcity, Vehicles.Year, Vehicles.Fuel, Vehicles.Transmission, Vehicles.Make, Vehicles.Model, Clients.FirstName, Clients.LastName FROM Vehicles INNER JOIN Clients ON Vehicles.ClientID = Clients.ID;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            read = command.ExecuteReader();
+
+
+            string licensePlate = String.Empty;
+            string horsePower = String.Empty;
+            string capacity = String.Empty;
+            string year = String.Empty;
+            string fuel = String.Empty;
+            string transmission = String.Empty;
+            string make = String.Empty;
+            string model = String.Empty;
+            string clientFirstName = String.Empty;
+            string clientLastName = String.Empty;
+
+            while (read.Read())
+            {
+                licensePlate = read["LicensePlate"].ToString();
+                horsePower = read["HorsePower"].ToString();
+                capacity = read["Capаcity"].ToString();
+                year = read["Year"].ToString();
+                fuel = read["Fuel"].ToString();
+                transmission = read["Transmission"].ToString();
+                make = read["Make"].ToString();
+                model = read["Model"].ToString();
+                clientFirstName = read["FirstName"].ToString();
+                clientLastName = read["LastName"].ToString();
+
+                Vehicle vehicle = new Vehicle(licensePlate, horsePower, capacity, year, fuel, transmission, make, model, clientFirstName, clientLastName);
+
+                vehicleBindingSource.Add(vehicle);
             }
             read.Close();
             connection.Close();
@@ -532,9 +577,92 @@ namespace VehicleServiceManagement
             read.Close();
             connection.Close();
 
-            SearchVehicle sv = new SearchVehicle(currentClientID);
+            SearchVehicle sv = new SearchVehicle(currentClientID, this);
             sv.Show();
             
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string text = TextBoxSearchVehicles.Text;
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string query = "SELECT Vehicles.LicensePlate, Vehicles.HorsePower, Vehicles.Capаcity, Vehicles.Year, Vehicles.Fuel, Vehicles.Transmission, Vehicles.Make, Vehicles.Model, Clients.FirstName, Clients.LastName FROM Vehicles INNER JOIN Clients ON Vehicles.ClientID = Clients.ID WHERE LicensePlate LIKE'%" + text + "%' OR HorsePower LIKE '%" + text + "%' OR Capаcity LIKE'%" + text + "%' OR Year LIKE '%" + text + "%' OR Make LIKE '%" + text + "%' OR Model LIKE '%" + text + "%' OR FirstName LIKE '%" + text + "%' OR LastName LIKE '%" + text + "%'; ";
+            DataGridViewVehicles.Rows.Clear();
+
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader read = command.ExecuteReader();
+
+
+            string licensePlate = String.Empty;
+            string horsePower = String.Empty;
+            string capacity = String.Empty;
+            string year = String.Empty;
+            string fuel = String.Empty;
+            string transmission = String.Empty;
+            string make = String.Empty;
+            string model = String.Empty;
+            string clientFirstName = String.Empty;
+            string clientLastName = String.Empty;
+
+            while (read.Read())
+            {
+                licensePlate = read["LicensePlate"].ToString();
+                horsePower = read["HorsePower"].ToString();
+                capacity = read["Capаcity"].ToString();
+                year = read["Year"].ToString();
+                fuel = read["Fuel"].ToString();
+                transmission = read["Transmission"].ToString();
+                make = read["Make"].ToString();
+                model = read["Model"].ToString();
+                clientFirstName = read["FirstName"].ToString();
+                clientLastName = read["LastName"].ToString();
+
+                Vehicle vehicle = new Vehicle(licensePlate, horsePower, capacity, year, fuel, transmission, make, model, clientFirstName, clientLastName);
+
+                vehicleBindingSource.Add(vehicle);
+            }
+            read.Close();
+            connection.Close();
+        }
+
+        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            FillVehiclesTable();
+        }
+
+        private void bunifuShadowPanel1_ControlAdded(object sender, ControlEventArgs e)
+        {
+
+        }
+
+        private void ImageButtonClear_Click(object sender, EventArgs e)
+        {
+            TextBoxName.Text = string.Empty;
+            TextBoxLastName.Text = string.Empty;
+            TextBoxPhoneNumber.Text = string.Empty;
+            TextBoxNickname.Text = string.Empty;
+
+            TextBoxName.Enabled = false;
+            TextBoxLastName.Enabled = false;
+            TextBoxPhoneNumber.Enabled = false;
+            TextBoxNickname.Enabled = false;
+            ButtonCurrentClientVehicles.Enabled = false;
         }
     }
 }
