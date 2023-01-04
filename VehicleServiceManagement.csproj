@@ -172,7 +172,7 @@
     <Compile Include="SearchVehicle.Designer.cs">
       <DependentUpon>SearchVehicle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vehicle.cs" />
+    <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Form1\Form1.cs">
       <SubType>Form</SubType>
