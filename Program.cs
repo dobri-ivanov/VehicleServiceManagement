@@ -16,7 +16,7 @@ namespace VehicleServiceManagement
         {
             //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddNewVehicle());
+            Application.Run(new Main());
         }
     }
 }

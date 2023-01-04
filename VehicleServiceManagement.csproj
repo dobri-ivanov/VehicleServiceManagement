@@ -172,6 +172,12 @@
     <Compile Include="AlertBoxes\AlertBox.Designer.cs">
       <DependentUpon>AlertBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchClients.Designer.cs">
+      <DependentUpon>SearchClients.cs</DependentUpon>
+    </Compile>
     <Compile Include="SearchVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SearchClients.resx">
+      <DependentUpon>SearchClients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SearchVehicle.resx">
       <DependentUpon>SearchVehicle.cs</DependentUpon>
     </EmbeddedResource>

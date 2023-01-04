@@ -91,5 +91,14 @@ namespace VehicleServiceManagement
         {
             this.Close();
         }
+
+        private void ButtonAdd_Click(object sender, EventArgs e)
+        {
+            Main.SetVehiclePage();
+            AddNewVehicle addNewVehicle = new AddNewVehicle(Main, currentClientId);
+            addNewVehicle.Show();
+            this.Close();
+            
+        }
     }
 }

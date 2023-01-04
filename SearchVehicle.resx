@@ -184,6 +184,26 @@
         AAAAqLq4+BVwZSybJdIwfwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="ButtonAdd.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAJAAAAAqCAYAAABcF9KrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMmSURBVHhe7dw/aBNRHAfwu3tNek16ySVp2qv9QxWHgigB
+        HbSTOhUHKf4HBwuC1D8oOBT/LBUERV0UKaIudXFQcBMXnQTRRZwUh4KDKP4hRtGqGc73zV1rre+RNNel
+        6fcHn9LSl7Twvrz87u7dGfOs9dKY5aaeWBnnuZmwP8qffVq8MIeYS5A/j0mD0oKWa6aS1027uRRb2V1M
+        H9nlt9847bffOuMvezju9766S4sY5hBzCZjb+Nr+oiFE2Uol78i57wsiUGeZTst5+UZFd3RfuevxTeU/
+        QI2n58VtP3fusC/ymSIWDxkFO0hE7eVaufRTZ2TbVPezCeUfocaHIGHxsLLp1zITXhCN6tUnOrIv266d
+        +qV6U1p6vHuXfNGeeSezUQgioi8X4cELVG9ESxdaGNGZ+yAzou+L8LHFlYd0Ou9fRl80KaPiBomZVWba
+        uZI6untK9UKiadkLx37LheZBGJuZ8qx0awlNk+pFRLM19XR8kZn52w/hUA3dtmow0Vz5q6O+lXEehfEx
+        bDNhf+XhOs2H1Zr4LrNTObQfxNlH1SAineT2zQjQiCFXn/HMyWHlICKdmY8xXBjFtS3VICIdHNJbTuKt
+        YaWSkzxxSPOFntmMx34Y+MIGmuoheyAwlL8kqoYBokgYIIqEAaJIGCCKhAGiSBggioQBokgYIIqEAaJI
+        ggAJUeZORKpHJUC4ooorq6oBRDpYdLD4GLgnGre1qgYR6eCW6MqzEczW5ER27IByEJEO9pBhLxma6OGW
+        LQPfVIOIdFIHd5SNmDiLALmmHf+pGkSk88+tPdjbij2uqoFEc2EHK3ayVsITVgGJUg0mmsseWIPVZyiI
+        TlhchagWqtVnujzhtb3hU8dIB3vnm3q99zIr/UFk/q9C0/KuTzwzTSrNG1Z/FumWnWFW1CVcZytCxEfa
+        0TSsPAiPlXcPhTGpWgU8kYpnqAk9Dz62qq48ivJwmSO+akWRNx4uPeiF7U3rSmHDrO15aqmNeBPRkSs5
+        +4fKWJXYIzUmzK17fK+PxzmHzwDfE0RgYQopPIFVqXIVNthMRA2kMrcxcVF+jwfK11CG8QesBMrE2eZS
+        ogAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="LabelCurrentClientData.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 20pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>

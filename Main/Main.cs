@@ -226,6 +226,11 @@ namespace VehicleServiceManagement
             TextBoxNickname.Text = string.Empty;
         }
 
+        public void SetVehiclePage()
+        {
+            MainPages.SetPage("Vehicles");
+            FillVehiclesTable();
+        }
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
             if (TextBoxName.Text.Length > 0 && TextBoxLastName.Text.Length > 0 && TextBoxPhoneNumber.Text.Length > 0)
@@ -663,6 +668,17 @@ namespace VehicleServiceManagement
             TextBoxPhoneNumber.Enabled = false;
             TextBoxNickname.Enabled = false;
             ButtonCurrentClientVehicles.Enabled = false;
+        }
+
+        private void ControlPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonAddVechicle_Click(object sender, EventArgs e)
+        {
+            AddNewVehicle addNewVehicle = new AddNewVehicle();
+            addNewVehicle.Show();
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,174 +13,56 @@ namespace VehicleServiceManagement
 {
     public partial class AddNewVehicle : Form
     {
+        public string connectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
+
+        private int currentClientId;
         public AddNewVehicle()
         {
             InitializeComponent();
         }
 
-        private void bunifuLabel8_Click(object sender, EventArgs e)
+        public AddNewVehicle(Main main, int clientID)
         {
-
-
+            InitializeComponent();
+            currentClientId = clientID;
+            FillClientData(clientID);
         }
 
-        private void bunifuLabel6_Click(object sender, EventArgs e)
+        private void FillClientData(int clientID)
         {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
 
+            SqlDataReader read = (null);
+            string query = "SELECT * FROM Clients WHERE ID = '"+clientID+"'";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            read = command.ExecuteReader();
+
+            string name = String.Empty;
+            string lastName = String.Empty;
+            string phoneNumber = String.Empty;
+            string nickname = String.Empty;
+
+            while (read.Read())
+            {
+                name = (read["FirstName"].ToString());
+                lastName = (read["LastName"].ToString());
+                phoneNumber = (read["PhoneNumber"].ToString());
+                nickname = (read["Nickname"].ToString());
+
+            }
+            read.Close();
+            connection.Close();
+
+            TextBoxFirstName.Text = name;
+            TextBoxLastName.Text = lastName;
+            TextBoxPhoneNumber.Text = phoneNumber;
+            TextBoxNickname.Text = nickname;
         }
-
-        private void bunifuLabel7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox6_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel7_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox7_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel8_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox5_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel6_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox7_TextChanged_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox12_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox8_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox10_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox11_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel8_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox6_TextChanged_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel7_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox5_TextChanged_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel6_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonRefreshVehicles_Click(object sender, EventArgs e)
-        {
-                    }
-
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }
