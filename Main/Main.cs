@@ -691,5 +691,65 @@ namespace VehicleServiceManagement
         {
 
         }
+
+        private void bunifuTextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel10_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
