@@ -64,5 +64,41 @@ namespace VehicleServiceManagement
         {
             this.Close();
         }
+
+        private void ButtonSearchClients_Click(object sender, EventArgs e)
+        {
+            SearchClients searchClients = new SearchClients(this);
+            searchClients.Show();
+        }
+
+        public void FillClientsData(string phoneNumber)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string query = "SELECT * FROM Clients WHERE PhoneNumber = N'"+phoneNumber+"'";
+
+
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader read = command.ExecuteReader();
+
+            string name = String.Empty;
+            string lastName = String.Empty;
+            string nickname = String.Empty;
+
+            while (read.Read())
+            {
+                name = (read["FirstName"].ToString());
+                lastName = (read["LastName"].ToString());
+                nickname = (read["Nickname"].ToString());
+
+            }
+            read.Close();
+            connection.Close();
+            
+            TextBoxFirstName.Text = name;
+            TextBoxLastName.Text = lastName;
+            TextBoxPhoneNumber.Text = phoneNumber;
+            TextBoxNickname.Text = nickname;
+        }
     }
 }

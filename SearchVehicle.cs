@@ -94,7 +94,6 @@ namespace VehicleServiceManagement
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            Main.SetVehiclePage();
             AddNewVehicle addNewVehicle = new AddNewVehicle(Main, currentClientId);
             addNewVehicle.Show();
             this.Close();

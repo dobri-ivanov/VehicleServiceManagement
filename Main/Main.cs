@@ -390,7 +390,7 @@ namespace VehicleServiceManagement
             string text = TextBoxSearch.Text;
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string query = "SELECT * FROM Clients WHERE FirstName LIKE'%" + text + "%' OR LastName LIKE '%" + text + "%' OR PhoneNumber LIKE'%" + text + "%' OR Nickname LIKE '%" + text + "%';";
+            string query = "SELECT * FROM Clients WHERE FirstName LIKE N'%" + text + "%' OR LastName LIKE N'%" + text + "%' OR PhoneNumber LIKE N'%" + text + "%' OR Nickname LIKE N'%" + text + "%';";
             DataGridViewClients.Rows.Clear();
 
 
