@@ -686,5 +686,10 @@ namespace VehicleServiceManagement
             AddNewVehicle addNewVehicle = new AddNewVehicle(this, "ADD");
             addNewVehicle.Show();
         }
+
+        private void bunifuLabel10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

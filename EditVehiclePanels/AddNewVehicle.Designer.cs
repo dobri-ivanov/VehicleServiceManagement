@@ -184,8 +184,8 @@ namespace VehicleServiceManagement
             this.ButtonSearchClients.Image = global::VehicleServiceManagement.Properties.Resources.searchClient1;
             this.ButtonSearchClients.ImageActive = null;
             this.ButtonSearchClients.ImageLocation = null;
-            this.ButtonSearchClients.ImageMargin = 10;
-            this.ButtonSearchClients.ImageSize = new System.Drawing.Size(90, 90);
+            this.ButtonSearchClients.ImageMargin = 20;
+            this.ButtonSearchClients.ImageSize = new System.Drawing.Size(80, 80);
             this.ButtonSearchClients.ImageZoomSize = new System.Drawing.Size(100, 100);
             this.ButtonSearchClients.InitialImage = ((System.Drawing.Image)(resources.GetObject("ButtonSearchClients.InitialImage")));
             this.ButtonSearchClients.Location = new System.Drawing.Point(688, 169);
@@ -199,7 +199,7 @@ namespace VehicleServiceManagement
             this.ButtonSearchClients.TabIndex = 75;
             this.ButtonSearchClients.ToolTipText = "";
             this.ButtonSearchClients.WaitOnLoad = false;
-            this.ButtonSearchClients.Zoom = 10;
+            this.ButtonSearchClients.Zoom = 20;
             this.ButtonSearchClients.ZoomSpeed = 10;
             this.ButtonSearchClients.Click += new System.EventHandler(this.ButtonSearchClients_Click);
             // 
@@ -1529,17 +1529,18 @@ namespace VehicleServiceManagement
             // 
             this.LabelTitle.AllowParentOverrides = false;
             this.LabelTitle.AutoEllipsis = false;
+            this.LabelTitle.AutoSize = false;
             this.LabelTitle.Cursor = System.Windows.Forms.Cursors.Default;
             this.LabelTitle.CursorType = System.Windows.Forms.Cursors.Default;
             this.LabelTitle.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.LabelTitle.ForeColor = System.Drawing.Color.White;
-            this.LabelTitle.Location = new System.Drawing.Point(238, 12);
+            this.LabelTitle.Location = new System.Drawing.Point(3, 12);
             this.LabelTitle.Name = "LabelTitle";
             this.LabelTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelTitle.Size = new System.Drawing.Size(407, 40);
+            this.LabelTitle.Size = new System.Drawing.Size(854, 40);
             this.LabelTitle.TabIndex = 46;
             this.LabelTitle.Text = "ДОБАВЯНЕ НА АВТОМОБИЛ";
-            this.LabelTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LabelTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // Notification

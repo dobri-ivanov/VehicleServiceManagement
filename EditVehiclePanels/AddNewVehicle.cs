@@ -26,9 +26,10 @@ namespace VehicleServiceManagement
         public AddNewVehicle(Main main, int clientID, string currentOperation)
         {
             InitializeComponent();
+            operation = currentOperation;
+            SetUp();
             currentClientId = clientID;
             mainPanel = main;
-            operation = currentOperation;
             FillClientData(clientID);
         }
 
@@ -36,6 +37,7 @@ namespace VehicleServiceManagement
         {
             InitializeComponent();
             operation = currentOperation;
+            SetUp();
             mainPanel = main;
         }
 
@@ -70,6 +72,18 @@ namespace VehicleServiceManagement
             TextBoxLastName.Text = lastName;
             TextBoxPhoneNumber.Text = phoneNumber;
             TextBoxNickname.Text = nickname;
+        }
+
+        private void SetUp()
+        {
+            if (operation == "ADD")
+            {
+                LabelTitle.Text = "ДОБАВЯНЕ НА АВТОМОБИЛ";
+            }
+            else if (operation == "EDIT")
+            {
+                LabelTitle.Text = "РЕДАКТИРАНЕ ДАННИ НА АВТОМОБИЛ";
+            }
         }
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
