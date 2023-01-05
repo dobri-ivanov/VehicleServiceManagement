@@ -306,6 +306,12 @@ namespace VehicleServiceManagement
             FillClientsTable();
         }
 
+        public void AddVehicleNotfication()
+        {
+            Notification.Show(this, $"Автомобилът е добавен успешно!",
+            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+
+        }
         private void FillClientsTable()
         {
             SqlConnection connection = new SqlConnection(connectionString);
@@ -347,7 +353,7 @@ namespace VehicleServiceManagement
             DataGridViewVehicles.Rows.Clear();
 
             SqlDataReader read = (null);
-            string query = "SELECT Vehicles.LicensePlate, Vehicles.HorsePower, Vehicles.Capаcity, Vehicles.Year, Vehicles.Fuel, Vehicles.Transmission, Vehicles.Make, Vehicles.Model, Clients.FirstName, Clients.LastName FROM Vehicles INNER JOIN Clients ON Vehicles.ClientID = Clients.ID;";
+            string query = "SELECT Vehicles.LicensePlate, Vehicles.HorsePower, Vehicles.Capacity, Vehicles.Year, Vehicles.Fuel, Vehicles.Transmission, Vehicles.Make, Vehicles.Model, Clients.FirstName, Clients.LastName FROM Vehicles INNER JOIN Clients ON Vehicles.ClientID = Clients.ID;";
 
             SqlCommand command = new SqlCommand(query, connection);
             read = command.ExecuteReader();
@@ -368,7 +374,7 @@ namespace VehicleServiceManagement
             {
                 licensePlate = read["LicensePlate"].ToString();
                 horsePower = read["HorsePower"].ToString();
-                capacity = read["Capаcity"].ToString();
+                capacity = read["Capacity"].ToString();
                 year = read["Year"].ToString();
                 fuel = read["Fuel"].ToString();
                 transmission = read["Transmission"].ToString();
@@ -602,7 +608,7 @@ namespace VehicleServiceManagement
             string text = TextBoxSearchVehicles.Text;
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string query = "SELECT Vehicles.LicensePlate, Vehicles.HorsePower, Vehicles.Capаcity, Vehicles.Year, Vehicles.Fuel, Vehicles.Transmission, Vehicles.Make, Vehicles.Model, Clients.FirstName, Clients.LastName FROM Vehicles INNER JOIN Clients ON Vehicles.ClientID = Clients.ID WHERE LicensePlate LIKE'%" + text + "%' OR HorsePower LIKE '%" + text + "%' OR Capаcity LIKE'%" + text + "%' OR Year LIKE '%" + text + "%' OR Make LIKE '%" + text + "%' OR Model LIKE '%" + text + "%' OR FirstName LIKE '%" + text + "%' OR LastName LIKE '%" + text + "%'; ";
+            string query = "SELECT Vehicles.LicensePlate, Vehicles.HorsePower, Vehicles.Capacity, Vehicles.Year, Vehicles.Fuel, Vehicles.Transmission, Vehicles.Make, Vehicles.Model, Clients.FirstName, Clients.LastName FROM Vehicles INNER JOIN Clients ON Vehicles.ClientID = Clients.ID WHERE LicensePlate LIKE'%" + text + "%' OR HorsePower LIKE '%" + text + "%' OR Capacity LIKE'%" + text + "%' OR Year LIKE '%" + text + "%' OR Make LIKE '%" + text + "%' OR Model LIKE '%" + text + "%' OR FirstName LIKE '%" + text + "%' OR LastName LIKE '%" + text + "%'; ";
             DataGridViewVehicles.Rows.Clear();
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -624,7 +630,7 @@ namespace VehicleServiceManagement
             {
                 licensePlate = read["LicensePlate"].ToString();
                 horsePower = read["HorsePower"].ToString();
-                capacity = read["Capаcity"].ToString();
+                capacity = read["Capacity"].ToString();
                 year = read["Year"].ToString();
                 fuel = read["Fuel"].ToString();
                 transmission = read["Transmission"].ToString();
@@ -677,7 +683,7 @@ namespace VehicleServiceManagement
 
         private void ButtonAddVechicle_Click(object sender, EventArgs e)
         {
-            AddNewVehicle addNewVehicle = new AddNewVehicle();
+            AddNewVehicle addNewVehicle = new AddNewVehicle(this, "ADD");
             addNewVehicle.Show();
         }
     }

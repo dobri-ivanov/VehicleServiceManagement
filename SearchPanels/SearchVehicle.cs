@@ -50,7 +50,6 @@ namespace VehicleServiceManagement
 
 
             connection.Open();
-            //DataGridViewVehicles.Rows.Clear();
 
             read = (null);
             query = "SELECT * FROM Vehicles WHERE ClientID = '" + currentClientId + "'";
@@ -70,7 +69,7 @@ namespace VehicleServiceManagement
                 make = (read["Make"].ToString());
                 model = (read["Model"].ToString());
                 year = (read["Year"].ToString());
-                capacity = (read["Capаcity"].ToString());
+                capacity = (read["Capacity"].ToString());
                 hp = (read["HorsePower"].ToString());
                 lp = (read["LicensePlate"].ToString());
 
@@ -94,10 +93,15 @@ namespace VehicleServiceManagement
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            AddNewVehicle addNewVehicle = new AddNewVehicle(Main, currentClientId);
+            AddNewVehicle addNewVehicle = new AddNewVehicle(Main, currentClientId, "ADD");
             addNewVehicle.Show();
             this.Close();
             
+        }
+
+        private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
