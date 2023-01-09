@@ -154,10 +154,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EditVehiclePanels\AddNewVehicle.cs">
+    <Compile Include="VehichelsInteration\AddNewVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditVehiclePanels\AddNewVehicle.Designer.cs">
+    <Compile Include="VehichelsInteration\AddNewVehicle.Designer.cs">
       <DependentUpon>AddNewVehicle.cs</DependentUpon>
     </Compile>
     <Compile Include="AlertBoxes\AlertBoxEditClient.cs">
@@ -166,11 +166,11 @@
     <Compile Include="AlertBoxes\AlertBoxEditClient.Designer.cs">
       <DependentUpon>AlertBoxEditClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="AlertBoxes\AlertBox.cs">
+    <Compile Include="AlertBoxes\AlertBoxDeleteClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlertBoxes\AlertBox.Designer.cs">
-      <DependentUpon>AlertBox.cs</DependentUpon>
+    <Compile Include="AlertBoxes\AlertBoxDeleteClient.Designer.cs">
+      <DependentUpon>AlertBoxDeleteClient.cs</DependentUpon>
     </Compile>
     <Compile Include="SearchPanels\SearchClients.cs">
       <SubType>Form</SubType>
@@ -186,12 +186,6 @@
     </Compile>
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Models\Client.cs" />
-    <Compile Include="Form1\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,17 +206,14 @@
     <Compile Include="SplashScreen\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="EditVehiclePanels\AddNewVehicle.resx">
+    <EmbeddedResource Include="VehichelsInteration\AddNewVehicle.resx">
       <DependentUpon>AddNewVehicle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AlertBoxes\AlertBoxEditClient.resx">
       <DependentUpon>AlertBoxEditClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AlertBoxes\AlertBox.resx">
-      <DependentUpon>AlertBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="AlertBoxes\AlertBoxDeleteClient.resx">
+      <DependentUpon>AlertBoxDeleteClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
