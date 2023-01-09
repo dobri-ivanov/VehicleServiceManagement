@@ -109,7 +109,6 @@ namespace VehicleServiceManagement
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Hourglass.HourglassOptions hourglassOptions1 = new Hourglass.HourglassOptions();
             this.DragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.ControlPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.ButtonMinimize = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -188,7 +187,6 @@ namespace VehicleServiceManagement
             this.PanelUser = new Bunifu.UI.WinForms.BunifuPanel();
             this.LabelUserName = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBoxUserAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.hgScheduler1 = new Hourglass.HgScheduler();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -216,7 +214,6 @@ namespace VehicleServiceManagement
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).BeginInit();
             this.Home.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
-            this.Calendar.SuspendLayout();
             this.Settings.SuspendLayout();
             this.PanelButtons.SuspendLayout();
             this.PanelUser.SuspendLayout();
@@ -3071,7 +3068,6 @@ namespace VehicleServiceManagement
             // Calendar
             // 
             this.Calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.Calendar.Controls.Add(this.hgScheduler1);
             this.Calendar.Location = new System.Drawing.Point(4, 4);
             this.Calendar.Name = "Calendar";
             this.Calendar.Size = new System.Drawing.Size(1346, 812);
@@ -3810,24 +3806,6 @@ namespace VehicleServiceManagement
             this.PictureBoxUserAvatar.TabStop = false;
             this.PictureBoxUserAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // hgScheduler1
-            // 
-            this.hgScheduler1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.hgScheduler1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.hgScheduler1.Location = new System.Drawing.Point(312, 0);
-            this.hgScheduler1.Name = "hgScheduler1";
-            hourglassOptions1.EventArrangement = null;
-            hourglassOptions1.EventClickHandling = null;
-            hourglassOptions1.EventDeleteHandling = null;
-            hourglassOptions1.EventDoubleClickHandling = null;
-            hourglassOptions1.HeaderDateFormat = "dddd";
-            hourglassOptions1.StartDate = new System.DateTime(2023, 1, 7, 0, 0, 0, 0);
-            hourglassOptions1.ViewType = Hourglass.ViewTypes.Week;
-            this.hgScheduler1.Options = hourglassOptions1;
-            this.hgScheduler1.Size = new System.Drawing.Size(1034, 812);
-            this.hgScheduler1.TabIndex = 0;
-            this.hgScheduler1.Theme = resources.GetString("hgScheduler1.Theme");
-            // 
             // firstNameDataGridViewTextBoxColumn
             // 
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
@@ -3981,7 +3959,6 @@ namespace VehicleServiceManagement
             this.Home.ResumeLayout(false);
             this.Home.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
-            this.Calendar.ResumeLayout(false);
             this.Settings.ResumeLayout(false);
             this.Settings.PerformLayout();
             this.PanelButtons.ResumeLayout(false);
@@ -4089,6 +4066,5 @@ namespace VehicleServiceManagement
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox8;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
-        private Hourglass.HgScheduler hgScheduler1;
     }
 }
