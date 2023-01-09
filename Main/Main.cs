@@ -141,10 +141,7 @@ namespace VehicleServiceManagement
 
         private void ButtonMinimize_Click(object sender, EventArgs e)
         {
-            //ControlPanel.Dock = DockStyle.None; // Un-dock
-            //ControlPanel.Visible = false;
             this.WindowState = FormWindowState.Minimized;
-            //isMinimized = true;
         }
 
         private void ButtonHome_Click(object sender, EventArgs e)
@@ -649,7 +646,8 @@ namespace VehicleServiceManagement
 
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -748,6 +746,11 @@ namespace VehicleServiceManagement
         }
 
         private void bunifuLabel12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Main_Load(object sender, EventArgs e)
         {
 
         }
