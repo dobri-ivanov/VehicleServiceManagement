@@ -343,7 +343,7 @@ namespace VehicleServiceManagement
             read.Close();
             connection.Close();
         }
-        private void FillVehiclesTable()
+        public void FillVehiclesTable()
         {
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
@@ -652,6 +652,14 @@ namespace VehicleServiceManagement
         {
             int rowIndex = e.RowIndex;
             int colIndex = e.ColumnIndex;
+
+            if (DataGridViewVehicles.Columns[colIndex].Name == "GetVehicle")
+            {
+                string licensePlate = DataGridViewVehicles.Rows[rowIndex].Cells[9].Value.ToString();
+                VehicleOptions vehicleOptions = new VehicleOptions(licensePlate, this);
+                vehicleOptions.Show();
+
+            }
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

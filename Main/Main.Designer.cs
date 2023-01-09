@@ -32,15 +32,6 @@ namespace VehicleServiceManagement
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Hourglass.HourglassOptions hourglassOptions1 = new Hourglass.HourglassOptions();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -70,6 +61,15 @@ namespace VehicleServiceManagement
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Hourglass.HourglassOptions hourglassOptions1 = new Hourglass.HourglassOptions();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -81,15 +81,6 @@ namespace VehicleServiceManagement
             this.ButtonMaximize = new Bunifu.UI.WinForms.BunifuImageButton();
             this.ButtonCloseApplication = new Bunifu.UI.WinForms.BunifuImageButton();
             this.MainPages = new Bunifu.UI.WinForms.BunifuPages();
-            this.Vehicles = new System.Windows.Forms.TabPage();
-            this.ButtonAddVechicle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.ButtonRefreshVehicles = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.LabelTitleVehicles = new Bunifu.UI.WinForms.BunifuLabel();
-            this.DataGridViewVehicles = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.GetVehicle = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.TextBoxSearchVehicles = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.Calendar = new System.Windows.Forms.TabPage();
-            this.hgScheduler1 = new Hourglass.HgScheduler();
             this.Clients = new System.Windows.Forms.TabPage();
             this.ButtonRefreshClients = new Bunifu.UI.WinForms.BunifuImageButton();
             this.PanelClientButtons = new Bunifu.UI.WinForms.BunifuPanel();
@@ -113,8 +104,33 @@ namespace VehicleServiceManagement
             this.LabelCurrentClient = new Bunifu.UI.WinForms.BunifuLabel();
             this.LabelTitle = new Bunifu.UI.WinForms.BunifuLabel();
             this.DataGridViewClients = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nicknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Get = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TextBoxSearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.Vehicles = new System.Windows.Forms.TabPage();
+            this.ButtonAddVechicle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.ButtonRefreshVehicles = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.LabelTitleVehicles = new Bunifu.UI.WinForms.BunifuLabel();
+            this.DataGridViewVehicles = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.makeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horsePowerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fuelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transmissionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.licensePlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GetVehicle = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TextBoxSearchVehicles = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.Calendar = new System.Windows.Forms.TabPage();
+            this.hgScheduler1 = new Hourglass.HgScheduler();
             this.Home = new System.Windows.Forms.TabPage();
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -135,38 +151,22 @@ namespace VehicleServiceManagement
             this.PanelUser = new Bunifu.UI.WinForms.BunifuPanel();
             this.LabelUserName = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBoxUserAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nicknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.makeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horsePowerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fuelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transmissionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.licensePlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MainPages.SuspendLayout();
-            this.Vehicles.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVehicles)).BeginInit();
-            this.Calendar.SuspendLayout();
             this.Clients.SuspendLayout();
             this.PanelClientButtons.SuspendLayout();
             this.ShadowPanelCurrentClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
+            this.Vehicles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVehicles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
+            this.Calendar.SuspendLayout();
             this.Home.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.Settings.SuspendLayout();
             this.PanelButtons.SuspendLayout();
             this.PanelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DragControl
@@ -319,369 +319,6 @@ namespace VehicleServiceManagement
             animation1.TransparencyCoeff = 0F;
             this.MainPages.Transition = animation1;
             this.MainPages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
-            // 
-            // Vehicles
-            // 
-            this.Vehicles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.Vehicles.Controls.Add(this.ButtonAddVechicle);
-            this.Vehicles.Controls.Add(this.ButtonRefreshVehicles);
-            this.Vehicles.Controls.Add(this.LabelTitleVehicles);
-            this.Vehicles.Controls.Add(this.DataGridViewVehicles);
-            this.Vehicles.Controls.Add(this.TextBoxSearchVehicles);
-            this.Vehicles.Location = new System.Drawing.Point(4, 4);
-            this.Vehicles.Name = "Vehicles";
-            this.Vehicles.Padding = new System.Windows.Forms.Padding(3);
-            this.Vehicles.Size = new System.Drawing.Size(1346, 812);
-            this.Vehicles.TabIndex = 2;
-            this.Vehicles.Text = "Vehicles";
-            // 
-            // ButtonAddVechicle
-            // 
-            this.ButtonAddVechicle.AllowAnimations = true;
-            this.ButtonAddVechicle.AllowMouseEffects = true;
-            this.ButtonAddVechicle.AllowToggling = false;
-            this.ButtonAddVechicle.AnimationSpeed = 200;
-            this.ButtonAddVechicle.AutoGenerateColors = false;
-            this.ButtonAddVechicle.AutoRoundBorders = false;
-            this.ButtonAddVechicle.AutoSizeLeftIcon = true;
-            this.ButtonAddVechicle.AutoSizeRightIcon = true;
-            this.ButtonAddVechicle.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonAddVechicle.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.ButtonAddVechicle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonAddVechicle.BackgroundImage")));
-            this.ButtonAddVechicle.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ButtonAddVechicle.ButtonText = "ДОБАВИ";
-            this.ButtonAddVechicle.ButtonTextMarginLeft = 0;
-            this.ButtonAddVechicle.ColorContrastOnClick = 45;
-            this.ButtonAddVechicle.ColorContrastOnHover = 45;
-            this.ButtonAddVechicle.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.ButtonAddVechicle.CustomizableEdges = borderEdges1;
-            this.ButtonAddVechicle.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.ButtonAddVechicle.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.ButtonAddVechicle.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ButtonAddVechicle.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.ButtonAddVechicle.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.ButtonAddVechicle.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.ButtonAddVechicle.ForeColor = System.Drawing.Color.White;
-            this.ButtonAddVechicle.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonAddVechicle.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonAddVechicle.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.ButtonAddVechicle.IconMarginLeft = 11;
-            this.ButtonAddVechicle.IconPadding = 10;
-            this.ButtonAddVechicle.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ButtonAddVechicle.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonAddVechicle.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.ButtonAddVechicle.IconSize = 25;
-            this.ButtonAddVechicle.IdleBorderColor = System.Drawing.Color.Black;
-            this.ButtonAddVechicle.IdleBorderRadius = 30;
-            this.ButtonAddVechicle.IdleBorderThickness = 1;
-            this.ButtonAddVechicle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.ButtonAddVechicle.IdleIconLeftImage = global::VehicleServiceManagement.Properties.Resources.plus;
-            this.ButtonAddVechicle.IdleIconRightImage = null;
-            this.ButtonAddVechicle.IndicateFocus = false;
-            this.ButtonAddVechicle.Location = new System.Drawing.Point(1194, 13);
-            this.ButtonAddVechicle.Name = "ButtonAddVechicle";
-            this.ButtonAddVechicle.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.ButtonAddVechicle.OnDisabledState.BorderRadius = 30;
-            this.ButtonAddVechicle.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ButtonAddVechicle.OnDisabledState.BorderThickness = 1;
-            this.ButtonAddVechicle.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ButtonAddVechicle.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.ButtonAddVechicle.OnDisabledState.IconLeftImage = null;
-            this.ButtonAddVechicle.OnDisabledState.IconRightImage = null;
-            this.ButtonAddVechicle.onHoverState.BorderColor = System.Drawing.Color.Black;
-            this.ButtonAddVechicle.onHoverState.BorderRadius = 30;
-            this.ButtonAddVechicle.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ButtonAddVechicle.onHoverState.BorderThickness = 1;
-            this.ButtonAddVechicle.onHoverState.FillColor = System.Drawing.Color.LimeGreen;
-            this.ButtonAddVechicle.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.ButtonAddVechicle.onHoverState.IconLeftImage = null;
-            this.ButtonAddVechicle.onHoverState.IconRightImage = null;
-            this.ButtonAddVechicle.OnIdleState.BorderColor = System.Drawing.Color.Black;
-            this.ButtonAddVechicle.OnIdleState.BorderRadius = 30;
-            this.ButtonAddVechicle.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ButtonAddVechicle.OnIdleState.BorderThickness = 1;
-            this.ButtonAddVechicle.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.ButtonAddVechicle.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.ButtonAddVechicle.OnIdleState.IconLeftImage = global::VehicleServiceManagement.Properties.Resources.plus;
-            this.ButtonAddVechicle.OnIdleState.IconRightImage = null;
-            this.ButtonAddVechicle.OnPressedState.BorderColor = System.Drawing.Color.Black;
-            this.ButtonAddVechicle.OnPressedState.BorderRadius = 30;
-            this.ButtonAddVechicle.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ButtonAddVechicle.OnPressedState.BorderThickness = 1;
-            this.ButtonAddVechicle.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.ButtonAddVechicle.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.ButtonAddVechicle.OnPressedState.IconLeftImage = null;
-            this.ButtonAddVechicle.OnPressedState.IconRightImage = null;
-            this.ButtonAddVechicle.Size = new System.Drawing.Size(144, 44);
-            this.ButtonAddVechicle.TabIndex = 18;
-            this.ButtonAddVechicle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ButtonAddVechicle.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ButtonAddVechicle.TextMarginLeft = 0;
-            this.ButtonAddVechicle.TextPadding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ButtonAddVechicle.UseDefaultRadiusAndThickness = true;
-            this.ButtonAddVechicle.Click += new System.EventHandler(this.ButtonAddVechicle_Click);
-            // 
-            // ButtonRefreshVehicles
-            // 
-            this.ButtonRefreshVehicles.ActiveImage = null;
-            this.ButtonRefreshVehicles.AllowAnimations = true;
-            this.ButtonRefreshVehicles.AllowBuffering = false;
-            this.ButtonRefreshVehicles.AllowToggling = false;
-            this.ButtonRefreshVehicles.AllowZooming = true;
-            this.ButtonRefreshVehicles.AllowZoomingOnFocus = false;
-            this.ButtonRefreshVehicles.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonRefreshVehicles.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.ButtonRefreshVehicles.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ButtonRefreshVehicles.ErrorImage")));
-            this.ButtonRefreshVehicles.FadeWhenInactive = false;
-            this.ButtonRefreshVehicles.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.ButtonRefreshVehicles.Image = global::VehicleServiceManagement.Properties.Resources.refresh;
-            this.ButtonRefreshVehicles.ImageActive = null;
-            this.ButtonRefreshVehicles.ImageLocation = null;
-            this.ButtonRefreshVehicles.ImageMargin = 10;
-            this.ButtonRefreshVehicles.ImageSize = new System.Drawing.Size(41, 41);
-            this.ButtonRefreshVehicles.ImageZoomSize = new System.Drawing.Size(51, 51);
-            this.ButtonRefreshVehicles.InitialImage = ((System.Drawing.Image)(resources.GetObject("ButtonRefreshVehicles.InitialImage")));
-            this.ButtonRefreshVehicles.Location = new System.Drawing.Point(291, 12);
-            this.ButtonRefreshVehicles.Name = "ButtonRefreshVehicles";
-            this.ButtonRefreshVehicles.Rotation = 0;
-            this.ButtonRefreshVehicles.ShowActiveImage = true;
-            this.ButtonRefreshVehicles.ShowCursorChanges = true;
-            this.ButtonRefreshVehicles.ShowImageBorders = true;
-            this.ButtonRefreshVehicles.ShowSizeMarkers = false;
-            this.ButtonRefreshVehicles.Size = new System.Drawing.Size(51, 51);
-            this.ButtonRefreshVehicles.TabIndex = 16;
-            this.ButtonRefreshVehicles.ToolTipText = "";
-            this.ButtonRefreshVehicles.WaitOnLoad = false;
-            this.ButtonRefreshVehicles.Zoom = 10;
-            this.ButtonRefreshVehicles.ZoomSpeed = 10;
-            this.ButtonRefreshVehicles.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
-            // LabelTitleVehicles
-            // 
-            this.LabelTitleVehicles.AllowParentOverrides = false;
-            this.LabelTitleVehicles.AutoEllipsis = false;
-            this.LabelTitleVehicles.Cursor = System.Windows.Forms.Cursors.Default;
-            this.LabelTitleVehicles.CursorType = System.Windows.Forms.Cursors.Default;
-            this.LabelTitleVehicles.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.LabelTitleVehicles.ForeColor = System.Drawing.Color.White;
-            this.LabelTitleVehicles.Location = new System.Drawing.Point(7, 3);
-            this.LabelTitleVehicles.Name = "LabelTitleVehicles";
-            this.LabelTitleVehicles.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelTitleVehicles.Size = new System.Drawing.Size(246, 54);
-            this.LabelTitleVehicles.TabIndex = 12;
-            this.LabelTitleVehicles.Text = "Автомобили";
-            this.LabelTitleVehicles.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.LabelTitleVehicles.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.LabelTitleVehicles.Click += new System.EventHandler(this.bunifuLabel9_Click);
-            // 
-            // DataGridViewVehicles
-            // 
-            this.DataGridViewVehicles.AllowCustomTheming = true;
-            this.DataGridViewVehicles.AllowUserToAddRows = false;
-            this.DataGridViewVehicles.AllowUserToDeleteRows = false;
-            this.DataGridViewVehicles.AllowUserToResizeColumns = false;
-            this.DataGridViewVehicles.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.DataGridViewVehicles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridViewVehicles.AutoGenerateColumns = false;
-            this.DataGridViewVehicles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridViewVehicles.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.DataGridViewVehicles.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridViewVehicles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.DataGridViewVehicles.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.DataGridViewVehicles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridViewVehicles.ColumnHeadersHeight = 40;
-            this.DataGridViewVehicles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.firstNameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn1,
-            this.makeDataGridViewTextBoxColumn,
-            this.modelDataGridViewTextBoxColumn,
-            this.yearDataGridViewTextBoxColumn,
-            this.capacityDataGridViewTextBoxColumn,
-            this.horsePowerDataGridViewTextBoxColumn,
-            this.fuelDataGridViewTextBoxColumn,
-            this.transmissionDataGridViewTextBoxColumn,
-            this.licensePlateDataGridViewTextBoxColumn,
-            this.GetVehicle});
-            this.DataGridViewVehicles.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.Silver;
-            this.DataGridViewVehicles.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.DataGridViewVehicles.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.DataGridViewVehicles.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.DataGridViewVehicles.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGridViewVehicles.CurrentTheme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.DataGridViewVehicles.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.DataGridViewVehicles.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.DataGridViewVehicles.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.DataGridViewVehicles.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DataGridViewVehicles.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.DataGridViewVehicles.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGridViewVehicles.CurrentTheme.Name = null;
-            this.DataGridViewVehicles.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.DataGridViewVehicles.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.DataGridViewVehicles.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.DataGridViewVehicles.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.DataGridViewVehicles.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataGridViewVehicles.Cursor = System.Windows.Forms.Cursors.Default;
-            this.DataGridViewVehicles.DataSource = this.vehicleBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridViewVehicles.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DataGridViewVehicles.EnableHeadersVisualStyles = false;
-            this.DataGridViewVehicles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.DataGridViewVehicles.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.DataGridViewVehicles.HeaderBgColor = System.Drawing.Color.Empty;
-            this.DataGridViewVehicles.HeaderForeColor = System.Drawing.Color.White;
-            this.DataGridViewVehicles.Location = new System.Drawing.Point(7, 69);
-            this.DataGridViewVehicles.MaximumSize = new System.Drawing.Size(1500, 1500);
-            this.DataGridViewVehicles.MultiSelect = false;
-            this.DataGridViewVehicles.Name = "DataGridViewVehicles";
-            this.DataGridViewVehicles.ReadOnly = true;
-            this.DataGridViewVehicles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.DataGridViewVehicles.RowHeadersVisible = false;
-            this.DataGridViewVehicles.RowHeadersWidth = 50;
-            this.DataGridViewVehicles.RowTemplate.Height = 40;
-            this.DataGridViewVehicles.RowTemplate.ReadOnly = true;
-            this.DataGridViewVehicles.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridViewVehicles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewVehicles.Size = new System.Drawing.Size(1331, 737);
-            this.DataGridViewVehicles.TabIndex = 13;
-            this.DataGridViewVehicles.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
-            this.DataGridViewVehicles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
-            // 
-            // GetVehicle
-            // 
-            this.GetVehicle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GetVehicle.FillWeight = 25.38071F;
-            this.GetVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.GetVehicle.HeaderText = "";
-            this.GetVehicle.Name = "GetVehicle";
-            this.GetVehicle.ReadOnly = true;
-            this.GetVehicle.Text = "➕";
-            this.GetVehicle.ToolTipText = "Избери клиент";
-            this.GetVehicle.UseColumnTextForButtonValue = true;
-            this.GetVehicle.Width = 50;
-            // 
-            // TextBoxSearchVehicles
-            // 
-            this.TextBoxSearchVehicles.AcceptsReturn = false;
-            this.TextBoxSearchVehicles.AcceptsTab = false;
-            this.TextBoxSearchVehicles.AnimationSpeed = 200;
-            this.TextBoxSearchVehicles.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.TextBoxSearchVehicles.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.TextBoxSearchVehicles.BackColor = System.Drawing.Color.Transparent;
-            this.TextBoxSearchVehicles.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TextBoxSearchVehicles.BackgroundImage")));
-            this.TextBoxSearchVehicles.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.TextBoxSearchVehicles.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.TextBoxSearchVehicles.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.TextBoxSearchVehicles.BorderColorIdle = System.Drawing.Color.White;
-            this.TextBoxSearchVehicles.BorderRadius = 35;
-            this.TextBoxSearchVehicles.BorderThickness = 1;
-            this.TextBoxSearchVehicles.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.TextBoxSearchVehicles.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxSearchVehicles.DefaultFont = new System.Drawing.Font("Segoe UI", 13F);
-            this.TextBoxSearchVehicles.DefaultText = "";
-            this.TextBoxSearchVehicles.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.TextBoxSearchVehicles.ForeColor = System.Drawing.Color.White;
-            this.TextBoxSearchVehicles.HideSelection = true;
-            this.TextBoxSearchVehicles.IconLeft = null;
-            this.TextBoxSearchVehicles.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxSearchVehicles.IconPadding = 10;
-            this.TextBoxSearchVehicles.IconRight = null;
-            this.TextBoxSearchVehicles.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxSearchVehicles.Lines = new string[0];
-            this.TextBoxSearchVehicles.Location = new System.Drawing.Point(352, 13);
-            this.TextBoxSearchVehicles.MaxLength = 32767;
-            this.TextBoxSearchVehicles.MinimumSize = new System.Drawing.Size(1, 1);
-            this.TextBoxSearchVehicles.Modified = false;
-            this.TextBoxSearchVehicles.Multiline = false;
-            this.TextBoxSearchVehicles.Name = "TextBoxSearchVehicles";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxSearchVehicles.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.White;
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.TextBoxSearchVehicles.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxSearchVehicles.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.White;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            stateProperties4.ForeColor = System.Drawing.Color.White;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxSearchVehicles.OnIdleState = stateProperties4;
-            this.TextBoxSearchVehicles.Padding = new System.Windows.Forms.Padding(3);
-            this.TextBoxSearchVehicles.PasswordChar = '\0';
-            this.TextBoxSearchVehicles.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.TextBoxSearchVehicles.PlaceholderText = "Търсене на автомобили";
-            this.TextBoxSearchVehicles.ReadOnly = false;
-            this.TextBoxSearchVehicles.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TextBoxSearchVehicles.SelectedText = "";
-            this.TextBoxSearchVehicles.SelectionLength = 0;
-            this.TextBoxSearchVehicles.SelectionStart = 0;
-            this.TextBoxSearchVehicles.ShortcutsEnabled = true;
-            this.TextBoxSearchVehicles.Size = new System.Drawing.Size(409, 44);
-            this.TextBoxSearchVehicles.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.TextBoxSearchVehicles.TabIndex = 11;
-            this.TextBoxSearchVehicles.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextBoxSearchVehicles.TextMarginBottom = 0;
-            this.TextBoxSearchVehicles.TextMarginLeft = 3;
-            this.TextBoxSearchVehicles.TextMarginTop = 0;
-            this.TextBoxSearchVehicles.TextPlaceholder = "Търсене на автомобили";
-            this.TextBoxSearchVehicles.UseSystemPasswordChar = false;
-            this.TextBoxSearchVehicles.WordWrap = true;
-            this.TextBoxSearchVehicles.TextChanged += new System.EventHandler(this.bunifuTextBox1_TextChanged);
-            // 
-            // Calendar
-            // 
-            this.Calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.Calendar.Controls.Add(this.hgScheduler1);
-            this.Calendar.Location = new System.Drawing.Point(4, 4);
-            this.Calendar.Name = "Calendar";
-            this.Calendar.Size = new System.Drawing.Size(1346, 812);
-            this.Calendar.TabIndex = 4;
-            this.Calendar.Text = "Calendar";
-            // 
-            // hgScheduler1
-            // 
-            this.hgScheduler1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.hgScheduler1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.hgScheduler1.Location = new System.Drawing.Point(3, 0);
-            this.hgScheduler1.Name = "hgScheduler1";
-            hourglassOptions1.EventArrangement = null;
-            hourglassOptions1.EventClickHandling = null;
-            hourglassOptions1.EventDeleteHandling = null;
-            hourglassOptions1.EventDoubleClickHandling = null;
-            hourglassOptions1.HeaderDateFormat = "dddd";
-            hourglassOptions1.StartDate = new System.DateTime(2023, 1, 9, 10, 1, 20, 23);
-            hourglassOptions1.ViewType = Hourglass.ViewTypes.Week;
-            this.hgScheduler1.Options = hourglassOptions1;
-            this.hgScheduler1.Size = new System.Drawing.Size(1340, 809);
-            this.hgScheduler1.TabIndex = 0;
-            this.hgScheduler1.Theme = resources.GetString("hgScheduler1.Theme");
             // 
             // Clients
             // 
@@ -1870,6 +1507,51 @@ namespace VehicleServiceManagement
             this.DataGridViewClients.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             this.DataGridViewClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewClients_CellContentClick);
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
+            this.nameDataGridViewTextBoxColumn.Frozen = true;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Име";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.nameDataGridViewTextBoxColumn.Width = 170;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
+            this.lastNameDataGridViewTextBoxColumn.Frozen = true;
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastNameDataGridViewTextBoxColumn.Width = 170;
+            // 
+            // nicknameDataGridViewTextBoxColumn
+            // 
+            this.nicknameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nicknameDataGridViewTextBoxColumn.DataPropertyName = "Nickname";
+            this.nicknameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
+            this.nicknameDataGridViewTextBoxColumn.Frozen = true;
+            this.nicknameDataGridViewTextBoxColumn.HeaderText = "Прякор";
+            this.nicknameDataGridViewTextBoxColumn.Name = "nicknameDataGridViewTextBoxColumn";
+            this.nicknameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nicknameDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.FillWeight = 118.6548F;
+            this.phoneNumberDataGridViewTextBoxColumn.Frozen = true;
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Телефонен номер";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 180;
+            // 
             // Get
             // 
             this.Get.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -1882,6 +1564,10 @@ namespace VehicleServiceManagement
             this.Get.ToolTipText = "Избери клиент";
             this.Get.UseColumnTextForButtonValue = true;
             this.Get.Width = 50;
+            // 
+            // clientBindingSource
+            // 
+            this.clientBindingSource.DataSource = typeof(VehicleServiceManagement.Client);
             // 
             // TextBoxSearch
             // 
@@ -1958,6 +1644,443 @@ namespace VehicleServiceManagement
             this.TextBoxSearch.UseSystemPasswordChar = false;
             this.TextBoxSearch.WordWrap = true;
             this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
+            // 
+            // Vehicles
+            // 
+            this.Vehicles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.Vehicles.Controls.Add(this.ButtonAddVechicle);
+            this.Vehicles.Controls.Add(this.ButtonRefreshVehicles);
+            this.Vehicles.Controls.Add(this.LabelTitleVehicles);
+            this.Vehicles.Controls.Add(this.DataGridViewVehicles);
+            this.Vehicles.Controls.Add(this.TextBoxSearchVehicles);
+            this.Vehicles.Location = new System.Drawing.Point(4, 4);
+            this.Vehicles.Name = "Vehicles";
+            this.Vehicles.Padding = new System.Windows.Forms.Padding(3);
+            this.Vehicles.Size = new System.Drawing.Size(1346, 812);
+            this.Vehicles.TabIndex = 2;
+            this.Vehicles.Text = "Vehicles";
+            // 
+            // ButtonAddVechicle
+            // 
+            this.ButtonAddVechicle.AllowAnimations = true;
+            this.ButtonAddVechicle.AllowMouseEffects = true;
+            this.ButtonAddVechicle.AllowToggling = false;
+            this.ButtonAddVechicle.AnimationSpeed = 200;
+            this.ButtonAddVechicle.AutoGenerateColors = false;
+            this.ButtonAddVechicle.AutoRoundBorders = false;
+            this.ButtonAddVechicle.AutoSizeLeftIcon = true;
+            this.ButtonAddVechicle.AutoSizeRightIcon = true;
+            this.ButtonAddVechicle.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonAddVechicle.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.ButtonAddVechicle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonAddVechicle.BackgroundImage")));
+            this.ButtonAddVechicle.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonAddVechicle.ButtonText = "ДОБАВИ";
+            this.ButtonAddVechicle.ButtonTextMarginLeft = 0;
+            this.ButtonAddVechicle.ColorContrastOnClick = 45;
+            this.ButtonAddVechicle.ColorContrastOnHover = 45;
+            this.ButtonAddVechicle.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.ButtonAddVechicle.CustomizableEdges = borderEdges1;
+            this.ButtonAddVechicle.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ButtonAddVechicle.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ButtonAddVechicle.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ButtonAddVechicle.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ButtonAddVechicle.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.ButtonAddVechicle.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.ButtonAddVechicle.ForeColor = System.Drawing.Color.White;
+            this.ButtonAddVechicle.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonAddVechicle.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonAddVechicle.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.ButtonAddVechicle.IconMarginLeft = 11;
+            this.ButtonAddVechicle.IconPadding = 10;
+            this.ButtonAddVechicle.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonAddVechicle.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonAddVechicle.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.ButtonAddVechicle.IconSize = 25;
+            this.ButtonAddVechicle.IdleBorderColor = System.Drawing.Color.Black;
+            this.ButtonAddVechicle.IdleBorderRadius = 30;
+            this.ButtonAddVechicle.IdleBorderThickness = 1;
+            this.ButtonAddVechicle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.ButtonAddVechicle.IdleIconLeftImage = global::VehicleServiceManagement.Properties.Resources.plus;
+            this.ButtonAddVechicle.IdleIconRightImage = null;
+            this.ButtonAddVechicle.IndicateFocus = false;
+            this.ButtonAddVechicle.Location = new System.Drawing.Point(1194, 13);
+            this.ButtonAddVechicle.Name = "ButtonAddVechicle";
+            this.ButtonAddVechicle.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ButtonAddVechicle.OnDisabledState.BorderRadius = 30;
+            this.ButtonAddVechicle.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonAddVechicle.OnDisabledState.BorderThickness = 1;
+            this.ButtonAddVechicle.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ButtonAddVechicle.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ButtonAddVechicle.OnDisabledState.IconLeftImage = null;
+            this.ButtonAddVechicle.OnDisabledState.IconRightImage = null;
+            this.ButtonAddVechicle.onHoverState.BorderColor = System.Drawing.Color.Black;
+            this.ButtonAddVechicle.onHoverState.BorderRadius = 30;
+            this.ButtonAddVechicle.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonAddVechicle.onHoverState.BorderThickness = 1;
+            this.ButtonAddVechicle.onHoverState.FillColor = System.Drawing.Color.LimeGreen;
+            this.ButtonAddVechicle.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.ButtonAddVechicle.onHoverState.IconLeftImage = null;
+            this.ButtonAddVechicle.onHoverState.IconRightImage = null;
+            this.ButtonAddVechicle.OnIdleState.BorderColor = System.Drawing.Color.Black;
+            this.ButtonAddVechicle.OnIdleState.BorderRadius = 30;
+            this.ButtonAddVechicle.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonAddVechicle.OnIdleState.BorderThickness = 1;
+            this.ButtonAddVechicle.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.ButtonAddVechicle.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.ButtonAddVechicle.OnIdleState.IconLeftImage = global::VehicleServiceManagement.Properties.Resources.plus;
+            this.ButtonAddVechicle.OnIdleState.IconRightImage = null;
+            this.ButtonAddVechicle.OnPressedState.BorderColor = System.Drawing.Color.Black;
+            this.ButtonAddVechicle.OnPressedState.BorderRadius = 30;
+            this.ButtonAddVechicle.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ButtonAddVechicle.OnPressedState.BorderThickness = 1;
+            this.ButtonAddVechicle.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.ButtonAddVechicle.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.ButtonAddVechicle.OnPressedState.IconLeftImage = null;
+            this.ButtonAddVechicle.OnPressedState.IconRightImage = null;
+            this.ButtonAddVechicle.Size = new System.Drawing.Size(144, 44);
+            this.ButtonAddVechicle.TabIndex = 18;
+            this.ButtonAddVechicle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ButtonAddVechicle.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ButtonAddVechicle.TextMarginLeft = 0;
+            this.ButtonAddVechicle.TextPadding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.ButtonAddVechicle.UseDefaultRadiusAndThickness = true;
+            this.ButtonAddVechicle.Click += new System.EventHandler(this.ButtonAddVechicle_Click);
+            // 
+            // ButtonRefreshVehicles
+            // 
+            this.ButtonRefreshVehicles.ActiveImage = null;
+            this.ButtonRefreshVehicles.AllowAnimations = true;
+            this.ButtonRefreshVehicles.AllowBuffering = false;
+            this.ButtonRefreshVehicles.AllowToggling = false;
+            this.ButtonRefreshVehicles.AllowZooming = true;
+            this.ButtonRefreshVehicles.AllowZoomingOnFocus = false;
+            this.ButtonRefreshVehicles.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonRefreshVehicles.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ButtonRefreshVehicles.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ButtonRefreshVehicles.ErrorImage")));
+            this.ButtonRefreshVehicles.FadeWhenInactive = false;
+            this.ButtonRefreshVehicles.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.ButtonRefreshVehicles.Image = global::VehicleServiceManagement.Properties.Resources.refresh;
+            this.ButtonRefreshVehicles.ImageActive = null;
+            this.ButtonRefreshVehicles.ImageLocation = null;
+            this.ButtonRefreshVehicles.ImageMargin = 10;
+            this.ButtonRefreshVehicles.ImageSize = new System.Drawing.Size(41, 41);
+            this.ButtonRefreshVehicles.ImageZoomSize = new System.Drawing.Size(51, 51);
+            this.ButtonRefreshVehicles.InitialImage = ((System.Drawing.Image)(resources.GetObject("ButtonRefreshVehicles.InitialImage")));
+            this.ButtonRefreshVehicles.Location = new System.Drawing.Point(291, 12);
+            this.ButtonRefreshVehicles.Name = "ButtonRefreshVehicles";
+            this.ButtonRefreshVehicles.Rotation = 0;
+            this.ButtonRefreshVehicles.ShowActiveImage = true;
+            this.ButtonRefreshVehicles.ShowCursorChanges = true;
+            this.ButtonRefreshVehicles.ShowImageBorders = true;
+            this.ButtonRefreshVehicles.ShowSizeMarkers = false;
+            this.ButtonRefreshVehicles.Size = new System.Drawing.Size(51, 51);
+            this.ButtonRefreshVehicles.TabIndex = 16;
+            this.ButtonRefreshVehicles.ToolTipText = "";
+            this.ButtonRefreshVehicles.WaitOnLoad = false;
+            this.ButtonRefreshVehicles.Zoom = 10;
+            this.ButtonRefreshVehicles.ZoomSpeed = 10;
+            this.ButtonRefreshVehicles.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // LabelTitleVehicles
+            // 
+            this.LabelTitleVehicles.AllowParentOverrides = false;
+            this.LabelTitleVehicles.AutoEllipsis = false;
+            this.LabelTitleVehicles.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LabelTitleVehicles.CursorType = System.Windows.Forms.Cursors.Default;
+            this.LabelTitleVehicles.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.LabelTitleVehicles.ForeColor = System.Drawing.Color.White;
+            this.LabelTitleVehicles.Location = new System.Drawing.Point(7, 3);
+            this.LabelTitleVehicles.Name = "LabelTitleVehicles";
+            this.LabelTitleVehicles.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelTitleVehicles.Size = new System.Drawing.Size(246, 54);
+            this.LabelTitleVehicles.TabIndex = 12;
+            this.LabelTitleVehicles.Text = "Автомобили";
+            this.LabelTitleVehicles.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LabelTitleVehicles.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.LabelTitleVehicles.Click += new System.EventHandler(this.bunifuLabel9_Click);
+            // 
+            // DataGridViewVehicles
+            // 
+            this.DataGridViewVehicles.AllowCustomTheming = true;
+            this.DataGridViewVehicles.AllowUserToAddRows = false;
+            this.DataGridViewVehicles.AllowUserToDeleteRows = false;
+            this.DataGridViewVehicles.AllowUserToResizeColumns = false;
+            this.DataGridViewVehicles.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.DataGridViewVehicles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGridViewVehicles.AutoGenerateColumns = false;
+            this.DataGridViewVehicles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridViewVehicles.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.DataGridViewVehicles.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGridViewVehicles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DataGridViewVehicles.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.DataGridViewVehicles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DataGridViewVehicles.ColumnHeadersHeight = 40;
+            this.DataGridViewVehicles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn1,
+            this.makeDataGridViewTextBoxColumn,
+            this.modelDataGridViewTextBoxColumn,
+            this.yearDataGridViewTextBoxColumn,
+            this.capacityDataGridViewTextBoxColumn,
+            this.horsePowerDataGridViewTextBoxColumn,
+            this.fuelDataGridViewTextBoxColumn,
+            this.transmissionDataGridViewTextBoxColumn,
+            this.licensePlateDataGridViewTextBoxColumn,
+            this.GetVehicle});
+            this.DataGridViewVehicles.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.Silver;
+            this.DataGridViewVehicles.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.DataGridViewVehicles.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.DataGridViewVehicles.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
+            this.DataGridViewVehicles.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGridViewVehicles.CurrentTheme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.DataGridViewVehicles.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.DataGridViewVehicles.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.DataGridViewVehicles.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.DataGridViewVehicles.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DataGridViewVehicles.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.DataGridViewVehicles.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGridViewVehicles.CurrentTheme.Name = null;
+            this.DataGridViewVehicles.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.DataGridViewVehicles.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.DataGridViewVehicles.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.DataGridViewVehicles.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.DataGridViewVehicles.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataGridViewVehicles.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DataGridViewVehicles.DataSource = this.vehicleBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewVehicles.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DataGridViewVehicles.EnableHeadersVisualStyles = false;
+            this.DataGridViewVehicles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.DataGridViewVehicles.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.DataGridViewVehicles.HeaderBgColor = System.Drawing.Color.Empty;
+            this.DataGridViewVehicles.HeaderForeColor = System.Drawing.Color.White;
+            this.DataGridViewVehicles.Location = new System.Drawing.Point(7, 69);
+            this.DataGridViewVehicles.MaximumSize = new System.Drawing.Size(1500, 1500);
+            this.DataGridViewVehicles.MultiSelect = false;
+            this.DataGridViewVehicles.Name = "DataGridViewVehicles";
+            this.DataGridViewVehicles.ReadOnly = true;
+            this.DataGridViewVehicles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DataGridViewVehicles.RowHeadersVisible = false;
+            this.DataGridViewVehicles.RowHeadersWidth = 50;
+            this.DataGridViewVehicles.RowTemplate.Height = 40;
+            this.DataGridViewVehicles.RowTemplate.ReadOnly = true;
+            this.DataGridViewVehicles.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewVehicles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridViewVehicles.Size = new System.Drawing.Size(1331, 737);
+            this.DataGridViewVehicles.TabIndex = 13;
+            this.DataGridViewVehicles.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
+            this.DataGridViewVehicles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Име";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastNameDataGridViewTextBoxColumn1
+            // 
+            this.lastNameDataGridViewTextBoxColumn1.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
+            this.lastNameDataGridViewTextBoxColumn1.Name = "lastNameDataGridViewTextBoxColumn1";
+            this.lastNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // makeDataGridViewTextBoxColumn
+            // 
+            this.makeDataGridViewTextBoxColumn.DataPropertyName = "Make";
+            this.makeDataGridViewTextBoxColumn.HeaderText = "Марка";
+            this.makeDataGridViewTextBoxColumn.Name = "makeDataGridViewTextBoxColumn";
+            this.makeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Модел";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
+            this.yearDataGridViewTextBoxColumn.HeaderText = "Година";
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // capacityDataGridViewTextBoxColumn
+            // 
+            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "Capacity";
+            this.capacityDataGridViewTextBoxColumn.HeaderText = "Кубатура";
+            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
+            this.capacityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horsePowerDataGridViewTextBoxColumn
+            // 
+            this.horsePowerDataGridViewTextBoxColumn.DataPropertyName = "HorsePower";
+            this.horsePowerDataGridViewTextBoxColumn.HeaderText = "Конски сили";
+            this.horsePowerDataGridViewTextBoxColumn.Name = "horsePowerDataGridViewTextBoxColumn";
+            this.horsePowerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fuelDataGridViewTextBoxColumn
+            // 
+            this.fuelDataGridViewTextBoxColumn.DataPropertyName = "Fuel";
+            this.fuelDataGridViewTextBoxColumn.HeaderText = "Гориво";
+            this.fuelDataGridViewTextBoxColumn.Name = "fuelDataGridViewTextBoxColumn";
+            this.fuelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // transmissionDataGridViewTextBoxColumn
+            // 
+            this.transmissionDataGridViewTextBoxColumn.DataPropertyName = "Transmission";
+            this.transmissionDataGridViewTextBoxColumn.HeaderText = "Трансмисия";
+            this.transmissionDataGridViewTextBoxColumn.Name = "transmissionDataGridViewTextBoxColumn";
+            this.transmissionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // licensePlateDataGridViewTextBoxColumn
+            // 
+            this.licensePlateDataGridViewTextBoxColumn.DataPropertyName = "LicensePlate";
+            this.licensePlateDataGridViewTextBoxColumn.HeaderText = "Рег. Номер";
+            this.licensePlateDataGridViewTextBoxColumn.Name = "licensePlateDataGridViewTextBoxColumn";
+            this.licensePlateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // GetVehicle
+            // 
+            this.GetVehicle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GetVehicle.FillWeight = 25.38071F;
+            this.GetVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.GetVehicle.HeaderText = "";
+            this.GetVehicle.Name = "GetVehicle";
+            this.GetVehicle.ReadOnly = true;
+            this.GetVehicle.Text = "➕";
+            this.GetVehicle.ToolTipText = "Избери клиент";
+            this.GetVehicle.UseColumnTextForButtonValue = true;
+            this.GetVehicle.Width = 50;
+            // 
+            // vehicleBindingSource
+            // 
+            this.vehicleBindingSource.DataSource = typeof(VehicleServiceManagement.Vehicle);
+            // 
+            // TextBoxSearchVehicles
+            // 
+            this.TextBoxSearchVehicles.AcceptsReturn = false;
+            this.TextBoxSearchVehicles.AcceptsTab = false;
+            this.TextBoxSearchVehicles.AnimationSpeed = 200;
+            this.TextBoxSearchVehicles.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.TextBoxSearchVehicles.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.TextBoxSearchVehicles.BackColor = System.Drawing.Color.Transparent;
+            this.TextBoxSearchVehicles.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TextBoxSearchVehicles.BackgroundImage")));
+            this.TextBoxSearchVehicles.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.TextBoxSearchVehicles.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.TextBoxSearchVehicles.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.TextBoxSearchVehicles.BorderColorIdle = System.Drawing.Color.White;
+            this.TextBoxSearchVehicles.BorderRadius = 35;
+            this.TextBoxSearchVehicles.BorderThickness = 1;
+            this.TextBoxSearchVehicles.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.TextBoxSearchVehicles.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxSearchVehicles.DefaultFont = new System.Drawing.Font("Segoe UI", 13F);
+            this.TextBoxSearchVehicles.DefaultText = "";
+            this.TextBoxSearchVehicles.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.TextBoxSearchVehicles.ForeColor = System.Drawing.Color.White;
+            this.TextBoxSearchVehicles.HideSelection = true;
+            this.TextBoxSearchVehicles.IconLeft = null;
+            this.TextBoxSearchVehicles.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxSearchVehicles.IconPadding = 10;
+            this.TextBoxSearchVehicles.IconRight = null;
+            this.TextBoxSearchVehicles.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxSearchVehicles.Lines = new string[0];
+            this.TextBoxSearchVehicles.Location = new System.Drawing.Point(352, 13);
+            this.TextBoxSearchVehicles.MaxLength = 32767;
+            this.TextBoxSearchVehicles.MinimumSize = new System.Drawing.Size(1, 1);
+            this.TextBoxSearchVehicles.Modified = false;
+            this.TextBoxSearchVehicles.Multiline = false;
+            this.TextBoxSearchVehicles.Name = "TextBoxSearchVehicles";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxSearchVehicles.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.White;
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.TextBoxSearchVehicles.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxSearchVehicles.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.White;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxSearchVehicles.OnIdleState = stateProperties4;
+            this.TextBoxSearchVehicles.Padding = new System.Windows.Forms.Padding(3);
+            this.TextBoxSearchVehicles.PasswordChar = '\0';
+            this.TextBoxSearchVehicles.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.TextBoxSearchVehicles.PlaceholderText = "Търсене на автомобили";
+            this.TextBoxSearchVehicles.ReadOnly = false;
+            this.TextBoxSearchVehicles.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TextBoxSearchVehicles.SelectedText = "";
+            this.TextBoxSearchVehicles.SelectionLength = 0;
+            this.TextBoxSearchVehicles.SelectionStart = 0;
+            this.TextBoxSearchVehicles.ShortcutsEnabled = true;
+            this.TextBoxSearchVehicles.Size = new System.Drawing.Size(409, 44);
+            this.TextBoxSearchVehicles.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.TextBoxSearchVehicles.TabIndex = 11;
+            this.TextBoxSearchVehicles.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBoxSearchVehicles.TextMarginBottom = 0;
+            this.TextBoxSearchVehicles.TextMarginLeft = 3;
+            this.TextBoxSearchVehicles.TextMarginTop = 0;
+            this.TextBoxSearchVehicles.TextPlaceholder = "Търсене на автомобили";
+            this.TextBoxSearchVehicles.UseSystemPasswordChar = false;
+            this.TextBoxSearchVehicles.WordWrap = true;
+            this.TextBoxSearchVehicles.TextChanged += new System.EventHandler(this.bunifuTextBox1_TextChanged);
+            // 
+            // Calendar
+            // 
+            this.Calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.Calendar.Controls.Add(this.hgScheduler1);
+            this.Calendar.Location = new System.Drawing.Point(4, 4);
+            this.Calendar.Name = "Calendar";
+            this.Calendar.Size = new System.Drawing.Size(1346, 812);
+            this.Calendar.TabIndex = 4;
+            this.Calendar.Text = "Calendar";
+            // 
+            // hgScheduler1
+            // 
+            this.hgScheduler1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.hgScheduler1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.hgScheduler1.Location = new System.Drawing.Point(3, 0);
+            this.hgScheduler1.Name = "hgScheduler1";
+            hourglassOptions1.EventArrangement = null;
+            hourglassOptions1.EventClickHandling = null;
+            hourglassOptions1.EventDeleteHandling = null;
+            hourglassOptions1.EventDoubleClickHandling = null;
+            hourglassOptions1.HeaderDateFormat = "dddd";
+            hourglassOptions1.StartDate = new System.DateTime(2023, 1, 9, 10, 1, 20, 23);
+            hourglassOptions1.ViewType = Hourglass.ViewTypes.Week;
+            this.hgScheduler1.Options = hourglassOptions1;
+            this.hgScheduler1.Size = new System.Drawing.Size(1340, 809);
+            this.hgScheduler1.TabIndex = 0;
+            this.hgScheduler1.Theme = resources.GetString("hgScheduler1.Theme");
             // 
             // Home
             // 
@@ -2777,129 +2900,6 @@ namespace VehicleServiceManagement
             this.PictureBoxUserAvatar.TabStop = false;
             this.PictureBoxUserAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
-            this.nameDataGridViewTextBoxColumn.Frozen = true;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Име";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.nameDataGridViewTextBoxColumn.Width = 170;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
-            this.lastNameDataGridViewTextBoxColumn.Frozen = true;
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lastNameDataGridViewTextBoxColumn.Width = 170;
-            // 
-            // nicknameDataGridViewTextBoxColumn
-            // 
-            this.nicknameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nicknameDataGridViewTextBoxColumn.DataPropertyName = "Nickname";
-            this.nicknameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
-            this.nicknameDataGridViewTextBoxColumn.Frozen = true;
-            this.nicknameDataGridViewTextBoxColumn.HeaderText = "Прякор";
-            this.nicknameDataGridViewTextBoxColumn.Name = "nicknameDataGridViewTextBoxColumn";
-            this.nicknameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nicknameDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.FillWeight = 118.6548F;
-            this.phoneNumberDataGridViewTextBoxColumn.Frozen = true;
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Телефонен номер";
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.phoneNumberDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // clientBindingSource
-            // 
-            this.clientBindingSource.DataSource = typeof(VehicleServiceManagement.Client);
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Име";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lastNameDataGridViewTextBoxColumn1
-            // 
-            this.lastNameDataGridViewTextBoxColumn1.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
-            this.lastNameDataGridViewTextBoxColumn1.Name = "lastNameDataGridViewTextBoxColumn1";
-            this.lastNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // makeDataGridViewTextBoxColumn
-            // 
-            this.makeDataGridViewTextBoxColumn.DataPropertyName = "Make";
-            this.makeDataGridViewTextBoxColumn.HeaderText = "Марка";
-            this.makeDataGridViewTextBoxColumn.Name = "makeDataGridViewTextBoxColumn";
-            this.makeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "Модел";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Година";
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // capacityDataGridViewTextBoxColumn
-            // 
-            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "Capacity";
-            this.capacityDataGridViewTextBoxColumn.HeaderText = "Кубатура";
-            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
-            this.capacityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // horsePowerDataGridViewTextBoxColumn
-            // 
-            this.horsePowerDataGridViewTextBoxColumn.DataPropertyName = "HorsePower";
-            this.horsePowerDataGridViewTextBoxColumn.HeaderText = "Конски сили";
-            this.horsePowerDataGridViewTextBoxColumn.Name = "horsePowerDataGridViewTextBoxColumn";
-            this.horsePowerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fuelDataGridViewTextBoxColumn
-            // 
-            this.fuelDataGridViewTextBoxColumn.DataPropertyName = "Fuel";
-            this.fuelDataGridViewTextBoxColumn.HeaderText = "Гориво";
-            this.fuelDataGridViewTextBoxColumn.Name = "fuelDataGridViewTextBoxColumn";
-            this.fuelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // transmissionDataGridViewTextBoxColumn
-            // 
-            this.transmissionDataGridViewTextBoxColumn.DataPropertyName = "Transmission";
-            this.transmissionDataGridViewTextBoxColumn.HeaderText = "Трансмисия";
-            this.transmissionDataGridViewTextBoxColumn.Name = "transmissionDataGridViewTextBoxColumn";
-            this.transmissionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // licensePlateDataGridViewTextBoxColumn
-            // 
-            this.licensePlateDataGridViewTextBoxColumn.DataPropertyName = "LicensePlate";
-            this.licensePlateDataGridViewTextBoxColumn.HeaderText = "Рег. Номер";
-            this.licensePlateDataGridViewTextBoxColumn.Name = "licensePlateDataGridViewTextBoxColumn";
-            this.licensePlateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vehicleBindingSource
-            // 
-            this.vehicleBindingSource.DataSource = typeof(VehicleServiceManagement.Vehicle);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2918,16 +2918,18 @@ namespace VehicleServiceManagement
             this.Load += new System.EventHandler(this.Main_Load);
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.MainPages.ResumeLayout(false);
-            this.Vehicles.ResumeLayout(false);
-            this.Vehicles.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVehicles)).EndInit();
-            this.Calendar.ResumeLayout(false);
             this.Clients.ResumeLayout(false);
             this.Clients.PerformLayout();
             this.PanelClientButtons.ResumeLayout(false);
             this.ShadowPanelCurrentClient.ResumeLayout(false);
             this.ShadowPanelCurrentClient.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
+            this.Vehicles.ResumeLayout(false);
+            this.Vehicles.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVehicles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).EndInit();
+            this.Calendar.ResumeLayout(false);
             this.Home.ResumeLayout(false);
             this.Home.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
@@ -2937,8 +2939,6 @@ namespace VehicleServiceManagement
             this.PanelButtons.PerformLayout();
             this.PanelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

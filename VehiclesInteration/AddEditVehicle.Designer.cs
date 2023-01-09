@@ -1543,6 +1543,7 @@ namespace VehicleServiceManagement
             this.LabelTitle.Text = "ДОБАВЯНЕ НА АВТОМОБИЛ";
             this.LabelTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.LabelTitle.Click += new System.EventHandler(this.LabelTitle_Click);
             // 
             // Notification
             // 

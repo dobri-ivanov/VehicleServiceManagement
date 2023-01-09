@@ -16,7 +16,9 @@ namespace VehicleServiceManagement
         public string connectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
 
         string operation = string.Empty;
+
         private int currentClientId;
+        private string currentlicensePlate;
         Main mainPanel;
         public AddNewVehicle()
         {
@@ -33,6 +35,20 @@ namespace VehicleServiceManagement
             FillClientData(clientID);
         }
 
+        public AddNewVehicle(Main main, int clientID, string licensePlate, string currentOperation)
+        {
+            InitializeComponent();
+            operation = currentOperation;
+            SetUp();
+            currentClientId = clientID;
+            currentlicensePlate = licensePlate;
+            mainPanel = main;
+            FillVehicleData(licensePlate);
+            FillClientData(clientID);
+        }
+
+       
+
         public AddNewVehicle(Main main, string currentOperation)
         {
             InitializeComponent();
@@ -40,7 +56,45 @@ namespace VehicleServiceManagement
             SetUp();
             mainPanel = main;
         }
+        private void FillVehicleData(string licensePlate)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string query = "SELECT * FROM Vehicles WHERE ID = ''";
 
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader read = command.ExecuteReader();
+
+            string horsePower = String.Empty;
+            string capacity = String.Empty;
+            string year = String.Empty;
+            string fuel = String.Empty;
+            string transmission = String.Empty;
+            string make = String.Empty;
+            string model = String.Empty;
+
+            while (read.Read())
+            {
+                horsePower = read["HorsePower"].ToString();
+                capacity = read["Capacity"].ToString();
+                year = read["Year"].ToString();
+                fuel = read["Fuel"].ToString();
+                transmission = read["Transmission"].ToString();
+                make = read["Make"].ToString();
+                model = read["Model"].ToString();
+            }
+            read.Close();
+            connection.Close();
+
+            TextBoxMake.Text = make;
+            TextBoxModel.Text = model;
+            TextBoxYear.Text = year;
+            TextBoxCapacity.Text = capacity;
+            TextBoxFuel.Text = fuel;
+            TextBoxHorsePower.Text = horsePower;
+            TextBoxTransmission.Text = transmission;
+            TextBoxLicensePlate.Text = currentlicensePlate;
+        }
         private void FillClientData(int clientID)
         {
             SqlConnection connection = new SqlConnection(connectionString);
@@ -189,6 +243,11 @@ namespace VehicleServiceManagement
         }
 
         private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LabelTitle_Click(object sender, EventArgs e)
         {
 
         }

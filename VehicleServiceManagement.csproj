@@ -154,11 +154,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="VehichelsInteration\AddNewVehicle.cs">
+    <Compile Include="AlertBoxes\AlertBoxDeleteVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VehichelsInteration\AddNewVehicle.Designer.cs">
-      <DependentUpon>AddNewVehicle.cs</DependentUpon>
+    <Compile Include="AlertBoxes\AlertBoxDeleteVehicle.Designer.cs">
+      <DependentUpon>AlertBoxDeleteVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehiclesInteration\AddEditVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehiclesInteration\AddEditVehicle.Designer.cs">
+      <DependentUpon>AddEditVehicle.cs</DependentUpon>
     </Compile>
     <Compile Include="AlertBoxes\AlertBoxEditClient.cs">
       <SubType>Form</SubType>
@@ -206,14 +212,17 @@
     <Compile Include="SplashScreen\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="VehicleOptions.cs">
+    <Compile Include="VehiclesInteration\VehicleOptions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VehicleOptions.Designer.cs">
+    <Compile Include="VehiclesInteration\VehicleOptions.Designer.cs">
       <DependentUpon>VehicleOptions.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="VehichelsInteration\AddNewVehicle.resx">
-      <DependentUpon>AddNewVehicle.cs</DependentUpon>
+    <EmbeddedResource Include="AlertBoxes\AlertBoxDeleteVehicle.resx">
+      <DependentUpon>AlertBoxDeleteVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehiclesInteration\AddEditVehicle.resx">
+      <DependentUpon>AddEditVehicle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AlertBoxes\AlertBoxEditClient.resx">
       <DependentUpon>AlertBoxEditClient.cs</DependentUpon>
@@ -247,7 +256,7 @@
     <EmbeddedResource Include="SplashScreen\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VehicleOptions.resx">
+    <EmbeddedResource Include="VehiclesInteration\VehicleOptions.resx">
       <DependentUpon>VehicleOptions.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
