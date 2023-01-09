@@ -20,6 +20,7 @@ namespace VehicleServiceManagement
         private int currentClientId;
         private string currentlicensePlate;
         Main mainPanel;
+        VehicleOptions vehicleOptionsPanel;
         public AddNewVehicle()
         {
             InitializeComponent();
@@ -35,14 +36,15 @@ namespace VehicleServiceManagement
             FillClientData(clientID);
         }
 
-        public AddNewVehicle(Main main, int clientID, string licensePlate, string currentOperation)
+        public AddNewVehicle(VehicleOptions vo, Main main, int clientID, string licensePlate, string currentOperation)
         {
             InitializeComponent();
             operation = currentOperation;
-            SetUp();
+            vehicleOptionsPanel = vo;
             currentClientId = clientID;
             currentlicensePlate = licensePlate;
             mainPanel = main;
+            SetUp();
             FillVehicleData(licensePlate);
             FillClientData(clientID);
         }
@@ -60,7 +62,7 @@ namespace VehicleServiceManagement
         {
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string query = "SELECT * FROM Vehicles WHERE ID = ''";
+            string query = "SELECT * FROM Vehicles WHERE LicensePlate = N'"+licensePlate+"'";
 
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader read = command.ExecuteReader();
@@ -204,7 +206,7 @@ namespace VehicleServiceManagement
                     string currentLicensePlate = TextBoxLicensePlate.Text;
                     SqlConnection connection = new SqlConnection(connectionString);
                     connection.Open();
-                    string selectQuery = "SELECT * FROM Vehicles WHERE LicensePlate = '" + currentLicensePlate + "'";
+                    string selectQuery = "SELECT * FROM Vehicles WHERE LicensePlate = N'" + currentLicensePlate + "'";
                     SqlCommand command = new SqlCommand(selectQuery, connection);
 
                     SqlDataReader read = command.ExecuteReader();
@@ -239,6 +241,37 @@ namespace VehicleServiceManagement
                     read.Close();
                     connection.Close();
                 }
+            }
+            else if (operation == "EDIT")
+            {
+                string licensePlate = TextBoxLicensePlate.Text;
+                string horsePower = TextBoxHorsePower.Text;
+                string capacity = TextBoxCapacity.Text;
+                string year = TextBoxYear.Text;
+                string fuel = TextBoxFuel.Text;
+                string transmission = TextBoxTransmission.Text;
+                string make = TextBoxMake.Text;
+                string model = TextBoxModel.Text;
+
+                SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+                connection.Open();
+
+                string query = "UPDATE Vehicles SET LicensePlate = N'" + licensePlate + "', HorsePower = '" + horsePower + "', Capacity = '" + capacity + "', Year = '" + year + "', Fuel = N'"+fuel+"', Transmission = N'"+transmission+"', ClientID = '"+currentClientId+"', Make = '"+make+"', Model = '"+model+"' WHERE LicensePlate = N'" + currentlicensePlate + "';";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+                mainPanel.EditVehicleNotification($"Информацията е успешно обновена!");
+                vehicleOptionsPanel.Close();
+                this.Close();
+
+
+
+
+
+
+
+
+
             }
         }
 

@@ -63,7 +63,6 @@ namespace VehicleServiceManagement
             this.Panel.ShowBorders = true;
             this.Panel.Size = new System.Drawing.Size(295, 308);
             this.Panel.TabIndex = 0;
-            this.Panel.Click += new System.EventHandler(this.Panel_Click);
             // 
             // ButtonCloseApplication
             // 
@@ -206,6 +205,7 @@ namespace VehicleServiceManagement
             this.LabelTitle.Text = "Клиенти";
             this.LabelTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.LabelTitle.Click += new System.EventHandler(this.LabelTitle_Click);
             // 
             // ButtonEdit
             // 

@@ -609,7 +609,7 @@ namespace VehicleServiceManagement
             string text = TextBoxSearchVehicles.Text;
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string query = "SELECT Vehicles.LicensePlate, Vehicles.HorsePower, Vehicles.Capacity, Vehicles.Year, Vehicles.Fuel, Vehicles.Transmission, Vehicles.Make, Vehicles.Model, Clients.FirstName, Clients.LastName FROM Vehicles INNER JOIN Clients ON Vehicles.ClientID = Clients.ID WHERE LicensePlate LIKE'%" + text + "%' OR HorsePower LIKE '%" + text + "%' OR Capacity LIKE'%" + text + "%' OR Year LIKE '%" + text + "%' OR Make LIKE '%" + text + "%' OR Model LIKE '%" + text + "%' OR FirstName LIKE '%" + text + "%' OR LastName LIKE '%" + text + "%'; ";
+            string query = "SELECT Vehicles.LicensePlate, Vehicles.HorsePower, Vehicles.Capacity, Vehicles.Year, Vehicles.Fuel, Vehicles.Transmission, Vehicles.Make, Vehicles.Model, Clients.FirstName, Clients.LastName FROM Vehicles INNER JOIN Clients ON Vehicles.ClientID = Clients.ID WHERE LicensePlate LIKE N'%" + text + "%' OR HorsePower LIKE '%" + text + "%' OR Capacity LIKE'%" + text + "%' OR Year LIKE '%" + text + "%' OR Make LIKE '%" + text + "%' OR Model LIKE '%" + text + "%' OR FirstName LIKE '%" + text + "%' OR LastName LIKE '%" + text + "%'; ";
             DataGridViewVehicles.Rows.Clear();
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -695,6 +695,20 @@ namespace VehicleServiceManagement
         {
             AddNewVehicle addNewVehicle = new AddNewVehicle(this, "ADD");
             addNewVehicle.Show();
+        }
+
+        public void DeleteVehicleNotification(string text)
+        {
+            Notification.Show(this, $"{text}",
+            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+
+        }
+        public void EditVehicleNotification(string text)
+        {
+            FillVehiclesTable();
+            Notification.Show(this, $"{text}",
+            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+
         }
 
         private void bunifuLabel10_Click(object sender, EventArgs e)

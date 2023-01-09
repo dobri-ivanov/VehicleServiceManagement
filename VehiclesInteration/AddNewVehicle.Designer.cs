@@ -185,11 +185,12 @@ namespace VehicleServiceManagement
             this.ButtonSearchClients.Image = global::VehicleServiceManagement.Properties.Resources.searchClient1;
             this.ButtonSearchClients.ImageActive = null;
             this.ButtonSearchClients.ImageLocation = null;
-            this.ButtonSearchClients.ImageMargin = 20;
-            this.ButtonSearchClients.ImageSize = new System.Drawing.Size(80, 80);
+            this.ButtonSearchClients.ImageMargin = 0;
+            this.ButtonSearchClients.ImageSize = new System.Drawing.Size(99, 99);
             this.ButtonSearchClients.ImageZoomSize = new System.Drawing.Size(100, 100);
             this.ButtonSearchClients.InitialImage = ((System.Drawing.Image)(resources.GetObject("ButtonSearchClients.InitialImage")));
             this.ButtonSearchClients.Location = new System.Drawing.Point(688, 169);
+            this.ButtonSearchClients.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonSearchClients.Name = "ButtonSearchClients";
             this.ButtonSearchClients.Rotation = 0;
             this.ButtonSearchClients.ShowActiveImage = true;
@@ -200,7 +201,7 @@ namespace VehicleServiceManagement
             this.ButtonSearchClients.TabIndex = 75;
             this.ButtonSearchClients.ToolTipText = "";
             this.ButtonSearchClients.WaitOnLoad = false;
-            this.ButtonSearchClients.Zoom = 20;
+            this.ButtonSearchClients.Zoom = 0;
             this.ButtonSearchClients.ZoomSpeed = 10;
             this.ButtonSearchClients.Click += new System.EventHandler(this.ButtonSearchClients_Click);
             // 

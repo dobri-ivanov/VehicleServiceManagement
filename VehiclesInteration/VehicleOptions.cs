@@ -16,6 +16,8 @@ namespace VehicleServiceManagement
     {
         private string currentLicensePlate;
         private Main mainPanel;
+        private string currentMake;
+        private string currentModel;
 
         public object AddEditVehicle { get; private set; }
 
@@ -32,11 +34,25 @@ namespace VehicleServiceManagement
         }
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
-        }
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+            connection.Open();
+            string query = "SELECT * FROM Vehicles WHERE LicensePlate = N'" + currentLicensePlate + "';";
 
-        private void Panel_Click(object sender, EventArgs e)
-        {
 
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader read = command.ExecuteReader();
+
+            int clientId = -1;
+
+            while (read.Read())
+            {
+                clientId = int.Parse(read["ClientId"].ToString());
+
+            }
+            read.Close();
+            connection.Close();
+            AddNewVehicle addNewVehicle = new AddNewVehicle(this, mainPanel, clientId, currentLicensePlate, "EDIT");
+            addNewVehicle.Show();
         }
 
         private void ButtonCloseApplication_Click(object sender, EventArgs e)
@@ -48,24 +64,24 @@ namespace VehicleServiceManagement
         {
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
-            string query = "SELECT * FROM Vehicles WHERE LicensePlate = '"+currentLicensePlate+"';";
+            string query = "SELECT * FROM Vehicles WHERE LicensePlate = N'"+currentLicensePlate+"';";
 
 
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader read = command.ExecuteReader();
 
-            string make = String.Empty;
-            string model = String.Empty;
+            currentMake = String.Empty;
+            currentModel = String.Empty;
 
             while (read.Read())
             {
-                make = read["Make"].ToString();
-                model = read["Model"].ToString();
+                currentMake = read["Make"].ToString();
+                currentModel = read["Model"].ToString();
 
             }
             read.Close();
             connection.Close();
-            string text = $"Сигурни ли сте, че искате да изтриете автомобил:{Environment.NewLine}{make} {model} {currentLicensePlate}";
+            string text = $"Сигурни ли сте, че искате да изтриете автомобил:{Environment.NewLine}{currentMake} {currentModel} {currentLicensePlate}";
 
 
 
@@ -77,12 +93,19 @@ namespace VehicleServiceManagement
         {
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
-            string query = "DELETE FROM Vehicles WHERE LicensePlate = '" + currentLicensePlate + "';";
+            string query = "DELETE FROM Vehicles WHERE LicensePlate = N'" + currentLicensePlate + "';";
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
             connection.Close();
             mainPanel.FillVehiclesTable();
+            mainPanel.DeleteVehicleNotification($"Успешно изтрит автомобил: {currentMake} {currentModel} {currentLicensePlate}");
             this.Close();
+            
+        }
+
+        private void LabelTitle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
