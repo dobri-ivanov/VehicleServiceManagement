@@ -45,5 +45,10 @@ namespace VehicleServiceManagement
         {
 
         }
+
+        private void AlerBoxDragPanel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

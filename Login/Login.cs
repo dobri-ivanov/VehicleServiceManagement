@@ -21,7 +21,7 @@ namespace VehicleServiceManagement
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-        public string connectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
+        public string connectionString = Main.currentConnectionString;
 
         public Login()
         {
@@ -161,6 +161,11 @@ namespace VehicleServiceManagement
         }
 
         private void DragPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }

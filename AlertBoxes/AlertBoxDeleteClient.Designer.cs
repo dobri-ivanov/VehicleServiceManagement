@@ -98,6 +98,7 @@ namespace VehicleServiceManagement
             this.AlerBoxDragPanel.ShowBorders = false;
             this.AlerBoxDragPanel.Size = new System.Drawing.Size(419, 58);
             this.AlerBoxDragPanel.TabIndex = 11;
+            this.AlerBoxDragPanel.Click += new System.EventHandler(this.AlerBoxDragPanel_Click);
             // 
             // bunifuLabel1
             // 

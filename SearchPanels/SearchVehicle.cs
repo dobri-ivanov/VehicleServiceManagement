@@ -15,7 +15,7 @@ namespace VehicleServiceManagement
     {
         int currentClientId;
         Main mainPanel;
-        public string connectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
+        public string connectionString = Main.currentConnectionString;
         public SearchVehicle(int clientID, Main main)
         {
             InitializeComponent();

@@ -45,5 +45,10 @@ namespace VehicleServiceManagement
         {
             this.Hide();
         }
+
+        private void LabelText_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

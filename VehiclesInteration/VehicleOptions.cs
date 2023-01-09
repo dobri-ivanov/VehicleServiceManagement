@@ -107,5 +107,10 @@ namespace VehicleServiceManagement
         {
 
         }
+
+        private void Panel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

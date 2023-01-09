@@ -13,7 +13,7 @@ namespace VehicleServiceManagement
 {
     public partial class AddNewVehicle : Form
     {
-        public string connectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
+        public string connectionString = Main.currentConnectionString;
 
         string operation = string.Empty;
 

@@ -19,11 +19,9 @@ namespace VehicleServiceManagement
         string oldNickname;
 
         private static string currentPhoneNumber = String.Empty;
-        public static string currentConnectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
-
         private bool isMaximized = false;
         private bool isMinimized = false;
-        public string connectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
+        public static string currentConnectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
         public Main()
         {
             InitializeComponent();
@@ -238,7 +236,7 @@ namespace VehicleServiceManagement
                 string query;
                 SqlCommand command;
 
-                SqlConnection connection = new SqlConnection(connectionString);
+                SqlConnection connection = new SqlConnection(Main.currentConnectionString);
                 connection.Open();
                 string selectQuery = "SELECT * FROM Clients WHERE PhoneNumber = '" + phoneNumber + "'";
                 command = new SqlCommand(selectQuery, connection);
@@ -311,7 +309,7 @@ namespace VehicleServiceManagement
         }
         private void FillClientsTable()
         {
-            SqlConnection connection = new SqlConnection(connectionString);
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
             DataGridViewClients.Rows.Clear();
 
@@ -345,7 +343,7 @@ namespace VehicleServiceManagement
         }
         public void FillVehiclesTable()
         {
-            SqlConnection connection = new SqlConnection(connectionString);
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
             DataGridViewVehicles.Rows.Clear();
 
@@ -391,7 +389,7 @@ namespace VehicleServiceManagement
         private void TextBoxSearch_TextChanged(object sender, EventArgs e)
         {
             string text = TextBoxSearch.Text;
-            SqlConnection connection = new SqlConnection(connectionString);
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
             string query = "SELECT * FROM Clients WHERE FirstName LIKE N'%" + text + "%' OR LastName LIKE N'%" + text + "%' OR PhoneNumber LIKE N'%" + text + "%' OR Nickname LIKE N'%" + text + "%';";
             DataGridViewClients.Rows.Clear();
@@ -464,7 +462,7 @@ namespace VehicleServiceManagement
         }
         public void DeleteUser()
         {
-            SqlConnection connection = new SqlConnection(currentConnectionString);
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
             string query = "DELETE FROM Clients WHERE PhoneNumber = '" + currentPhoneNumber + "';";
             SqlCommand command = new SqlCommand(query, connection);
@@ -495,7 +493,7 @@ namespace VehicleServiceManagement
             string currentPhoneNumber = TextBoxPhoneNumber.Text;
             string currentNickname = TextBoxNickname.Text;
 
-            SqlConnection connection = new SqlConnection(currentConnectionString);
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
 
             string query = "UPDATE Clients SET FirstName = N'"+currentName+"', LastName = N'"+currentLastName+"', PhoneNumber = '"+currentPhoneNumber+"', Nickname = N'"+currentNickname+"' WHERE PhoneNumber = '"+oldPhoneNumber+"';";
@@ -570,7 +568,7 @@ namespace VehicleServiceManagement
         {
             int currentClientID = 0;
 
-            SqlConnection connection = new SqlConnection(connectionString);
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
             string phoneNum = TextBoxPhoneNumber.Text;
             string query = "SELECT * FROM Clients WHERE PhoneNumber = '"+phoneNum+"'";
@@ -607,7 +605,7 @@ namespace VehicleServiceManagement
         private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
         {
             string text = TextBoxSearchVehicles.Text;
-            SqlConnection connection = new SqlConnection(connectionString);
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
             string query = "SELECT Vehicles.LicensePlate, Vehicles.HorsePower, Vehicles.Capacity, Vehicles.Year, Vehicles.Fuel, Vehicles.Transmission, Vehicles.Make, Vehicles.Model, Clients.FirstName, Clients.LastName FROM Vehicles INNER JOIN Clients ON Vehicles.ClientID = Clients.ID WHERE LicensePlate LIKE N'%" + text + "%' OR HorsePower LIKE '%" + text + "%' OR Capacity LIKE'%" + text + "%' OR Year LIKE '%" + text + "%' OR Make LIKE '%" + text + "%' OR Model LIKE '%" + text + "%' OR FirstName LIKE '%" + text + "%' OR LastName LIKE '%" + text + "%'; ";
             DataGridViewVehicles.Rows.Clear();

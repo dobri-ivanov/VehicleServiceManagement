@@ -150,6 +150,7 @@ namespace VehicleServiceManagement
             this.LabelText.Text = "Сигурни ли сте, че искате да изтриете клиент: Иван Иванов / 0887446787";
             this.LabelText.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelText.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.LabelText.Click += new System.EventHandler(this.LabelText_Click);
             // 
             // ButtonNo
             // 

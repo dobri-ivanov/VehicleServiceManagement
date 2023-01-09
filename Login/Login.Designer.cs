@@ -539,6 +539,7 @@ namespace VehicleServiceManagement
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вход";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             this.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).EndInit();
