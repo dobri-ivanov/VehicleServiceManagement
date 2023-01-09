@@ -115,5 +115,10 @@ namespace VehicleServiceManagement
             addNewVehiclePanel.FillClientsData(phoneNumber);
             this.Close();
         }
+
+        private void Panel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -600,6 +600,10 @@ namespace VehicleServiceManagement
 
         }
 
+        public void ChangeVehicleSearchText(string text)
+        {
+            TextBoxSearchVehicles.Text = text;
+        }
         private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
         {
             string text = TextBoxSearchVehicles.Text;

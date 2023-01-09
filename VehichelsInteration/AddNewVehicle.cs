@@ -166,27 +166,31 @@ namespace VehicleServiceManagement
                         string horsePower = TextBoxHorsePower.Text;
                         string licensePlate = TextBoxLicensePlate.Text;
 
-                        connection.Open();
                         string query = "INSERT INTO Vehicles(LicensePlate, HorsePower, Capacity, Year, Fuel, Transmission, ClientID, Make, Model) " +
                             "VALUES(N'" + licensePlate + "', '" + horsePower + "', '" + capacity + "', '" + year + "', N'" + fuel + "', N'" + transmission + "', '" + currentClientId + "', '" + make + "', '" + model + "')";
 
                         command = new SqlCommand(query, connection);
                         command.ExecuteNonQuery();
 
-                        connection.Close();
                         mainPanel.AddVehicleNotfication();
                         this.Close();
                     }
                     else
                     {
-                        read.Close();
+
                         Notification.Show(this, $"Вече същестува този автомобил!",
                         Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
 
                     }
-
+                    read.Close();
+                    connection.Close();
                 }
             }
+        }
+
+        private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

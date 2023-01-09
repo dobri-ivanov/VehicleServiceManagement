@@ -72,6 +72,7 @@ namespace VehicleServiceManagement
             this.Panel.ShowBorders = true;
             this.Panel.Size = new System.Drawing.Size(844, 531);
             this.Panel.TabIndex = 0;
+            this.Panel.Click += new System.EventHandler(this.Panel_Click);
             // 
             // TextBoxSearch
             // 
@@ -216,7 +217,7 @@ namespace VehicleServiceManagement
             this.DataGridViewClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridViewClients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
             this.DataGridViewClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridViewClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            this.DataGridViewClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataGridViewClients.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.DataGridViewClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

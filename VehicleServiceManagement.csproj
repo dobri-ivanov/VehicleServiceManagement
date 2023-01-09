@@ -206,6 +206,12 @@
     <Compile Include="SplashScreen\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehicleOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleOptions.Designer.cs">
+      <DependentUpon>VehicleOptions.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="VehichelsInteration\AddNewVehicle.resx">
       <DependentUpon>AddNewVehicle.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleOptions.resx">
+      <DependentUpon>VehicleOptions.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Client.datasource" />

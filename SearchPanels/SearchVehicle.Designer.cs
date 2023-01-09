@@ -40,17 +40,17 @@ namespace VehicleServiceManagement
             this.LabelCurrentClientData = new Bunifu.UI.WinForms.BunifuLabel();
             this.LabelTitle = new Bunifu.UI.WinForms.BunifuLabel();
             this.DataGridViewVehicles = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.Get = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ButtonCloseApplication = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.makeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horsePowerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.licensePlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Get = new System.Windows.Forms.DataGridViewButtonColumn();
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ButtonCloseApplication = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVehicles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
@@ -216,7 +216,7 @@ namespace VehicleServiceManagement
             this.DataGridViewVehicles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridViewVehicles.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
             this.DataGridViewVehicles.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridViewVehicles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            this.DataGridViewVehicles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataGridViewVehicles.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.DataGridViewVehicles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -284,48 +284,7 @@ namespace VehicleServiceManagement
             this.DataGridViewVehicles.Size = new System.Drawing.Size(1000, 322);
             this.DataGridViewVehicles.TabIndex = 11;
             this.DataGridViewVehicles.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
-            // 
-            // makeDataGridViewTextBoxColumn
-            // 
-            this.makeDataGridViewTextBoxColumn.DataPropertyName = "Make";
-            this.makeDataGridViewTextBoxColumn.HeaderText = "Марка";
-            this.makeDataGridViewTextBoxColumn.Name = "makeDataGridViewTextBoxColumn";
-            this.makeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "Модел";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Година";
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // capacityDataGridViewTextBoxColumn
-            // 
-            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "Capacity";
-            this.capacityDataGridViewTextBoxColumn.HeaderText = "Кубатура";
-            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
-            this.capacityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // horsePowerDataGridViewTextBoxColumn
-            // 
-            this.horsePowerDataGridViewTextBoxColumn.DataPropertyName = "HorsePower";
-            this.horsePowerDataGridViewTextBoxColumn.HeaderText = "Конски сили";
-            this.horsePowerDataGridViewTextBoxColumn.Name = "horsePowerDataGridViewTextBoxColumn";
-            this.horsePowerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // licensePlateDataGridViewTextBoxColumn
-            // 
-            this.licensePlateDataGridViewTextBoxColumn.DataPropertyName = "LicensePlate";
-            this.licensePlateDataGridViewTextBoxColumn.HeaderText = "Рег. Номер";
-            this.licensePlateDataGridViewTextBoxColumn.Name = "licensePlateDataGridViewTextBoxColumn";
-            this.licensePlateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.DataGridViewVehicles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewVehicles_CellContentClick);
             // 
             // Get
             // 
@@ -339,10 +298,6 @@ namespace VehicleServiceManagement
             this.Get.ToolTipText = "Избери клиент";
             this.Get.UseColumnTextForButtonValue = true;
             this.Get.Width = 50;
-            // 
-            // vehicleBindingSource
-            // 
-            this.vehicleBindingSource.DataSource = typeof(VehicleServiceManagement.Vehicle);
             // 
             // ButtonCloseApplication
             // 
@@ -390,6 +345,52 @@ namespace VehicleServiceManagement
             // 
             this.bunifuElipse1.ElipseRadius = 25;
             this.bunifuElipse1.TargetControl = this;
+            // 
+            // makeDataGridViewTextBoxColumn
+            // 
+            this.makeDataGridViewTextBoxColumn.DataPropertyName = "Make";
+            this.makeDataGridViewTextBoxColumn.HeaderText = "Марка";
+            this.makeDataGridViewTextBoxColumn.Name = "makeDataGridViewTextBoxColumn";
+            this.makeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Модел";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
+            this.yearDataGridViewTextBoxColumn.HeaderText = "Година";
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // capacityDataGridViewTextBoxColumn
+            // 
+            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "Capacity";
+            this.capacityDataGridViewTextBoxColumn.HeaderText = "Кубатура";
+            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
+            this.capacityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horsePowerDataGridViewTextBoxColumn
+            // 
+            this.horsePowerDataGridViewTextBoxColumn.DataPropertyName = "HorsePower";
+            this.horsePowerDataGridViewTextBoxColumn.HeaderText = "Конски сили";
+            this.horsePowerDataGridViewTextBoxColumn.Name = "horsePowerDataGridViewTextBoxColumn";
+            this.horsePowerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // licensePlateDataGridViewTextBoxColumn
+            // 
+            this.licensePlateDataGridViewTextBoxColumn.DataPropertyName = "LicensePlate";
+            this.licensePlateDataGridViewTextBoxColumn.HeaderText = "Рег. Номер";
+            this.licensePlateDataGridViewTextBoxColumn.Name = "licensePlateDataGridViewTextBoxColumn";
+            this.licensePlateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vehicleBindingSource
+            // 
+            this.vehicleBindingSource.DataSource = typeof(VehicleServiceManagement.Vehicle);
             // 
             // SearchVehicle
             // 

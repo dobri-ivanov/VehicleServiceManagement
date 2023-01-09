@@ -14,13 +14,13 @@ namespace VehicleServiceManagement
     public partial class SearchVehicle : Form
     {
         int currentClientId;
-        Main Main;
+        Main mainPanel;
         public string connectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
         public SearchVehicle(int clientID, Main main)
         {
             InitializeComponent();
             currentClientId = clientID;
-            Main = main;
+            mainPanel = main;
             Setup();
         }
 
@@ -93,7 +93,7 @@ namespace VehicleServiceManagement
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            AddNewVehicle addNewVehicle = new AddNewVehicle(Main, currentClientId, "ADD");
+            AddNewVehicle addNewVehicle = new AddNewVehicle(mainPanel, currentClientId, "ADD");
             addNewVehicle.Show();
             this.Close();
             
@@ -102,6 +102,21 @@ namespace VehicleServiceManagement
         private void bunifuPanel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void DataGridViewVehicles_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewVehicles.Columns[colIndex].Name == "Get")
+            {
+
+                string licensePlate = DataGridViewVehicles.Rows[rowIndex].Cells[5].Value.ToString();
+                mainPanel.SetVehiclePage();
+                mainPanel.ChangeVehicleSearchText(licensePlate);
+                this.Close();
+
+            }
         }
     }
 }

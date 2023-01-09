@@ -40,6 +40,7 @@ namespace VehicleServiceManagement
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Hourglass.HourglassOptions hourglassOptions1 = new Hourglass.HourglassOptions();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -75,7 +76,6 @@ namespace VehicleServiceManagement
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Hourglass.HourglassOptions hourglassOptions1 = new Hourglass.HourglassOptions();
             this.DragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.ButtonMinimize = new Bunifu.UI.WinForms.BunifuImageButton();
             this.ButtonMaximize = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -88,6 +88,8 @@ namespace VehicleServiceManagement
             this.DataGridViewVehicles = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.GetVehicle = new System.Windows.Forms.DataGridViewButtonColumn();
             this.TextBoxSearchVehicles = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.Calendar = new System.Windows.Forms.TabPage();
+            this.hgScheduler1 = new Hourglass.HgScheduler();
             this.Clients = new System.Windows.Forms.TabPage();
             this.ButtonRefreshClients = new Bunifu.UI.WinForms.BunifuImageButton();
             this.PanelClientButtons = new Bunifu.UI.WinForms.BunifuPanel();
@@ -113,7 +115,6 @@ namespace VehicleServiceManagement
             this.DataGridViewClients = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Get = new System.Windows.Forms.DataGridViewButtonColumn();
             this.TextBoxSearch = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.Calendar = new System.Windows.Forms.TabPage();
             this.Home = new System.Windows.Forms.TabPage();
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -134,7 +135,11 @@ namespace VehicleServiceManagement
             this.PanelUser = new Bunifu.UI.WinForms.BunifuPanel();
             this.LabelUserName = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBoxUserAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.hgScheduler1 = new Hourglass.HgScheduler();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nicknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,33 +151,29 @@ namespace VehicleServiceManagement
             this.transmissionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.licensePlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nicknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MainPages.SuspendLayout();
             this.Vehicles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVehicles)).BeginInit();
+            this.Calendar.SuspendLayout();
             this.Clients.SuspendLayout();
             this.PanelClientButtons.SuspendLayout();
             this.ShadowPanelCurrentClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).BeginInit();
-            this.Calendar.SuspendLayout();
             this.Home.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.Settings.SuspendLayout();
             this.PanelButtons.SuspendLayout();
             this.PanelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DragControl
             // 
             this.DragControl.Fixed = true;
             this.DragControl.Horizontal = true;
+            this.DragControl.TargetControl = null;
             this.DragControl.Vertical = true;
             // 
             // ButtonMinimize
@@ -285,8 +286,8 @@ namespace VehicleServiceManagement
             this.MainPages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.MainPages.AllowTransitions = true;
             this.MainPages.Controls.Add(this.Vehicles);
-            this.MainPages.Controls.Add(this.Calendar);
             this.MainPages.Controls.Add(this.Clients);
+            this.MainPages.Controls.Add(this.Calendar);
             this.MainPages.Controls.Add(this.Home);
             this.MainPages.Controls.Add(this.Raports);
             this.MainPages.Controls.Add(this.Settings);
@@ -491,7 +492,7 @@ namespace VehicleServiceManagement
             this.DataGridViewVehicles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridViewVehicles.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
             this.DataGridViewVehicles.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridViewVehicles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            this.DataGridViewVehicles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataGridViewVehicles.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.DataGridViewVehicles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -653,6 +654,34 @@ namespace VehicleServiceManagement
             this.TextBoxSearchVehicles.UseSystemPasswordChar = false;
             this.TextBoxSearchVehicles.WordWrap = true;
             this.TextBoxSearchVehicles.TextChanged += new System.EventHandler(this.bunifuTextBox1_TextChanged);
+            // 
+            // Calendar
+            // 
+            this.Calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.Calendar.Controls.Add(this.hgScheduler1);
+            this.Calendar.Location = new System.Drawing.Point(4, 4);
+            this.Calendar.Name = "Calendar";
+            this.Calendar.Size = new System.Drawing.Size(1346, 812);
+            this.Calendar.TabIndex = 4;
+            this.Calendar.Text = "Calendar";
+            // 
+            // hgScheduler1
+            // 
+            this.hgScheduler1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.hgScheduler1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.hgScheduler1.Location = new System.Drawing.Point(3, 0);
+            this.hgScheduler1.Name = "hgScheduler1";
+            hourglassOptions1.EventArrangement = null;
+            hourglassOptions1.EventClickHandling = null;
+            hourglassOptions1.EventDeleteHandling = null;
+            hourglassOptions1.EventDoubleClickHandling = null;
+            hourglassOptions1.HeaderDateFormat = "dddd";
+            hourglassOptions1.StartDate = new System.DateTime(2023, 1, 9, 10, 1, 20, 23);
+            hourglassOptions1.ViewType = Hourglass.ViewTypes.Week;
+            this.hgScheduler1.Options = hourglassOptions1;
+            this.hgScheduler1.Size = new System.Drawing.Size(1340, 809);
+            this.hgScheduler1.TabIndex = 0;
+            this.hgScheduler1.Theme = resources.GetString("hgScheduler1.Theme");
             // 
             // Clients
             // 
@@ -1773,7 +1802,7 @@ namespace VehicleServiceManagement
             this.DataGridViewClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridViewClients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
             this.DataGridViewClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridViewClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            this.DataGridViewClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataGridViewClients.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.DataGridViewClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1929,16 +1958,6 @@ namespace VehicleServiceManagement
             this.TextBoxSearch.UseSystemPasswordChar = false;
             this.TextBoxSearch.WordWrap = true;
             this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
-            // 
-            // Calendar
-            // 
-            this.Calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.Calendar.Controls.Add(this.hgScheduler1);
-            this.Calendar.Location = new System.Drawing.Point(4, 4);
-            this.Calendar.Name = "Calendar";
-            this.Calendar.Size = new System.Drawing.Size(1346, 812);
-            this.Calendar.TabIndex = 4;
-            this.Calendar.Text = "Calendar";
             // 
             // Home
             // 
@@ -2758,23 +2777,54 @@ namespace VehicleServiceManagement
             this.PictureBoxUserAvatar.TabStop = false;
             this.PictureBoxUserAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // hgScheduler1
+            // nameDataGridViewTextBoxColumn
             // 
-            this.hgScheduler1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.hgScheduler1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.hgScheduler1.Location = new System.Drawing.Point(3, 0);
-            this.hgScheduler1.Name = "hgScheduler1";
-            hourglassOptions1.EventArrangement = null;
-            hourglassOptions1.EventClickHandling = null;
-            hourglassOptions1.EventDeleteHandling = null;
-            hourglassOptions1.EventDoubleClickHandling = null;
-            hourglassOptions1.HeaderDateFormat = "dddd";
-            hourglassOptions1.StartDate = new System.DateTime(2023, 1, 9, 10, 1, 20, 23);
-            hourglassOptions1.ViewType = Hourglass.ViewTypes.Week;
-            this.hgScheduler1.Options = hourglassOptions1;
-            this.hgScheduler1.Size = new System.Drawing.Size(1340, 809);
-            this.hgScheduler1.TabIndex = 0;
-            this.hgScheduler1.Theme = resources.GetString("hgScheduler1.Theme");
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
+            this.nameDataGridViewTextBoxColumn.Frozen = true;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Име";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.nameDataGridViewTextBoxColumn.Width = 170;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
+            this.lastNameDataGridViewTextBoxColumn.Frozen = true;
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastNameDataGridViewTextBoxColumn.Width = 170;
+            // 
+            // nicknameDataGridViewTextBoxColumn
+            // 
+            this.nicknameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nicknameDataGridViewTextBoxColumn.DataPropertyName = "Nickname";
+            this.nicknameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
+            this.nicknameDataGridViewTextBoxColumn.Frozen = true;
+            this.nicknameDataGridViewTextBoxColumn.HeaderText = "Прякор";
+            this.nicknameDataGridViewTextBoxColumn.Name = "nicknameDataGridViewTextBoxColumn";
+            this.nicknameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nicknameDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.FillWeight = 118.6548F;
+            this.phoneNumberDataGridViewTextBoxColumn.Frozen = true;
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Телефонен номер";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // clientBindingSource
+            // 
+            this.clientBindingSource.DataSource = typeof(VehicleServiceManagement.Client);
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
@@ -2850,55 +2900,6 @@ namespace VehicleServiceManagement
             // 
             this.vehicleBindingSource.DataSource = typeof(VehicleServiceManagement.Vehicle);
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
-            this.nameDataGridViewTextBoxColumn.Frozen = true;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Име";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.nameDataGridViewTextBoxColumn.Width = 170;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
-            this.lastNameDataGridViewTextBoxColumn.Frozen = true;
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lastNameDataGridViewTextBoxColumn.Width = 170;
-            // 
-            // nicknameDataGridViewTextBoxColumn
-            // 
-            this.nicknameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nicknameDataGridViewTextBoxColumn.DataPropertyName = "Nickname";
-            this.nicknameDataGridViewTextBoxColumn.FillWeight = 118.6548F;
-            this.nicknameDataGridViewTextBoxColumn.Frozen = true;
-            this.nicknameDataGridViewTextBoxColumn.HeaderText = "Прякор";
-            this.nicknameDataGridViewTextBoxColumn.Name = "nicknameDataGridViewTextBoxColumn";
-            this.nicknameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nicknameDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.FillWeight = 118.6548F;
-            this.phoneNumberDataGridViewTextBoxColumn.Frozen = true;
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Телефонен номер";
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.phoneNumberDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // clientBindingSource
-            // 
-            this.clientBindingSource.DataSource = typeof(VehicleServiceManagement.Client);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2920,13 +2921,13 @@ namespace VehicleServiceManagement
             this.Vehicles.ResumeLayout(false);
             this.Vehicles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVehicles)).EndInit();
+            this.Calendar.ResumeLayout(false);
             this.Clients.ResumeLayout(false);
             this.Clients.PerformLayout();
             this.PanelClientButtons.ResumeLayout(false);
             this.ShadowPanelCurrentClient.ResumeLayout(false);
             this.ShadowPanelCurrentClient.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).EndInit();
-            this.Calendar.ResumeLayout(false);
             this.Home.ResumeLayout(false);
             this.Home.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
@@ -2936,8 +2937,8 @@ namespace VehicleServiceManagement
             this.PanelButtons.PerformLayout();
             this.PanelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
