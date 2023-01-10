@@ -94,6 +94,7 @@ namespace VehicleServiceManagement
             currentPoint.Y += 180;
             ButtonSettings.Location = currentPoint;
 
+
             currentPoint = PanelButtons.Location;
             currentPoint.X += 320;
             PanelButtons.Location = currentPoint;
@@ -102,9 +103,40 @@ namespace VehicleServiceManagement
             currentPoint.X += 320;
             ButtonDelete.Location = currentPoint;
 
+            currentPoint = ButtonAdd.Location;
+            currentPoint.X += 320;
+            ButtonAdd.Location = currentPoint;
+
             currentPoint = ButtonEdit.Location;
             currentPoint.X += 320;
             ButtonEdit.Location = currentPoint;
+
+            currentPoint = ShadowPanelCurrentClient.Location;
+            currentPoint.X += 320;
+            ShadowPanelCurrentClient.Location = currentPoint;
+            ShadowPanelCurrentClient.Size = new Size(572, 926);
+
+            currentPoint = ButtonCancel.Location;
+            currentPoint.Y += 180;
+            ButtonCancel.Location = currentPoint;
+
+            currentPoint = ButtonSave.Location;
+            currentPoint.Y += 180;
+            ButtonSave.Location = currentPoint;
+
+            currentPoint = ButtonRefreshClients.Location;
+            currentPoint.X += 320;
+            ButtonRefreshClients.Location = currentPoint;
+
+            currentPoint = TextBoxSearch.Location;
+            currentPoint.X += 320;
+            TextBoxSearch.Location = currentPoint;
+
+            DataGridViewVehicles.Size = new Size(1651, 917);
+
+            currentPoint = ButtonAddVechicle.Location;
+            currentPoint.X += 320;
+            ButtonAddVechicle.Location = currentPoint;
         }
         private void ReturnControlsPosition()
         {
@@ -135,6 +167,34 @@ namespace VehicleServiceManagement
             currentPoint = ButtonEdit.Location;
             currentPoint.X -= 320;
             ButtonEdit.Location = currentPoint;
+
+            currentPoint = ShadowPanelCurrentClient.Location;
+            currentPoint.X -= 320;
+            ShadowPanelCurrentClient.Location = currentPoint;
+
+            ShadowPanelCurrentClient.Size = new Size(572, 746);
+
+            currentPoint = ButtonCancel.Location;
+            currentPoint.Y -= 180;
+            ButtonCancel.Location = currentPoint;
+
+            currentPoint = ButtonSave.Location;
+            currentPoint.Y -= 180;
+            ButtonSave.Location = currentPoint;
+
+            currentPoint = ButtonRefreshClients.Location;
+            currentPoint.X -= 320;
+            ButtonRefreshClients.Location = currentPoint;
+
+            currentPoint = TextBoxSearch.Location;
+            currentPoint.X -= 320;
+            TextBoxSearch.Location = currentPoint;
+
+            DataGridViewVehicles.Size = new Size(1331, 737);
+
+            currentPoint = ButtonAddVechicle.Location;
+            currentPoint.X -= 320;
+            ButtonAddVechicle.Location = currentPoint;
         }
 
         private void ButtonMinimize_Click(object sender, EventArgs e)
@@ -682,6 +742,8 @@ namespace VehicleServiceManagement
             TextBoxPhoneNumber.Enabled = false;
             TextBoxNickname.Enabled = false;
             ButtonCurrentClientVehicles.Enabled = false;
+            ButtonEdit.Enabled = false;
+            ButtonDelete.Enabled = false;
         }
 
         private void ControlPanel_Click(object sender, EventArgs e)
