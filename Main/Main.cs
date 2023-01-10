@@ -527,29 +527,37 @@ namespace VehicleServiceManagement
         }
         public void DeleteUser()
         {
-            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
-            connection.Open();
-            string query = "DELETE FROM Clients WHERE PhoneNumber = '" + currentPhoneNumber + "';";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.ExecuteNonQuery();
-            connection.Close();
-            FillClientsTable();
+            try
+            {
+                SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+                connection.Open();
+                string query = "DELETE FROM Clients WHERE PhoneNumber = '" + currentPhoneNumber + "';";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+                FillClientsTable();
 
-            ButtonDelete.Enabled = false;
-            ButtonEdit.Enabled = false;
-            TextBoxName.Enabled = true;
-            TextBoxLastName.Enabled = true;
-            TextBoxPhoneNumber.Enabled = true;
-            TextBoxNickname.Enabled = true;
+                ButtonDelete.Enabled = false;
+                ButtonEdit.Enabled = false;
+                TextBoxName.Enabled = true;
+                TextBoxLastName.Enabled = true;
+                TextBoxPhoneNumber.Enabled = true;
+                TextBoxNickname.Enabled = true;
 
-            string name = TextBoxName.Text;
-            string lastName = TextBoxLastName.Text;
-            string phoneNumber = TextBoxPhoneNumber.Text;
+                string name = TextBoxName.Text;
+                string lastName = TextBoxLastName.Text;
+                string phoneNumber = TextBoxPhoneNumber.Text;
 
-            Clear();
-            Notification.Show(this, $"Успешно изтрит клиент: {name} {lastName} | {phoneNumber}",
-            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+                Clear();
+                Notification.Show(this, $"Успешно изтрит клиент: {name} {lastName} | {phoneNumber}",
+                Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+            }
+            catch
+            {
+                Notification.Show(this, $"Изтриването не е успешно! Можете да премахнете само клиенти, които не притежават автомобили!",
+                Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning, 10000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
 
+            }
         }
         public void EditUser()
         {
@@ -722,10 +730,10 @@ namespace VehicleServiceManagement
             TextBoxPhoneNumber.Text = string.Empty;
             TextBoxNickname.Text = string.Empty;
 
-            TextBoxName.Enabled = false;
-            TextBoxLastName.Enabled = false;
-            TextBoxPhoneNumber.Enabled = false;
-            TextBoxNickname.Enabled = false;
+            TextBoxName.Enabled = true;
+            TextBoxLastName.Enabled = true;
+            TextBoxPhoneNumber.Enabled = true;
+            TextBoxNickname.Enabled = true;
             ButtonCurrentClientVehicles.Enabled = false;
             ButtonEdit.Enabled = false;
             ButtonDelete.Enabled = false;

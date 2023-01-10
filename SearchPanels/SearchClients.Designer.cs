@@ -31,19 +31,19 @@ namespace VehicleServiceManagement
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchClients));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel = new Bunifu.UI.WinForms.BunifuPanel();
-            this.TextBoxSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.ButtonCloseApplication = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.LabelTitle = new Bunifu.UI.WinForms.BunifuLabel();
-            this.DataGridViewClients = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Get = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.DataGridViewClients = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.TextBoxSearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.LabelTitle = new Bunifu.UI.WinForms.BunifuLabel();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,93 +62,16 @@ namespace VehicleServiceManagement
             this.Panel.BorderColor = System.Drawing.Color.Silver;
             this.Panel.BorderRadius = 3;
             this.Panel.BorderThickness = 1;
+            this.Panel.Controls.Add(this.DataGridViewClients);
             this.Panel.Controls.Add(this.TextBoxSearch);
             this.Panel.Controls.Add(this.ButtonCloseApplication);
             this.Panel.Controls.Add(this.LabelTitle);
-            this.Panel.Controls.Add(this.DataGridViewClients);
-            this.Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel.Location = new System.Drawing.Point(0, 0);
             this.Panel.Name = "Panel";
             this.Panel.ShowBorders = true;
             this.Panel.Size = new System.Drawing.Size(844, 531);
             this.Panel.TabIndex = 0;
             this.Panel.Click += new System.EventHandler(this.Panel_Click);
-            // 
-            // TextBoxSearch
-            // 
-            this.TextBoxSearch.AcceptsReturn = false;
-            this.TextBoxSearch.AcceptsTab = false;
-            this.TextBoxSearch.AnimationSpeed = 200;
-            this.TextBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.TextBoxSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.TextBoxSearch.BackColor = System.Drawing.Color.Transparent;
-            this.TextBoxSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TextBoxSearch.BackgroundImage")));
-            this.TextBoxSearch.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.TextBoxSearch.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.TextBoxSearch.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.TextBoxSearch.BorderColorIdle = System.Drawing.Color.White;
-            this.TextBoxSearch.BorderRadius = 35;
-            this.TextBoxSearch.BorderThickness = 1;
-            this.TextBoxSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.TextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxSearch.DefaultFont = new System.Drawing.Font("Segoe UI", 13F);
-            this.TextBoxSearch.DefaultText = "";
-            this.TextBoxSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.TextBoxSearch.ForeColor = System.Drawing.Color.White;
-            this.TextBoxSearch.HideSelection = true;
-            this.TextBoxSearch.IconLeft = null;
-            this.TextBoxSearch.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxSearch.IconPadding = 10;
-            this.TextBoxSearch.IconRight = null;
-            this.TextBoxSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxSearch.Lines = new string[0];
-            this.TextBoxSearch.Location = new System.Drawing.Point(12, 72);
-            this.TextBoxSearch.MaxLength = 32767;
-            this.TextBoxSearch.MinimumSize = new System.Drawing.Size(1, 1);
-            this.TextBoxSearch.Modified = false;
-            this.TextBoxSearch.Multiline = false;
-            this.TextBoxSearch.Name = "TextBoxSearch";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxSearch.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.White;
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.TextBoxSearch.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxSearch.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.White;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            stateProperties4.ForeColor = System.Drawing.Color.White;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxSearch.OnIdleState = stateProperties4;
-            this.TextBoxSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.TextBoxSearch.PasswordChar = '\0';
-            this.TextBoxSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.TextBoxSearch.PlaceholderText = "Търсене на клиенти";
-            this.TextBoxSearch.ReadOnly = false;
-            this.TextBoxSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TextBoxSearch.SelectedText = "";
-            this.TextBoxSearch.SelectionLength = 0;
-            this.TextBoxSearch.SelectionStart = 0;
-            this.TextBoxSearch.ShortcutsEnabled = true;
-            this.TextBoxSearch.Size = new System.Drawing.Size(409, 44);
-            this.TextBoxSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.TextBoxSearch.TabIndex = 8;
-            this.TextBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextBoxSearch.TextMarginBottom = 0;
-            this.TextBoxSearch.TextMarginLeft = 3;
-            this.TextBoxSearch.TextMarginTop = 0;
-            this.TextBoxSearch.TextPlaceholder = "Търсене на клиенти";
-            this.TextBoxSearch.UseSystemPasswordChar = false;
-            this.TextBoxSearch.WordWrap = true;
-            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
             // 
             // ButtonCloseApplication
             // 
@@ -185,22 +108,18 @@ namespace VehicleServiceManagement
             this.ButtonCloseApplication.ZoomSpeed = 10;
             this.ButtonCloseApplication.Click += new System.EventHandler(this.ButtonCloseApplication_Click);
             // 
-            // LabelTitle
+            // Get
             // 
-            this.LabelTitle.AllowParentOverrides = false;
-            this.LabelTitle.AutoEllipsis = false;
-            this.LabelTitle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.LabelTitle.CursorType = System.Windows.Forms.Cursors.Default;
-            this.LabelTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.LabelTitle.ForeColor = System.Drawing.Color.White;
-            this.LabelTitle.Location = new System.Drawing.Point(345, 12);
-            this.LabelTitle.Name = "LabelTitle";
-            this.LabelTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelTitle.Size = new System.Drawing.Size(164, 54);
-            this.LabelTitle.TabIndex = 6;
-            this.LabelTitle.Text = "Клиенти";
-            this.LabelTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.LabelTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.Get.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Get.FillWeight = 25.38071F;
+            this.Get.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Get.HeaderText = "";
+            this.Get.Name = "Get";
+            this.Get.ReadOnly = true;
+            this.Get.Text = "➕";
+            this.Get.ToolTipText = "Избери клиент";
+            this.Get.UseColumnTextForButtonValue = true;
+            this.Get.Width = 50;
             // 
             // DataGridViewClients
             // 
@@ -268,7 +187,8 @@ namespace VehicleServiceManagement
             this.DataGridViewClients.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
             this.DataGridViewClients.HeaderBgColor = System.Drawing.Color.Empty;
             this.DataGridViewClients.HeaderForeColor = System.Drawing.Color.White;
-            this.DataGridViewClients.Location = new System.Drawing.Point(12, 122);
+            this.DataGridViewClients.Location = new System.Drawing.Point(9, 128);
+            this.DataGridViewClients.Margin = new System.Windows.Forms.Padding(0);
             this.DataGridViewClients.MaximumSize = new System.Drawing.Size(1000, 1000);
             this.DataGridViewClients.MultiSelect = false;
             this.DataGridViewClients.Name = "DataGridViewClients";
@@ -280,23 +200,103 @@ namespace VehicleServiceManagement
             this.DataGridViewClients.RowTemplate.ReadOnly = true;
             this.DataGridViewClients.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGridViewClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewClients.Size = new System.Drawing.Size(820, 397);
+            this.DataGridViewClients.Size = new System.Drawing.Size(826, 397);
             this.DataGridViewClients.TabIndex = 5;
             this.DataGridViewClients.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             this.DataGridViewClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewClients_CellContentClick);
             // 
-            // Get
+            // TextBoxSearch
             // 
-            this.Get.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Get.FillWeight = 25.38071F;
-            this.Get.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Get.HeaderText = "";
-            this.Get.Name = "Get";
-            this.Get.ReadOnly = true;
-            this.Get.Text = "➕";
-            this.Get.ToolTipText = "Избери клиент";
-            this.Get.UseColumnTextForButtonValue = true;
-            this.Get.Width = 50;
+            this.TextBoxSearch.AcceptsReturn = false;
+            this.TextBoxSearch.AcceptsTab = false;
+            this.TextBoxSearch.AnimationSpeed = 200;
+            this.TextBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.TextBoxSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.TextBoxSearch.BackColor = System.Drawing.Color.Transparent;
+            this.TextBoxSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TextBoxSearch.BackgroundImage")));
+            this.TextBoxSearch.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.TextBoxSearch.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.TextBoxSearch.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.TextBoxSearch.BorderColorIdle = System.Drawing.Color.White;
+            this.TextBoxSearch.BorderRadius = 35;
+            this.TextBoxSearch.BorderThickness = 1;
+            this.TextBoxSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.TextBoxSearch.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TextBoxSearch.DefaultFont = new System.Drawing.Font("Segoe UI", 13F);
+            this.TextBoxSearch.DefaultText = "";
+            this.TextBoxSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.TextBoxSearch.ForeColor = System.Drawing.Color.White;
+            this.TextBoxSearch.HideSelection = true;
+            this.TextBoxSearch.IconLeft = null;
+            this.TextBoxSearch.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.TextBoxSearch.IconPadding = 10;
+            this.TextBoxSearch.IconRight = null;
+            this.TextBoxSearch.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.TextBoxSearch.Lines = new string[0];
+            this.TextBoxSearch.Location = new System.Drawing.Point(12, 72);
+            this.TextBoxSearch.MaxLength = 32767;
+            this.TextBoxSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.TextBoxSearch.Modified = false;
+            this.TextBoxSearch.Multiline = false;
+            this.TextBoxSearch.Name = "TextBoxSearch";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxSearch.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.White;
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.TextBoxSearch.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxSearch.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.White;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxSearch.OnIdleState = stateProperties4;
+            this.TextBoxSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.TextBoxSearch.PasswordChar = '\0';
+            this.TextBoxSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.TextBoxSearch.PlaceholderText = "Търсене на клиенти";
+            this.TextBoxSearch.ReadOnly = false;
+            this.TextBoxSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TextBoxSearch.SelectedText = "";
+            this.TextBoxSearch.SelectionLength = 0;
+            this.TextBoxSearch.SelectionStart = 0;
+            this.TextBoxSearch.ShortcutsEnabled = true;
+            this.TextBoxSearch.Size = new System.Drawing.Size(409, 44);
+            this.TextBoxSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.TextBoxSearch.TabIndex = 9;
+            this.TextBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBoxSearch.TextMarginBottom = 0;
+            this.TextBoxSearch.TextMarginLeft = 3;
+            this.TextBoxSearch.TextMarginTop = 0;
+            this.TextBoxSearch.TextPlaceholder = "Търсене на клиенти";
+            this.TextBoxSearch.UseSystemPasswordChar = false;
+            this.TextBoxSearch.WordWrap = true;
+            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged_1);
+            // 
+            // LabelTitle
+            // 
+            this.LabelTitle.AllowParentOverrides = false;
+            this.LabelTitle.AutoEllipsis = false;
+            this.LabelTitle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LabelTitle.CursorType = System.Windows.Forms.Cursors.Default;
+            this.LabelTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.LabelTitle.ForeColor = System.Drawing.Color.White;
+            this.LabelTitle.Location = new System.Drawing.Point(345, 12);
+            this.LabelTitle.Name = "LabelTitle";
+            this.LabelTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelTitle.Size = new System.Drawing.Size(164, 54);
+            this.LabelTitle.TabIndex = 6;
+            this.LabelTitle.Text = "Клиенти";
+            this.LabelTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LabelTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -351,17 +351,16 @@ namespace VehicleServiceManagement
         }
 
         #endregion
-
+        private System.Windows.Forms.BindingSource clientBindingSource;
         private Bunifu.UI.WinForms.BunifuPanel Panel;
         private Bunifu.UI.WinForms.BunifuDataGridView DataGridViewClients;
-        private System.Windows.Forms.BindingSource clientBindingSource;
-        private Bunifu.UI.WinForms.BunifuLabel LabelTitle;
-        private Bunifu.UI.WinForms.BunifuImageButton ButtonCloseApplication;
-        private Bunifu.UI.WinForms.BunifuTextBox TextBoxSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nicknameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Get;
+        private Bunifu.UI.WinForms.BunifuTextBox TextBoxSearch;
+        private Bunifu.UI.WinForms.BunifuImageButton ButtonCloseApplication;
+        private Bunifu.UI.WinForms.BunifuLabel LabelTitle;
     }
 }
