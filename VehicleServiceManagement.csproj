@@ -193,8 +193,8 @@
     <Compile Include="SearchPanels\SearchVehicle.Designer.cs">
       <DependentUpon>SearchVehicle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Vehicle.cs" />
-    <Compile Include="Models\Client.cs" />
+    <Compile Include="Vehicle.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +343,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\searchClient1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

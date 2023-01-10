@@ -133,10 +133,13 @@ namespace VehicleServiceManagement
             TextBoxSearch.Location = currentPoint;
 
             DataGridViewVehicles.Size = new Size(1651, 917);
+            DataGridViewClients.Size = new Size(1074, 923);
 
             currentPoint = ButtonAddVechicle.Location;
             currentPoint.X += 320;
             ButtonAddVechicle.Location = currentPoint;
+
+
         }
         private void ReturnControlsPosition()
         {
@@ -191,6 +194,7 @@ namespace VehicleServiceManagement
             TextBoxSearch.Location = currentPoint;
 
             DataGridViewVehicles.Size = new Size(1331, 737);
+            DataGridViewClients.Size = new Size(754, 743);
 
             currentPoint = ButtonAddVechicle.Location;
             currentPoint.X -= 320;
@@ -199,7 +203,9 @@ namespace VehicleServiceManagement
 
         private void ButtonMinimize_Click(object sender, EventArgs e)
         {
+            PanelButtons.Dock = DockStyle.None;
             this.WindowState = FormWindowState.Minimized;
+            isMinimized = true;
         }
 
         private void ButtonHome_Click(object sender, EventArgs e)
@@ -235,10 +241,9 @@ namespace VehicleServiceManagement
         {
             if (isMinimized == true)
             {
-                //ControlPanel.Dock = DockStyle.Top;    // Re-dock
-                //ControlPanel.Width = MainPages.Width; // maintain desired width
-                //ControlPanel.Visible = true;
-                //isMinimized = false;
+                PanelButtons.Dock = DockStyle.Left;    // Re-dock
+                PanelButtons.Visible = true;
+                isMinimized = false;
             }
 
         }
@@ -619,11 +624,6 @@ namespace VehicleServiceManagement
             }
         }
 
-        private void ТextBoxLastName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ButtonCurrentClientVehicles_Click(object sender, EventArgs e)
         {
             int currentClientID = 0;
@@ -646,16 +646,6 @@ namespace VehicleServiceManagement
             SearchVehicle sv = new SearchVehicle(currentClientID, this);
             sv.Show();
             
-        }
-
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel9_Click(object sender, EventArgs e)
-        {
-
         }
 
         public void ChangeVehicleSearchText(string text)
@@ -725,11 +715,6 @@ namespace VehicleServiceManagement
             FillVehiclesTable();
         }
 
-        private void bunifuShadowPanel1_ControlAdded(object sender, ControlEventArgs e)
-        {
-
-        }
-
         private void ImageButtonClear_Click(object sender, EventArgs e)
         {
             TextBoxName.Text = string.Empty;
@@ -744,11 +729,6 @@ namespace VehicleServiceManagement
             ButtonCurrentClientVehicles.Enabled = false;
             ButtonEdit.Enabled = false;
             ButtonDelete.Enabled = false;
-        }
-
-        private void ControlPanel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ButtonAddVechicle_Click(object sender, EventArgs e)
@@ -768,76 +748,6 @@ namespace VehicleServiceManagement
             FillVehiclesTable();
             Notification.Show(this, $"{text}",
             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
-
-        }
-
-        private void bunifuLabel10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel9_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel10_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Main_Load(object sender, EventArgs e)
-        {
 
         }
     }
