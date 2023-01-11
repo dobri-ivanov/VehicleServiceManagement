@@ -16,22 +16,16 @@ namespace VehicleServiceManagement
         AddNewVehicle addNewVehiclePanel;
 
         public string connectionString = Main.currentConnectionString;
-
         public SearchClients()
         {
             InitializeComponent();
-
         }
+
         public SearchClients(AddNewVehicle anv)
         {
             InitializeComponent();
             addNewVehiclePanel = anv;
             FillTable();
-        }
-
-        private void ButtonCloseApplication_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void FillTable()
@@ -68,7 +62,7 @@ namespace VehicleServiceManagement
             connection.Close();
         }
 
-        private void TextBoxSearch_TextChanged(object sender, EventArgs e)
+        private void TextBoxSearch_TextChanged_1(object sender, EventArgs e)
         {
             string text = TextBoxSearch.Text;
             SqlConnection connection = new SqlConnection(connectionString);
@@ -103,6 +97,11 @@ namespace VehicleServiceManagement
             connection.Close();
         }
 
+        private void ButtonCloseApplication_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void DataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
@@ -110,20 +109,15 @@ namespace VehicleServiceManagement
             string phoneNumber = string.Empty;
             if (DataGridViewClients.Columns[colIndex].Name == "Get")
             {
-                phoneNumber = DataGridViewClients.Rows[rowIndex].Cells[2].Value.ToString();
+                phoneNumber = DataGridViewClients.Rows[rowIndex].Cells[3].Value.ToString();
+                addNewVehiclePanel.FillClientsData(phoneNumber);
+                this.Close();
             }
-            addNewVehiclePanel.FillClientsData(phoneNumber);
-            this.Close();
         }
 
-        private void Panel_Click(object sender, EventArgs e)
+        private void SearchClients_MouseHover(object sender, EventArgs e)
         {
-
-        }
-
-        private void TextBoxSearch_TextChanged_1(object sender, EventArgs e)
-        {
-
+            TextBoxSearch.Cursor = Cursors.IBeam;
         }
     }
 }

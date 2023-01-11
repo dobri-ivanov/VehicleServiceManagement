@@ -148,6 +148,7 @@ namespace VehicleServiceManagement
 
         private void ButtonSearchClients_Click(object sender, EventArgs e)
         {
+            this.TopMost = false;
             SearchClients searchClients = new SearchClients(this);
             searchClients.Show();
         }
