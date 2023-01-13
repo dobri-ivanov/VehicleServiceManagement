@@ -137,7 +137,9 @@ namespace VehicleServiceManagement
             this.PanelUser = new Bunifu.UI.WinForms.BunifuPanel();
             this.LabelUserName = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBoxUserAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.ShadowPanelCurrentRaport = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.LabelCurrentRaportTitle = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nicknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -154,7 +156,6 @@ namespace VehicleServiceManagement
             this.transmissionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.licensePlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panelDragControl.SuspendLayout();
             this.MainPages.SuspendLayout();
             this.Clients.SuspendLayout();
@@ -171,7 +172,7 @@ namespace VehicleServiceManagement
             this.PanelButtons.SuspendLayout();
             this.PanelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).BeginInit();
-            this.bunifuShadowPanel1.SuspendLayout();
+            this.ShadowPanelCurrentRaport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -2055,7 +2056,8 @@ namespace VehicleServiceManagement
             // Raports
             // 
             this.Raports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.Raports.Controls.Add(this.bunifuShadowPanel1);
+            this.Raports.Controls.Add(this.bunifuLabel1);
+            this.Raports.Controls.Add(this.ShadowPanelCurrentRaport);
             this.Raports.Location = new System.Drawing.Point(4, 4);
             this.Raports.Name = "Raports";
             this.Raports.Size = new System.Drawing.Size(1666, 992);
@@ -2794,27 +2796,61 @@ namespace VehicleServiceManagement
             this.PictureBoxUserAvatar.TabStop = false;
             this.PictureBoxUserAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // bunifuShadowPanel1
+            // ShadowPanelCurrentRaport
             // 
-            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel1.BorderRadius = 1;
-            this.bunifuShadowPanel1.BorderThickness = 1;
-            this.bunifuShadowPanel1.Controls.Add(this.bunifuLabel1);
-            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(492, 3);
-            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
-            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.DarkGray;
-            this.bunifuShadowPanel1.ShadowDept = 2;
-            this.bunifuShadowPanel1.ShadowDepth = 5;
-            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(855, 809);
-            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel1.TabIndex = 0;
+            this.ShadowPanelCurrentRaport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.ShadowPanelCurrentRaport.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.ShadowPanelCurrentRaport.BorderRadius = 1;
+            this.ShadowPanelCurrentRaport.BorderThickness = 1;
+            this.ShadowPanelCurrentRaport.Controls.Add(this.LabelCurrentRaportTitle);
+            this.ShadowPanelCurrentRaport.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.ShadowPanelCurrentRaport.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.ShadowPanelCurrentRaport.Location = new System.Drawing.Point(492, 57);
+            this.ShadowPanelCurrentRaport.Name = "ShadowPanelCurrentRaport";
+            this.ShadowPanelCurrentRaport.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.ShadowPanelCurrentRaport.PanelColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.ShadowPanelCurrentRaport.ShadowColor = System.Drawing.Color.DarkGray;
+            this.ShadowPanelCurrentRaport.ShadowDept = 2;
+            this.ShadowPanelCurrentRaport.ShadowDepth = 5;
+            this.ShadowPanelCurrentRaport.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.ShadowPanelCurrentRaport.ShadowTopLeftVisible = false;
+            this.ShadowPanelCurrentRaport.Size = new System.Drawing.Size(855, 755);
+            this.ShadowPanelCurrentRaport.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.ShadowPanelCurrentRaport.TabIndex = 0;
+            // 
+            // LabelCurrentRaportTitle
+            // 
+            this.LabelCurrentRaportTitle.AllowParentOverrides = false;
+            this.LabelCurrentRaportTitle.AutoEllipsis = false;
+            this.LabelCurrentRaportTitle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LabelCurrentRaportTitle.CursorType = System.Windows.Forms.Cursors.Default;
+            this.LabelCurrentRaportTitle.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
+            this.LabelCurrentRaportTitle.ForeColor = System.Drawing.Color.White;
+            this.LabelCurrentRaportTitle.Location = new System.Drawing.Point(332, 13);
+            this.LabelCurrentRaportTitle.Name = "LabelCurrentRaportTitle";
+            this.LabelCurrentRaportTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelCurrentRaportTitle.Size = new System.Drawing.Size(218, 42);
+            this.LabelCurrentRaportTitle.TabIndex = 13;
+            this.LabelCurrentRaportTitle.Text = "Текущ ремонт";
+            this.LabelCurrentRaportTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LabelCurrentRaportTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(169, 54);
+            this.bunifuLabel1.TabIndex = 14;
+            this.bunifuLabel1.Text = "Ремонти";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -2922,23 +2958,6 @@ namespace VehicleServiceManagement
             // 
             this.vehicleBindingSource.DataSource = typeof(VehicleServiceManagement.Vehicle);
             // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(313, 17);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(280, 54);
-            this.bunifuLabel1.TabIndex = 13;
-            this.bunifuLabel1.Text = "Текущ ремонт";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2969,14 +2988,15 @@ namespace VehicleServiceManagement
             this.Home.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
             this.Raports.ResumeLayout(false);
+            this.Raports.PerformLayout();
             this.Settings.ResumeLayout(false);
             this.Settings.PerformLayout();
             this.PanelButtons.ResumeLayout(false);
             this.PanelButtons.PerformLayout();
             this.PanelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).EndInit();
-            this.bunifuShadowPanel1.ResumeLayout(false);
-            this.bunifuShadowPanel1.PerformLayout();
+            this.ShadowPanelCurrentRaport.ResumeLayout(false);
+            this.ShadowPanelCurrentRaport.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -3061,7 +3081,8 @@ namespace VehicleServiceManagement
         private System.Windows.Forms.DataGridViewTextBoxColumn nicknameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Get;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
+        private Bunifu.UI.WinForms.BunifuShadowPanel ShadowPanelCurrentRaport;
+        private Bunifu.UI.WinForms.BunifuLabel LabelCurrentRaportTitle;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
     }
 }
