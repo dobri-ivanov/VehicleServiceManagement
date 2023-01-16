@@ -82,9 +82,18 @@ namespace VehicleServiceManagement
             this.ButtonMinimize = new Bunifu.UI.WinForms.BunifuImageButton();
             this.ButtonMaximize = new Bunifu.UI.WinForms.BunifuImageButton();
             this.MainPages = new Bunifu.UI.WinForms.BunifuPages();
+            this.Raports = new System.Windows.Forms.TabPage();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.ShadowPanelCurrentRaport = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.LabelCurrentRaportTitle = new Bunifu.UI.WinForms.BunifuLabel();
             this.Clients = new System.Windows.Forms.TabPage();
             this.DataGridViewClients = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nicknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Get = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ButtonAdd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ButtonEdit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ButtonDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -111,7 +120,18 @@ namespace VehicleServiceManagement
             this.ButtonRefreshVehicles = new Bunifu.UI.WinForms.BunifuImageButton();
             this.LabelTitleVehicles = new Bunifu.UI.WinForms.BunifuLabel();
             this.DataGridViewVehicles = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.makeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horsePowerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fuelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transmissionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.licensePlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GetVehicle = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TextBoxSearchVehicles = new Bunifu.UI.WinForms.BunifuTextBox();
             this.Calendar = new System.Windows.Forms.TabPage();
             this.panelLeftSide = new System.Windows.Forms.Panel();
@@ -122,7 +142,6 @@ namespace VehicleServiceManagement
             this.LabelHome = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.LabelCountClientsValue = new Bunifu.UI.WinForms.BunifuLabel();
-            this.Raports = new System.Windows.Forms.TabPage();
             this.Settings = new System.Windows.Forms.TabPage();
             this.LabelSettings = new Bunifu.UI.WinForms.BunifuLabel();
             this.Notification = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
@@ -137,44 +156,25 @@ namespace VehicleServiceManagement
             this.PanelUser = new Bunifu.UI.WinForms.BunifuPanel();
             this.LabelUserName = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBoxUserAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.ShadowPanelCurrentRaport = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.LabelCurrentRaportTitle = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nicknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.makeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.capacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horsePowerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fuelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transmissionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.licensePlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelDragControl.SuspendLayout();
             this.MainPages.SuspendLayout();
+            this.Raports.SuspendLayout();
+            this.ShadowPanelCurrentRaport.SuspendLayout();
             this.Clients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.ShadowPanelCurrentClient.SuspendLayout();
             this.Vehicles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVehicles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             this.Calendar.SuspendLayout();
             this.panelRightSide.SuspendLayout();
             this.Home.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
-            this.Raports.SuspendLayout();
             this.Settings.SuspendLayout();
             this.PanelButtons.SuspendLayout();
             this.PanelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).BeginInit();
-            this.ShadowPanelCurrentRaport.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DragControl
@@ -193,6 +193,7 @@ namespace VehicleServiceManagement
             this.panelDragControl.Name = "panelDragControl";
             this.panelDragControl.Size = new System.Drawing.Size(1759, 85);
             this.panelDragControl.TabIndex = 4;
+            this.panelDragControl.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDragControl_Paint);
             // 
             // ButtonCloseApplication
             // 
@@ -338,6 +339,73 @@ namespace VehicleServiceManagement
             this.MainPages.Transition = animation1;
             this.MainPages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
+            // Raports
+            // 
+            this.Raports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.Raports.Controls.Add(this.bunifuLabel1);
+            this.Raports.Controls.Add(this.ShadowPanelCurrentRaport);
+            this.Raports.Location = new System.Drawing.Point(4, 4);
+            this.Raports.Name = "Raports";
+            this.Raports.Size = new System.Drawing.Size(1666, 992);
+            this.Raports.TabIndex = 3;
+            this.Raports.Text = "Raports";
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(169, 54);
+            this.bunifuLabel1.TabIndex = 14;
+            this.bunifuLabel1.Text = "Ремонти";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // ShadowPanelCurrentRaport
+            // 
+            this.ShadowPanelCurrentRaport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.ShadowPanelCurrentRaport.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.ShadowPanelCurrentRaport.BorderRadius = 1;
+            this.ShadowPanelCurrentRaport.BorderThickness = 1;
+            this.ShadowPanelCurrentRaport.Controls.Add(this.LabelCurrentRaportTitle);
+            this.ShadowPanelCurrentRaport.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.ShadowPanelCurrentRaport.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.ShadowPanelCurrentRaport.Location = new System.Drawing.Point(492, 57);
+            this.ShadowPanelCurrentRaport.Name = "ShadowPanelCurrentRaport";
+            this.ShadowPanelCurrentRaport.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.ShadowPanelCurrentRaport.PanelColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.ShadowPanelCurrentRaport.ShadowColor = System.Drawing.Color.DarkGray;
+            this.ShadowPanelCurrentRaport.ShadowDept = 2;
+            this.ShadowPanelCurrentRaport.ShadowDepth = 5;
+            this.ShadowPanelCurrentRaport.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.ShadowPanelCurrentRaport.ShadowTopLeftVisible = false;
+            this.ShadowPanelCurrentRaport.Size = new System.Drawing.Size(855, 755);
+            this.ShadowPanelCurrentRaport.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.ShadowPanelCurrentRaport.TabIndex = 0;
+            // 
+            // LabelCurrentRaportTitle
+            // 
+            this.LabelCurrentRaportTitle.AllowParentOverrides = false;
+            this.LabelCurrentRaportTitle.AutoEllipsis = false;
+            this.LabelCurrentRaportTitle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LabelCurrentRaportTitle.CursorType = System.Windows.Forms.Cursors.Default;
+            this.LabelCurrentRaportTitle.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
+            this.LabelCurrentRaportTitle.ForeColor = System.Drawing.Color.White;
+            this.LabelCurrentRaportTitle.Location = new System.Drawing.Point(332, 13);
+            this.LabelCurrentRaportTitle.Name = "LabelCurrentRaportTitle";
+            this.LabelCurrentRaportTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelCurrentRaportTitle.Size = new System.Drawing.Size(218, 42);
+            this.LabelCurrentRaportTitle.TabIndex = 13;
+            this.LabelCurrentRaportTitle.Text = "Текущ ремонт";
+            this.LabelCurrentRaportTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LabelCurrentRaportTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // Clients
             // 
             this.Clients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
@@ -438,6 +506,34 @@ namespace VehicleServiceManagement
             this.DataGridViewClients.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             this.DataGridViewClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewClients_CellContentClick);
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Име";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nicknameDataGridViewTextBoxColumn
+            // 
+            this.nicknameDataGridViewTextBoxColumn.DataPropertyName = "Nickname";
+            this.nicknameDataGridViewTextBoxColumn.HeaderText = "Прякор";
+            this.nicknameDataGridViewTextBoxColumn.Name = "nicknameDataGridViewTextBoxColumn";
+            this.nicknameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Телефонен номер";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Get
             // 
             this.Get.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -450,6 +546,10 @@ namespace VehicleServiceManagement
             this.Get.ToolTipText = "Избери клиент";
             this.Get.UseColumnTextForButtonValue = true;
             this.Get.Width = 50;
+            // 
+            // clientBindingSource
+            // 
+            this.clientBindingSource.DataSource = typeof(VehicleServiceManagement.Client);
             // 
             // ButtonAdd
             // 
@@ -1841,6 +1941,76 @@ namespace VehicleServiceManagement
             this.DataGridViewVehicles.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             this.DataGridViewVehicles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
             // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Име";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastNameDataGridViewTextBoxColumn1
+            // 
+            this.lastNameDataGridViewTextBoxColumn1.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
+            this.lastNameDataGridViewTextBoxColumn1.Name = "lastNameDataGridViewTextBoxColumn1";
+            this.lastNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // makeDataGridViewTextBoxColumn
+            // 
+            this.makeDataGridViewTextBoxColumn.DataPropertyName = "Make";
+            this.makeDataGridViewTextBoxColumn.HeaderText = "Марка";
+            this.makeDataGridViewTextBoxColumn.Name = "makeDataGridViewTextBoxColumn";
+            this.makeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Модел";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
+            this.yearDataGridViewTextBoxColumn.HeaderText = "Година";
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // capacityDataGridViewTextBoxColumn
+            // 
+            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "Capacity";
+            this.capacityDataGridViewTextBoxColumn.HeaderText = "Кубатура";
+            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
+            this.capacityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horsePowerDataGridViewTextBoxColumn
+            // 
+            this.horsePowerDataGridViewTextBoxColumn.DataPropertyName = "HorsePower";
+            this.horsePowerDataGridViewTextBoxColumn.HeaderText = "Конски сили";
+            this.horsePowerDataGridViewTextBoxColumn.Name = "horsePowerDataGridViewTextBoxColumn";
+            this.horsePowerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fuelDataGridViewTextBoxColumn
+            // 
+            this.fuelDataGridViewTextBoxColumn.DataPropertyName = "Fuel";
+            this.fuelDataGridViewTextBoxColumn.HeaderText = "Гориво";
+            this.fuelDataGridViewTextBoxColumn.Name = "fuelDataGridViewTextBoxColumn";
+            this.fuelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // transmissionDataGridViewTextBoxColumn
+            // 
+            this.transmissionDataGridViewTextBoxColumn.DataPropertyName = "Transmission";
+            this.transmissionDataGridViewTextBoxColumn.HeaderText = "Трансмисия";
+            this.transmissionDataGridViewTextBoxColumn.Name = "transmissionDataGridViewTextBoxColumn";
+            this.transmissionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // licensePlateDataGridViewTextBoxColumn
+            // 
+            this.licensePlateDataGridViewTextBoxColumn.DataPropertyName = "LicensePlate";
+            this.licensePlateDataGridViewTextBoxColumn.HeaderText = "Рег. Номер";
+            this.licensePlateDataGridViewTextBoxColumn.Name = "licensePlateDataGridViewTextBoxColumn";
+            this.licensePlateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // GetVehicle
             // 
             this.GetVehicle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -1853,6 +2023,10 @@ namespace VehicleServiceManagement
             this.GetVehicle.ToolTipText = "Избери клиент";
             this.GetVehicle.UseColumnTextForButtonValue = true;
             this.GetVehicle.Width = 50;
+            // 
+            // vehicleBindingSource
+            // 
+            this.vehicleBindingSource.DataSource = typeof(VehicleServiceManagement.Vehicle);
             // 
             // TextBoxSearchVehicles
             // 
@@ -2052,17 +2226,6 @@ namespace VehicleServiceManagement
             this.LabelCountClientsValue.Text = "5426";
             this.LabelCountClientsValue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelCountClientsValue.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // Raports
-            // 
-            this.Raports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.Raports.Controls.Add(this.bunifuLabel1);
-            this.Raports.Controls.Add(this.ShadowPanelCurrentRaport);
-            this.Raports.Location = new System.Drawing.Point(4, 4);
-            this.Raports.Name = "Raports";
-            this.Raports.Size = new System.Drawing.Size(1666, 992);
-            this.Raports.TabIndex = 3;
-            this.Raports.Text = "Raports";
             // 
             // Settings
             // 
@@ -2796,168 +2959,6 @@ namespace VehicleServiceManagement
             this.PictureBoxUserAvatar.TabStop = false;
             this.PictureBoxUserAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // ShadowPanelCurrentRaport
-            // 
-            this.ShadowPanelCurrentRaport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.ShadowPanelCurrentRaport.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.ShadowPanelCurrentRaport.BorderRadius = 1;
-            this.ShadowPanelCurrentRaport.BorderThickness = 1;
-            this.ShadowPanelCurrentRaport.Controls.Add(this.LabelCurrentRaportTitle);
-            this.ShadowPanelCurrentRaport.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.ShadowPanelCurrentRaport.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.ShadowPanelCurrentRaport.Location = new System.Drawing.Point(492, 57);
-            this.ShadowPanelCurrentRaport.Name = "ShadowPanelCurrentRaport";
-            this.ShadowPanelCurrentRaport.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.ShadowPanelCurrentRaport.PanelColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.ShadowPanelCurrentRaport.ShadowColor = System.Drawing.Color.DarkGray;
-            this.ShadowPanelCurrentRaport.ShadowDept = 2;
-            this.ShadowPanelCurrentRaport.ShadowDepth = 5;
-            this.ShadowPanelCurrentRaport.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.ShadowPanelCurrentRaport.ShadowTopLeftVisible = false;
-            this.ShadowPanelCurrentRaport.Size = new System.Drawing.Size(855, 755);
-            this.ShadowPanelCurrentRaport.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.ShadowPanelCurrentRaport.TabIndex = 0;
-            // 
-            // LabelCurrentRaportTitle
-            // 
-            this.LabelCurrentRaportTitle.AllowParentOverrides = false;
-            this.LabelCurrentRaportTitle.AutoEllipsis = false;
-            this.LabelCurrentRaportTitle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.LabelCurrentRaportTitle.CursorType = System.Windows.Forms.Cursors.Default;
-            this.LabelCurrentRaportTitle.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
-            this.LabelCurrentRaportTitle.ForeColor = System.Drawing.Color.White;
-            this.LabelCurrentRaportTitle.Location = new System.Drawing.Point(332, 13);
-            this.LabelCurrentRaportTitle.Name = "LabelCurrentRaportTitle";
-            this.LabelCurrentRaportTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelCurrentRaportTitle.Size = new System.Drawing.Size(218, 42);
-            this.LabelCurrentRaportTitle.TabIndex = 13;
-            this.LabelCurrentRaportTitle.Text = "Текущ ремонт";
-            this.LabelCurrentRaportTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.LabelCurrentRaportTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(3, 3);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(169, 54);
-            this.bunifuLabel1.TabIndex = 14;
-            this.bunifuLabel1.Text = "Ремонти";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Име";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nicknameDataGridViewTextBoxColumn
-            // 
-            this.nicknameDataGridViewTextBoxColumn.DataPropertyName = "Nickname";
-            this.nicknameDataGridViewTextBoxColumn.HeaderText = "Прякор";
-            this.nicknameDataGridViewTextBoxColumn.Name = "nicknameDataGridViewTextBoxColumn";
-            this.nicknameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Телефонен номер";
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // clientBindingSource
-            // 
-            this.clientBindingSource.DataSource = typeof(VehicleServiceManagement.Client);
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Име";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lastNameDataGridViewTextBoxColumn1
-            // 
-            this.lastNameDataGridViewTextBoxColumn1.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
-            this.lastNameDataGridViewTextBoxColumn1.Name = "lastNameDataGridViewTextBoxColumn1";
-            this.lastNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // makeDataGridViewTextBoxColumn
-            // 
-            this.makeDataGridViewTextBoxColumn.DataPropertyName = "Make";
-            this.makeDataGridViewTextBoxColumn.HeaderText = "Марка";
-            this.makeDataGridViewTextBoxColumn.Name = "makeDataGridViewTextBoxColumn";
-            this.makeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "Модел";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Година";
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // capacityDataGridViewTextBoxColumn
-            // 
-            this.capacityDataGridViewTextBoxColumn.DataPropertyName = "Capacity";
-            this.capacityDataGridViewTextBoxColumn.HeaderText = "Кубатура";
-            this.capacityDataGridViewTextBoxColumn.Name = "capacityDataGridViewTextBoxColumn";
-            this.capacityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // horsePowerDataGridViewTextBoxColumn
-            // 
-            this.horsePowerDataGridViewTextBoxColumn.DataPropertyName = "HorsePower";
-            this.horsePowerDataGridViewTextBoxColumn.HeaderText = "Конски сили";
-            this.horsePowerDataGridViewTextBoxColumn.Name = "horsePowerDataGridViewTextBoxColumn";
-            this.horsePowerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fuelDataGridViewTextBoxColumn
-            // 
-            this.fuelDataGridViewTextBoxColumn.DataPropertyName = "Fuel";
-            this.fuelDataGridViewTextBoxColumn.HeaderText = "Гориво";
-            this.fuelDataGridViewTextBoxColumn.Name = "fuelDataGridViewTextBoxColumn";
-            this.fuelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // transmissionDataGridViewTextBoxColumn
-            // 
-            this.transmissionDataGridViewTextBoxColumn.DataPropertyName = "Transmission";
-            this.transmissionDataGridViewTextBoxColumn.HeaderText = "Трансмисия";
-            this.transmissionDataGridViewTextBoxColumn.Name = "transmissionDataGridViewTextBoxColumn";
-            this.transmissionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // licensePlateDataGridViewTextBoxColumn
-            // 
-            this.licensePlateDataGridViewTextBoxColumn.DataPropertyName = "LicensePlate";
-            this.licensePlateDataGridViewTextBoxColumn.HeaderText = "Рег. Номер";
-            this.licensePlateDataGridViewTextBoxColumn.Name = "licensePlateDataGridViewTextBoxColumn";
-            this.licensePlateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vehicleBindingSource
-            // 
-            this.vehicleBindingSource.DataSource = typeof(VehicleServiceManagement.Vehicle);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2974,31 +2975,31 @@ namespace VehicleServiceManagement
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.panelDragControl.ResumeLayout(false);
             this.MainPages.ResumeLayout(false);
+            this.Raports.ResumeLayout(false);
+            this.Raports.PerformLayout();
+            this.ShadowPanelCurrentRaport.ResumeLayout(false);
+            this.ShadowPanelCurrentRaport.PerformLayout();
             this.Clients.ResumeLayout(false);
             this.Clients.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.ShadowPanelCurrentClient.ResumeLayout(false);
             this.ShadowPanelCurrentClient.PerformLayout();
             this.Vehicles.ResumeLayout(false);
             this.Vehicles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVehicles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).EndInit();
             this.Calendar.ResumeLayout(false);
             this.panelRightSide.ResumeLayout(false);
             this.Home.ResumeLayout(false);
             this.Home.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
-            this.Raports.ResumeLayout(false);
-            this.Raports.PerformLayout();
             this.Settings.ResumeLayout(false);
             this.Settings.PerformLayout();
             this.PanelButtons.ResumeLayout(false);
             this.PanelButtons.PerformLayout();
             this.PanelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).EndInit();
-            this.ShadowPanelCurrentRaport.ResumeLayout(false);
-            this.ShadowPanelCurrentRaport.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

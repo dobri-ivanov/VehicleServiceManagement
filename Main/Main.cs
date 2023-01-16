@@ -758,5 +758,10 @@ namespace VehicleServiceManagement
             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
 
         }
+
+        private void panelDragControl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
