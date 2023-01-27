@@ -163,6 +163,7 @@
     <Compile Include="AlertBoxes\AlertBoxDeleteVehicle.Designer.cs">
       <DependentUpon>AlertBoxDeleteVehicle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report.cs" />
     <Compile Include="SearchPanels\SearchClients.cs">
       <SubType>Form</SubType>
     </Compile>
