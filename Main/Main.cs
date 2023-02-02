@@ -440,7 +440,7 @@ namespace VehicleServiceManagement
                 transmission = read["Transmission"].ToString();
                 make = read["Make"].ToString();
                 model = read["Model"].ToString();
-                clientFirstName = read["FirstName"].ToString();
+                clientFirstName = read["FirstName"].ToString() + " " + read["LastName"].ToString();
                 clientLastName = read["LastName"].ToString();
 
                 Vehicle vehicle = new Vehicle(licensePlate, horsePower, capacity, year, fuel, transmission, make, model, clientFirstName, clientLastName);
@@ -711,10 +711,9 @@ namespace VehicleServiceManagement
 
             if (DataGridViewVehicles.Columns[colIndex].Name == "GetVehicle")
             {
-                string licensePlate = DataGridViewVehicles.Rows[rowIndex].Cells[9].Value.ToString();
+                string licensePlate = DataGridViewVehicles.Rows[rowIndex].Cells[8].Value.ToString();
                 VehicleOptions vehicleOptions = new VehicleOptions(licensePlate, this);
                 vehicleOptions.Show();
-
             }
         }
 
