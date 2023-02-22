@@ -762,5 +762,19 @@ namespace VehicleServiceManagement
         {
 
         }
+
+        private void ButtonLogOut_Click(object sender, EventArgs e)
+        {
+            Main currentPanel = this;
+            Login login = new Login();
+            login.Show();
+            currentPanel.Hide();
+
+        }
+
+        private void Settings_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

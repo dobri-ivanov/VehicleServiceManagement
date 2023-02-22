@@ -352,7 +352,7 @@ namespace VehicleServiceManagement
             this.ButtonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
             this.ButtonLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonLogin.BackgroundImage")));
             this.ButtonLogin.ButtonText = "ВХОД";
-            this.ButtonLogin.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ButtonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonLogin.ForeColor = System.Drawing.Color.Gray;
             this.ButtonLogin.IdleBorderThickness = 2;
