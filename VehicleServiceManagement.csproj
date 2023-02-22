@@ -265,6 +265,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Client.datasource" />
+    <None Include="Properties\DataSources\Report.datasource" />
     <None Include="Properties\DataSources\Vehicle.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

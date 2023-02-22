@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -227,6 +228,7 @@ namespace VehicleServiceManagement
         private void ButtonReports_Click(object sender, EventArgs e)
         {
             MainPages.SetPage("Raports");
+            FillRaportsTable();
         }
         private void ButtonCalendar_Click(object sender, EventArgs e)
         {
@@ -402,6 +404,40 @@ namespace VehicleServiceManagement
 
                 clientBindingSource.Add(client);
 
+            }
+            read.Close();
+            connection.Close();
+        }
+
+        public void FillRaportsTable()
+        {
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+            connection.Open();
+            DataGridViewRaports.Rows.Clear();
+
+            SqlDataReader read = (null);
+            string query = 
+                "SELECT r.Title, r.CreationDate, v.LicensePlate " +
+                "FROM Reports AS r " +
+                "JOIN Vehicles AS v ON r.VehicleID = v.ID ";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            read = command.ExecuteReader();
+
+
+            string title = String.Empty;
+            string creationDate = String.Empty;
+            string licensePlate = String.Empty;
+
+            while (read.Read())
+            {
+                title = read["Title"].ToString();
+                creationDate = read["CreationDate"].ToString();
+                licensePlate = read["LicensePlate"].ToString();
+
+                Report report = new Report(title, creationDate, licensePlate);
+
+                reportBindingSource.Add(report);
             }
             read.Close();
             connection.Close();
@@ -775,6 +811,16 @@ namespace VehicleServiceManagement
         private void Settings_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Raports_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ImageButtonRefreshReports_Click(object sender, EventArgs e)
+        {
+            FillRaportsTable();
         }
     }
 }
