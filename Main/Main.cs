@@ -419,7 +419,8 @@ namespace VehicleServiceManagement
             string query = 
                 "SELECT r.Title, r.CreationDate, v.LicensePlate " +
                 "FROM Reports AS r " +
-                "JOIN Vehicles AS v ON r.VehicleID = v.ID ";
+                "JOIN Vehicles AS v ON r.VehicleID = v.ID " +
+                "ORDER BY CreationDate DESC";
 
             SqlCommand command = new SqlCommand(query, connection);
             read = command.ExecuteReader();
@@ -432,7 +433,8 @@ namespace VehicleServiceManagement
             while (read.Read())
             {
                 title = read["Title"].ToString();
-                creationDate = read["CreationDate"].ToString();
+                string date = read["CreationDate"].ToString();
+                creationDate = date.Substring(0, 10);
                 licensePlate = read["LicensePlate"].ToString();
 
                 Report report = new Report(title, creationDate, licensePlate);
