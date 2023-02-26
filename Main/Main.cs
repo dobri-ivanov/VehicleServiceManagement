@@ -140,6 +140,10 @@ namespace VehicleServiceManagement
             currentPoint.X += 320;
             ButtonAddVechicle.Location = currentPoint;
 
+            currentPoint = ButtonLogOut.Location;
+            currentPoint.X += 320;
+            ButtonLogOut.Location = currentPoint;
+
 
         }
         private void ReturnControlsPosition()
@@ -200,6 +204,10 @@ namespace VehicleServiceManagement
             currentPoint = ButtonAddVechicle.Location;
             currentPoint.X -= 320;
             ButtonAddVechicle.Location = currentPoint;
+
+            currentPoint = ButtonLogOut.Location;
+            currentPoint.X -= 320;
+            ButtonLogOut.Location = currentPoint;
         }
 
         private void ButtonMinimize_Click(object sender, EventArgs e)

@@ -1444,6 +1444,27 @@
         RK5CYII=
 </value>
   </data>
+  <data name="ButtonLogOut.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAxCAYAAADEDXt+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALFSURBVHhe7Z0rc8JAFEaRlUgkElmJrERWVlYikcg6ZGUl
+        shKJrEQiKysr+w9Cv4/clOlAmUCy7HQ4Z+Yms5uXyJmbbB67nXPYbDYDxbQoimfFm0NluBKqc654UfFJ
+        82GokQYdpOeDKT4U74qZYqL6O0esBldAdc51/seaW76V4lMxV/k2VmuOdtbVTi2apfPB+rEI4Ad50VM8
+        ypF1SNiLReehnQwtnXY0VdxENcBRQkInq4eoOg1tOFb4Xq4bVQC1cbKSP6+KWVTVQxu4IeGbSbIdNEIO
+        uWE6j+JxtOLE8kURoDG1nJKlbsEsyXjQNvLKl+DD94ASzo9S3jXnHg9axwlNfq01H0TVDi3wfd4kigCt
+        I/Hu5dgiiiWq7EfW43ILSZFnfiC9eyOigh8KPkYRIBnyzO2Ktyhu5ftUZbMn0gA18NU1fOtaPL/FWMUy
+        gOTIt7Llq8lMFk6jHiA58s2v3+Y7CwEuhHwrr7aa+P0tn0TBxZBvfrryYfn81QqfScFFkXObcgJwYZAP
+        soF8kA3kg2wgH2QD+SAbyAfZQD7IBvJBNpAPsoF8kA3kg2wgH2Rj613BJ/SQgUq+338TASTGyc5Jz/It
+        VLiPeoDkyLdbebe2fO7wcRz1AMmRbyPF0hbu/0UOkBD5VvaOIfn8H+WX57EMICnybffrhgpLxWhbAEjI
+        z/1ehcWzgFEESIY8229jqIJWLyRlL+tV/LkAoCWOJjgtcP+5p3XgDFADeeUO5l+ieBitQPcZ0CpKavW6
+        W/YKWtFDGyEgNCbEqz+kRgjoDEiv9HA28seXWme80/v51obuwt5ZkA8PoDaSzR0BLRTNxnLRxk6b/vLF
+        LZX9nsQBgpDOr878BqO9x3bemXbq0SY9ppYfFI5U194Ig/DvcDJSODl5YMjKjXQjGuhgtnt7LVd4XAW4
+        UnT+LZwbEx4Y8sSrYqfzDfpyBMbfJPL8AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="LabelSettings.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'Segoe UI'; font-size: 30pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: center; }</value>
+  </data>
   <data name="ImageButtonRefreshReports.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -3515,27 +3536,6 @@
   </data>
   <data name="LabelCountClientsValue.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 13px;font-family: 'Segoe UI'; font-size: 25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: center; }</value>
-  </data>
-  <data name="ButtonLogOut.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAxCAYAAADEDXt+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALFSURBVHhe7Z0rc8JAFEaRlUgkElmJrERWVlYikcg6ZGUl
-        shKJrEQiKysr+w9Cv4/clOlAmUCy7HQ4Z+Yms5uXyJmbbB67nXPYbDYDxbQoimfFm0NluBKqc654UfFJ
-        82GokQYdpOeDKT4U74qZYqL6O0esBldAdc51/seaW76V4lMxV/k2VmuOdtbVTi2apfPB+rEI4Ad50VM8
-        ypF1SNiLReehnQwtnXY0VdxENcBRQkInq4eoOg1tOFb4Xq4bVQC1cbKSP6+KWVTVQxu4IeGbSbIdNEIO
-        uWE6j+JxtOLE8kURoDG1nJKlbsEsyXjQNvLKl+DD94ASzo9S3jXnHg9axwlNfq01H0TVDi3wfd4kigCt
-        I/Hu5dgiiiWq7EfW43ILSZFnfiC9eyOigh8KPkYRIBnyzO2Ktyhu5ftUZbMn0gA18NU1fOtaPL/FWMUy
-        gOTIt7Llq8lMFk6jHiA58s2v3+Y7CwEuhHwrr7aa+P0tn0TBxZBvfrryYfn81QqfScFFkXObcgJwYZAP
-        soF8kA3kg2wgH2QD+SAbyAfZQD7IBvJBNpAPsoF8kA3kg2wgH2Rj613BJ/SQgUq+338TASTGyc5Jz/It
-        VLiPeoDkyLdbebe2fO7wcRz1AMmRbyPF0hbu/0UOkBD5VvaOIfn8H+WX57EMICnybffrhgpLxWhbAEjI
-        z/1ehcWzgFEESIY8229jqIJWLyRlL+tV/LkAoCWOJjgtcP+5p3XgDFADeeUO5l+ieBitQPcZ0CpKavW6
-        W/YKWtFDGyEgNCbEqz+kRgjoDEiv9HA28seXWme80/v51obuwt5ZkA8PoDaSzR0BLRTNxnLRxk6b/vLF
-        LZX9nsQBgpDOr878BqO9x3bemXbq0SY9ppYfFI5U194Ig/DvcDJSODl5YMjKjXQjGuhgtnt7LVd4XAW4
-        UnT+LZwbEx4Y8sSrYqfzDfpyBMbfJPL8AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="LabelSettings.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'Segoe UI'; font-size: 30pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: center; }</value>
   </data>
   <data name="animation1.BlindCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
