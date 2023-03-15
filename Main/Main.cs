@@ -25,7 +25,7 @@ namespace VehicleServiceManagement
         public static string currentConnectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
         public Main()
         {
-            InitializeComponent();
+            InitializeComponent();   
         }
         public Main(string name)
         {
@@ -34,7 +34,6 @@ namespace VehicleServiceManagement
             LabelUserName.Text = name;
             LabelCurrentDate.Text = today.Day.ToString();
         }
-
 
         private void ButtonCalendar_MouseHover(object sender, EventArgs e)
         {
