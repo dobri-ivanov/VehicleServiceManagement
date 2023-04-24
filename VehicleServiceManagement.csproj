@@ -164,6 +164,7 @@
       <DependentUpon>AlertBoxDeleteVehicle.cs</DependentUpon>
     </Compile>
     <Compile Include="Report.cs" />
+    <Compile Include="ReportContent.cs" />
     <Compile Include="SearchPanels\SearchClients.cs">
       <SubType>Form</SubType>
     </Compile>

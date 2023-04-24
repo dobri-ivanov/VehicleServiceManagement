@@ -417,7 +417,7 @@ namespace VehicleServiceManagement
 
             SqlDataReader read = (null);
             string query = 
-                "SELECT r.Title, r.CreationDate, v.LicensePlate " +
+                "SELECT r.ID, r.Title, r.CreationDate, v.LicensePlate " +
                 "FROM Reports AS r " +
                 "JOIN Vehicles AS v ON r.VehicleID = v.ID " +
                 "ORDER BY CreationDate DESC";
@@ -425,19 +425,20 @@ namespace VehicleServiceManagement
             SqlCommand command = new SqlCommand(query, connection);
             read = command.ExecuteReader();
 
-
+            int id = 0;
             string title = String.Empty;
             string creationDate = String.Empty;
             string licensePlate = String.Empty;
 
             while (read.Read())
             {
+                id = int.Parse(read["ID"].ToString());
                 title = read["Title"].ToString();
                 string date = read["CreationDate"].ToString();
                 creationDate = date.Substring(0, 10);
                 licensePlate = read["LicensePlate"].ToString();
 
-                Report report = new Report(title, creationDate, licensePlate);
+                Report report = new Report(id, title, creationDate, licensePlate);
 
                 reportBindingSource.Add(report);
             }
@@ -836,6 +837,103 @@ namespace VehicleServiceManagement
         }
 
         private void bunifuTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridViewCurerntReportContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DataGridViewRaports_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewRaports.Columns[colIndex].Name == "GetReport")
+            { 
+                int id = int.Parse(DataGridViewRaports.Rows[rowIndex].Cells[0].Value.ToString());
+                string title = DataGridViewRaports.Rows[rowIndex].Cells[1].Value.ToString();
+                string licensePlate = DataGridViewRaports.Rows[rowIndex].Cells[2].Value.ToString();
+                string date = DataGridViewRaports.Rows[rowIndex].Cells[3].Value.ToString();
+
+                GenerateReport(id, title, licensePlate, date);
+            }
+        }
+
+        private void GenerateReport(int id, string title, string licensePlate, string date)
+        {
+            TextBoxDate.Text = date;
+            LabelReportTitle.Text = title;
+            TextBoxVehicle.Text = GetVehicleInformation(licensePlate);
+            TextBoxOwner.Text = GetOwnerInformation(licensePlate);
+            FillReportContentTable(id)
+            
+            
+
+        }
+
+        private void FillReportContentTable(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        private string GetOwnerInformation(string licensePlate)
+        {
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+            connection.Open();
+            DataGridViewRaports.Rows.Clear();
+
+            SqlDataReader read = (null);
+            string query =
+                $"SELECT CONCAT(c.FirstName, ' ', c.LastName, ' | ', c.PhoneNumber) AS result " +
+                "FROM Clients as c " +
+                "JOIN Vehicles as v ON c.ID = v.ClientID " +
+                "WHERE LicensePlate = '" + licensePlate + "'";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            read = command.ExecuteReader();
+
+            string result = String.Empty;
+
+            while (read.Read())
+            {
+                result = read["result"].ToString();
+            }
+            read.Close();
+            connection.Close();
+
+            return result;
+        }
+
+        private string GetVehicleInformation(string licensePlate)
+        {
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+            connection.Open();
+            DataGridViewRaports.Rows.Clear();
+
+            SqlDataReader read = (null);
+            string query =
+                $"SELECT CONCAT(Make, ' ', Model, ' ', [Year], ' ', Capacity, ' ', HorsePower) AS result " +
+                "FROM Vehicles " +
+                "WHERE LicensePlate = '" + licensePlate + "'";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            read = command.ExecuteReader();
+
+            string result = String.Empty;
+
+            while (read.Read())
+            {
+                result = read["result"].ToString();
+            }
+            read.Close();
+            connection.Close();
+
+            return result + "hp";
+        }
+
+        private void bunifuDatePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

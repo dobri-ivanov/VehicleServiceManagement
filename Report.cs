@@ -8,8 +8,9 @@ namespace VehicleServiceManagement
 {
     class Report
     {
-        public Report(string title, string creationDate, string licensePlate)
+        public Report(int id, string title, string creationDate, string licensePlate)
         {
+            this.ID = id;
             this.Title = title;
             this.CreationDate = creationDate;
             this.VehicleLicensePlate = licensePlate;
