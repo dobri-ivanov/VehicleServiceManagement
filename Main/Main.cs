@@ -11,6 +11,7 @@ namespace VehicleServiceManagement
         string oldLastName;
         string oldPhoneNumber;
         string oldNickname;
+        int currentReportId;
 
         private static string currentPhoneNumber = String.Empty;
         private bool isMaximized = false;
@@ -18,7 +19,7 @@ namespace VehicleServiceManagement
         public static string currentConnectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
         public Main()
         {
-            InitializeComponent();   
+            InitializeComponent();
         }
         public Main(string name)
         {
@@ -416,7 +417,7 @@ namespace VehicleServiceManagement
             DataGridViewRaports.Rows.Clear();
 
             SqlDataReader read = (null);
-            string query = 
+            string query =
                 "SELECT r.ID, r.Title, r.CreationDate, v.LicensePlate " +
                 "FROM Reports AS r " +
                 "JOIN Vehicles AS v ON r.VehicleID = v.ID " +
@@ -608,7 +609,7 @@ namespace VehicleServiceManagement
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
 
-            string query = "UPDATE Clients SET FirstName = N'"+currentName+"', LastName = N'"+currentLastName+"', PhoneNumber = '"+currentPhoneNumber+"', Nickname = N'"+currentNickname+"' WHERE PhoneNumber = '"+oldPhoneNumber+"';";
+            string query = "UPDATE Clients SET FirstName = N'" + currentName + "', LastName = N'" + currentLastName + "', PhoneNumber = '" + currentPhoneNumber + "', Nickname = N'" + currentNickname + "' WHERE PhoneNumber = '" + oldPhoneNumber + "';";
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
             connection.Close();
@@ -678,7 +679,7 @@ namespace VehicleServiceManagement
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
             string phoneNum = TextBoxPhoneNumber.Text;
-            string query = "SELECT * FROM Clients WHERE PhoneNumber = '"+phoneNum+"'";
+            string query = "SELECT * FROM Clients WHERE PhoneNumber = '" + phoneNum + "'";
 
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader read = command.ExecuteReader();
@@ -692,7 +693,7 @@ namespace VehicleServiceManagement
 
             SearchVehicle sv = new SearchVehicle(currentClientID, this);
             sv.Show();
-            
+
         }
 
         public void ChangeVehicleSearchText(string text)
@@ -797,11 +798,6 @@ namespace VehicleServiceManagement
 
         }
 
-        private void panelDragControl_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void ButtonLogOut_Click(object sender, EventArgs e)
         {
             Main currentPanel = this;
@@ -811,39 +807,9 @@ namespace VehicleServiceManagement
 
         }
 
-        private void Settings_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Raports_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ImageButtonRefreshReports_Click(object sender, EventArgs e)
         {
             FillRaportsTable();
-        }
-
-        private void TextBoxSearchReport_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGridViewCurerntReportContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void DataGridViewRaports_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -851,31 +817,113 @@ namespace VehicleServiceManagement
             int rowIndex = e.RowIndex;
             int colIndex = e.ColumnIndex;
             if (DataGridViewRaports.Columns[colIndex].Name == "GetReport")
-            { 
+            {
                 int id = int.Parse(DataGridViewRaports.Rows[rowIndex].Cells[0].Value.ToString());
                 string title = DataGridViewRaports.Rows[rowIndex].Cells[1].Value.ToString();
                 string licensePlate = DataGridViewRaports.Rows[rowIndex].Cells[2].Value.ToString();
                 string date = DataGridViewRaports.Rows[rowIndex].Cells[3].Value.ToString();
 
+                ShadowPanelCurrentReport.Visible = true;
                 GenerateReport(id, title, licensePlate, date);
             }
         }
 
         private void GenerateReport(int id, string title, string licensePlate, string date)
         {
+            currentReportId = id;
             TextBoxDate.Text = date;
             LabelReportTitle.Text = title;
             TextBoxVehicle.Text = GetVehicleInformation(licensePlate);
             TextBoxOwner.Text = GetOwnerInformation(licensePlate);
-            FillReportContentTable(id)
-            
-            
+            TextBoxWorkPrice.Text = GetReportWorkPrice(id) + " лв.";
+            TextBoxTotalSum.Text = (decimal.Parse(GetReportWorkPrice(id)) + GetContentTotalPrice(id)).ToString() + " лв.";
+            FillReportContentTable(id);
+        }
 
+        private decimal GetContentTotalPrice(int id)
+        {
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+            connection.Open();
+
+            SqlDataReader read = (null);
+            string query =
+                "SELECT Price " +
+                "FROM ReportContents " +
+                "WHERE ReportID = '" + id + "'";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            read = command.ExecuteReader();
+
+
+            decimal totalPrice = 0;
+
+            while (read.Read())
+            {
+                totalPrice += decimal.Parse(read["Price"].ToString());
+            }
+            read.Close();
+            connection.Close();
+
+            return totalPrice;
+        }
+
+        private string GetReportWorkPrice(int id)
+        {
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+            connection.Open();
+
+            SqlDataReader read = (null);
+            string query =
+                "SELECT WorkPrice " +
+                "FROM Reports " +
+                "WHERE ID = '" + id + "'";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            read = command.ExecuteReader();
+
+
+            string workPrice = String.Empty;
+
+            while (read.Read())
+            {
+                workPrice = (read["WorkPrice"].ToString());
+            }
+            read.Close();
+            connection.Close();
+
+            return workPrice;
         }
 
         private void FillReportContentTable(int id)
         {
-            throw new NotImplementedException();
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+            connection.Open();
+            DataGridViewCurerntReportContent.Rows.Clear();
+
+            SqlDataReader read = (null);
+            string query = "SELECT * " +
+                "FROM ReportContents " +
+                "WHERE ReportID = '" + id + "'";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            read = command.ExecuteReader();
+
+
+            string title = String.Empty;
+            decimal quantity = 0;
+            decimal price = 0;
+
+            while (read.Read())
+            {
+                title = (read["Title"].ToString());
+                quantity = decimal.Parse(read["Quantity"].ToString());
+                price = decimal.Parse(read["Price"].ToString());
+                ReportContent reportContent = new ReportContent(title, quantity, price);
+
+                reportContentBindingSource.Add(reportContent);
+            }
+            read.Close();
+            connection.Close();
         }
 
         private string GetOwnerInformation(string licensePlate)
@@ -933,9 +981,65 @@ namespace VehicleServiceManagement
             return result + "hp";
         }
 
-        private void bunifuDatePicker1_ValueChanged(object sender, EventArgs e)
+        private void ButtonDeleteReport_Click(object sender, EventArgs e)
         {
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+            connection.Open();
 
+            string query =
+                $"DELTE FROM Reports " +
+                $"WHERE ID = '" + currentReportId + "'";
+
+            string query2 =
+                $"DELTE FROM ReportContents " +
+                $"WHERE ReportID = '" + currentReportId + "'";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.ExecuteNonQuery();
+
+            command = new SqlCommand(query2, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        private void TextBoxSearchReport_TextChanged(object sender, EventArgs e)
+        {
+            string text = TextBoxSearchReport.Text;
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+            connection.Open();
+
+            string query =
+                "SELECT r.ID, r.Title, r.CreationDate, v.LicensePlate " +
+                "FROM Reports as r " +
+                "JOIN Vehicles as v ON r.VehicleID = v.ID " +
+                "WHERE r.Title LIKE N'%" + text + "%' " +
+                "OR r.CreationDate LIKE N'%" + text + "%' " +
+                "OR r.ID LIKE N'%" + text + "%' " +
+                "OR v.LicensePlate LIKE N'%" + text + "%';";
+
+            DataGridViewRaports.Rows.Clear();
+
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader read = command.ExecuteReader();
+
+            int id = 0;
+            string title = String.Empty;
+            string date = String.Empty;
+            string licensePlate = String.Empty;
+
+            while (read.Read())
+            {
+                id = int.Parse(read["ID"].ToString());
+                title = read["Title"].ToString();
+                date = DateTime.Parse(read["CreationDate"].ToString()).ToString("d");
+                licensePlate = read["LicensePlate"].ToString();
+
+                Report report = new Report(id, title, date, licensePlate);
+                reportBindingSource.Add(report);
+            }
+
+            read.Close();
+            connection.Close();
         }
     }
 }

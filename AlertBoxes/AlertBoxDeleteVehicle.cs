@@ -19,10 +19,6 @@ namespace VehicleServiceManagement.AlertBoxes
             this.Hide();
         }
 
-        private void AlertBoxDeleteVehicle_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void ButtonClose_Click(object sender, EventArgs e)
         {
@@ -33,15 +29,6 @@ namespace VehicleServiceManagement.AlertBoxes
             VehicleOptionsPanel = vehicleOptions;
             LabelText.Text = text;
             this.Show();
-        }
-        private void LabelText_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AlerBoxDragPanel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ButtonNo_Click(object sender, EventArgs e)
