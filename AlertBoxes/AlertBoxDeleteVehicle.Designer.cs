@@ -36,9 +36,10 @@ namespace VehicleServiceManagement.AlertBoxes
             this.ButtonNo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ButtonClose = new Bunifu.UI.WinForms.BunifuImageButton();
             this.AlerBoxDragPanel = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.LabelText = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.LabelText2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.AlerBoxDragPanel.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -273,43 +274,6 @@ namespace VehicleServiceManagement.AlertBoxes
             this.AlerBoxDragPanel.Size = new System.Drawing.Size(419, 58);
             this.AlerBoxDragPanel.TabIndex = 11;
             // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel1.BorderRadius = 0;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.AlerBoxDragPanel);
-            this.bunifuPanel1.Controls.Add(this.ButtonClose);
-            this.bunifuPanel1.Controls.Add(this.ButtonNo);
-            this.bunifuPanel1.Controls.Add(this.ButtonYes);
-            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(558, 253);
-            this.bunifuPanel1.TabIndex = 3;
-            // 
-            // LabelText
-            // 
-            this.LabelText.AllowParentOverrides = false;
-            this.LabelText.AutoEllipsis = false;
-            this.LabelText.AutoSize = false;
-            this.LabelText.Cursor = System.Windows.Forms.Cursors.Default;
-            this.LabelText.CursorType = System.Windows.Forms.Cursors.Default;
-            this.LabelText.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.LabelText.ForeColor = System.Drawing.Color.White;
-            this.LabelText.Location = new System.Drawing.Point(6, 52);
-            this.LabelText.Name = "LabelText";
-            this.LabelText.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelText.Size = new System.Drawing.Size(543, 127);
-            this.LabelText.TabIndex = 10;
-            this.LabelText.Text = "Сигурни ли сте, че искате да изтриете автомобил: Audi A6 CT 1131 PP";
-            this.LabelText.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelText.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // bunifuLabel1
             // 
             this.bunifuLabel1.AllowParentOverrides = false;
@@ -327,6 +291,63 @@ namespace VehicleServiceManagement.AlertBoxes
             this.bunifuLabel1.Text = "ВНИМАНИЕ";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.White;
+            this.bunifuPanel1.BorderRadius = 0;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.LabelText2);
+            this.bunifuPanel1.Controls.Add(this.AlerBoxDragPanel);
+            this.bunifuPanel1.Controls.Add(this.ButtonClose);
+            this.bunifuPanel1.Controls.Add(this.ButtonNo);
+            this.bunifuPanel1.Controls.Add(this.ButtonYes);
+            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(558, 253);
+            this.bunifuPanel1.TabIndex = 3;
+            this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
+            // 
+            // LabelText
+            // 
+            this.LabelText.AllowParentOverrides = false;
+            this.LabelText.AutoEllipsis = false;
+            this.LabelText.AutoSize = false;
+            this.LabelText.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LabelText.CursorType = System.Windows.Forms.Cursors.Default;
+            this.LabelText.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.LabelText.ForeColor = System.Drawing.Color.White;
+            this.LabelText.Location = new System.Drawing.Point(1, 1);
+            this.LabelText.Name = "LabelText";
+            this.LabelText.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelText.Size = new System.Drawing.Size(543, 127);
+            this.LabelText.TabIndex = 10;
+            this.LabelText.Text = "Сигурни ли сте, че искате да изтриете автомобил: Audi A6 CT 1131 PP";
+            this.LabelText.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelText.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // LabelText2
+            // 
+            this.LabelText2.AllowParentOverrides = false;
+            this.LabelText2.AutoEllipsis = false;
+            this.LabelText2.AutoSize = false;
+            this.LabelText2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LabelText2.CursorType = System.Windows.Forms.Cursors.Default;
+            this.LabelText2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.LabelText2.ForeColor = System.Drawing.Color.White;
+            this.LabelText2.Location = new System.Drawing.Point(3, 63);
+            this.LabelText2.Name = "LabelText2";
+            this.LabelText2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelText2.Size = new System.Drawing.Size(552, 127);
+            this.LabelText2.TabIndex = 12;
+            this.LabelText2.Text = "Сигурни ли сте, че искате да изтриете клиент: Иван Иванов / 0887446787";
+            this.LabelText2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelText2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // AlertBoxDeleteVehicle
             // 
@@ -354,5 +375,6 @@ namespace VehicleServiceManagement.AlertBoxes
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuLabel LabelText;
+        private Bunifu.UI.WinForms.BunifuLabel LabelText2;
     }
 }

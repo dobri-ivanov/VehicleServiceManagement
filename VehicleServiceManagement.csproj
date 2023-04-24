@@ -157,6 +157,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlertBoxes\AlertBoxDeleteReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertBoxes\AlertBoxDeleteReport.Designer.cs">
+      <DependentUpon>AlertBoxDeleteReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="AlertBoxes\AlertBoxDeleteVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     <Compile Include="VehiclesInteration\VehicleOptions.Designer.cs">
       <DependentUpon>VehicleOptions.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AlertBoxes\AlertBoxDeleteReport.resx">
+      <DependentUpon>AlertBoxDeleteReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AlertBoxes\AlertBoxDeleteVehicle.resx">
       <DependentUpon>AlertBoxDeleteVehicle.cs</DependentUpon>
     </EmbeddedResource>

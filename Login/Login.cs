@@ -90,6 +90,7 @@ namespace VehicleServiceManagement
             }
         }
 
+        //Shoud parameteriziese every query to database
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection(connectionString);

@@ -10,25 +10,18 @@ using System.Windows.Forms;
 
 namespace VehicleServiceManagement.AlertBoxes
 {
-    public partial class AlertBoxDeleteVehicle : Form
+    public partial class AlertBoxDeleteReport : Form
     {
-        private VehicleOptions VehicleOptionsPanel;
-        public AlertBoxDeleteVehicle()
+        public Main Main;
+        public AlertBoxDeleteReport()
         {
             InitializeComponent();
             this.Hide();
         }
 
-
         private void ButtonClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        public void ShowData(string text, VehicleOptions vehicleOptions)
-        {
-            VehicleOptionsPanel = vehicleOptions;
-            LabelText2.Text = text;
-            this.Show();
         }
 
         private void ButtonNo_Click(object sender, EventArgs e)
@@ -36,15 +29,17 @@ namespace VehicleServiceManagement.AlertBoxes
             this.Close();
         }
 
-        private void ButtonYes_Click(object sender, EventArgs e)
+        public void ShowData(string text, Main main)
         {
-            VehicleOptionsPanel.DeleteVehicle();
-            this.Close();
+            Main = main;
+            LabelText.Text = text;
+            this.Show();
         }
 
-        private void bunifuPanel1_Click(object sender, EventArgs e)
+        private void ButtonYes_Click(object sender, EventArgs e)
         {
-
+            Main.DeleteReport();
+            this.Close();
         }
     }
 }

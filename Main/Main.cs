@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
+using VehicleServiceManagement.AlertBoxes;
 
 namespace VehicleServiceManagement
 {
@@ -16,7 +17,8 @@ namespace VehicleServiceManagement
         private static string currentPhoneNumber = String.Empty;
         private bool isMaximized = false;
         private bool isMinimized = false;
-        public static string currentConnectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
+        //public static string currentConnectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
+        public static string currentConnectionString = "Data Source=mssql-123097-0.cloudclusters.net,10126;Initial Catalog=VehicleServiceManagement;Persist Security Info=True;User ID=DobriIv;Password=Test123456";
         public Main()
         {
             InitializeComponent();
@@ -930,7 +932,6 @@ namespace VehicleServiceManagement
         {
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
-            DataGridViewRaports.Rows.Clear();
 
             SqlDataReader read = (null);
             string query =
@@ -958,7 +959,6 @@ namespace VehicleServiceManagement
         {
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
-            DataGridViewRaports.Rows.Clear();
 
             SqlDataReader read = (null);
             string query =
@@ -983,15 +983,22 @@ namespace VehicleServiceManagement
 
         private void ButtonDeleteReport_Click(object sender, EventArgs e)
         {
+
+            AlertBoxDeleteReport alertBoxDeleteReport = new AlertBoxDeleteReport();
+            alertBoxDeleteReport.ShowData("Сигурни ли сте, че искате да изтриете текущия ремонт?", this);
+        }
+
+        public void DeleteReport()
+        {
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
 
             string query =
-                $"DELTE FROM Reports " +
+                $"DELETE FROM Reports " +
                 $"WHERE ID = '" + currentReportId + "'";
 
             string query2 =
-                $"DELTE FROM ReportContents " +
+                $"DELETE FROM ReportContents " +
                 $"WHERE ReportID = '" + currentReportId + "'";
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -1000,6 +1007,12 @@ namespace VehicleServiceManagement
             command = new SqlCommand(query2, connection);
             command.ExecuteNonQuery();
             connection.Close();
+
+            ShadowPanelCurrentReport.Visible = false;
+            FillRaportsTable();
+
+            Notification.Show(this, $"Текущият ремонт е успешно изтрит!",
+            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
         }
 
         private void TextBoxSearchReport_TextChanged(object sender, EventArgs e)
@@ -1041,5 +1054,6 @@ namespace VehicleServiceManagement
             read.Close();
             connection.Close();
         }
+
     }
 }
