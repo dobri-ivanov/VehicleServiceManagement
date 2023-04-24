@@ -829,5 +829,15 @@ namespace VehicleServiceManagement
         {
 
         }
+
+        private void bunifuLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
