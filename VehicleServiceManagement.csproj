@@ -171,6 +171,18 @@
     </Compile>
     <Compile Include="Report.cs" />
     <Compile Include="ReportContent.cs" />
+    <Compile Include="ReportsInteraction\AddEditReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsInteraction\AddEditReport.Designer.cs">
+      <DependentUpon>AddEditReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsInteraction\SearchVehicleForReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsInteraction\SearchVehicleForReport.Designer.cs">
+      <DependentUpon>SearchVehicleForReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="SearchPanels\SearchClients.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +246,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AlertBoxes\AlertBoxDeleteVehicle.resx">
       <DependentUpon>AlertBoxDeleteVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsInteraction\AddEditReport.resx">
+      <DependentUpon>AddEditReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsInteraction\SearchVehicleForReport.resx">
+      <DependentUpon>SearchVehicleForReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchPanels\SearchClients.resx">
       <DependentUpon>SearchClients.cs</DependentUpon>
@@ -383,6 +401,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\select-new-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-content.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

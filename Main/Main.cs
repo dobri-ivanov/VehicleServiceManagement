@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 using VehicleServiceManagement.AlertBoxes;
+using VehicleServiceManagement.ReportsInteraction;
 
 namespace VehicleServiceManagement
 {
@@ -1149,7 +1150,8 @@ namespace VehicleServiceManagement
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-
+            AddEditReport addEditReport = new AddEditReport("ADD");
+            addEditReport.Show();
         }
 
         private void DataGridViewCurerntReportContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
