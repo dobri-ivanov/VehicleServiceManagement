@@ -17,8 +17,8 @@ namespace VehicleServiceManagement
         private static string currentPhoneNumber = String.Empty;
         private bool isMaximized = false;
         private bool isMinimized = false;
-        //public static string currentConnectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
-        public static string currentConnectionString = "Data Source=mssql-123097-0.cloudclusters.net,10126;Initial Catalog=VehicleServiceManagement;Persist Security Info=True;User ID=DobriIv;Password=Test123456";
+        public static string currentConnectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
+        //public static string currentConnectionString = "Data Source=mssql-123097-0.cloudclusters.net,10126;Initial Catalog=VehicleServiceManagement;Persist Security Info=True;User ID=DobriIv;Password=Test123456";
         public Main()
         {
             InitializeComponent();
@@ -1055,5 +1055,95 @@ namespace VehicleServiceManagement
             connection.Close();
         }
 
+        private void DataGridViewRaports_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewRaports.Columns[colIndex].Name == "GetReport")
+            {
+                if (AreValidCoords(rowIndex, colIndex))
+                {
+                    DataGridViewRaports.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new_hover;
+                }
+            }
+        }
+
+        private bool AreValidCoords(int rowIndex, int colIndex)
+        {
+            if (rowIndex >= 0 && colIndex >= 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void DataGridViewRaports_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewRaports.Columns[colIndex].Name == "GetReport")
+            {
+                if (AreValidCoords(rowIndex, colIndex))
+                {
+                    DataGridViewRaports.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new;
+                }
+               
+            }
+        }
+
+        private void DataGridViewClients_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewClients.Columns[colIndex].Name == "Get")
+            {
+                if (AreValidCoords(rowIndex, colIndex))
+                {
+                    DataGridViewClients.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new_hover;
+                }            
+            }
+        }
+
+        private void DataGridViewClients_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewClients.Columns[colIndex].Name == "Get")
+            {
+                if (AreValidCoords(rowIndex, colIndex))
+                {
+                    DataGridViewClients.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new;
+                }
+               
+            }
+        }
+
+        private void DataGridViewVehicles_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewVehicles.Columns[colIndex].Name == "GetVehicle")
+            {
+                if (AreValidCoords(rowIndex, colIndex))
+                {
+                    DataGridViewVehicles.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new_hover;
+                }
+
+            }
+        }
+
+        private void DataGridViewVehicles_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewVehicles.Columns[colIndex].Name == "GetVehicle")
+            {
+                if (AreValidCoords(rowIndex, colIndex))
+                {
+                    DataGridViewVehicles.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new;
+                }
+
+            }
+        }
     }
 }

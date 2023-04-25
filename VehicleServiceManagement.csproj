@@ -363,5 +363,26 @@
   <ItemGroup>
     <None Include="Resources\door.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dots-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select-black-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select-new-hover.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
