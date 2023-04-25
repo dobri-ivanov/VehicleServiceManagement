@@ -837,7 +837,7 @@ namespace VehicleServiceManagement
             TextBoxVehicle.Text = GetVehicleInformation(licensePlate);
             TextBoxOwner.Text = GetOwnerInformation(licensePlate);
             TextBoxWorkPrice.Text = GetReportWorkPrice(id) + " лв.";
-            TextBoxTotalSum.Text = (decimal.Parse(GetReportWorkPrice(id)) + GetContentTotalPrice(id)).ToString() + " лв.";
+            TextBoxTotalSum.Text = (decimal.Parse(GetReportWorkPrice(id)) + GetContentTotalPrice(id)).ToString("f2") + " лв.";
             FillReportContentTable(id);
         }
 
@@ -848,7 +848,7 @@ namespace VehicleServiceManagement
 
             SqlDataReader read = (null);
             string query =
-                "SELECT Price " +
+                "SELECT Price, Quantity " +
                 "FROM ReportContents " +
                 "WHERE ReportID = '" + id + "'";
 
@@ -860,7 +860,7 @@ namespace VehicleServiceManagement
 
             while (read.Read())
             {
-                totalPrice += decimal.Parse(read["Price"].ToString());
+                totalPrice += decimal.Parse(read["Price"].ToString()) * decimal.Parse(read["Quantity"].ToString());
             }
             read.Close();
             connection.Close();
@@ -914,6 +914,7 @@ namespace VehicleServiceManagement
             decimal quantity = 0;
             decimal price = 0;
 
+            int row = 0;
             while (read.Read())
             {
                 title = (read["Title"].ToString());
@@ -922,6 +923,7 @@ namespace VehicleServiceManagement
                 ReportContent reportContent = new ReportContent(title, quantity, price);
 
                 reportContentBindingSource.Add(reportContent);
+                DataGridViewCurerntReportContent[3, row++].Value = (quantity * price).ToString();
             }
             read.Close();
             connection.Close();
@@ -1143,6 +1145,16 @@ namespace VehicleServiceManagement
                 }
 
             }
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridViewCurerntReportContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
