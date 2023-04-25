@@ -745,7 +745,6 @@ namespace VehicleServiceManagement
             read.Close();
             connection.Close();
         }
-
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
@@ -1087,7 +1086,7 @@ namespace VehicleServiceManagement
                 {
                     DataGridViewRaports.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new;
                 }
-               
+
             }
         }
 
@@ -1100,7 +1099,7 @@ namespace VehicleServiceManagement
                 if (AreValidCoords(rowIndex, colIndex))
                 {
                     DataGridViewClients.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new_hover;
-                }            
+                }
             }
         }
 
@@ -1114,7 +1113,7 @@ namespace VehicleServiceManagement
                 {
                     DataGridViewClients.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new;
                 }
-               
+
             }
         }
 

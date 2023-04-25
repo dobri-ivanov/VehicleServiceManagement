@@ -119,5 +119,39 @@ namespace VehicleServiceManagement
         {
             TextBoxSearch.Cursor = Cursors.IBeam;
         }
+
+        private void DataGridViewClients_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewClients.Columns[colIndex].Name == "Get")
+            {
+                if (AreValidCoords(rowIndex, colIndex))
+                {
+                    DataGridViewClients.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new_hover;
+                }
+            }
+        }
+
+        private void DataGridViewClients_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewClients.Columns[colIndex].Name == "Get")
+            {
+                if (AreValidCoords(rowIndex, colIndex))
+                {
+                    DataGridViewClients.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new;
+                }
+            }
+        }
+        private bool AreValidCoords(int rowIndex, int colIndex)
+        {
+            if (rowIndex >= 0 && colIndex >= 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

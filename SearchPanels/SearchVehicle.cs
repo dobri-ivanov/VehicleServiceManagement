@@ -118,5 +118,42 @@ namespace VehicleServiceManagement
 
             }
         }
+
+        private bool AreValidCoords(int rowIndex, int colIndex)
+        {
+            if (rowIndex >= 0 && colIndex >= 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void DataGridViewVehicles_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewVehicles.Columns[colIndex].Name == "Get")
+            {
+                if (AreValidCoords(rowIndex, colIndex))
+                {
+                    DataGridViewVehicles.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new_hover;
+                }
+
+            }
+        }
+
+        private void DataGridViewVehicles_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewVehicles.Columns[colIndex].Name == "Get")
+            {
+                if (AreValidCoords(rowIndex, colIndex))
+                {
+                    DataGridViewVehicles.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new;
+                }
+
+            }
+        }
     }
 }

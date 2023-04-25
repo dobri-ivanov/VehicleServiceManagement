@@ -49,7 +49,7 @@ namespace VehicleServiceManagement
             FillClientData(clientID);
         }
 
-       
+
 
         public AddNewVehicle(Main main, string currentOperation)
         {
@@ -62,7 +62,7 @@ namespace VehicleServiceManagement
         {
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string query = "SELECT * FROM Vehicles WHERE LicensePlate = N'"+licensePlate+"'";
+            string query = "SELECT * FROM Vehicles WHERE LicensePlate = N'" + licensePlate + "'";
 
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader read = command.ExecuteReader();
@@ -74,6 +74,7 @@ namespace VehicleServiceManagement
             string transmission = String.Empty;
             string make = String.Empty;
             string model = String.Empty;
+            string vin = String.Empty;
 
             while (read.Read())
             {
@@ -84,6 +85,7 @@ namespace VehicleServiceManagement
                 transmission = read["Transmission"].ToString();
                 make = read["Make"].ToString();
                 model = read["Model"].ToString();
+                vin = read["Vin"].ToString();
             }
             read.Close();
             connection.Close();
@@ -96,6 +98,7 @@ namespace VehicleServiceManagement
             TextBoxHorsePower.Text = horsePower;
             TextBoxTransmission.Text = transmission;
             TextBoxLicensePlate.Text = currentlicensePlate;
+            TextBoxVinNumber.Text = vin;
         }
         private void FillClientData(int clientID)
         {
@@ -222,9 +225,10 @@ namespace VehicleServiceManagement
                         string capacity = TextBoxCapacity.Text;
                         string horsePower = TextBoxHorsePower.Text;
                         string licensePlate = TextBoxLicensePlate.Text;
+                        string vin = TextBoxVinNumber.Text;
 
-                        string query = "INSERT INTO Vehicles(LicensePlate, HorsePower, Capacity, Year, Fuel, Transmission, ClientID, Make, Model) " +
-                            "VALUES(N'" + licensePlate + "', '" + horsePower + "', '" + capacity + "', '" + year + "', N'" + fuel + "', N'" + transmission + "', '" + currentClientId + "', '" + make + "', '" + model + "')";
+                        string query = "INSERT INTO Vehicles(LicensePlate, HorsePower, Capacity, Year, Fuel, Transmission, ClientID, Make, Model, Vin) " +
+                            "VALUES(N'" + licensePlate + "', '" + horsePower + "', '" + capacity + "', '" + year + "', N'" + fuel + "', N'" + transmission + "', '" + currentClientId + "', '" + make + "', '" + model + "', '" + vin + "')";
 
                         command = new SqlCommand(query, connection);
                         command.ExecuteNonQuery();
@@ -253,11 +257,12 @@ namespace VehicleServiceManagement
                 string transmission = TextBoxTransmission.Text;
                 string make = TextBoxMake.Text;
                 string model = TextBoxModel.Text;
+                string vin = TextBoxVinNumber.Text;
 
                 SqlConnection connection = new SqlConnection(Main.currentConnectionString);
                 connection.Open();
 
-                string query = "UPDATE Vehicles SET LicensePlate = N'" + licensePlate + "', HorsePower = '" + horsePower + "', Capacity = '" + capacity + "', Year = '" + year + "', Fuel = N'"+fuel+"', Transmission = N'"+transmission+"', ClientID = '"+currentClientId+"', Make = '"+make+"', Model = '"+model+"' WHERE LicensePlate = N'" + currentlicensePlate + "';";
+                string query = "UPDATE Vehicles SET LicensePlate = N'" + licensePlate + "', HorsePower = '" + horsePower + "', Capacity = '" + capacity + "', Year = '" + year + "', Fuel = N'" + fuel + "', Transmission = N'" + transmission + "', ClientID = '" + currentClientId + "', Make = '" + make + "', Model = '" + model + "', Vin = '" + vin + "' WHERE LicensePlate = N'" + currentlicensePlate + "';";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
                 connection.Close();
