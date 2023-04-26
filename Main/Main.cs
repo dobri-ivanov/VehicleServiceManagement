@@ -725,7 +725,7 @@ namespace VehicleServiceManagement
             string text = TextBoxSearchVehicles.Text;
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
-            string query = "SELECT Vehicles.LicensePlate, Vehicles.HorsePower, Vehicles.Capacity, Vehicles.Year, Vehicles.Fuel, Vehicles.Transmission, Vehicles.Make, Vehicles.Model, Clients.FirstName, Clients.LastName FROM Vehicles INNER JOIN Clients ON Vehicles.ClientID = Clients.ID WHERE LicensePlate LIKE N'%" + text + "%' OR HorsePower LIKE '%" + text + "%' OR Capacity LIKE'%" + text + "%' OR Year LIKE '%" + text + "%' OR Make LIKE '%" + text + "%' OR Model LIKE '%" + text + "%' OR FirstName LIKE '%" + text + "%' OR LastName LIKE '%" + text + "%'; ";
+            string query = "SELECT Vehicles.LicensePlate, Vehicles.HorsePower, Vehicles.Capacity, Vehicles.Year, Vehicles.Fuel, Vehicles.Transmission, Vehicles.Make, Vehicles.Model, Clients.FirstName, Clients.LastName FROM Vehicles INNER JOIN Clients ON Vehicles.ClientID = Clients.ID WHERE Clients.FirstName LIKE N'%" + text + "%' OR LicensePlate LIKE N'%" + text + "%' OR HorsePower LIKE '%" + text + "%' OR Capacity LIKE'%" + text + "%' OR Year LIKE '%" + text + "%' OR Make LIKE '%" + text + "%' OR Model LIKE '%" + text + "%' OR FirstName LIKE '%" + text + "%' OR LastName LIKE '%" + text + "%'; ";
             DataGridViewVehicles.Rows.Clear();
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -756,7 +756,7 @@ namespace VehicleServiceManagement
                 clientFirstName = read["FirstName"].ToString();
                 clientLastName = read["LastName"].ToString();
 
-                Vehicle vehicle = new Vehicle(licensePlate, horsePower, capacity, year, fuel, transmission, make, model, clientFirstName, clientLastName);
+                Vehicle vehicle = new Vehicle(licensePlate, horsePower, capacity, year, fuel, transmission, make, model, clientFirstName + " " + clientLastName, clientLastName);
 
                 vehicleBindingSource.Add(vehicle);
             }
@@ -1013,12 +1013,12 @@ namespace VehicleServiceManagement
             connection.Open();
 
             string query =
-                $"DELETE FROM Reports " +
-                $"WHERE ID = '" + currentReportId + "'";
-
-            string query2 =
                 $"DELETE FROM ReportContents " +
                 $"WHERE ReportID = '" + currentReportId + "'";
+
+            string query2 =
+              $"DELETE FROM Reports " +
+              $"WHERE ID = '" + currentReportId + "'";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
