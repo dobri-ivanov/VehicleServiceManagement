@@ -129,7 +129,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             DataGridViewCurerntReportContent.DataSource = null;
             DataGridViewCurerntReportContent.Rows.Clear();
             DataGridViewCurerntReportContent.DataSource = reportContentSource;
-            int row = 0;
+
             while (read.Read())
             {
                 title = (read["Title"].ToString());
@@ -170,8 +170,6 @@ namespace VehicleServiceManagement.ReportsInteraction
             reader.Read();
             currentReportId = int.Parse(reader["ID"].ToString());
             connection.Close();
-
-            TextBoxTotalSum.Text = currentReportId.ToString();
         }
 
         public void FillVehicleInformation(string licensePlate)
@@ -326,6 +324,40 @@ namespace VehicleServiceManagement.ReportsInteraction
         private void DataGridViewReportContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void DataGridViewCurerntReportContent_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewCurerntReportContent.Columns[colIndex].Name == "Get")
+            {
+                if (AreValidCoords(rowIndex, colIndex))
+                {
+                    DataGridViewCurerntReportContent.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.dots_new_hover;
+                }
+            }
+        }
+        private bool AreValidCoords(int rowIndex, int colIndex)
+        {
+            if (rowIndex >= 0 && colIndex >= 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void DataGridViewCurerntReportContent_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewCurerntReportContent.Columns[colIndex].Name == "Get")
+            {
+                if (AreValidCoords(rowIndex, colIndex))
+                {
+                    DataGridViewCurerntReportContent.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.dots_new;
+                }
+            }
         }
     }
 }

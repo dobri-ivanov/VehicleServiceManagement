@@ -408,5 +408,11 @@
   <ItemGroup>
     <None Include="Resources\car2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dots_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dots_new_hover.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

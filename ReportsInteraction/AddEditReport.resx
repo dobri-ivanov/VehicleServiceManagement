@@ -299,10 +299,10 @@
   </metadata>
   <data name="TextBoxTitle.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAYkAAAAyCAYAAACppye/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACASURBVHhe7dfLCQAgDERBS7UUO0s683OVFCA4A6+GZRsA
+        iVBORw0KGgoAAAANSUhEUgAAAb4AAAAvCAYAAACcwK+7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACFSURBVHhe7de5DQAgDARBl0opdGZ3xpMTE8CMtDWcLgAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAADwmIvpuSJJ01zJzSpJUdZ5EuR6SpN+LsQDpw2SlDwChtgAAAABJRU5ErkJggg==
+        AAAAAAAAAAAAAAAAAABuysy26pIk/VBU1ZAk6Zf24zsuoiRJ75V9AkLeMxAH8M3LAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="TextBoxTotalSum.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -769,25 +769,25 @@
   </data>
   <data name="TextBoxModification.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOEAAAAtCAYAAABYmQy1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABZSURBVHhe7dXLCQAgDERBS7UUO0s683P3bBBm4JWwbAMA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC/RETfDUk1tcyckuo6T3hdp6QXxVgiAKrj
-        6ntriAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAOEAAAA0CAYAAAB8QF/mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABgSURBVHhe7dW5DQAgDARBl0opdGZ3xpMjkUEyI20JpwsA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgIjPbqkv6U1TVkPSv/YTHdUp6
+        UfYJOqOq430evc0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="LabelModification.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 15pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 13pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>
   <data name="TextBoxVehicle.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOAAAAAtCAYAAAC3W2eLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABZSURBVHhe7dU7DQAgEERBpCIFZ3fO+ISWFmhmkidhswUA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC2iKizJul9JTO7pD+tBzwuU9Ltog1FHqIq
-        CuDtIwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAOAAAAArCAYAAABhAoSWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABXSURBVHhe7dU7DQAgEERBpCIFZ3fO+NTQAs1M8iRstgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAu4iosybpfSUzu6Q/rQc8LlPS7aINPhyiKnUf
+        PMUAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="LabelVehicle.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 15pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 13pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>
   <data name="ButtonCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
