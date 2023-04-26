@@ -206,6 +206,23 @@ namespace VehicleServiceManagement
             ButtonLogOut.Location = currentPoint;
         }
 
+        internal void ReportNotification(string function, int id, string title, string licensePlate, string date)
+        {
+            if (function == "ADD")
+            {
+                Notification.Show(this, $"Създаден е нов ремонт!",
+                Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+            }
+            else
+            {
+                Notification.Show(this, $"Текущият ремонт е редактиран успешно!",
+                Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+            }
+
+            GenerateReport(id, title, licensePlate, date);
+            FillRaportsTable();
+        }
+
         private void ButtonMinimize_Click(object sender, EventArgs e)
         {
             PanelButtons.Dock = DockStyle.None;
@@ -924,7 +941,7 @@ namespace VehicleServiceManagement
                 ReportContent reportContent = new ReportContent(title, quantity, price);
 
                 reportContentBindingSource.Add(reportContent);
-                DataGridViewCurerntReportContent[3, row++].Value = (quantity * price).ToString();
+                DataGridViewCurerntReportContent[3, row++].Value = (quantity * price).ToString("f2");
             }
             read.Close();
             connection.Close();
@@ -1150,13 +1167,19 @@ namespace VehicleServiceManagement
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            AddEditReport addEditReport = new AddEditReport("ADD");
+            AddEditReport addEditReport = new AddEditReport("ADD", this);
             addEditReport.Show();
         }
 
         private void DataGridViewCurerntReportContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void ButtonEditReport_Click(object sender, EventArgs e)
+        {
+            AddEditReport addEditReport = new AddEditReport("EDIT", this, currentReportId);
+            addEditReport.ShowDialog();
         }
     }
 }
