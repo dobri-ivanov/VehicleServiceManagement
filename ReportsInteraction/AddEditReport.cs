@@ -13,9 +13,11 @@ namespace VehicleServiceManagement.ReportsInteraction
 {
     public partial class AddEditReport : Form
     {
-        public string Function;
-        public int currentVehicleId;
-        public int currentReportId;
+        public static decimal totalSum;
+
+        private string Function;
+        private int currentVehicleId;
+        private int currentReportId;
         private Main Main;
         public AddEditReport(string function, Main main)
         {
@@ -107,9 +109,17 @@ namespace VehicleServiceManagement.ReportsInteraction
             dateTimePicker1.Value = date;
             FillVehicleInformation(licensePlate);
             FillContentTable(currentReportId);
+
+            RefreshTotalSum();
         }
 
-        private void FillContentTable(int currentReportId)
+        private void RefreshTotalSum()
+        {
+            decimal workPrice = decimal.Parse(TextBoxWorkPrice.Text);
+            TextBoxTotalSum.Text = (totalSum + workPrice).ToString("f2") + " лв.";
+        }
+
+        public void FillContentTable(int currentReportId)
         {
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
@@ -126,10 +136,9 @@ namespace VehicleServiceManagement.ReportsInteraction
             decimal quantity = 0;
             decimal price = 0;
 
-            DataGridViewCurerntReportContent.DataSource = null;
             DataGridViewCurerntReportContent.Rows.Clear();
-            DataGridViewCurerntReportContent.DataSource = reportContentSource;
 
+            totalSum = 0;
             while (read.Read())
             {
                 title = (read["Title"].ToString());
@@ -139,9 +148,12 @@ namespace VehicleServiceManagement.ReportsInteraction
                 ReportContent reportContent = new ReportContent(title, quantity, price, totalPrice);
 
                 reportContentSource.Add(reportContent);
+                totalSum += totalPrice;
             }
             read.Close();
             connection.Close();
+
+            RefreshTotalSum();
         }
 
         private void CreateNewReport()
@@ -311,21 +323,6 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.Close();
         }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void reportContentBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGridViewReportContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void DataGridViewCurerntReportContent_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
@@ -358,6 +355,22 @@ namespace VehicleServiceManagement.ReportsInteraction
                     DataGridViewCurerntReportContent.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.dots_new;
                 }
             }
+        }
+
+        private void TextBoxWorkPrice_TextChanged(object sender, EventArgs e)
+        {
+            RefreshTotalSum();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            ContentInteractionPanel contentInteractionPanel = new ContentInteractionPanel(this, "ADD", currentReportId);
+            contentInteractionPanel.ShowDialog();
+        }
+
+        private void LabelHeader_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -232,7 +232,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridViewCurerntReportContent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -253,7 +253,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
             this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
             this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.DataGridViewCurerntReportContent.CurrentTheme.Name = null;
             this.DataGridViewCurerntReportContent.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
@@ -542,6 +542,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxWorkPrice.TextPlaceholder = "250.00 лв";
             this.TextBoxWorkPrice.UseSystemPasswordChar = false;
             this.TextBoxWorkPrice.WordWrap = true;
+            this.TextBoxWorkPrice.TextChanged += new System.EventHandler(this.TextBoxWorkPrice_TextChanged);
             // 
             // LabelTotalSum
             // 
@@ -1032,6 +1033,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.LabelHeader.Text = "СЪЗДАВАНЕ НА РЕМОНТ";
             this.LabelHeader.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelHeader.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.LabelHeader.Click += new System.EventHandler(this.LabelHeader_Click);
             // 
             // LabelTitle
             // 

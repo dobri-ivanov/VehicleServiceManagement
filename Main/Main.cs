@@ -1181,5 +1181,10 @@ namespace VehicleServiceManagement
             AddEditReport addEditReport = new AddEditReport("EDIT", this, currentReportId);
             addEditReport.ShowDialog();
         }
+
+        private void panelDragControl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
