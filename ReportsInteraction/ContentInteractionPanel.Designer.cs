@@ -494,6 +494,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxPrice.TextPlaceholder = "1250,00";
             this.TextBoxPrice.UseSystemPasswordChar = false;
             this.TextBoxPrice.WordWrap = true;
+            this.TextBoxPrice.TextChanged += new System.EventHandler(this.TextBoxPrice_TextChanged);
             // 
             // TextBoxQuantity
             // 
@@ -569,6 +570,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxQuantity.TextPlaceholder = "4,5";
             this.TextBoxQuantity.UseSystemPasswordChar = false;
             this.TextBoxQuantity.WordWrap = true;
+            this.TextBoxQuantity.TextChanged += new System.EventHandler(this.TextBoxQuantity_TextChanged);
             // 
             // TextBoxTitle
             // 

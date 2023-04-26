@@ -267,7 +267,6 @@ namespace VehicleServiceManagement
             this.ToolTip.SetToolTip(this.panelDragControl, "");
             this.ToolTip.SetToolTipIcon(this.panelDragControl, null);
             this.ToolTip.SetToolTipTitle(this.panelDragControl, "");
-            this.panelDragControl.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDragControl_Paint);
             // 
             // ButtonCloseApplication
             // 
@@ -1332,7 +1331,6 @@ namespace VehicleServiceManagement
             this.ToolTip.SetToolTip(this.DataGridViewCurerntReportContent, "");
             this.ToolTip.SetToolTipIcon(this.DataGridViewCurerntReportContent, null);
             this.ToolTip.SetToolTipTitle(this.DataGridViewCurerntReportContent, "");
-            this.DataGridViewCurerntReportContent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCurerntReportContent_CellContentClick);
             // 
             // TotalSum
             // 

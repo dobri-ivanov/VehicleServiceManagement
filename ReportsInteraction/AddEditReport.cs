@@ -109,8 +109,6 @@ namespace VehicleServiceManagement.ReportsInteraction
             dateTimePicker1.Value = date;
             FillVehicleInformation(licensePlate);
             FillContentTable(currentReportId);
-
-            RefreshTotalSum();
         }
 
         private void RefreshTotalSum()
@@ -121,6 +119,7 @@ namespace VehicleServiceManagement.ReportsInteraction
 
         public void FillContentTable(int currentReportId)
         {
+            
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
             SqlDataReader read = (null);
@@ -136,8 +135,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             decimal quantity = 0;
             decimal price = 0;
 
-            DataGridViewCurerntReportContent.Rows.Clear();
-
+            RefreshTable();
             totalSum = 0;
             while (read.Read())
             {
@@ -147,13 +145,21 @@ namespace VehicleServiceManagement.ReportsInteraction
                 decimal totalPrice = decimal.Parse((quantity * price).ToString("f2"));
                 ReportContent reportContent = new ReportContent(title, quantity, price, totalPrice);
 
-                reportContentSource.Add(reportContent);
+                reportContentBindingSource.Add(reportContent);
                 totalSum += totalPrice;
             }
             read.Close();
             connection.Close();
 
             RefreshTotalSum();
+        }
+
+        private void RefreshTable()
+        {
+            while (DataGridViewCurerntReportContent.RowCount > 0)
+            {
+                DataGridViewCurerntReportContent.Rows.RemoveAt(0);
+            }
         }
 
         private void CreateNewReport()
@@ -369,6 +375,21 @@ namespace VehicleServiceManagement.ReportsInteraction
         }
 
         private void LabelHeader_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportContentSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridViewItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DataGridViewCurerntReportContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

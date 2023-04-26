@@ -1106,7 +1106,6 @@ namespace VehicleServiceManagement
                 {
                     DataGridViewRaports.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new;
                 }
-
             }
         }
 
@@ -1133,10 +1132,8 @@ namespace VehicleServiceManagement
                 {
                     DataGridViewClients.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new;
                 }
-
             }
         }
-
         private void DataGridViewVehicles_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
@@ -1147,7 +1144,6 @@ namespace VehicleServiceManagement
                 {
                     DataGridViewVehicles.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new_hover;
                 }
-
             }
         }
 
@@ -1161,7 +1157,6 @@ namespace VehicleServiceManagement
                 {
                     DataGridViewVehicles.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new;
                 }
-
             }
         }
 
@@ -1171,20 +1166,10 @@ namespace VehicleServiceManagement
             addEditReport.Show();
         }
 
-        private void DataGridViewCurerntReportContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void ButtonEditReport_Click(object sender, EventArgs e)
         {
             AddEditReport addEditReport = new AddEditReport("EDIT", this, currentReportId);
             addEditReport.ShowDialog();
-        }
-
-        private void panelDragControl_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

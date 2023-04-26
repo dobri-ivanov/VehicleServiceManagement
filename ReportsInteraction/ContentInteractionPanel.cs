@@ -17,6 +17,7 @@ namespace VehicleServiceManagement.ReportsInteraction
         private string Function;
         private int CurrentReportId;
         private AddEditReport AER;
+        private decimal totalSum;
 
         //Needed for edit function
         private string CurrentTitle;
@@ -86,7 +87,7 @@ namespace VehicleServiceManagement.ReportsInteraction
                 "FROM ReportContents " +
                 "WHERE " +
                 "ReportID = '" + CurrentReportId + "' AND " +
-                "Title = '" + title + "' AND " +
+                "Title = N'" + title + "' AND " +
                 "Quantity = '" + quantity + "' AND " +
                 "Price = '" + price + "';";
 
@@ -116,6 +117,26 @@ namespace VehicleServiceManagement.ReportsInteraction
             AER.FillContentTable(CurrentReportId);
 
             connection.Close();
+            this.Close();
+        }
+
+        private void TextBoxQuantity_TextChanged(object sender, EventArgs e)
+        {
+            RefreshTotalSum();
+        }
+
+        private void RefreshTotalSum()
+        {
+            if (!string.IsNullOrEmpty(TextBoxQuantity.Text) && !string.IsNullOrEmpty(TextBoxPrice.Text))
+            {
+                totalSum = decimal.Parse(TextBoxQuantity.Text.ToString()) * decimal.Parse(TextBoxPrice.Text.ToString());
+            }
+            TextBoxTotalSum.Text = totalSum.ToString("f2") + " лв.";
+        }
+
+        private void TextBoxPrice_TextChanged(object sender, EventArgs e)
+        {
+            RefreshTotalSum();
         }
     }
 }
