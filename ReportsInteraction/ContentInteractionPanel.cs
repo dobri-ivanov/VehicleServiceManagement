@@ -129,7 +129,14 @@ namespace VehicleServiceManagement.ReportsInteraction
         {
             if (!string.IsNullOrEmpty(TextBoxQuantity.Text) && !string.IsNullOrEmpty(TextBoxPrice.Text))
             {
-                totalSum = decimal.Parse(TextBoxQuantity.Text.ToString()) * decimal.Parse(TextBoxPrice.Text.ToString());
+                try
+                {
+                    totalSum = decimal.Parse(TextBoxQuantity.Text.ToString()) * decimal.Parse(TextBoxPrice.Text.ToString());
+                }
+                catch (Exception)
+                {
+
+                }      
             }
             TextBoxTotalSum.Text = totalSum.ToString("f2") + " лв.";
         }
