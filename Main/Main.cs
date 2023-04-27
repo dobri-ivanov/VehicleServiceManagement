@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 using VehicleServiceManagement.AlertBoxes;
+using VehicleServiceManagement.Print;
 using VehicleServiceManagement.ReportsInteraction;
 
 namespace VehicleServiceManagement
@@ -937,8 +938,6 @@ namespace VehicleServiceManagement
         {
             GenerateReport(id, title, licensePlate, date);
             MainPages.SetPage("Raports");
-            this.TopMost = true;
-            this.TopMost = false;
         }
         private void GenerateReport(int id, string title, string licensePlate, string date)
         {
@@ -947,8 +946,8 @@ namespace VehicleServiceManagement
             currentReportId = id;
             TextBoxDate.Text = date;
             LabelReportTitle.Text = title;
-            TextBoxVehicle.Text = GetVehicleInformation(licensePlate);
-            TextBoxOwner.Text = GetOwnerInformation(licensePlate);
+            TextBoxVehicleInformation.Text = GetVehicleInformation(licensePlate);
+            TextBoxCustomer.Text = GetOwnerInformation(licensePlate);
             TextBoxWorkPrice.Text = GetReportWorkPrice(id) + " лв.";
             TextBoxTotalSum.Text = (decimal.Parse(GetReportWorkPrice(id)) + GetContentTotalPrice(id)).ToString("f2") + " лв.";
             FillReportContentTable(id);
@@ -1052,7 +1051,7 @@ namespace VehicleServiceManagement
                 $"SELECT CONCAT(c.FirstName, ' ', c.LastName, ' | ', c.PhoneNumber) AS result " +
                 "FROM Clients as c " +
                 "JOIN Vehicles as v ON c.ID = v.ClientID " +
-                "WHERE LicensePlate = '" + licensePlate + "'";
+                "WHERE LicensePlate = N'" + licensePlate + "'";
 
             SqlCommand command = new SqlCommand(query, connection);
             read = command.ExecuteReader();
@@ -1078,7 +1077,7 @@ namespace VehicleServiceManagement
             string query =
                 $"SELECT CONCAT(Make, ' ', Model, ' ', [Year], ' ', Capacity, ' ', HorsePower) AS result " +
                 "FROM Vehicles " +
-                "WHERE LicensePlate = '" + licensePlate + "'";
+                "WHERE LicensePlate = N'" + licensePlate + "'";
 
             SqlCommand command = new SqlCommand(query, connection);
             read = command.ExecuteReader();
@@ -1278,6 +1277,12 @@ namespace VehicleServiceManagement
                 AddEditReport addEditReport = new AddEditReport("EDIT", this, currentReportId);
                 addEditReport.ShowDialog();
             }
+        }
+
+        private void bunifuButton1_Click_1(object sender, EventArgs e)
+        {
+            ReportPreview reportPreview = new ReportPreview(currentReportId);
+            reportPreview.ShowDialog();
         }
     }
 }
