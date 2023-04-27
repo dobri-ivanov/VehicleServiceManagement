@@ -24,6 +24,7 @@ namespace VehicleServiceManagement
         public Main()
         {
             InitializeComponent();
+            Setup();
         }
         public Main(string name)
         {
@@ -31,6 +32,56 @@ namespace VehicleServiceManagement
             DateTime today = DateTime.Now;
             LabelUserName.Text = name;
             LabelCurrentDate.Text = today.Day.ToString();
+            Setup();
+        }
+
+        private void Setup()
+        {
+            string countClients = String.Empty;
+            string countVehicles = String.Empty;
+            string countReports = String.Empty;
+
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+            connection.Open();
+
+            string query1 =
+                "SELECT COUNT(*) AS Result " +
+                "FROM Clients;";
+
+            string query2 =
+                "SELECT COUNT(*) AS Result " +
+                "FROM Vehicles;";
+
+            string query3 =
+                "SELECT COUNT(*) AS Result " +
+                "FROM Reports;";
+
+
+            SqlCommand command = new SqlCommand(query1, connection);
+            SqlDataReader read = command.ExecuteReader();
+
+            read.Read();
+            countClients = read["Result"].ToString();
+            read.Close();
+
+            command = new SqlCommand(query2, connection);
+            read = command.ExecuteReader();
+
+            read.Read();
+            countVehicles = read["Result"].ToString();
+            read.Close();
+
+            command = new SqlCommand(query3, connection);
+            read = command.ExecuteReader();
+
+            read.Read();
+            countReports = read["Result"].ToString();
+            read.Close();
+            connection.Close();
+
+            LabelCountClinetsValue.Text = countClients;
+            LabelCountVehiclesValue.Text = countVehicles;
+            LabelCountReportsValue.Text = countReports;
         }
 
         private void ButtonCalendar_MouseHover(object sender, EventArgs e)
@@ -299,6 +350,7 @@ namespace VehicleServiceManagement
 
             GenerateReport(id, title, licensePlate, date);
             FillRaportsTable();
+            Setup();
         }
 
         private void ButtonMinimize_Click(object sender, EventArgs e)
@@ -440,6 +492,7 @@ namespace VehicleServiceManagement
                     TextBoxPhoneNumber.Enabled = true;
                     TextBoxNickname.Enabled = true;
                     FillClientsTable();
+                    Setup();
                 }
                 else
                 {
@@ -471,6 +524,7 @@ namespace VehicleServiceManagement
         {
             Notification.Show(this, $"Автомобилът е добавен успешно!",
             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+            Setup();
 
         }
         private void FillClientsTable()
@@ -689,6 +743,7 @@ namespace VehicleServiceManagement
                 Clear();
                 Notification.Show(this, $"Успешно изтрит клиент: {name} {lastName} | {phoneNumber}",
                 Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+                Setup();
             }
             catch
             {
@@ -793,7 +848,7 @@ namespace VehicleServiceManagement
             {
                 SearchVehicle sv = new SearchVehicle(currentClientID, this);
                 sv.Show();
-            }  
+            }
         }
 
         public void ChangeVehicleSearchText(string text)
@@ -856,7 +911,7 @@ namespace VehicleServiceManagement
                     VehicleOptions vehicleOptions = new VehicleOptions(licensePlate, this);
                     vehicleOptions.Show();
                 }
-                
+
             }
         }
 
@@ -888,13 +943,14 @@ namespace VehicleServiceManagement
                 AddNewVehicle addNewVehicle = new AddNewVehicle(this, "ADD");
                 addNewVehicle.Show();
             }
-            
+
         }
 
         public void DeleteVehicleNotification(string text)
         {
             Notification.Show(this, $"{text}",
             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+            Setup();
 
         }
         public void DeleteVehicleNotification2(string text)
@@ -1132,6 +1188,7 @@ namespace VehicleServiceManagement
 
             Notification.Show(this, $"Текущият ремонт е успешно изтрит!",
             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+            Setup();
         }
 
         private void TextBoxSearchReport_TextChanged(object sender, EventArgs e)
@@ -1273,7 +1330,7 @@ namespace VehicleServiceManagement
                 AddEditReport addEditReport = new AddEditReport("ADD", this);
                 addEditReport.Show();
             }
-            
+
         }
 
         private void ButtonEditReport_Click(object sender, EventArgs e)
