@@ -31,6 +31,10 @@ namespace VehicleServiceManagement
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewVehicle));
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -81,13 +85,11 @@ namespace VehicleServiceManagement
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties50 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties51 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties52 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Notification = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.LabelVinNumber = new Bunifu.UI.WinForms.BunifuLabel();
+            this.TextBoxVinNumber = new Bunifu.UI.WinForms.BunifuTextBox();
             this.ButtonSearchClients = new Bunifu.UI.WinForms.BunifuImageButton();
             this.TextBoxLicensePlate = new Bunifu.UI.WinForms.BunifuTextBox();
             this.LabelLicensePlate = new Bunifu.UI.WinForms.BunifuLabel();
@@ -118,8 +120,6 @@ namespace VehicleServiceManagement
             this.TextBoxFirstName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.LabelFirstName = new Bunifu.UI.WinForms.BunifuLabel();
             this.LabelTitle = new Bunifu.UI.WinForms.BunifuLabel();
-            this.TextBoxVinNumber = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.LabelVinNumber = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -244,6 +244,98 @@ namespace VehicleServiceManagement
             this.bunifuPanel1.Size = new System.Drawing.Size(860, 802);
             this.bunifuPanel1.TabIndex = 0;
             this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
+            // 
+            // LabelVinNumber
+            // 
+            this.LabelVinNumber.AllowParentOverrides = false;
+            this.LabelVinNumber.AutoEllipsis = false;
+            this.LabelVinNumber.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LabelVinNumber.CursorType = System.Windows.Forms.Cursors.Default;
+            this.LabelVinNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LabelVinNumber.ForeColor = System.Drawing.Color.White;
+            this.LabelVinNumber.Location = new System.Drawing.Point(602, 571);
+            this.LabelVinNumber.Name = "LabelVinNumber";
+            this.LabelVinNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelVinNumber.Size = new System.Drawing.Size(91, 21);
+            this.LabelVinNumber.TabIndex = 77;
+            this.LabelVinNumber.Text = "VIN НОМЕР";
+            this.LabelVinNumber.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LabelVinNumber.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // TextBoxVinNumber
+            // 
+            this.TextBoxVinNumber.AcceptsReturn = false;
+            this.TextBoxVinNumber.AcceptsTab = false;
+            this.TextBoxVinNumber.AnimationSpeed = 200;
+            this.TextBoxVinNumber.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.TextBoxVinNumber.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.TextBoxVinNumber.BackColor = System.Drawing.Color.LightGray;
+            this.TextBoxVinNumber.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TextBoxVinNumber.BackgroundImage")));
+            this.TextBoxVinNumber.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.TextBoxVinNumber.BorderColorDisabled = System.Drawing.Color.Black;
+            this.TextBoxVinNumber.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.TextBoxVinNumber.BorderColorIdle = System.Drawing.Color.Black;
+            this.TextBoxVinNumber.BorderRadius = 1;
+            this.TextBoxVinNumber.BorderThickness = 2;
+            this.TextBoxVinNumber.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.TextBoxVinNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxVinNumber.DefaultFont = new System.Drawing.Font("Segoe UI", 13F);
+            this.TextBoxVinNumber.DefaultText = "";
+            this.TextBoxVinNumber.FillColor = System.Drawing.Color.LightGray;
+            this.TextBoxVinNumber.ForeColor = System.Drawing.Color.Black;
+            this.TextBoxVinNumber.HideSelection = true;
+            this.TextBoxVinNumber.IconLeft = null;
+            this.TextBoxVinNumber.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxVinNumber.IconPadding = 10;
+            this.TextBoxVinNumber.IconRight = null;
+            this.TextBoxVinNumber.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxVinNumber.Lines = new string[0];
+            this.TextBoxVinNumber.Location = new System.Drawing.Point(602, 598);
+            this.TextBoxVinNumber.MaxLength = 32767;
+            this.TextBoxVinNumber.MinimumSize = new System.Drawing.Size(1, 1);
+            this.TextBoxVinNumber.Modified = false;
+            this.TextBoxVinNumber.Multiline = false;
+            this.TextBoxVinNumber.Name = "TextBoxVinNumber";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxVinNumber.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.Black;
+            stateProperties2.FillColor = System.Drawing.Color.Gray;
+            stateProperties2.ForeColor = System.Drawing.Color.Black;
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.TextBoxVinNumber.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxVinNumber.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Black;
+            stateProperties4.FillColor = System.Drawing.Color.LightGray;
+            stateProperties4.ForeColor = System.Drawing.Color.Black;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.TextBoxVinNumber.OnIdleState = stateProperties4;
+            this.TextBoxVinNumber.Padding = new System.Windows.Forms.Padding(3);
+            this.TextBoxVinNumber.PasswordChar = '\0';
+            this.TextBoxVinNumber.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.TextBoxVinNumber.PlaceholderText = "Въведете VIN ";
+            this.TextBoxVinNumber.ReadOnly = false;
+            this.TextBoxVinNumber.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TextBoxVinNumber.SelectedText = "";
+            this.TextBoxVinNumber.SelectionLength = 0;
+            this.TextBoxVinNumber.SelectionStart = 0;
+            this.TextBoxVinNumber.ShortcutsEnabled = true;
+            this.TextBoxVinNumber.Size = new System.Drawing.Size(224, 52);
+            this.TextBoxVinNumber.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
+            this.TextBoxVinNumber.TabIndex = 76;
+            this.TextBoxVinNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBoxVinNumber.TextMarginBottom = 0;
+            this.TextBoxVinNumber.TextMarginLeft = 3;
+            this.TextBoxVinNumber.TextMarginTop = 0;
+            this.TextBoxVinNumber.TextPlaceholder = "Въведете VIN ";
+            this.TextBoxVinNumber.UseSystemPasswordChar = false;
+            this.TextBoxVinNumber.WordWrap = true;
             // 
             // ButtonSearchClients
             // 
@@ -1623,98 +1715,6 @@ namespace VehicleServiceManagement
             this.LabelTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.LabelTitle.Click += new System.EventHandler(this.LabelTitle_Click);
             // 
-            // TextBoxVinNumber
-            // 
-            this.TextBoxVinNumber.AcceptsReturn = false;
-            this.TextBoxVinNumber.AcceptsTab = false;
-            this.TextBoxVinNumber.AnimationSpeed = 200;
-            this.TextBoxVinNumber.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.TextBoxVinNumber.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.TextBoxVinNumber.BackColor = System.Drawing.Color.LightGray;
-            this.TextBoxVinNumber.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TextBoxVinNumber.BackgroundImage")));
-            this.TextBoxVinNumber.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.TextBoxVinNumber.BorderColorDisabled = System.Drawing.Color.Black;
-            this.TextBoxVinNumber.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.TextBoxVinNumber.BorderColorIdle = System.Drawing.Color.Black;
-            this.TextBoxVinNumber.BorderRadius = 1;
-            this.TextBoxVinNumber.BorderThickness = 2;
-            this.TextBoxVinNumber.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.TextBoxVinNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxVinNumber.DefaultFont = new System.Drawing.Font("Segoe UI", 13F);
-            this.TextBoxVinNumber.DefaultText = "";
-            this.TextBoxVinNumber.FillColor = System.Drawing.Color.LightGray;
-            this.TextBoxVinNumber.ForeColor = System.Drawing.Color.Black;
-            this.TextBoxVinNumber.HideSelection = true;
-            this.TextBoxVinNumber.IconLeft = null;
-            this.TextBoxVinNumber.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxVinNumber.IconPadding = 10;
-            this.TextBoxVinNumber.IconRight = null;
-            this.TextBoxVinNumber.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxVinNumber.Lines = new string[0];
-            this.TextBoxVinNumber.Location = new System.Drawing.Point(602, 598);
-            this.TextBoxVinNumber.MaxLength = 32767;
-            this.TextBoxVinNumber.MinimumSize = new System.Drawing.Size(1, 1);
-            this.TextBoxVinNumber.Modified = false;
-            this.TextBoxVinNumber.Multiline = false;
-            this.TextBoxVinNumber.Name = "TextBoxVinNumber";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxVinNumber.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.Black;
-            stateProperties2.FillColor = System.Drawing.Color.Gray;
-            stateProperties2.ForeColor = System.Drawing.Color.Black;
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.TextBoxVinNumber.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxVinNumber.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Black;
-            stateProperties4.FillColor = System.Drawing.Color.LightGray;
-            stateProperties4.ForeColor = System.Drawing.Color.Black;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.TextBoxVinNumber.OnIdleState = stateProperties4;
-            this.TextBoxVinNumber.Padding = new System.Windows.Forms.Padding(3);
-            this.TextBoxVinNumber.PasswordChar = '\0';
-            this.TextBoxVinNumber.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.TextBoxVinNumber.PlaceholderText = "Въведете VIN ";
-            this.TextBoxVinNumber.ReadOnly = false;
-            this.TextBoxVinNumber.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TextBoxVinNumber.SelectedText = "";
-            this.TextBoxVinNumber.SelectionLength = 0;
-            this.TextBoxVinNumber.SelectionStart = 0;
-            this.TextBoxVinNumber.ShortcutsEnabled = true;
-            this.TextBoxVinNumber.Size = new System.Drawing.Size(224, 52);
-            this.TextBoxVinNumber.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.TextBoxVinNumber.TabIndex = 76;
-            this.TextBoxVinNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextBoxVinNumber.TextMarginBottom = 0;
-            this.TextBoxVinNumber.TextMarginLeft = 3;
-            this.TextBoxVinNumber.TextMarginTop = 0;
-            this.TextBoxVinNumber.TextPlaceholder = "Въведете VIN ";
-            this.TextBoxVinNumber.UseSystemPasswordChar = false;
-            this.TextBoxVinNumber.WordWrap = true;
-            // 
-            // LabelVinNumber
-            // 
-            this.LabelVinNumber.AllowParentOverrides = false;
-            this.LabelVinNumber.AutoEllipsis = false;
-            this.LabelVinNumber.Cursor = System.Windows.Forms.Cursors.Default;
-            this.LabelVinNumber.CursorType = System.Windows.Forms.Cursors.Default;
-            this.LabelVinNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LabelVinNumber.ForeColor = System.Drawing.Color.White;
-            this.LabelVinNumber.Location = new System.Drawing.Point(602, 571);
-            this.LabelVinNumber.Name = "LabelVinNumber";
-            this.LabelVinNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelVinNumber.Size = new System.Drawing.Size(91, 21);
-            this.LabelVinNumber.TabIndex = 77;
-            this.LabelVinNumber.Text = "VIN НОМЕР";
-            this.LabelVinNumber.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.LabelVinNumber.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // AddNewVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1724,9 +1724,10 @@ namespace VehicleServiceManagement
             this.Controls.Add(this.bunifuPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddNewVehicle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddNewVehicle";
+            this.Text = "Автомобил";
             this.TopMost = true;
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();

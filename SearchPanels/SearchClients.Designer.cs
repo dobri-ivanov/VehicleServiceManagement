@@ -338,9 +338,10 @@ namespace VehicleServiceManagement
             this.ClientSize = new System.Drawing.Size(844, 781);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SearchClients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SearchClients";
+            this.Text = "Клиенти";
             this.MouseHover += new System.EventHandler(this.SearchClients_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();

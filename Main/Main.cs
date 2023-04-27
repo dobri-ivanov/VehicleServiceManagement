@@ -897,6 +897,12 @@ namespace VehicleServiceManagement
             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
 
         }
+        public void DeleteVehicleNotification2(string text)
+        {
+            Notification.Show(this, $"{text}",
+            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+
+        }
         public void EditVehicleNotification(string text)
         {
             FillVehiclesTable();

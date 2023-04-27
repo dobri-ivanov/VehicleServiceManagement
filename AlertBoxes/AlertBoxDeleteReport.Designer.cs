@@ -344,9 +344,10 @@
             this.ClientSize = new System.Drawing.Size(558, 253);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AlertBoxDeleteReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AlertBoxDeleteReport";
+            this.Text = "Известие";
             this.bunifuPanel1.ResumeLayout(false);
             this.AlerBoxDragPanel.ResumeLayout(false);
             this.ResumeLayout(false);

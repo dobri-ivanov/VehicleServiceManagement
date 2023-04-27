@@ -34,6 +34,8 @@ namespace VehicleServiceManagement.Print
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -56,18 +58,20 @@ namespace VehicleServiceManagement.Print
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.LabelHeader = new Bunifu.UI.WinForms.BunifuLabel();
             this.LabelOwner = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.DataGridViewCurerntReportContent = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.titleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reportContentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LabelTotalSum = new Bunifu.UI.WinForms.BunifuLabel();
             this.LabelWorkPrice = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.TotalSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TextBoxOwner = new Bunifu.UI.WinForms.BunifuTextBox();
             this.ButtonClose = new Bunifu.UI.WinForms.BunifuImageButton();
             this.TextBoxWorkPrice = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -76,13 +80,9 @@ namespace VehicleServiceManagement.Print
             this.TextBoxVehicle = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ButtonPrint = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.titleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reportContentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewCurerntReportContent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportContentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // printDocument1
@@ -232,6 +232,48 @@ namespace VehicleServiceManagement.Print
             this.DataGridViewCurerntReportContent.TabIndex = 54;
             this.DataGridViewCurerntReportContent.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             // 
+            // titleDataGridViewTextBoxColumn1
+            // 
+            this.titleDataGridViewTextBoxColumn1.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn1.FillWeight = 206.55F;
+            this.titleDataGridViewTextBoxColumn1.HeaderText = "Информация";
+            this.titleDataGridViewTextBoxColumn1.Name = "titleDataGridViewTextBoxColumn1";
+            this.titleDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.quantityDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.quantityDataGridViewTextBoxColumn.FillWeight = 66.26812F;
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Количество";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.priceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.priceDataGridViewTextBoxColumn.FillWeight = 66.26812F;
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Цена";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // TotalSum
+            // 
+            this.TotalSum.DataPropertyName = "TotalPrice";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TotalSum.DefaultCellStyle = dataGridViewCellStyle5;
+            this.TotalSum.FillWeight = 60.9137F;
+            this.TotalSum.HeaderText = "Обща сума";
+            this.TotalSum.Name = "TotalSum";
+            this.TotalSum.ReadOnly = true;
+            // 
+            // reportContentBindingSource
+            // 
+            this.reportContentBindingSource.DataSource = typeof(VehicleServiceManagement.ReportContent);
+            // 
             // LabelTotalSum
             // 
             this.LabelTotalSum.AllowParentOverrides = false;
@@ -285,16 +327,6 @@ namespace VehicleServiceManagement.Print
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.bunifuLabel2.Click += new System.EventHandler(this.bunifuLabel2_Click);
-            // 
-            // TotalSum
-            // 
-            this.TotalSum.DataPropertyName = "TotalPrice";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TotalSum.DefaultCellStyle = dataGridViewCellStyle5;
-            this.TotalSum.FillWeight = 60.9137F;
-            this.TotalSum.HeaderText = "Обща сума";
-            this.TotalSum.Name = "TotalSum";
-            this.TotalSum.ReadOnly = true;
             // 
             // TextBoxOwner
             // 
@@ -811,38 +843,6 @@ namespace VehicleServiceManagement.Print
             this.ButtonPrint.UseDefaultRadiusAndThickness = true;
             this.ButtonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
             // 
-            // titleDataGridViewTextBoxColumn1
-            // 
-            this.titleDataGridViewTextBoxColumn1.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn1.FillWeight = 206.55F;
-            this.titleDataGridViewTextBoxColumn1.HeaderText = "Информация";
-            this.titleDataGridViewTextBoxColumn1.Name = "titleDataGridViewTextBoxColumn1";
-            this.titleDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.quantityDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.quantityDataGridViewTextBoxColumn.FillWeight = 66.26812F;
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Количество";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.priceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.priceDataGridViewTextBoxColumn.FillWeight = 66.26812F;
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Цена";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // reportContentBindingSource
-            // 
-            this.reportContentBindingSource.DataSource = typeof(VehicleServiceManagement.ReportContent);
-            // 
             // ReportPreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -866,13 +866,14 @@ namespace VehicleServiceManagement.Print
             this.Controls.Add(this.ButtonPrint);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReportPreview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ReportPreview";
+            this.Text = "Работна карта";
             this.Load += new System.EventHandler(this.ReportPreview_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewCurerntReportContent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportContentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

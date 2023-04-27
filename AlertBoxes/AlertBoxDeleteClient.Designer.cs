@@ -366,9 +366,10 @@ namespace VehicleServiceManagement
             this.ClientSize = new System.Drawing.Size(430, 246);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AlertBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AlertBox";
+            this.Text = "Известие";
             this.TopMost = true;
             this.bunifuPanel1.ResumeLayout(false);
             this.AlerBoxDragPanel.ResumeLayout(false);

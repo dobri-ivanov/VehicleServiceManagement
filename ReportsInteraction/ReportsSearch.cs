@@ -59,7 +59,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             reader.Close();
             connection.Close();
 
-            string text = make + " " + model + " " + year + " " + capacity + " " + year + "hp (" + CurrentLicensePlate + ")";
+            string text = make + " " + model + " " + year + " " + capacity + " " + horsePower + "hp (" + CurrentLicensePlate + ")";
             TextBoxTitle.Text = text;
         }
 
@@ -211,6 +211,11 @@ namespace VehicleServiceManagement.ReportsInteraction
         {
             Main.CreateNewReport(CurrentLicensePlate);
             this.Close();
+        }
+
+        private void TextBoxTitle_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

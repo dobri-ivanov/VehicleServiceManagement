@@ -101,15 +101,24 @@ namespace VehicleServiceManagement
         }
         public void DeleteVehicle()
         {
-            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
-            connection.Open();
-            string query = "DELETE FROM Vehicles WHERE LicensePlate = N'" + currentLicensePlate + "';";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.ExecuteNonQuery();
-            connection.Close();
-            mainPanel.FillVehiclesTable();
-            mainPanel.DeleteVehicleNotification($"Успешно изтрит автомобил: {currentMake} {currentModel} {currentLicensePlate}");
-            Exit();
+            try
+            {
+                SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+                connection.Open();
+
+                string query = "DELETE FROM Vehicles WHERE LicensePlate = N'" + currentLicensePlate + "';";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+                mainPanel.FillVehiclesTable();
+                mainPanel.DeleteVehicleNotification($"Успешно изтрит автомобил: {currentMake} {currentModel} {currentLicensePlate}");
+                Exit();
+            }
+            catch (Exception)
+            {
+                mainPanel.DeleteVehicleNotification2($"Автомобилът не може да бъде изтрит, защото има съществуващи ремонти!");
+            }        
             
         }
         private void bunifuButton1_Click(object sender, EventArgs e)
@@ -121,8 +130,8 @@ namespace VehicleServiceManagement
 
         private void Exit()
         {
-            isOpened = false;
             this.Close();
+            isOpened = false;
         }
     }
 }

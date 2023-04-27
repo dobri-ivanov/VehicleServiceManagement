@@ -247,6 +247,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxTitle.TextPlaceholder = "";
             this.TextBoxTitle.UseSystemPasswordChar = false;
             this.TextBoxTitle.WordWrap = true;
+            this.TextBoxTitle.TextChanged += new System.EventHandler(this.TextBoxTitle_TextChanged);
             // 
             // TextBoxSearchReport
             // 
@@ -518,9 +519,10 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.ClientSize = new System.Drawing.Size(668, 811);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReportsSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ReportsSearch";
+            this.Text = "Ремонти";
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewRaports)).EndInit();

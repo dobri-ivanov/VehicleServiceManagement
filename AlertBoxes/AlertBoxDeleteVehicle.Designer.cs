@@ -38,8 +38,8 @@ namespace VehicleServiceManagement.AlertBoxes
             this.AlerBoxDragPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.LabelText = new Bunifu.UI.WinForms.BunifuLabel();
             this.LabelText2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.LabelText = new Bunifu.UI.WinForms.BunifuLabel();
             this.AlerBoxDragPanel.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -313,24 +313,6 @@ namespace VehicleServiceManagement.AlertBoxes
             this.bunifuPanel1.TabIndex = 3;
             this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
             // 
-            // LabelText
-            // 
-            this.LabelText.AllowParentOverrides = false;
-            this.LabelText.AutoEllipsis = false;
-            this.LabelText.AutoSize = false;
-            this.LabelText.Cursor = System.Windows.Forms.Cursors.Default;
-            this.LabelText.CursorType = System.Windows.Forms.Cursors.Default;
-            this.LabelText.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.LabelText.ForeColor = System.Drawing.Color.White;
-            this.LabelText.Location = new System.Drawing.Point(1, 1);
-            this.LabelText.Name = "LabelText";
-            this.LabelText.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelText.Size = new System.Drawing.Size(543, 127);
-            this.LabelText.TabIndex = 10;
-            this.LabelText.Text = "Сигурни ли сте, че искате да изтриете автомобил: Audi A6 CT 1131 PP";
-            this.LabelText.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelText.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // LabelText2
             // 
             this.LabelText2.AllowParentOverrides = false;
@@ -349,6 +331,24 @@ namespace VehicleServiceManagement.AlertBoxes
             this.LabelText2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelText2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // LabelText
+            // 
+            this.LabelText.AllowParentOverrides = false;
+            this.LabelText.AutoEllipsis = false;
+            this.LabelText.AutoSize = false;
+            this.LabelText.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LabelText.CursorType = System.Windows.Forms.Cursors.Default;
+            this.LabelText.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.LabelText.ForeColor = System.Drawing.Color.White;
+            this.LabelText.Location = new System.Drawing.Point(1, 1);
+            this.LabelText.Name = "LabelText";
+            this.LabelText.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelText.Size = new System.Drawing.Size(543, 127);
+            this.LabelText.TabIndex = 10;
+            this.LabelText.Text = "Сигурни ли сте, че искате да изтриете автомобил: Audi A6 CT 1131 PP";
+            this.LabelText.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelText.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // AlertBoxDeleteVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,9 +357,10 @@ namespace VehicleServiceManagement.AlertBoxes
             this.ClientSize = new System.Drawing.Size(558, 253);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AlertBoxDeleteVehicle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AlertBoxDeleteVehicle";
+            this.Text = "Известие";
             this.AlerBoxDragPanel.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
