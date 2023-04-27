@@ -63,7 +63,6 @@ namespace VehicleServiceManagement
             this.Panel.ShowBorders = true;
             this.Panel.Size = new System.Drawing.Size(295, 308);
             this.Panel.TabIndex = 0;
-            this.Panel.Click += new System.EventHandler(this.Panel_Click);
             // 
             // ButtonCloseApplication
             // 
@@ -188,6 +187,7 @@ namespace VehicleServiceManagement
             this.bunifuButton1.TextMarginLeft = 0;
             this.bunifuButton1.TextPadding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
             // LabelTitle
             // 
@@ -203,10 +203,9 @@ namespace VehicleServiceManagement
             this.LabelTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.LabelTitle.Size = new System.Drawing.Size(289, 45);
             this.LabelTitle.TabIndex = 9;
-            this.LabelTitle.Text = "Клиенти";
+            this.LabelTitle.Text = "СТ 1131 РР";
             this.LabelTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.LabelTitle.Click += new System.EventHandler(this.LabelTitle_Click);
             // 
             // ButtonEdit
             // 

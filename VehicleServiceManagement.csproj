@@ -189,6 +189,12 @@
     <Compile Include="ReportsInteraction\ContentInteractionPanel.Designer.cs">
       <DependentUpon>ContentInteractionPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportsInteraction\ReportsSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsInteraction\ReportsSearch.Designer.cs">
+      <DependentUpon>ReportsSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportsInteraction\SearchVehicleForReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportsInteraction\ContentInteractionPanel.resx">
       <DependentUpon>ContentInteractionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsInteraction\ReportsSearch.resx">
+      <DependentUpon>ReportsSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportsInteraction\SearchVehicleForReport.resx">
       <DependentUpon>SearchVehicleForReport.cs</DependentUpon>

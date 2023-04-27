@@ -919,13 +919,21 @@ namespace VehicleServiceManagement
                 string licensePlate = DataGridViewRaports.Rows[rowIndex].Cells[2].Value.ToString();
                 string date = DataGridViewRaports.Rows[rowIndex].Cells[3].Value.ToString();
 
-                ShadowPanelCurrentReport.Visible = true;
                 GenerateReport(id, title, licensePlate, date);
             }
         }
 
+        public void LoadReport(int id, string title, string licensePlate, string date)
+        {
+            GenerateReport(id, title, licensePlate, date);
+            MainPages.SetPage("Raports");
+            this.TopMost = true;
+            this.TopMost = false;
+        }
         private void GenerateReport(int id, string title, string licensePlate, string date)
         {
+            ShadowPanelCurrentReport.Visible = true;
+
             currentReportId = id;
             TextBoxDate.Text = date;
             LabelReportTitle.Text = title;
@@ -1235,6 +1243,12 @@ namespace VehicleServiceManagement
                     DataGridViewVehicles.Rows[rowIndex].Cells[colIndex].Value = Properties.Resources.select_new;
                 }
             }
+        }
+        public void CreateNewReport(string licensePlate)
+        {
+            MainPages.SetPage("Raports");
+            AddEditReport addEditReport = new AddEditReport("ADD2", this, licensePlate);
+            addEditReport.ShowDialog();
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)

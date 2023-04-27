@@ -88,6 +88,14 @@ namespace VehicleServiceManagement.ReportsInteraction
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(TextBoxTitle.Text) || string.IsNullOrEmpty(TextBoxQuantity.Text) || string.IsNullOrEmpty(TextBoxPrice.Text))
+            {
+                Notification.Show(this, $"Попълнете всички полета!",
+               Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
+
+                return;
+            }
+
             if (Function == "ADD")
             {
                 AddNewItem();

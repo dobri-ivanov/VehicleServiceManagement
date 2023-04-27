@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VehicleServiceManagement.AlertBoxes;
+using VehicleServiceManagement.ReportsInteraction;
 
 namespace VehicleServiceManagement
 {
@@ -102,15 +103,10 @@ namespace VehicleServiceManagement
             this.Close();
             
         }
-
-        private void LabelTitle_Click(object sender, EventArgs e)
+        private void bunifuButton1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Panel_Click(object sender, EventArgs e)
-        {
-
+            ReportsSearch reportsSearch = new ReportsSearch(mainPanel, this, currentLicensePlate);
+            reportsSearch.ShowDialog();
         }
     }
 }

@@ -19,6 +19,7 @@ namespace VehicleServiceManagement.ReportsInteraction
         private int currentVehicleId;
         private int currentReportId;
         private Main Main;
+        private string currentLicensePlate;
         public AddEditReport(string function, Main main)
         {
             Main = main;
@@ -30,6 +31,15 @@ namespace VehicleServiceManagement.ReportsInteraction
         public AddEditReport(string function, Main main, int ReportId)
         {
             currentReportId = ReportId;
+            Main = main;
+            Function = function;
+            InitializeComponent();
+            Configure();
+        }
+
+        public AddEditReport(string function, Main main, string licensePlate)
+        {
+            currentLicensePlate = licensePlate;
             Main = main;
             Function = function;
             InitializeComponent();
@@ -56,6 +66,14 @@ namespace VehicleServiceManagement.ReportsInteraction
                 TextBoxModification.PlaceholderText = string.Empty;
 
                 LoadReport();
+            }
+            else if (Function == "ADD2")
+            {
+                LabelHeader.Text = "СЪЗДАВАНЕ НА РЕМОНТ";
+                ButtonSave.Text = "СЪЗДАЙ";
+
+                CreateNewReport();
+                FillVehicleInformation(currentLicensePlate);
             }
         }
 
@@ -419,6 +437,11 @@ namespace VehicleServiceManagement.ReportsInteraction
                 ContentInteractionPanel cip = new ContentInteractionPanel(this, "EDIT", currentReportId, title, quantity, price);
                 cip.ShowDialog();
             }
+        }
+
+        private void LabelHeader_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

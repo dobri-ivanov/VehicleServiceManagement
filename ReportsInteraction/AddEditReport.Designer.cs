@@ -1071,6 +1071,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.LabelHeader.Text = "СЪЗДАВАНЕ НА РЕМОНТ";
             this.LabelHeader.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelHeader.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.LabelHeader.Click += new System.EventHandler(this.LabelHeader_Click);
             // 
             // LabelTitle
             // 
