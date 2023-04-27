@@ -78,7 +78,7 @@
             this.LabelText.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.LabelText.Size = new System.Drawing.Size(552, 127);
             this.LabelText.TabIndex = 12;
-            this.LabelText.Text = "Сигурни ли сте, че искате да изтриете клиент: Иван Иванов / 0887446787";
+            this.LabelText.Text = "Текст";
             this.LabelText.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelText.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

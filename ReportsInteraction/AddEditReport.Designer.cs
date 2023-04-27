@@ -31,6 +31,9 @@ namespace VehicleServiceManagement.ReportsInteraction
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditReport));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -53,13 +56,17 @@ namespace VehicleServiceManagement.ReportsInteraction
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Notification = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.DataGridViewCurerntReportContent = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.titleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Get = new System.Windows.Forms.DataGridViewImageColumn();
+            this.reportContentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.TextBoxTitle = new Bunifu.UI.WinForms.BunifuTextBox();
             this.TextBoxTotalSum = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -76,13 +83,6 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.ButtonSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.LabelHeader = new Bunifu.UI.WinForms.BunifuLabel();
             this.LabelTitle = new Bunifu.UI.WinForms.BunifuLabel();
-            this.DataGridViewCurerntReportContent = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Get = new System.Windows.Forms.DataGridViewImageColumn();
-            this.titleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reportContentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewCurerntReportContent)).BeginInit();
@@ -211,6 +211,135 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.bunifuPanel2.Size = new System.Drawing.Size(684, 850);
             this.bunifuPanel2.TabIndex = 49;
             // 
+            // DataGridViewCurerntReportContent
+            // 
+            this.DataGridViewCurerntReportContent.AllowCustomTheming = true;
+            this.DataGridViewCurerntReportContent.AllowUserToAddRows = false;
+            this.DataGridViewCurerntReportContent.AllowUserToDeleteRows = false;
+            this.DataGridViewCurerntReportContent.AllowUserToResizeColumns = false;
+            this.DataGridViewCurerntReportContent.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.DataGridViewCurerntReportContent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGridViewCurerntReportContent.AutoGenerateColumns = false;
+            this.DataGridViewCurerntReportContent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridViewCurerntReportContent.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.DataGridViewCurerntReportContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGridViewCurerntReportContent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DataGridViewCurerntReportContent.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.DataGridViewCurerntReportContent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewCurerntReportContent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DataGridViewCurerntReportContent.ColumnHeadersHeight = 40;
+            this.DataGridViewCurerntReportContent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.titleDataGridViewTextBoxColumn1,
+            this.quantityDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.TotalPrice,
+            this.Get});
+            this.DataGridViewCurerntReportContent.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.DataGridViewCurerntReportContent.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.DataGridViewCurerntReportContent.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.DataGridViewCurerntReportContent.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.DataGridViewCurerntReportContent.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGridViewCurerntReportContent.CurrentTheme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.DataGridViewCurerntReportContent.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGridViewCurerntReportContent.CurrentTheme.Name = null;
+            this.DataGridViewCurerntReportContent.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.DataGridViewCurerntReportContent.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.DataGridViewCurerntReportContent.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.DataGridViewCurerntReportContent.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.DataGridViewCurerntReportContent.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataGridViewCurerntReportContent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DataGridViewCurerntReportContent.DataSource = this.reportContentBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewCurerntReportContent.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DataGridViewCurerntReportContent.EnableHeadersVisualStyles = false;
+            this.DataGridViewCurerntReportContent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
+            this.DataGridViewCurerntReportContent.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.DataGridViewCurerntReportContent.HeaderBgColor = System.Drawing.Color.Empty;
+            this.DataGridViewCurerntReportContent.HeaderForeColor = System.Drawing.Color.White;
+            this.DataGridViewCurerntReportContent.Location = new System.Drawing.Point(5, 259);
+            this.DataGridViewCurerntReportContent.MaximumSize = new System.Drawing.Size(1900, 1900);
+            this.DataGridViewCurerntReportContent.MultiSelect = false;
+            this.DataGridViewCurerntReportContent.Name = "DataGridViewCurerntReportContent";
+            this.DataGridViewCurerntReportContent.ReadOnly = true;
+            this.DataGridViewCurerntReportContent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DataGridViewCurerntReportContent.RowHeadersVisible = false;
+            this.DataGridViewCurerntReportContent.RowHeadersWidth = 50;
+            this.DataGridViewCurerntReportContent.RowTemplate.Height = 40;
+            this.DataGridViewCurerntReportContent.RowTemplate.ReadOnly = true;
+            this.DataGridViewCurerntReportContent.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewCurerntReportContent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridViewCurerntReportContent.Size = new System.Drawing.Size(672, 459);
+            this.DataGridViewCurerntReportContent.TabIndex = 89;
+            this.DataGridViewCurerntReportContent.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
+            this.DataGridViewCurerntReportContent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCurerntReportContent_CellContentClick);
+            this.DataGridViewCurerntReportContent.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCurerntReportContent_CellMouseEnter);
+            this.DataGridViewCurerntReportContent.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCurerntReportContent_CellMouseLeave);
+            // 
+            // titleDataGridViewTextBoxColumn1
+            // 
+            this.titleDataGridViewTextBoxColumn1.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn1.FillWeight = 298.1044F;
+            this.titleDataGridViewTextBoxColumn1.HeaderText = "Информация";
+            this.titleDataGridViewTextBoxColumn1.Name = "titleDataGridViewTextBoxColumn1";
+            this.titleDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.FillWeight = 59.73062F;
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Кол.";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.FillWeight = 68.07668F;
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Цена";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // TotalPrice
+            // 
+            this.TotalPrice.DataPropertyName = "TotalPrice";
+            this.TotalPrice.FillWeight = 69.70032F;
+            this.TotalPrice.HeaderText = "Сума";
+            this.TotalPrice.Name = "TotalPrice";
+            this.TotalPrice.ReadOnly = true;
+            // 
+            // Get
+            // 
+            this.Get.FillWeight = 53.62643F;
+            this.Get.HeaderText = "";
+            this.Get.Image = global::VehicleServiceManagement.Properties.Resources.dots_new;
+            this.Get.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Get.Name = "Get";
+            this.Get.ReadOnly = true;
+            // 
+            // reportContentBindingSource
+            // 
+            this.reportContentBindingSource.DataSource = typeof(VehicleServiceManagement.ReportContent);
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.White;
@@ -319,7 +448,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxTotalSum.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.TextBoxTotalSum.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextBoxTotalSum.DefaultFont = new System.Drawing.Font("Segoe UI", 18F);
-            this.TextBoxTotalSum.DefaultText = "";
+            this.TextBoxTotalSum.DefaultText = "0.00 лв.";
             this.TextBoxTotalSum.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
             this.TextBoxTotalSum.ForeColor = System.Drawing.Color.White;
             this.TextBoxTotalSum.HideSelection = true;
@@ -328,7 +457,8 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxTotalSum.IconPadding = 10;
             this.TextBoxTotalSum.IconRight = null;
             this.TextBoxTotalSum.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxTotalSum.Lines = new string[0];
+            this.TextBoxTotalSum.Lines = new string[] {
+        "0.00 лв."};
             this.TextBoxTotalSum.Location = new System.Drawing.Point(141, 776);
             this.TextBoxTotalSum.MaxLength = 32767;
             this.TextBoxTotalSum.MinimumSize = new System.Drawing.Size(1, 1);
@@ -363,7 +493,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxTotalSum.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TextBoxTotalSum.SelectedText = "";
             this.TextBoxTotalSum.SelectionLength = 0;
-            this.TextBoxTotalSum.SelectionStart = 0;
+            this.TextBoxTotalSum.SelectionStart = 8;
             this.TextBoxTotalSum.ShortcutsEnabled = true;
             this.TextBoxTotalSum.Size = new System.Drawing.Size(158, 46);
             this.TextBoxTotalSum.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
@@ -433,7 +563,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxWorkPrice.Padding = new System.Windows.Forms.Padding(3);
             this.TextBoxWorkPrice.PasswordChar = '\0';
             this.TextBoxWorkPrice.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.TextBoxWorkPrice.PlaceholderText = "250.00 лв";
+            this.TextBoxWorkPrice.PlaceholderText = "50.00";
             this.TextBoxWorkPrice.ReadOnly = false;
             this.TextBoxWorkPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TextBoxWorkPrice.SelectedText = "";
@@ -447,7 +577,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxWorkPrice.TextMarginBottom = 0;
             this.TextBoxWorkPrice.TextMarginLeft = 3;
             this.TextBoxWorkPrice.TextMarginTop = 0;
-            this.TextBoxWorkPrice.TextPlaceholder = "250.00 лв";
+            this.TextBoxWorkPrice.TextPlaceholder = "50.00";
             this.TextBoxWorkPrice.UseSystemPasswordChar = false;
             this.TextBoxWorkPrice.WordWrap = true;
             this.TextBoxWorkPrice.TextChanged += new System.EventHandler(this.TextBoxWorkPrice_TextChanged);
@@ -941,7 +1071,6 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.LabelHeader.Text = "СЪЗДАВАНЕ НА РЕМОНТ";
             this.LabelHeader.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelHeader.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.LabelHeader.Click += new System.EventHandler(this.LabelHeader_Click);
             // 
             // LabelTitle
             // 
@@ -960,135 +1089,6 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.LabelTitle.Text = "СЪЗДАВАНЕ НА РЕМОНТ";
             this.LabelTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // DataGridViewCurerntReportContent
-            // 
-            this.DataGridViewCurerntReportContent.AllowCustomTheming = true;
-            this.DataGridViewCurerntReportContent.AllowUserToAddRows = false;
-            this.DataGridViewCurerntReportContent.AllowUserToDeleteRows = false;
-            this.DataGridViewCurerntReportContent.AllowUserToResizeColumns = false;
-            this.DataGridViewCurerntReportContent.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.DataGridViewCurerntReportContent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridViewCurerntReportContent.AutoGenerateColumns = false;
-            this.DataGridViewCurerntReportContent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridViewCurerntReportContent.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.DataGridViewCurerntReportContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridViewCurerntReportContent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.DataGridViewCurerntReportContent.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.DataGridViewCurerntReportContent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewCurerntReportContent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridViewCurerntReportContent.ColumnHeadersHeight = 40;
-            this.DataGridViewCurerntReportContent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.titleDataGridViewTextBoxColumn1,
-            this.quantityDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.TotalPrice,
-            this.Get});
-            this.DataGridViewCurerntReportContent.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.DataGridViewCurerntReportContent.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.DataGridViewCurerntReportContent.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.DataGridViewCurerntReportContent.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.DataGridViewCurerntReportContent.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGridViewCurerntReportContent.CurrentTheme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.DataGridViewCurerntReportContent.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.DataGridViewCurerntReportContent.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGridViewCurerntReportContent.CurrentTheme.Name = null;
-            this.DataGridViewCurerntReportContent.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.DataGridViewCurerntReportContent.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.DataGridViewCurerntReportContent.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.DataGridViewCurerntReportContent.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.White;
-            this.DataGridViewCurerntReportContent.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataGridViewCurerntReportContent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DataGridViewCurerntReportContent.DataSource = this.reportContentBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridViewCurerntReportContent.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DataGridViewCurerntReportContent.EnableHeadersVisualStyles = false;
-            this.DataGridViewCurerntReportContent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(216)))), ((int)(((byte)(172)))));
-            this.DataGridViewCurerntReportContent.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.DataGridViewCurerntReportContent.HeaderBgColor = System.Drawing.Color.Empty;
-            this.DataGridViewCurerntReportContent.HeaderForeColor = System.Drawing.Color.White;
-            this.DataGridViewCurerntReportContent.Location = new System.Drawing.Point(5, 259);
-            this.DataGridViewCurerntReportContent.MaximumSize = new System.Drawing.Size(1900, 1900);
-            this.DataGridViewCurerntReportContent.MultiSelect = false;
-            this.DataGridViewCurerntReportContent.Name = "DataGridViewCurerntReportContent";
-            this.DataGridViewCurerntReportContent.ReadOnly = true;
-            this.DataGridViewCurerntReportContent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.DataGridViewCurerntReportContent.RowHeadersVisible = false;
-            this.DataGridViewCurerntReportContent.RowHeadersWidth = 50;
-            this.DataGridViewCurerntReportContent.RowTemplate.Height = 40;
-            this.DataGridViewCurerntReportContent.RowTemplate.ReadOnly = true;
-            this.DataGridViewCurerntReportContent.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridViewCurerntReportContent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewCurerntReportContent.Size = new System.Drawing.Size(672, 459);
-            this.DataGridViewCurerntReportContent.TabIndex = 89;
-            this.DataGridViewCurerntReportContent.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
-            this.DataGridViewCurerntReportContent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCurerntReportContent_CellContentClick);
-            this.DataGridViewCurerntReportContent.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCurerntReportContent_CellMouseEnter);
-            this.DataGridViewCurerntReportContent.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCurerntReportContent_CellMouseLeave);
-            // 
-            // TotalPrice
-            // 
-            this.TotalPrice.DataPropertyName = "TotalPrice";
-            this.TotalPrice.FillWeight = 69.70032F;
-            this.TotalPrice.HeaderText = "Сума";
-            this.TotalPrice.Name = "TotalPrice";
-            this.TotalPrice.ReadOnly = true;
-            // 
-            // Get
-            // 
-            this.Get.FillWeight = 53.62643F;
-            this.Get.HeaderText = "";
-            this.Get.Image = global::VehicleServiceManagement.Properties.Resources.dots_new;
-            this.Get.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Get.Name = "Get";
-            this.Get.ReadOnly = true;
-            // 
-            // titleDataGridViewTextBoxColumn1
-            // 
-            this.titleDataGridViewTextBoxColumn1.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn1.FillWeight = 298.1044F;
-            this.titleDataGridViewTextBoxColumn1.HeaderText = "Информация";
-            this.titleDataGridViewTextBoxColumn1.Name = "titleDataGridViewTextBoxColumn1";
-            this.titleDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.FillWeight = 59.73062F;
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Кол.";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.FillWeight = 68.07668F;
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Цена";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // reportContentBindingSource
-            // 
-            this.reportContentBindingSource.DataSource = typeof(VehicleServiceManagement.ReportContent);
             // 
             // AddEditReport
             // 

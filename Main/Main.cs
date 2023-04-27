@@ -140,6 +140,44 @@ namespace VehicleServiceManagement
             currentPoint.X += 320;
             ButtonLogOut.Location = currentPoint;
 
+            ShadowPanelCurrentReport.Size = new Size(789, 936);
+
+            currentPoint = ShadowPanelCurrentReport.Location;
+            currentPoint.X += 320;
+            ShadowPanelCurrentReport.Location = currentPoint;
+
+
+            currentPoint = ButtonCreateReport.Location;
+            currentPoint.X += 320;
+            ButtonCreateReport.Location = currentPoint;
+
+            DataGridViewRaports.Size = new Size(869, 917);
+
+            currentPoint = TextBoxSearchReport.Location;
+            currentPoint.X += 320;
+            TextBoxSearchReport.Location = currentPoint;
+
+            currentPoint = ImageButtonRefreshReports.Location;
+            currentPoint.X += 320;
+            ImageButtonRefreshReports.Location = currentPoint;
+
+            DataGridViewCurerntReportContent.Size = new Size(774, 596);
+
+            currentPoint = LabelWorkPrice.Location;
+            currentPoint.Y += 180;
+            LabelWorkPrice.Location = currentPoint;
+
+            currentPoint = LabelTotalSum.Location;
+            currentPoint.Y += 180;
+            LabelTotalSum.Location = currentPoint;
+
+            currentPoint = TextBoxWorkPrice.Location;
+            currentPoint.Y += 180;
+            TextBoxWorkPrice.Location = currentPoint;
+
+            currentPoint = TextBoxTotalSum.Location;
+            currentPoint.Y += 180;
+            TextBoxTotalSum.Location = currentPoint;
 
         }
         private void ReturnControlsPosition()
@@ -204,6 +242,45 @@ namespace VehicleServiceManagement
             currentPoint = ButtonLogOut.Location;
             currentPoint.X -= 320;
             ButtonLogOut.Location = currentPoint;
+
+            ShadowPanelCurrentReport.Size = new Size(789, 756);
+
+            currentPoint = ShadowPanelCurrentReport.Location;
+            currentPoint.X -= 320;
+            ShadowPanelCurrentReport.Location = currentPoint;
+
+
+            currentPoint = ButtonCreateReport.Location;
+            currentPoint.X -= 320;
+            ButtonCreateReport.Location = currentPoint;
+
+            DataGridViewRaports.Size = new Size(549, 737);
+
+            currentPoint = TextBoxSearchReport.Location;
+            currentPoint.X -= 320;
+            TextBoxSearchReport.Location = currentPoint;
+
+            currentPoint = ImageButtonRefreshReports.Location;
+            currentPoint.X -= 320;
+            ImageButtonRefreshReports.Location = currentPoint;
+            //
+            DataGridViewCurerntReportContent.Size = new Size(774, 416);
+
+            currentPoint = LabelWorkPrice.Location;
+            currentPoint.Y -= 180;
+            LabelWorkPrice.Location = currentPoint;
+
+            currentPoint = LabelTotalSum.Location;
+            currentPoint.Y -= 180;
+            LabelTotalSum.Location = currentPoint;
+
+            currentPoint = TextBoxWorkPrice.Location;
+            currentPoint.Y -= 180;
+            TextBoxWorkPrice.Location = currentPoint;
+
+            currentPoint = TextBoxTotalSum.Location;
+            currentPoint.Y -= 180;
+            TextBoxTotalSum.Location = currentPoint;
         }
 
         internal void ReportNotification(string function, int id, string title, string licensePlate, string date)
@@ -913,7 +990,7 @@ namespace VehicleServiceManagement
             return workPrice;
         }
 
-        private void FillReportContentTable(int id)
+        public void FillReportContentTable(int id)
         {
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();

@@ -38,6 +38,7 @@ namespace VehicleServiceManagement.ReportsInteraction
 
         private void Configure()
         {
+            totalSum = 0;
             if (Function == "ADD")
             {
                 LabelHeader.Text = "СЪЗДАВАНЕ НА РЕМОНТ";
@@ -49,9 +50,33 @@ namespace VehicleServiceManagement.ReportsInteraction
             {
                 LabelHeader.Text = "РЕДАКТИРАНЕ НА РЕМОНТ";
                 ButtonSave.Text = "ЗАПАЗИ";
+                TextBoxWorkPrice.PlaceholderText = string.Empty;
+                TextBoxTitle.PlaceholderText = string.Empty;
+                TextBoxVehicle.PlaceholderText = string.Empty;
+                TextBoxModification.PlaceholderText = string.Empty;
 
                 LoadReport();
             }
+        }
+
+        internal void DeleteItem(string title, decimal quantity, decimal price)
+        {
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+            connection.Open();
+
+            string query =
+                "DELETE FROM ReportContents " +
+                "WHERE " +
+                "Title = N'" + title + "' AND " +
+                "Quantity = '" + quantity + "' AND " +
+                "Price = '" + price + "' AND " +
+                "ReportID = '" + currentReportId + "';";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+
+            FillContentTable(currentReportId);
         }
 
         private void LoadReport()
@@ -113,8 +138,14 @@ namespace VehicleServiceManagement.ReportsInteraction
 
         private void RefreshTotalSum()
         {
-            decimal workPrice = decimal.Parse(TextBoxWorkPrice.Text);
-            TextBoxTotalSum.Text = (totalSum + workPrice).ToString("f2") + " лв.";
+            try
+            {
+                decimal workPrice = decimal.Parse(TextBoxWorkPrice.Text);
+                TextBoxTotalSum.Text = (totalSum + workPrice).ToString("f2") + " лв.";
+            }
+            catch (Exception)
+            {
+            }  
         }
 
         public void FillContentTable(int currentReportId)
@@ -239,6 +270,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             {
                 DeleteCurrentReport();
             }
+            Main.FillReportContentTable(currentReportId);
             this.Close();
         }
 
@@ -374,24 +406,19 @@ namespace VehicleServiceManagement.ReportsInteraction
             contentInteractionPanel.ShowDialog();
         }
 
-        private void LabelHeader_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void reportContentSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGridViewItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void DataGridViewCurerntReportContent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if (DataGridViewCurerntReportContent.Columns[colIndex].Name == "Get")
+            {
+                string title = DataGridViewCurerntReportContent[0, rowIndex].Value.ToString();
+                decimal quantity = decimal.Parse(DataGridViewCurerntReportContent[1, rowIndex].Value.ToString());
+                decimal price = decimal.Parse(DataGridViewCurerntReportContent[2, rowIndex].Value.ToString());
 
+                ContentInteractionPanel cip = new ContentInteractionPanel(this, "EDIT", currentReportId, title, quantity, price);
+                cip.ShowDialog();
+            }
         }
     }
 }

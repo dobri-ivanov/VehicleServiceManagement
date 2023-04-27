@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VehicleServiceManagement.AlertBoxes;
 
 namespace VehicleServiceManagement.ReportsInteraction
 {
@@ -35,6 +36,7 @@ namespace VehicleServiceManagement.ReportsInteraction
         }
         public ContentInteractionPanel(AddEditReport aer, string function, int reportId, string title, decimal quantity, decimal price)
         {
+            AER = aer;
             CurrentTitle = title;
             CurrentQuantity = quantity;
             CurrentPrice = price;
@@ -42,6 +44,12 @@ namespace VehicleServiceManagement.ReportsInteraction
             CurrentReportId = reportId;
             InitializeComponent();
             Configure();
+        }
+
+        internal void DeleteItem()
+        {
+            AER.DeleteItem(CurrentTitle, CurrentQuantity, CurrentPrice);
+            this.Close();
         }
 
         private void Configure()
@@ -55,16 +63,22 @@ namespace VehicleServiceManagement.ReportsInteraction
             {
                 LabelHeader.Text = "РЕДАКТИРАНЕ НА АРТИКУЛ";
                 ButtonSave.Text = "ЗАПАЗИ";
+                ButtonDelete.Visible = true;
+                TextBoxQuantity.PlaceholderText = string.Empty;
+                TextBoxPrice.PlaceholderText = string.Empty;
 
                 LoadItem();
 
             }
         }
 
-        //Shoud be implemented
         private void LoadItem()
         {
+            TextBoxTitle.Text = CurrentTitle;
+            TextBoxQuantity.Text = CurrentQuantity.ToString();
+            TextBoxPrice.Text = CurrentPrice.ToString();
 
+            RefreshTotalSum();
         }
 
         private void ButtonCancel_Click(object sender, EventArgs e)
@@ -74,8 +88,49 @@ namespace VehicleServiceManagement.ReportsInteraction
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
+            if (Function == "ADD")
+            {
+                AddNewItem();
+            }
+            else if (Function == "EDIT")
+            {
+                UpdateCurrentItem();
+            }
+        }
+
+        private void UpdateCurrentItem()
+        {
+            string titleNewValue = TextBoxTitle.Text;
+            decimal quantityNewValue = decimal.Parse(TextBoxQuantity.Text);
+            decimal priceNewValue = decimal.Parse(TextBoxPrice.Text);
+
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
+            connection.Open();
+
+            string query =
+                "UPDATE ReportContents " +
+                "SET " +
+                "Title = N'"+ titleNewValue + "', " +
+                "Quantity = '" + quantityNewValue + "', " +
+                "Price = '" + priceNewValue + "' " +
+                "WHERE " +
+                "Title = N'" + CurrentTitle + "' AND " +
+                "Quantity = '" + CurrentQuantity + "' AND " +
+                "Price = '" + CurrentPrice + "' AND " +
+                "ReportID = '" + CurrentReportId + "';";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+
+            AER.FillContentTable(CurrentReportId);
+            this.Close();
+
+        }
+
+        private void AddNewItem()
+        {
             string title = TextBoxTitle.Text;
-            //Validation rule
             decimal quantity = decimal.Parse(TextBoxQuantity.Text);
             decimal price = decimal.Parse(TextBoxPrice.Text);
 
@@ -141,7 +196,13 @@ namespace VehicleServiceManagement.ReportsInteraction
             TextBoxTotalSum.Text = totalSum.ToString("f2") + " лв.";
         }
 
-        private void TextBoxPrice_TextChanged(object sender, EventArgs e)
+        private void ButtonDelete_Click(object sender, EventArgs e)
+        {
+            AlertBoxDeleteReport alertBoxDeleteReport = new AlertBoxDeleteReport();
+            alertBoxDeleteReport.ShowData("Сигурни ли сте, че искате да изтриете текущия артикул?", this);
+        }
+
+        private void TextBoxPrice_TextChanged_1(object sender, EventArgs e)
         {
             RefreshTotalSum();
         }

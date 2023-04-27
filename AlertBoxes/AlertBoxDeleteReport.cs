@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VehicleServiceManagement.ReportsInteraction;
 
 namespace VehicleServiceManagement.AlertBoxes
 {
     public partial class AlertBoxDeleteReport : Form
     {
         public Main Main;
+        public ContentInteractionPanel CIP;
         public AlertBoxDeleteReport()
         {
             InitializeComponent();
@@ -36,9 +38,24 @@ namespace VehicleServiceManagement.AlertBoxes
             this.Show();
         }
 
+        public void ShowData(string text, ContentInteractionPanel cip)
+        {
+            CIP = cip;
+            LabelText.Text = text;
+            this.Show();
+        }
+
         private void ButtonYes_Click(object sender, EventArgs e)
         {
-            Main.DeleteReport();
+            if (Main != null)
+            {
+                Main.DeleteReport();
+            }
+            else if (CIP != null)
+            {
+                CIP.DeleteItem();
+            }
+          
             this.Close();
         }
     }
