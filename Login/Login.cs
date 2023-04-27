@@ -107,8 +107,12 @@ namespace VehicleServiceManagement
                 if (connection.State == System.Data.ConnectionState.Open)
                 {
                     SqlDataReader read = (null);
-                    string query = "SELECT * FROM users WHERE Username = '"+TextBoxUsername.Text+"' AND Password = '"+TextBoxPassword.Text+"'";
+                    string query = "SELECT * FROM users WHERE Username = @user AND Password = @pass;";
                     SqlCommand command = new SqlCommand(query, connection);
+
+                    command.Parameters.Add("@user", SqlDbType.VarChar).Value = TextBoxUsername.Text;
+                    command.Parameters.Add("@pass", SqlDbType.VarChar).Value = TextBoxPassword.Text;
+
                     read = command.ExecuteReader();
 
                     string name = String.Empty;
