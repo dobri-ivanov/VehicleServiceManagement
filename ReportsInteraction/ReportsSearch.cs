@@ -14,11 +14,9 @@ namespace VehicleServiceManagement.ReportsInteraction
     public partial class ReportsSearch : Form
     {
         private Main Main;
-        private VehicleOptions VO;
         private string CurrentLicensePlate;
-        public ReportsSearch(Main main, VehicleOptions vo, string licensePlate)
+        public ReportsSearch(Main main, string licensePlate)
         {
-            VO = vo;
             Main = main;
             CurrentLicensePlate = licensePlate;
             InitializeComponent();
@@ -204,7 +202,6 @@ namespace VehicleServiceManagement.ReportsInteraction
                 string licensePlate = DataGridViewRaports.Rows[rowIndex].Cells[2].Value.ToString();
                 string date = DataGridViewRaports.Rows[rowIndex].Cells[3].Value.ToString();
 
-                VO.Close();
                 this.Close();
                 Main.LoadReport(id, title, licensePlate, date);
             }
@@ -213,7 +210,6 @@ namespace VehicleServiceManagement.ReportsInteraction
         private void ButtonCreateReport_Click(object sender, EventArgs e)
         {
             Main.CreateNewReport(CurrentLicensePlate);
-            VO.Close();
             this.Close();
         }
     }

@@ -15,6 +15,8 @@ namespace VehicleServiceManagement
 {
     public partial class VehicleOptions : Form
     {
+        public static bool isOpened = false;
+
         private string currentLicensePlate;
         private Main mainPanel;
         private string currentMake;
@@ -25,6 +27,7 @@ namespace VehicleServiceManagement
         public VehicleOptions()
         {
             InitializeComponent();
+            isOpened = true;
         }
         public VehicleOptions(string licensePlate, Main main)
         {
@@ -32,6 +35,7 @@ namespace VehicleServiceManagement
             mainPanel = main;
             currentLicensePlate = licensePlate;
             LabelTitle.Text = currentLicensePlate;
+            isOpened = true;
         }
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
@@ -52,13 +56,18 @@ namespace VehicleServiceManagement
             }
             read.Close();
             connection.Close();
-            AddNewVehicle addNewVehicle = new AddNewVehicle(this, mainPanel, clientId, currentLicensePlate, "EDIT");
-            addNewVehicle.Show();
+
+            if (!AddNewVehicle.isOpened)
+            {
+                AddNewVehicle addNewVehicle = new AddNewVehicle(this, mainPanel, clientId, currentLicensePlate, "EDIT");
+                addNewVehicle.Show();
+            }
+            Exit();
         }
 
         private void ButtonCloseApplication_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Exit();
         }
 
         private void ButtonDelete_Click(object sender, EventArgs e)
@@ -100,13 +109,20 @@ namespace VehicleServiceManagement
             connection.Close();
             mainPanel.FillVehiclesTable();
             mainPanel.DeleteVehicleNotification($"Успешно изтрит автомобил: {currentMake} {currentModel} {currentLicensePlate}");
-            this.Close();
+            Exit();
             
         }
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            ReportsSearch reportsSearch = new ReportsSearch(mainPanel, this, currentLicensePlate);
+            ReportsSearch reportsSearch = new ReportsSearch(mainPanel, currentLicensePlate);
             reportsSearch.ShowDialog();
+            Exit();
+        }
+
+        private void Exit()
+        {
+            isOpened = false;
+            this.Close();
         }
     }
 }

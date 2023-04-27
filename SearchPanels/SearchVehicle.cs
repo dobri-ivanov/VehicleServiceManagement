@@ -13,11 +13,14 @@ namespace VehicleServiceManagement
 {
     public partial class SearchVehicle : Form
     {
+        public static bool isOpened = false;
+
         int currentClientId;
         Main mainPanel;
         public string connectionString = Main.currentConnectionString;
         public SearchVehicle(int clientID, Main main)
         {
+            isOpened = true;
             InitializeComponent();
             currentClientId = clientID;
             mainPanel = main;
@@ -88,14 +91,17 @@ namespace VehicleServiceManagement
         }
         private void ButtonCloseApplication_Click_3(object sender, EventArgs e)
         {
-            this.Close();
+            Exit();
         }
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            AddNewVehicle addNewVehicle = new AddNewVehicle(mainPanel, currentClientId, "ADD");
-            addNewVehicle.Show();
-            this.Close();
+            if (!AddNewVehicle.isOpened)
+            {
+                AddNewVehicle addNewVehicle = new AddNewVehicle(mainPanel, currentClientId, "ADD");
+                addNewVehicle.Show();
+            }        
+            Exit();
             
         }
 
@@ -114,7 +120,7 @@ namespace VehicleServiceManagement
                 string licensePlate = DataGridViewVehicles.Rows[rowIndex].Cells[5].Value.ToString();
                 mainPanel.SetVehiclePage();
                 mainPanel.ChangeVehicleSearchText(licensePlate);
-                this.Close();
+                Exit();
 
             }
         }
@@ -154,6 +160,12 @@ namespace VehicleServiceManagement
                 }
 
             }
+        }
+
+        private void Exit()
+        {
+            this.Close();
+            isOpened = false;
         }
     }
 }

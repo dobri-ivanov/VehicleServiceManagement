@@ -14,6 +14,7 @@ namespace VehicleServiceManagement.ReportsInteraction
     public partial class AddEditReport : Form
     {
         public static decimal totalSum;
+        public static bool isOpened = false;
 
         private string Function;
         private int currentVehicleId;
@@ -26,6 +27,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             Function = function;
             InitializeComponent();
             Configure();
+            isOpened = true;
         }
 
         public AddEditReport(string function, Main main, int ReportId)
@@ -35,6 +37,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             Function = function;
             InitializeComponent();
             Configure();
+            isOpened = true;
         }
 
         public AddEditReport(string function, Main main, string licensePlate)
@@ -44,6 +47,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             Function = function;
             InitializeComponent();
             Configure();
+            isOpened = true;
         }
 
         private void Configure()
@@ -246,7 +250,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             string query =
                 "SELECT * " +
                 "FROM Vehicles " +
-                "WHERE LicensePlate = '" + licensePlate + "'";
+                "WHERE LicensePlate = N'" + licensePlate + "'";
 
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader read = command.ExecuteReader();
@@ -284,12 +288,14 @@ namespace VehicleServiceManagement.ReportsInteraction
 
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
-            if (Function == "ADD")
+            if (Function == "ADD" || Function == "ADD2")
             {
                 DeleteCurrentReport();
             }
+            Main.TopMost = true;
             Main.FillReportContentTable(currentReportId);
-            this.Close();
+            Exit();
+            Main.TopMost = false;
         }
 
         private void DeleteCurrentReport()
@@ -376,7 +382,7 @@ namespace VehicleServiceManagement.ReportsInteraction
 
 
             Main.ReportNotification(Function, currentReportId, title, licensePlate, date);
-            this.Close();
+            Exit();
         }
 
         private void DataGridViewCurerntReportContent_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
@@ -439,6 +445,11 @@ namespace VehicleServiceManagement.ReportsInteraction
             }
         }
 
+        private void Exit()
+        {
+            isOpened = false;
+            this.Close();
+        }
         private void LabelHeader_Click(object sender, EventArgs e)
         {
 

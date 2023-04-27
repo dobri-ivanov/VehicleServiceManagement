@@ -285,7 +285,7 @@ namespace VehicleServiceManagement
 
         internal void ReportNotification(string function, int id, string title, string licensePlate, string date)
         {
-            if (function == "ADD")
+            if (function == "ADD" || function == "ADD2")
             {
                 Notification.Show(this, $"Създаден е нов ремонт!",
                 Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 5000, "ЗАТВОРИ", Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight);
@@ -788,9 +788,11 @@ namespace VehicleServiceManagement
             read.Close();
             connection.Close();
 
-            SearchVehicle sv = new SearchVehicle(currentClientID, this);
-            sv.Show();
-
+            if (!SearchVehicle.isOpened)
+            {
+                SearchVehicle sv = new SearchVehicle(currentClientID, this);
+                sv.Show();
+            }  
         }
 
         public void ChangeVehicleSearchText(string text)
@@ -848,8 +850,12 @@ namespace VehicleServiceManagement
             if (DataGridViewVehicles.Columns[colIndex].Name == "GetVehicle")
             {
                 string licensePlate = DataGridViewVehicles.Rows[rowIndex].Cells[8].Value.ToString();
-                VehicleOptions vehicleOptions = new VehicleOptions(licensePlate, this);
-                vehicleOptions.Show();
+                if (!VehicleOptions.isOpened)
+                {
+                    VehicleOptions vehicleOptions = new VehicleOptions(licensePlate, this);
+                    vehicleOptions.Show();
+                }
+                
             }
         }
 
@@ -876,8 +882,12 @@ namespace VehicleServiceManagement
 
         private void ButtonAddVechicle_Click(object sender, EventArgs e)
         {
-            AddNewVehicle addNewVehicle = new AddNewVehicle(this, "ADD");
-            addNewVehicle.Show();
+            if (!AddNewVehicle.isOpened)
+            {
+                AddNewVehicle addNewVehicle = new AddNewVehicle(this, "ADD");
+                addNewVehicle.Show();
+            }
+            
         }
 
         public void DeleteVehicleNotification(string text)
@@ -1253,14 +1263,21 @@ namespace VehicleServiceManagement
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            AddEditReport addEditReport = new AddEditReport("ADD", this);
-            addEditReport.Show();
+            if (!AddEditReport.isOpened)
+            {
+                AddEditReport addEditReport = new AddEditReport("ADD", this);
+                addEditReport.Show();
+            }
+            
         }
 
         private void ButtonEditReport_Click(object sender, EventArgs e)
         {
-            AddEditReport addEditReport = new AddEditReport("EDIT", this, currentReportId);
-            addEditReport.ShowDialog();
+            if (!AddEditReport.isOpened)
+            {
+                AddEditReport addEditReport = new AddEditReport("EDIT", this, currentReportId);
+                addEditReport.ShowDialog();
+            }
         }
     }
 }

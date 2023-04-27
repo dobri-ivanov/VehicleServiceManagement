@@ -13,6 +13,8 @@ namespace VehicleServiceManagement
 {
     public partial class AddNewVehicle : Form
     {
+        public static bool isOpened = false;
+
         public string connectionString = Main.currentConnectionString;
 
         string operation = string.Empty;
@@ -24,6 +26,7 @@ namespace VehicleServiceManagement
         public AddNewVehicle()
         {
             InitializeComponent();
+            isOpened = true;
         }
 
         public AddNewVehicle(Main main, int clientID, string currentOperation)
@@ -34,6 +37,7 @@ namespace VehicleServiceManagement
             currentClientId = clientID;
             mainPanel = main;
             FillClientData(clientID);
+            isOpened = true;
         }
 
         public AddNewVehicle(VehicleOptions vo, Main main, int clientID, string licensePlate, string currentOperation)
@@ -47,6 +51,7 @@ namespace VehicleServiceManagement
             SetUp();
             FillVehicleData(licensePlate);
             FillClientData(clientID);
+            isOpened = true;
         }
 
 
@@ -57,6 +62,7 @@ namespace VehicleServiceManagement
             operation = currentOperation;
             SetUp();
             mainPanel = main;
+            isOpened = true;
         }
         private void FillVehicleData(string licensePlate)
         {
@@ -146,7 +152,7 @@ namespace VehicleServiceManagement
         }
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Exit();
         }
 
         private void ButtonSearchClients_Click(object sender, EventArgs e)
@@ -234,7 +240,7 @@ namespace VehicleServiceManagement
                         command.ExecuteNonQuery();
 
                         mainPanel.AddVehicleNotfication();
-                        this.Close();
+                        Exit();
                     }
                     else
                     {
@@ -268,19 +274,15 @@ namespace VehicleServiceManagement
                 connection.Close();
                 mainPanel.EditVehicleNotification($"Информацията е успешно обновена!");
                 vehicleOptionsPanel.Close();
-                this.Close();
-
-
-
-
-
-
-
-
-
+                Exit();
             }
         }
 
+        private void Exit()
+        {
+            isOpened = false;
+            this.Close();
+        }
         private void bunifuPanel1_Click(object sender, EventArgs e)
         {
 
