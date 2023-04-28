@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using VehicleServiceManagement.AlertBoxes;
 using VehicleServiceManagement.Print;
@@ -19,8 +20,10 @@ namespace VehicleServiceManagement
         private static string currentPhoneNumber = String.Empty;
         private bool isMaximized = false;
         private bool isMinimized = false;
-        public static string currentConnectionString = "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
-        //public static string currentConnectionString = "Data Source=mssql-123097-0.cloudclusters.net,10126;Initial Catalog=VehicleServiceManagement;Persist Security Info=True;User ID=DobriIv;Password=Test123456";
+
+        public static string currentConnectionString =
+            "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
+            //"Data Source=mssql-123097-0.cloudclusters.net,10126;Initial Catalog=VehicleServiceManagement;Persist Security Info=True;User ID=DobriIv;Password=Test123456";
         public Main()
         {
             InitializeComponent();
@@ -587,7 +590,7 @@ namespace VehicleServiceManagement
             {
                 id = int.Parse(read["ID"].ToString());
                 title = read["Title"].ToString();
-                string date = read["CreationDate"].ToString();
+                string date = DateTime.Parse(read["CreationDate"].ToString()).ToString("d");
                 creationDate = date.Substring(0, 10);
                 licensePlate = read["LicensePlate"].ToString();
 
@@ -1006,7 +1009,7 @@ namespace VehicleServiceManagement
             ShadowPanelCurrentReport.Visible = true;
 
             currentReportId = id;
-            TextBoxDate.Text = date;
+            TextBoxDate.Text = DateTime.Parse(date).ToString("d");
             LabelReportTitle.Text = title;
             TextBoxVehicleInformation.Text = GetVehicleInformation(licensePlate);
             TextBoxCustomer.Text = GetOwnerInformation(licensePlate);

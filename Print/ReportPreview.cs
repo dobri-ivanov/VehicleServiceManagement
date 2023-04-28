@@ -227,9 +227,9 @@ namespace VehicleServiceManagement.Print
 
             System.Drawing.Bitmap b = new System.Drawing.Bitmap(this.Width, this.Height);
             this.DrawToBitmap(b, new Rectangle(0, 0, this.Width, this.Height));
-            //b.Save(@"C:\Users\Dobri's PC\Desktop\myform.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
-            b.Save(@"report.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
-            Process.Start(@"report.jpg");
+
+            b.Save(@"C:\Users\Dobri's PC\Documents\report.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            Process.Start(@"C:\Users\Dobri's PC\Documents\report.jpg");
 
             this.Close();
         }
