@@ -77,5 +77,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-- Email - [My Address](dobri0316@abv.bg)
-- LinkedIn - [My LinkedIn Profile](https://www.linkedin.com/in/dobri-ivanov/)
+- Email - [dobri0316@abv.bg](dobri0316@abv.bg)
+- LinkedIn - [dobri-ivanov](https://www.linkedin.com/in/dobri-ivanov/)
