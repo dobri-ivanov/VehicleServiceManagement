@@ -14,6 +14,7 @@
 - [Features](#features)
 - [Technologies](#technologies)
 - [Usage](#usage)
+- [Gallery](#gallery)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -55,6 +56,10 @@ Vehicle Service Management System is a desktop application for managing vehicle 
 - Launch the application
 - Enter your login information
 - Explore the dashboard and services that application provides
+
+---
+## Gallery
+
 
 ---
 
