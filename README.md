@@ -36,6 +36,7 @@ Vehicle Service Management System is a desktop application for managing vehicle 
 - View Vehicle Service History
 - View and Print Service Reports
 - Settings for managing users and application configuration
+- Custom notifications
 
 ---
 
