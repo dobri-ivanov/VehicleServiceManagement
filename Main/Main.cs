@@ -23,7 +23,6 @@ namespace VehicleServiceManagement
 
         public static string currentConnectionString =
             "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
-            //"Data Source=mssql-123097-0.cloudclusters.net,10126;Initial Catalog=VehicleServiceManagement;Persist Security Info=True;User ID=DobriIv;Password=Test123456";
         public Main()
         {
             InitializeComponent();
