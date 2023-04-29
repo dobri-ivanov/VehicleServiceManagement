@@ -116,10 +116,6 @@ namespace VehicleServiceManagement
             this.ButtonMinimize = new Bunifu.UI.WinForms.BunifuImageButton();
             this.ButtonMaximize = new Bunifu.UI.WinForms.BunifuImageButton();
             this.MainPages = new Bunifu.UI.WinForms.BunifuPages();
-            this.Calendar = new System.Windows.Forms.TabPage();
-            this.panelLeftSide = new System.Windows.Forms.Panel();
-            this.LableTitle = new Bunifu.UI.WinForms.BunifuLabel();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.Home = new System.Windows.Forms.TabPage();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.LabelCountReportsValue = new Bunifu.UI.WinForms.BunifuLabel();
@@ -210,6 +206,10 @@ namespace VehicleServiceManagement
             this.reportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TextBoxSearchReport = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuReportHeader = new Bunifu.UI.WinForms.BunifuLabel();
+            this.Calendar = new System.Windows.Forms.TabPage();
+            this.panelLeftSide = new System.Windows.Forms.Panel();
+            this.LableTitle = new Bunifu.UI.WinForms.BunifuLabel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.Settings = new System.Windows.Forms.TabPage();
             this.ButtonLogOut = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.LabelSettings = new Bunifu.UI.WinForms.BunifuLabel();
@@ -233,8 +233,6 @@ namespace VehicleServiceManagement
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panelDragControl.SuspendLayout();
             this.MainPages.SuspendLayout();
-            this.Calendar.SuspendLayout();
-            this.panelLeftSide.SuspendLayout();
             this.Home.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
@@ -252,6 +250,8 @@ namespace VehicleServiceManagement
             ((System.ComponentModel.ISupportInitialize)(this.reportContentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewRaports)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportBindingSource)).BeginInit();
+            this.Calendar.SuspendLayout();
+            this.panelLeftSide.SuspendLayout();
             this.Settings.SuspendLayout();
             this.PanelButtons.SuspendLayout();
             this.PanelUser.SuspendLayout();
@@ -396,8 +396,8 @@ namespace VehicleServiceManagement
             // 
             this.MainPages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.MainPages.AllowTransitions = true;
-            this.MainPages.Controls.Add(this.Home);
             this.MainPages.Controls.Add(this.Clients);
+            this.MainPages.Controls.Add(this.Home);
             this.MainPages.Controls.Add(this.Vehicles);
             this.MainPages.Controls.Add(this.Raports);
             this.MainPages.Controls.Add(this.Calendar);
@@ -406,10 +406,10 @@ namespace VehicleServiceManagement
             this.MainPages.Margin = new System.Windows.Forms.Padding(0);
             this.MainPages.Multiline = true;
             this.MainPages.Name = "MainPages";
-            this.MainPages.Page = this.Home;
+            this.MainPages.Page = this.Clients;
             this.MainPages.PageIndex = 0;
-            this.MainPages.PageName = "Home";
-            this.MainPages.PageTitle = "Home";
+            this.MainPages.PageName = "Clients";
+            this.MainPages.PageTitle = "Clients";
             this.MainPages.SelectedIndex = 0;
             this.MainPages.Size = new System.Drawing.Size(1674, 1018);
             this.MainPages.TabIndex = 3;
@@ -433,67 +433,6 @@ namespace VehicleServiceManagement
             animation1.TransparencyCoeff = 0F;
             this.MainPages.Transition = animation1;
             this.MainPages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
-            // 
-            // Calendar
-            // 
-            this.Calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.Calendar.Controls.Add(this.panelLeftSide);
-            this.Calendar.Location = new System.Drawing.Point(4, 4);
-            this.Calendar.Name = "Calendar";
-            this.Calendar.Size = new System.Drawing.Size(1666, 992);
-            this.Calendar.TabIndex = 4;
-            this.Calendar.Text = "Calendar";
-            this.ToolTip.SetToolTip(this.Calendar, "");
-            this.ToolTip.SetToolTipIcon(this.Calendar, null);
-            this.ToolTip.SetToolTipTitle(this.Calendar, "");
-            // 
-            // panelLeftSide
-            // 
-            this.panelLeftSide.Controls.Add(this.LableTitle);
-            this.panelLeftSide.Controls.Add(this.monthCalendar1);
-            this.panelLeftSide.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLeftSide.Location = new System.Drawing.Point(0, 0);
-            this.panelLeftSide.Name = "panelLeftSide";
-            this.panelLeftSide.Size = new System.Drawing.Size(1666, 992);
-            this.panelLeftSide.TabIndex = 1;
-            this.ToolTip.SetToolTip(this.panelLeftSide, "");
-            this.ToolTip.SetToolTipIcon(this.panelLeftSide, null);
-            this.ToolTip.SetToolTipTitle(this.panelLeftSide, "");
-            // 
-            // LableTitle
-            // 
-            this.LableTitle.AllowParentOverrides = false;
-            this.LableTitle.AutoEllipsis = false;
-            this.LableTitle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.LableTitle.CursorType = System.Windows.Forms.Cursors.Default;
-            this.LableTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.LableTitle.ForeColor = System.Drawing.Color.White;
-            this.LableTitle.Location = new System.Drawing.Point(580, 41);
-            this.LableTitle.Name = "LableTitle";
-            this.LableTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LableTitle.Size = new System.Drawing.Size(190, 54);
-            this.LableTitle.TabIndex = 21;
-            this.LableTitle.Text = "Календар";
-            this.LableTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.LableTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTip.SetToolTip(this.LableTitle, "");
-            this.ToolTip.SetToolTipIcon(this.LableTitle, null);
-            this.ToolTip.SetToolTipTitle(this.LableTitle, "");
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(4, 3);
-            this.monthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.monthCalendar1.ForeColor = System.Drawing.Color.White;
-            this.monthCalendar1.Location = new System.Drawing.Point(184, 126);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 2;
-            this.monthCalendar1.TitleBackColor = System.Drawing.Color.Gainsboro;
-            this.ToolTip.SetToolTip(this.monthCalendar1, "");
-            this.ToolTip.SetToolTipIcon(this.monthCalendar1, null);
-            this.ToolTip.SetToolTipTitle(this.monthCalendar1, "");
-            this.monthCalendar1.TrailingForeColor = System.Drawing.Color.Silver;
             // 
             // Home
             // 
@@ -3823,6 +3762,67 @@ namespace VehicleServiceManagement
             this.ToolTip.SetToolTipIcon(this.bunifuReportHeader, null);
             this.ToolTip.SetToolTipTitle(this.bunifuReportHeader, "");
             // 
+            // Calendar
+            // 
+            this.Calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.Calendar.Controls.Add(this.panelLeftSide);
+            this.Calendar.Location = new System.Drawing.Point(4, 4);
+            this.Calendar.Name = "Calendar";
+            this.Calendar.Size = new System.Drawing.Size(1666, 992);
+            this.Calendar.TabIndex = 4;
+            this.Calendar.Text = "Calendar";
+            this.ToolTip.SetToolTip(this.Calendar, "");
+            this.ToolTip.SetToolTipIcon(this.Calendar, null);
+            this.ToolTip.SetToolTipTitle(this.Calendar, "");
+            // 
+            // panelLeftSide
+            // 
+            this.panelLeftSide.Controls.Add(this.LableTitle);
+            this.panelLeftSide.Controls.Add(this.monthCalendar1);
+            this.panelLeftSide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLeftSide.Location = new System.Drawing.Point(0, 0);
+            this.panelLeftSide.Name = "panelLeftSide";
+            this.panelLeftSide.Size = new System.Drawing.Size(1666, 992);
+            this.panelLeftSide.TabIndex = 1;
+            this.ToolTip.SetToolTip(this.panelLeftSide, "");
+            this.ToolTip.SetToolTipIcon(this.panelLeftSide, null);
+            this.ToolTip.SetToolTipTitle(this.panelLeftSide, "");
+            // 
+            // LableTitle
+            // 
+            this.LableTitle.AllowParentOverrides = false;
+            this.LableTitle.AutoEllipsis = false;
+            this.LableTitle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LableTitle.CursorType = System.Windows.Forms.Cursors.Default;
+            this.LableTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.LableTitle.ForeColor = System.Drawing.Color.White;
+            this.LableTitle.Location = new System.Drawing.Point(580, 41);
+            this.LableTitle.Name = "LableTitle";
+            this.LableTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LableTitle.Size = new System.Drawing.Size(190, 54);
+            this.LableTitle.TabIndex = 21;
+            this.LableTitle.Text = "Календар";
+            this.LableTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LableTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTip.SetToolTip(this.LableTitle, "");
+            this.ToolTip.SetToolTipIcon(this.LableTitle, null);
+            this.ToolTip.SetToolTipTitle(this.LableTitle, "");
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(4, 3);
+            this.monthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.monthCalendar1.ForeColor = System.Drawing.Color.White;
+            this.monthCalendar1.Location = new System.Drawing.Point(184, 126);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 2;
+            this.monthCalendar1.TitleBackColor = System.Drawing.Color.Gainsboro;
+            this.ToolTip.SetToolTip(this.monthCalendar1, "");
+            this.ToolTip.SetToolTipIcon(this.monthCalendar1, null);
+            this.ToolTip.SetToolTipTitle(this.monthCalendar1, "");
+            this.monthCalendar1.TrailingForeColor = System.Drawing.Color.Silver;
+            // 
             // Settings
             // 
             this.Settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
@@ -4783,9 +4783,6 @@ namespace VehicleServiceManagement
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.panelDragControl.ResumeLayout(false);
             this.MainPages.ResumeLayout(false);
-            this.Calendar.ResumeLayout(false);
-            this.panelLeftSide.ResumeLayout(false);
-            this.panelLeftSide.PerformLayout();
             this.Home.ResumeLayout(false);
             this.Home.PerformLayout();
             this.bunifuPanel3.ResumeLayout(false);
@@ -4809,6 +4806,9 @@ namespace VehicleServiceManagement
             ((System.ComponentModel.ISupportInitialize)(this.reportContentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewRaports)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportBindingSource)).EndInit();
+            this.Calendar.ResumeLayout(false);
+            this.panelLeftSide.ResumeLayout(false);
+            this.panelLeftSide.PerformLayout();
             this.Settings.ResumeLayout(false);
             this.Settings.PerformLayout();
             this.PanelButtons.ResumeLayout(false);

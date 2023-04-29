@@ -770,6 +770,8 @@ namespace VehicleServiceManagement
             connection.Close();
             FillClientsTable();
 
+            ButtonSave.Enabled = false;
+            ButtonCancel.Enabled = false;
             TextBoxName.Enabled = false;
             TextBoxLastName.Enabled = false;
             TextBoxPhoneNumber.Enabled = false;
