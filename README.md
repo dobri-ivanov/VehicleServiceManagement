@@ -132,6 +132,7 @@ Vehicle Service Management System is a desktop application for managing vehicle 
    
  <h3>Database diagram<h3/>
    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101797545086304336/image.png" width="50%">
+   
 ---
 
 ## Contributing
