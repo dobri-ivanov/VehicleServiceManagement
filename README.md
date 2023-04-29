@@ -111,6 +111,12 @@ Vehicle Service Management System is a desktop application for managing vehicle 
     <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101788314987659334/image.png" width="48%">
  </div>
  
+  - Add/Edit/Delete item to report
+ <div style = "display: grid;">
+    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101797807989465168/image.png" width="50%">
+    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101797853598318673/image.png" width="50%">
+ </div>
+ 
   - Report preview (ready to print)
  <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101788505564266536/image.png" width="50%">
  
@@ -124,6 +130,8 @@ Vehicle Service Management System is a desktop application for managing vehicle 
    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101794930873094154/image.png" width="50%">
    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101795390413623367/image.png" width="50%">
    
+ <h3>Database diagram<h3/>
+   <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101797545086304336/image.png" width="50%">
 ---
 
 ## Contributing
