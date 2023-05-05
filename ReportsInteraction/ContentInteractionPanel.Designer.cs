@@ -157,7 +157,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxPrice.Padding = new System.Windows.Forms.Padding(3);
             this.TextBoxPrice.PasswordChar = '\0';
             this.TextBoxPrice.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.TextBoxPrice.PlaceholderText = "50.00";
+            this.TextBoxPrice.PlaceholderText = "";
             this.TextBoxPrice.ReadOnly = false;
             this.TextBoxPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TextBoxPrice.SelectedText = "";
@@ -171,7 +171,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxPrice.TextMarginBottom = 0;
             this.TextBoxPrice.TextMarginLeft = 3;
             this.TextBoxPrice.TextMarginTop = 0;
-            this.TextBoxPrice.TextPlaceholder = "50.00";
+            this.TextBoxPrice.TextPlaceholder = "";
             this.TextBoxPrice.UseSystemPasswordChar = false;
             this.TextBoxPrice.WordWrap = true;
             this.TextBoxPrice.TextChanged += new System.EventHandler(this.TextBoxPrice_TextChanged_1);
@@ -609,7 +609,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxQuantity.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.TextBoxQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextBoxQuantity.DefaultFont = new System.Drawing.Font("Segoe UI", 17F);
-            this.TextBoxQuantity.DefaultText = "";
+            this.TextBoxQuantity.DefaultText = "1";
             this.TextBoxQuantity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
             this.TextBoxQuantity.ForeColor = System.Drawing.Color.White;
             this.TextBoxQuantity.HideSelection = true;
@@ -618,7 +618,8 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxQuantity.IconPadding = 10;
             this.TextBoxQuantity.IconRight = null;
             this.TextBoxQuantity.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxQuantity.Lines = new string[0];
+            this.TextBoxQuantity.Lines = new string[] {
+        "1"};
             this.TextBoxQuantity.Location = new System.Drawing.Point(15, 185);
             this.TextBoxQuantity.MaxLength = 32767;
             this.TextBoxQuantity.MinimumSize = new System.Drawing.Size(1, 1);
@@ -648,12 +649,12 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxQuantity.Padding = new System.Windows.Forms.Padding(3);
             this.TextBoxQuantity.PasswordChar = '\0';
             this.TextBoxQuantity.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.TextBoxQuantity.PlaceholderText = "1";
+            this.TextBoxQuantity.PlaceholderText = "";
             this.TextBoxQuantity.ReadOnly = false;
             this.TextBoxQuantity.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TextBoxQuantity.SelectedText = "";
             this.TextBoxQuantity.SelectionLength = 0;
-            this.TextBoxQuantity.SelectionStart = 0;
+            this.TextBoxQuantity.SelectionStart = 1;
             this.TextBoxQuantity.ShortcutsEnabled = true;
             this.TextBoxQuantity.Size = new System.Drawing.Size(150, 47);
             this.TextBoxQuantity.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
@@ -662,7 +663,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxQuantity.TextMarginBottom = 0;
             this.TextBoxQuantity.TextMarginLeft = 3;
             this.TextBoxQuantity.TextMarginTop = 0;
-            this.TextBoxQuantity.TextPlaceholder = "1";
+            this.TextBoxQuantity.TextPlaceholder = "";
             this.TextBoxQuantity.UseSystemPasswordChar = false;
             this.TextBoxQuantity.WordWrap = true;
             this.TextBoxQuantity.TextChanged += new System.EventHandler(this.TextBoxQuantity_TextChanged);

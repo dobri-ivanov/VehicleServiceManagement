@@ -116,18 +116,6 @@ namespace VehicleServiceManagement
             this.ButtonMinimize = new Bunifu.UI.WinForms.BunifuImageButton();
             this.ButtonMaximize = new Bunifu.UI.WinForms.BunifuImageButton();
             this.MainPages = new Bunifu.UI.WinForms.BunifuPages();
-            this.Home = new System.Windows.Forms.TabPage();
-            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.LabelCountReportsValue = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.LabelCountClinetsValue = new Bunifu.UI.WinForms.BunifuLabel();
-            this.LabelCountReports = new Bunifu.UI.WinForms.BunifuLabel();
-            this.LabelCountVehicles = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.LabelCountVehiclesValue = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.LabelCountClients = new Bunifu.UI.WinForms.BunifuLabel();
-            this.LabelHome = new Bunifu.UI.WinForms.BunifuLabel();
             this.Clients = new System.Windows.Forms.TabPage();
             this.DataGridViewClients = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -157,6 +145,18 @@ namespace VehicleServiceManagement
             this.ButtonDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ButtonRefreshClients = new Bunifu.UI.WinForms.BunifuImageButton();
             this.TextBoxSearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.Home = new System.Windows.Forms.TabPage();
+            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.LabelCountReportsValue = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.LabelCountClinetsValue = new Bunifu.UI.WinForms.BunifuLabel();
+            this.LabelCountReports = new Bunifu.UI.WinForms.BunifuLabel();
+            this.LabelCountVehicles = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.LabelCountVehiclesValue = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.LabelCountClients = new Bunifu.UI.WinForms.BunifuLabel();
+            this.LabelHome = new Bunifu.UI.WinForms.BunifuLabel();
             this.Vehicles = new System.Windows.Forms.TabPage();
             this.ButtonAddVechicle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ButtonRefreshVehicles = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -233,14 +233,14 @@ namespace VehicleServiceManagement
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panelDragControl.SuspendLayout();
             this.MainPages.SuspendLayout();
-            this.Home.SuspendLayout();
-            this.bunifuPanel3.SuspendLayout();
-            this.bunifuPanel1.SuspendLayout();
-            this.bunifuPanel2.SuspendLayout();
             this.Clients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.ShadowPanelCurrentClient.SuspendLayout();
+            this.Home.SuspendLayout();
+            this.bunifuPanel3.SuspendLayout();
+            this.bunifuPanel1.SuspendLayout();
+            this.bunifuPanel2.SuspendLayout();
             this.Vehicles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVehicles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
@@ -433,238 +433,6 @@ namespace VehicleServiceManagement
             animation1.TransparencyCoeff = 0F;
             this.MainPages.Transition = animation1;
             this.MainPages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
-            // 
-            // Home
-            // 
-            this.Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.Home.Controls.Add(this.bunifuPanel3);
-            this.Home.Controls.Add(this.bunifuPanel1);
-            this.Home.Controls.Add(this.LabelCountReports);
-            this.Home.Controls.Add(this.LabelCountVehicles);
-            this.Home.Controls.Add(this.bunifuPanel2);
-            this.Home.Controls.Add(this.bunifuLabel1);
-            this.Home.Controls.Add(this.LabelCountClients);
-            this.Home.Controls.Add(this.LabelHome);
-            this.Home.Location = new System.Drawing.Point(4, 4);
-            this.Home.Name = "Home";
-            this.Home.Padding = new System.Windows.Forms.Padding(3);
-            this.Home.Size = new System.Drawing.Size(1666, 992);
-            this.Home.TabIndex = 0;
-            this.Home.Text = "Home";
-            this.ToolTip.SetToolTip(this.Home, "");
-            this.ToolTip.SetToolTipIcon(this.Home, null);
-            this.ToolTip.SetToolTipTitle(this.Home, "");
-            // 
-            // bunifuPanel3
-            // 
-            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
-            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel3.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel3.BorderRadius = 3;
-            this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Controls.Add(this.LabelCountReportsValue);
-            this.bunifuPanel3.Location = new System.Drawing.Point(595, 260);
-            this.bunifuPanel3.Name = "bunifuPanel3";
-            this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(231, 124);
-            this.bunifuPanel3.TabIndex = 6;
-            this.ToolTip.SetToolTip(this.bunifuPanel3, "");
-            this.ToolTip.SetToolTipIcon(this.bunifuPanel3, null);
-            this.ToolTip.SetToolTipTitle(this.bunifuPanel3, "");
-            // 
-            // LabelCountReportsValue
-            // 
-            this.LabelCountReportsValue.AllowParentOverrides = false;
-            this.LabelCountReportsValue.AutoEllipsis = false;
-            this.LabelCountReportsValue.AutoSize = false;
-            this.LabelCountReportsValue.CursorType = null;
-            this.LabelCountReportsValue.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
-            this.LabelCountReportsValue.ForeColor = System.Drawing.Color.White;
-            this.LabelCountReportsValue.Location = new System.Drawing.Point(3, 25);
-            this.LabelCountReportsValue.Name = "LabelCountReportsValue";
-            this.LabelCountReportsValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelCountReportsValue.Size = new System.Drawing.Size(225, 75);
-            this.LabelCountReportsValue.TabIndex = 4;
-            this.LabelCountReportsValue.Text = "5426";
-            this.LabelCountReportsValue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelCountReportsValue.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTip.SetToolTip(this.LabelCountReportsValue, "");
-            this.ToolTip.SetToolTipIcon(this.LabelCountReportsValue, null);
-            this.ToolTip.SetToolTipTitle(this.LabelCountReportsValue, "");
-            // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.LabelCountClinetsValue);
-            this.bunifuPanel1.Location = new System.Drawing.Point(41, 260);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(231, 124);
-            this.bunifuPanel1.TabIndex = 6;
-            this.ToolTip.SetToolTip(this.bunifuPanel1, "");
-            this.ToolTip.SetToolTipIcon(this.bunifuPanel1, null);
-            this.ToolTip.SetToolTipTitle(this.bunifuPanel1, "");
-            // 
-            // LabelCountClinetsValue
-            // 
-            this.LabelCountClinetsValue.AllowParentOverrides = false;
-            this.LabelCountClinetsValue.AutoEllipsis = false;
-            this.LabelCountClinetsValue.AutoSize = false;
-            this.LabelCountClinetsValue.CursorType = null;
-            this.LabelCountClinetsValue.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
-            this.LabelCountClinetsValue.ForeColor = System.Drawing.Color.White;
-            this.LabelCountClinetsValue.Location = new System.Drawing.Point(3, 25);
-            this.LabelCountClinetsValue.Name = "LabelCountClinetsValue";
-            this.LabelCountClinetsValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelCountClinetsValue.Size = new System.Drawing.Size(225, 75);
-            this.LabelCountClinetsValue.TabIndex = 4;
-            this.LabelCountClinetsValue.Text = "5426";
-            this.LabelCountClinetsValue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelCountClinetsValue.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTip.SetToolTip(this.LabelCountClinetsValue, "");
-            this.ToolTip.SetToolTipIcon(this.LabelCountClinetsValue, null);
-            this.ToolTip.SetToolTipTitle(this.LabelCountClinetsValue, "");
-            // 
-            // LabelCountReports
-            // 
-            this.LabelCountReports.AllowParentOverrides = false;
-            this.LabelCountReports.AutoEllipsis = false;
-            this.LabelCountReports.CursorType = null;
-            this.LabelCountReports.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.LabelCountReports.ForeColor = System.Drawing.Color.White;
-            this.LabelCountReports.Location = new System.Drawing.Point(595, 215);
-            this.LabelCountReports.Name = "LabelCountReports";
-            this.LabelCountReports.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelCountReports.Size = new System.Drawing.Size(170, 33);
-            this.LabelCountReports.TabIndex = 8;
-            this.LabelCountReports.Text = "Брой ремонти";
-            this.LabelCountReports.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelCountReports.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTip.SetToolTip(this.LabelCountReports, "");
-            this.ToolTip.SetToolTipIcon(this.LabelCountReports, null);
-            this.ToolTip.SetToolTipTitle(this.LabelCountReports, "");
-            // 
-            // LabelCountVehicles
-            // 
-            this.LabelCountVehicles.AllowParentOverrides = false;
-            this.LabelCountVehicles.AutoEllipsis = false;
-            this.LabelCountVehicles.CursorType = null;
-            this.LabelCountVehicles.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.LabelCountVehicles.ForeColor = System.Drawing.Color.White;
-            this.LabelCountVehicles.Location = new System.Drawing.Point(317, 215);
-            this.LabelCountVehicles.Name = "LabelCountVehicles";
-            this.LabelCountVehicles.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelCountVehicles.Size = new System.Drawing.Size(213, 33);
-            this.LabelCountVehicles.TabIndex = 6;
-            this.LabelCountVehicles.Text = "Брой автомобили";
-            this.LabelCountVehicles.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelCountVehicles.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTip.SetToolTip(this.LabelCountVehicles, "");
-            this.ToolTip.SetToolTipIcon(this.LabelCountVehicles, null);
-            this.ToolTip.SetToolTipTitle(this.LabelCountVehicles, "");
-            // 
-            // bunifuPanel2
-            // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BorderRadius = 3;
-            this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Controls.Add(this.LabelCountVehiclesValue);
-            this.bunifuPanel2.Location = new System.Drawing.Point(317, 260);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(231, 124);
-            this.bunifuPanel2.TabIndex = 5;
-            this.ToolTip.SetToolTip(this.bunifuPanel2, "");
-            this.ToolTip.SetToolTipIcon(this.bunifuPanel2, null);
-            this.ToolTip.SetToolTipTitle(this.bunifuPanel2, "");
-            // 
-            // LabelCountVehiclesValue
-            // 
-            this.LabelCountVehiclesValue.AllowParentOverrides = false;
-            this.LabelCountVehiclesValue.AutoEllipsis = false;
-            this.LabelCountVehiclesValue.AutoSize = false;
-            this.LabelCountVehiclesValue.CursorType = null;
-            this.LabelCountVehiclesValue.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
-            this.LabelCountVehiclesValue.ForeColor = System.Drawing.Color.White;
-            this.LabelCountVehiclesValue.Location = new System.Drawing.Point(3, 25);
-            this.LabelCountVehiclesValue.Name = "LabelCountVehiclesValue";
-            this.LabelCountVehiclesValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelCountVehiclesValue.Size = new System.Drawing.Size(225, 75);
-            this.LabelCountVehiclesValue.TabIndex = 4;
-            this.LabelCountVehiclesValue.Text = "5426";
-            this.LabelCountVehiclesValue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelCountVehiclesValue.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTip.SetToolTip(this.LabelCountVehiclesValue, "");
-            this.ToolTip.SetToolTipIcon(this.LabelCountVehiclesValue, null);
-            this.ToolTip.SetToolTipTitle(this.LabelCountVehiclesValue, "");
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.AutoSize = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(2, 80);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(1347, 55);
-            this.bunifuLabel1.TabIndex = 4;
-            this.bunifuLabel1.Text = "ДОБРЕ ДОШЛИ!";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTip.SetToolTip(this.bunifuLabel1, "");
-            this.ToolTip.SetToolTipIcon(this.bunifuLabel1, null);
-            this.ToolTip.SetToolTipTitle(this.bunifuLabel1, "");
-            // 
-            // LabelCountClients
-            // 
-            this.LabelCountClients.AllowParentOverrides = false;
-            this.LabelCountClients.AutoEllipsis = false;
-            this.LabelCountClients.CursorType = null;
-            this.LabelCountClients.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.LabelCountClients.ForeColor = System.Drawing.Color.White;
-            this.LabelCountClients.Location = new System.Drawing.Point(41, 215);
-            this.LabelCountClients.Name = "LabelCountClients";
-            this.LabelCountClients.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelCountClients.Size = new System.Drawing.Size(163, 33);
-            this.LabelCountClients.TabIndex = 3;
-            this.LabelCountClients.Text = "Брой клиенти";
-            this.LabelCountClients.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelCountClients.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTip.SetToolTip(this.LabelCountClients, "");
-            this.ToolTip.SetToolTipIcon(this.LabelCountClients, null);
-            this.ToolTip.SetToolTipTitle(this.LabelCountClients, "");
-            // 
-            // LabelHome
-            // 
-            this.LabelHome.AllowParentOverrides = false;
-            this.LabelHome.AutoEllipsis = false;
-            this.LabelHome.AutoSize = false;
-            this.LabelHome.CursorType = null;
-            this.LabelHome.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.LabelHome.ForeColor = System.Drawing.Color.White;
-            this.LabelHome.Location = new System.Drawing.Point(2, 19);
-            this.LabelHome.Name = "LabelHome";
-            this.LabelHome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelHome.Size = new System.Drawing.Size(1347, 55);
-            this.LabelHome.TabIndex = 1;
-            this.LabelHome.Text = "ДЖОНИ АУТО ЕООД";
-            this.LabelHome.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LabelHome.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTip.SetToolTip(this.LabelHome, "");
-            this.ToolTip.SetToolTipIcon(this.LabelHome, null);
-            this.ToolTip.SetToolTipTitle(this.LabelHome, "");
             // 
             // Clients
             // 
@@ -2027,6 +1795,238 @@ namespace VehicleServiceManagement
             this.TextBoxSearch.UseSystemPasswordChar = false;
             this.TextBoxSearch.WordWrap = true;
             this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
+            // 
+            // Home
+            // 
+            this.Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.Home.Controls.Add(this.bunifuPanel3);
+            this.Home.Controls.Add(this.bunifuPanel1);
+            this.Home.Controls.Add(this.LabelCountReports);
+            this.Home.Controls.Add(this.LabelCountVehicles);
+            this.Home.Controls.Add(this.bunifuPanel2);
+            this.Home.Controls.Add(this.bunifuLabel1);
+            this.Home.Controls.Add(this.LabelCountClients);
+            this.Home.Controls.Add(this.LabelHome);
+            this.Home.Location = new System.Drawing.Point(4, 4);
+            this.Home.Name = "Home";
+            this.Home.Padding = new System.Windows.Forms.Padding(3);
+            this.Home.Size = new System.Drawing.Size(1666, 992);
+            this.Home.TabIndex = 0;
+            this.Home.Text = "Home";
+            this.ToolTip.SetToolTip(this.Home, "");
+            this.ToolTip.SetToolTipIcon(this.Home, null);
+            this.ToolTip.SetToolTipTitle(this.Home, "");
+            // 
+            // bunifuPanel3
+            // 
+            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
+            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel3.BorderColor = System.Drawing.Color.White;
+            this.bunifuPanel3.BorderRadius = 3;
+            this.bunifuPanel3.BorderThickness = 1;
+            this.bunifuPanel3.Controls.Add(this.LabelCountReportsValue);
+            this.bunifuPanel3.Location = new System.Drawing.Point(595, 260);
+            this.bunifuPanel3.Name = "bunifuPanel3";
+            this.bunifuPanel3.ShowBorders = true;
+            this.bunifuPanel3.Size = new System.Drawing.Size(231, 124);
+            this.bunifuPanel3.TabIndex = 6;
+            this.ToolTip.SetToolTip(this.bunifuPanel3, "");
+            this.ToolTip.SetToolTipIcon(this.bunifuPanel3, null);
+            this.ToolTip.SetToolTipTitle(this.bunifuPanel3, "");
+            // 
+            // LabelCountReportsValue
+            // 
+            this.LabelCountReportsValue.AllowParentOverrides = false;
+            this.LabelCountReportsValue.AutoEllipsis = false;
+            this.LabelCountReportsValue.AutoSize = false;
+            this.LabelCountReportsValue.CursorType = null;
+            this.LabelCountReportsValue.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.LabelCountReportsValue.ForeColor = System.Drawing.Color.White;
+            this.LabelCountReportsValue.Location = new System.Drawing.Point(3, 25);
+            this.LabelCountReportsValue.Name = "LabelCountReportsValue";
+            this.LabelCountReportsValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelCountReportsValue.Size = new System.Drawing.Size(225, 75);
+            this.LabelCountReportsValue.TabIndex = 4;
+            this.LabelCountReportsValue.Text = "5426";
+            this.LabelCountReportsValue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelCountReportsValue.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTip.SetToolTip(this.LabelCountReportsValue, "");
+            this.ToolTip.SetToolTipIcon(this.LabelCountReportsValue, null);
+            this.ToolTip.SetToolTipTitle(this.LabelCountReportsValue, "");
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.White;
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.LabelCountClinetsValue);
+            this.bunifuPanel1.Location = new System.Drawing.Point(41, 260);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(231, 124);
+            this.bunifuPanel1.TabIndex = 6;
+            this.ToolTip.SetToolTip(this.bunifuPanel1, "");
+            this.ToolTip.SetToolTipIcon(this.bunifuPanel1, null);
+            this.ToolTip.SetToolTipTitle(this.bunifuPanel1, "");
+            // 
+            // LabelCountClinetsValue
+            // 
+            this.LabelCountClinetsValue.AllowParentOverrides = false;
+            this.LabelCountClinetsValue.AutoEllipsis = false;
+            this.LabelCountClinetsValue.AutoSize = false;
+            this.LabelCountClinetsValue.CursorType = null;
+            this.LabelCountClinetsValue.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.LabelCountClinetsValue.ForeColor = System.Drawing.Color.White;
+            this.LabelCountClinetsValue.Location = new System.Drawing.Point(3, 25);
+            this.LabelCountClinetsValue.Name = "LabelCountClinetsValue";
+            this.LabelCountClinetsValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelCountClinetsValue.Size = new System.Drawing.Size(225, 75);
+            this.LabelCountClinetsValue.TabIndex = 4;
+            this.LabelCountClinetsValue.Text = "5426";
+            this.LabelCountClinetsValue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelCountClinetsValue.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTip.SetToolTip(this.LabelCountClinetsValue, "");
+            this.ToolTip.SetToolTipIcon(this.LabelCountClinetsValue, null);
+            this.ToolTip.SetToolTipTitle(this.LabelCountClinetsValue, "");
+            // 
+            // LabelCountReports
+            // 
+            this.LabelCountReports.AllowParentOverrides = false;
+            this.LabelCountReports.AutoEllipsis = false;
+            this.LabelCountReports.CursorType = null;
+            this.LabelCountReports.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.LabelCountReports.ForeColor = System.Drawing.Color.White;
+            this.LabelCountReports.Location = new System.Drawing.Point(595, 215);
+            this.LabelCountReports.Name = "LabelCountReports";
+            this.LabelCountReports.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelCountReports.Size = new System.Drawing.Size(170, 33);
+            this.LabelCountReports.TabIndex = 8;
+            this.LabelCountReports.Text = "Брой ремонти";
+            this.LabelCountReports.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelCountReports.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTip.SetToolTip(this.LabelCountReports, "");
+            this.ToolTip.SetToolTipIcon(this.LabelCountReports, null);
+            this.ToolTip.SetToolTipTitle(this.LabelCountReports, "");
+            // 
+            // LabelCountVehicles
+            // 
+            this.LabelCountVehicles.AllowParentOverrides = false;
+            this.LabelCountVehicles.AutoEllipsis = false;
+            this.LabelCountVehicles.CursorType = null;
+            this.LabelCountVehicles.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.LabelCountVehicles.ForeColor = System.Drawing.Color.White;
+            this.LabelCountVehicles.Location = new System.Drawing.Point(317, 215);
+            this.LabelCountVehicles.Name = "LabelCountVehicles";
+            this.LabelCountVehicles.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelCountVehicles.Size = new System.Drawing.Size(213, 33);
+            this.LabelCountVehicles.TabIndex = 6;
+            this.LabelCountVehicles.Text = "Брой автомобили";
+            this.LabelCountVehicles.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelCountVehicles.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTip.SetToolTip(this.LabelCountVehicles, "");
+            this.ToolTip.SetToolTipIcon(this.LabelCountVehicles, null);
+            this.ToolTip.SetToolTipTitle(this.LabelCountVehicles, "");
+            // 
+            // bunifuPanel2
+            // 
+            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(61)))), ((int)(((byte)(81)))));
+            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
+            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel2.BorderColor = System.Drawing.Color.White;
+            this.bunifuPanel2.BorderRadius = 3;
+            this.bunifuPanel2.BorderThickness = 1;
+            this.bunifuPanel2.Controls.Add(this.LabelCountVehiclesValue);
+            this.bunifuPanel2.Location = new System.Drawing.Point(317, 260);
+            this.bunifuPanel2.Name = "bunifuPanel2";
+            this.bunifuPanel2.ShowBorders = true;
+            this.bunifuPanel2.Size = new System.Drawing.Size(231, 124);
+            this.bunifuPanel2.TabIndex = 5;
+            this.ToolTip.SetToolTip(this.bunifuPanel2, "");
+            this.ToolTip.SetToolTipIcon(this.bunifuPanel2, null);
+            this.ToolTip.SetToolTipTitle(this.bunifuPanel2, "");
+            // 
+            // LabelCountVehiclesValue
+            // 
+            this.LabelCountVehiclesValue.AllowParentOverrides = false;
+            this.LabelCountVehiclesValue.AutoEllipsis = false;
+            this.LabelCountVehiclesValue.AutoSize = false;
+            this.LabelCountVehiclesValue.CursorType = null;
+            this.LabelCountVehiclesValue.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.LabelCountVehiclesValue.ForeColor = System.Drawing.Color.White;
+            this.LabelCountVehiclesValue.Location = new System.Drawing.Point(3, 25);
+            this.LabelCountVehiclesValue.Name = "LabelCountVehiclesValue";
+            this.LabelCountVehiclesValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelCountVehiclesValue.Size = new System.Drawing.Size(225, 75);
+            this.LabelCountVehiclesValue.TabIndex = 4;
+            this.LabelCountVehiclesValue.Text = "5426";
+            this.LabelCountVehiclesValue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelCountVehiclesValue.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTip.SetToolTip(this.LabelCountVehiclesValue, "");
+            this.ToolTip.SetToolTipIcon(this.LabelCountVehiclesValue, null);
+            this.ToolTip.SetToolTipTitle(this.LabelCountVehiclesValue, "");
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.AutoSize = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel1.Location = new System.Drawing.Point(2, 80);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(1347, 55);
+            this.bunifuLabel1.TabIndex = 4;
+            this.bunifuLabel1.Text = "ДОБРЕ ДОШЛИ!";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTip.SetToolTip(this.bunifuLabel1, "");
+            this.ToolTip.SetToolTipIcon(this.bunifuLabel1, null);
+            this.ToolTip.SetToolTipTitle(this.bunifuLabel1, "");
+            // 
+            // LabelCountClients
+            // 
+            this.LabelCountClients.AllowParentOverrides = false;
+            this.LabelCountClients.AutoEllipsis = false;
+            this.LabelCountClients.CursorType = null;
+            this.LabelCountClients.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.LabelCountClients.ForeColor = System.Drawing.Color.White;
+            this.LabelCountClients.Location = new System.Drawing.Point(41, 215);
+            this.LabelCountClients.Name = "LabelCountClients";
+            this.LabelCountClients.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelCountClients.Size = new System.Drawing.Size(163, 33);
+            this.LabelCountClients.TabIndex = 3;
+            this.LabelCountClients.Text = "Брой клиенти";
+            this.LabelCountClients.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelCountClients.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTip.SetToolTip(this.LabelCountClients, "");
+            this.ToolTip.SetToolTipIcon(this.LabelCountClients, null);
+            this.ToolTip.SetToolTipTitle(this.LabelCountClients, "");
+            // 
+            // LabelHome
+            // 
+            this.LabelHome.AllowParentOverrides = false;
+            this.LabelHome.AutoEllipsis = false;
+            this.LabelHome.AutoSize = false;
+            this.LabelHome.CursorType = null;
+            this.LabelHome.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.LabelHome.ForeColor = System.Drawing.Color.White;
+            this.LabelHome.Location = new System.Drawing.Point(2, 19);
+            this.LabelHome.Name = "LabelHome";
+            this.LabelHome.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelHome.Size = new System.Drawing.Size(1347, 55);
+            this.LabelHome.TabIndex = 1;
+            this.LabelHome.Text = "ДЖОНИ АУТО ЕООД";
+            this.LabelHome.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelHome.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTip.SetToolTip(this.LabelHome, "");
+            this.ToolTip.SetToolTipIcon(this.LabelHome, null);
+            this.ToolTip.SetToolTipTitle(this.LabelHome, "");
             // 
             // Vehicles
             // 
@@ -4087,17 +4087,18 @@ namespace VehicleServiceManagement
             // 
             this.LabelCurrentDate.AllowParentOverrides = false;
             this.LabelCurrentDate.AutoEllipsis = false;
+            this.LabelCurrentDate.AutoSize = false;
             this.LabelCurrentDate.Cursor = System.Windows.Forms.Cursors.Default;
             this.LabelCurrentDate.CursorType = System.Windows.Forms.Cursors.Default;
             this.LabelCurrentDate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.LabelCurrentDate.ForeColor = System.Drawing.Color.White;
-            this.LabelCurrentDate.Location = new System.Drawing.Point(34, 502);
+            this.LabelCurrentDate.Location = new System.Drawing.Point(30, 502);
             this.LabelCurrentDate.Name = "LabelCurrentDate";
             this.LabelCurrentDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelCurrentDate.Size = new System.Drawing.Size(14, 17);
+            this.LabelCurrentDate.Size = new System.Drawing.Size(22, 18);
             this.LabelCurrentDate.TabIndex = 9;
-            this.LabelCurrentDate.Text = "12";
-            this.LabelCurrentDate.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LabelCurrentDate.Text = "5";
+            this.LabelCurrentDate.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelCurrentDate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTip.SetToolTip(this.LabelCurrentDate, "");
             this.ToolTip.SetToolTipIcon(this.LabelCurrentDate, null);
@@ -4783,17 +4784,17 @@ namespace VehicleServiceManagement
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.panelDragControl.ResumeLayout(false);
             this.MainPages.ResumeLayout(false);
-            this.Home.ResumeLayout(false);
-            this.Home.PerformLayout();
-            this.bunifuPanel3.ResumeLayout(false);
-            this.bunifuPanel1.ResumeLayout(false);
-            this.bunifuPanel2.ResumeLayout(false);
             this.Clients.ResumeLayout(false);
             this.Clients.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewClients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.ShadowPanelCurrentClient.ResumeLayout(false);
             this.ShadowPanelCurrentClient.PerformLayout();
+            this.Home.ResumeLayout(false);
+            this.Home.PerformLayout();
+            this.bunifuPanel3.ResumeLayout(false);
+            this.bunifuPanel1.ResumeLayout(false);
+            this.bunifuPanel2.ResumeLayout(false);
             this.Vehicles.ResumeLayout(false);
             this.Vehicles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVehicles)).EndInit();
@@ -4812,7 +4813,6 @@ namespace VehicleServiceManagement
             this.Settings.ResumeLayout(false);
             this.Settings.PerformLayout();
             this.PanelButtons.ResumeLayout(false);
-            this.PanelButtons.PerformLayout();
             this.PanelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUserAvatar)).EndInit();
             this.ResumeLayout(false);

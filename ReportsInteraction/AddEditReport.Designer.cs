@@ -563,7 +563,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxWorkPrice.Padding = new System.Windows.Forms.Padding(3);
             this.TextBoxWorkPrice.PasswordChar = '\0';
             this.TextBoxWorkPrice.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.TextBoxWorkPrice.PlaceholderText = "50.00";
+            this.TextBoxWorkPrice.PlaceholderText = "";
             this.TextBoxWorkPrice.ReadOnly = false;
             this.TextBoxWorkPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TextBoxWorkPrice.SelectedText = "";
@@ -577,7 +577,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxWorkPrice.TextMarginBottom = 0;
             this.TextBoxWorkPrice.TextMarginLeft = 3;
             this.TextBoxWorkPrice.TextMarginTop = 0;
-            this.TextBoxWorkPrice.TextPlaceholder = "50.00";
+            this.TextBoxWorkPrice.TextPlaceholder = "";
             this.TextBoxWorkPrice.UseSystemPasswordChar = false;
             this.TextBoxWorkPrice.WordWrap = true;
             this.TextBoxWorkPrice.TextChanged += new System.EventHandler(this.TextBoxWorkPrice_TextChanged);

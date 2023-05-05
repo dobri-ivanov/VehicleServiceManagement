@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 using VehicleServiceManagement.AlertBoxes;
 using VehicleServiceManagement.Print;
@@ -770,6 +771,7 @@ namespace VehicleServiceManagement
             connection.Close();
             FillClientsTable();
 
+
             ButtonSave.Enabled = false;
             ButtonCancel.Enabled = false;
             TextBoxName.Enabled = false;
@@ -1010,7 +1012,7 @@ namespace VehicleServiceManagement
             ShadowPanelCurrentReport.Visible = true;
 
             currentReportId = id;
-            TextBoxDate.Text = DateTime.Parse(date).ToString("d");
+            TextBoxDate.Text = DateTime.Parse(date, Thread.CurrentThread.CurrentCulture).ToString("d");
             LabelReportTitle.Text = title;
             TextBoxVehicleInformation.Text = GetVehicleInformation(licensePlate);
             TextBoxCustomer.Text = GetOwnerInformation(licensePlate);

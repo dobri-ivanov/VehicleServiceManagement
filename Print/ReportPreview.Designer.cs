@@ -87,7 +87,6 @@ namespace VehicleServiceManagement.Print
             // 
             // printDocument1
             // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // printPreviewDialog1
             // 
@@ -467,7 +466,7 @@ namespace VehicleServiceManagement.Print
             this.TextBoxWorkPrice.IconRight = null;
             this.TextBoxWorkPrice.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.TextBoxWorkPrice.Lines = new string[0];
-            this.TextBoxWorkPrice.Location = new System.Drawing.Point(627, 804);
+            this.TextBoxWorkPrice.Location = new System.Drawing.Point(627, 791);
             this.TextBoxWorkPrice.MaxLength = 32767;
             this.TextBoxWorkPrice.MinimumSize = new System.Drawing.Size(1, 1);
             this.TextBoxWorkPrice.Modified = false;
@@ -830,7 +829,7 @@ namespace VehicleServiceManagement.Print
             this.ButtonPrint.OnPressedState.BorderRadius = 30;
             this.ButtonPrint.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.ButtonPrint.OnPressedState.BorderThickness = 1;
-            this.ButtonPrint.OnPressedState.FillColor = System.Drawing.Color.Gray;
+            this.ButtonPrint.OnPressedState.FillColor = System.Drawing.Color.White;
             this.ButtonPrint.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.ButtonPrint.OnPressedState.IconLeftImage = null;
             this.ButtonPrint.OnPressedState.IconRightImage = null;

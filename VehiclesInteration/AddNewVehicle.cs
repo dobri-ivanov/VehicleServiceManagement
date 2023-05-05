@@ -234,7 +234,7 @@ namespace VehicleServiceManagement
                         string vin = TextBoxVinNumber.Text;
 
                         string query = "INSERT INTO Vehicles(LicensePlate, HorsePower, Capacity, Year, Fuel, Transmission, ClientID, Make, Model, Vin) " +
-                            "VALUES(N'" + licensePlate + "', '" + horsePower + "', '" + capacity + "', '" + year + "', N'" + fuel + "', N'" + transmission + "', '" + currentClientId + "', '" + make + "', '" + model + "', '" + vin + "')";
+                            "VALUES(N'" + licensePlate + "', '" + horsePower + "', '" + capacity + "', '" + year + "', N'" + fuel + "', N'" + transmission + "', '" + currentClientId + "', N'" + make + "', N'" + model + "', '" + vin + "')";
 
                         command = new SqlCommand(query, connection);
                         command.ExecuteNonQuery();
@@ -268,7 +268,7 @@ namespace VehicleServiceManagement
                 SqlConnection connection = new SqlConnection(Main.currentConnectionString);
                 connection.Open();
 
-                string query = "UPDATE Vehicles SET LicensePlate = N'" + licensePlate + "', HorsePower = '" + horsePower + "', Capacity = '" + capacity + "', Year = '" + year + "', Fuel = N'" + fuel + "', Transmission = N'" + transmission + "', ClientID = '" + currentClientId + "', Make = '" + make + "', Model = '" + model + "', Vin = '" + vin + "' WHERE LicensePlate = N'" + currentlicensePlate + "';";
+                string query = "UPDATE Vehicles SET LicensePlate = N'" + licensePlate + "', HorsePower = '" + horsePower + "', Capacity = '" + capacity + "', Year = '" + year + "', Fuel = N'" + fuel + "', Transmission = N'" + transmission + "', ClientID = '" + currentClientId + "', Make = N'" + make + "', Model = N'" + model + "', Vin = '" + vin + "' WHERE LicensePlate = N'" + currentlicensePlate + "';";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
                 connection.Close();

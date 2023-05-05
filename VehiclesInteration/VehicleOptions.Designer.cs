@@ -113,7 +113,7 @@ namespace VehicleServiceManagement
             this.bunifuButton1.BackColor1 = System.Drawing.Color.Gray;
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.ButtonText = "РЕМОТИ";
+            this.bunifuButton1.ButtonText = "РЕМОНТИ";
             this.bunifuButton1.ButtonTextMarginLeft = 0;
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;

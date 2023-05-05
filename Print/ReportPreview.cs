@@ -215,12 +215,7 @@ namespace VehicleServiceManagement.Print
 
             return totalPrice;
         }
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            e.Graphics.DrawImage(bitmap, 0, 0);
-        }
 
-        Bitmap bitmap;
         private void ButtonPrint_Click(object sender, EventArgs e)
         {
             ButtonPrint.Visible = false;
@@ -228,8 +223,8 @@ namespace VehicleServiceManagement.Print
             System.Drawing.Bitmap b = new System.Drawing.Bitmap(this.Width, this.Height);
             this.DrawToBitmap(b, new Rectangle(0, 0, this.Width, this.Height));
 
-            b.Save(@"C:\Users\Dobri's PC\Documents\report.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
-            Process.Start(@"C:\Users\Dobri's PC\Documents\report.jpg");
+            b.Save(@"report.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            Process.Start(@"report.jpeg");
 
             this.Close();
         }

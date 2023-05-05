@@ -96,8 +96,9 @@ namespace VehicleServiceManagement
 
 
             AlertBoxDeleteVehicle alertBoxDeleteVehicle = new AlertBoxDeleteVehicle();
-            
             alertBoxDeleteVehicle.ShowData(text, this);
+
+            Exit();
         }
         public void DeleteVehicle()
         {

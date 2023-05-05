@@ -1075,7 +1075,7 @@ namespace VehicleServiceManagement
             this.TextBoxMake.Padding = new System.Windows.Forms.Padding(3);
             this.TextBoxMake.PasswordChar = '\0';
             this.TextBoxMake.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.TextBoxMake.PlaceholderText = "Въведете име";
+            this.TextBoxMake.PlaceholderText = "Въведете марка";
             this.TextBoxMake.ReadOnly = false;
             this.TextBoxMake.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TextBoxMake.SelectedText = "";
@@ -1089,7 +1089,7 @@ namespace VehicleServiceManagement
             this.TextBoxMake.TextMarginBottom = 0;
             this.TextBoxMake.TextMarginLeft = 3;
             this.TextBoxMake.TextMarginTop = 0;
-            this.TextBoxMake.TextPlaceholder = "Въведете име";
+            this.TextBoxMake.TextPlaceholder = "Въведете марка";
             this.TextBoxMake.UseSystemPasswordChar = false;
             this.TextBoxMake.WordWrap = true;
             // 
