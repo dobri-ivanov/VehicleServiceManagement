@@ -53,6 +53,7 @@ Vehicle Service Management System is a desktop application for managing vehicle 
 
 ## Usage
 
+- Download installer - (soon...)
 - Launch the application
 - Enter your login information
 - Explore the dashboard and services that application provides
