@@ -300,19 +300,22 @@ namespace VehicleServiceManagement.ReportsInteraction
 
         private void DeleteCurrentReport()
         {
-            SqlConnection connection;
-            SqlCommand command;
-
-            connection = new SqlConnection(Main.currentConnectionString);
+            SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
 
             string query =
-                "DELETE FROM Reports " +
-                "WHERE ID = '" + currentReportId + "'";
+                $"DELETE FROM ReportContents " +
+                $"WHERE ReportID = '" + currentReportId + "'";
 
-            command = new SqlCommand(query, connection);
+            string query2 =
+              $"DELETE FROM Reports " +
+              $"WHERE ID = '" + currentReportId + "'";
+
+            SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
 
+            command = new SqlCommand(query2, connection);
+            command.ExecuteNonQuery();
             connection.Close();
         }
 

@@ -396,8 +396,8 @@ namespace VehicleServiceManagement
             // 
             this.MainPages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.MainPages.AllowTransitions = true;
-            this.MainPages.Controls.Add(this.Clients);
             this.MainPages.Controls.Add(this.Home);
+            this.MainPages.Controls.Add(this.Clients);
             this.MainPages.Controls.Add(this.Vehicles);
             this.MainPages.Controls.Add(this.Raports);
             this.MainPages.Controls.Add(this.Calendar);
@@ -406,10 +406,10 @@ namespace VehicleServiceManagement
             this.MainPages.Margin = new System.Windows.Forms.Padding(0);
             this.MainPages.Multiline = true;
             this.MainPages.Name = "MainPages";
-            this.MainPages.Page = this.Clients;
+            this.MainPages.Page = this.Home;
             this.MainPages.PageIndex = 0;
-            this.MainPages.PageName = "Clients";
-            this.MainPages.PageTitle = "Clients";
+            this.MainPages.PageName = "Home";
+            this.MainPages.PageTitle = "Home";
             this.MainPages.SelectedIndex = 0;
             this.MainPages.Size = new System.Drawing.Size(1674, 1018);
             this.MainPages.TabIndex = 3;

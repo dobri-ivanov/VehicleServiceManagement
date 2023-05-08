@@ -27,15 +27,24 @@ namespace VehicleServiceManagement
         public Main()
         {
             InitializeComponent();
+            SetCurrentDate();
             Setup();
         }
+
+       
+
         public Main(string name)
         {
             InitializeComponent();
-            DateTime today = DateTime.Now;
             LabelUserName.Text = name;
-            LabelCurrentDate.Text = today.Day.ToString();
+            SetCurrentDate();
             Setup();
+        }
+
+        private void SetCurrentDate()
+        {
+            DateTime today = DateTime.Now;
+            LabelCurrentDate.Text = today.Day.ToString();
         }
 
         private void Setup()
@@ -459,18 +468,18 @@ namespace VehicleServiceManagement
 
                 SqlConnection connection = new SqlConnection(Main.currentConnectionString);
                 connection.Open();
-                string selectQuery = "SELECT * FROM Clients WHERE PhoneNumber = '" + phoneNumber + "'";
+                string selectQuery = "SELECT * FROM Clients WHERE PhoneNumber = N'" + phoneNumber + "'";
                 command = new SqlCommand(selectQuery, connection);
 
                 SqlDataReader read = command.ExecuteReader();
                 if (!read.HasRows)
                 {
                     read.Close();
-                    query = "INSERT INTO Clients(FirstName, LastName, PhoneNumber) VALUES(N'" + name + "', N'" + lastName + "', '" + phoneNumber + "')";
+                    query = "INSERT INTO Clients(FirstName, LastName, PhoneNumber) VALUES(N'" + name + "', N'" + lastName + "', N'" + phoneNumber + "')";
                     if (TextBoxNickname.Text.Length > 0)
                     {
                         string nickname = TextBoxNickname.Text;
-                        query = "INSERT INTO Clients(FirstName, LastName, PhoneNumber, Nickname) VALUES(N'" + name + "', N'" + lastName + "', '" + phoneNumber + "', N'" + nickname + "')";
+                        query = "INSERT INTO Clients(FirstName, LastName, PhoneNumber, Nickname) VALUES(N'" + name + "', N'" + lastName + "', N'" + phoneNumber + "', N'" + nickname + "')";
                     }
 
                     command = new SqlCommand(query, connection);
@@ -726,7 +735,7 @@ namespace VehicleServiceManagement
             {
                 SqlConnection connection = new SqlConnection(Main.currentConnectionString);
                 connection.Open();
-                string query = "DELETE FROM Clients WHERE PhoneNumber = '" + currentPhoneNumber + "';";
+                string query = "DELETE FROM Clients WHERE PhoneNumber = N'" + currentPhoneNumber + "';";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
                 connection.Close();
@@ -765,7 +774,7 @@ namespace VehicleServiceManagement
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
 
-            string query = "UPDATE Clients SET FirstName = N'" + currentName + "', LastName = N'" + currentLastName + "', PhoneNumber = '" + currentPhoneNumber + "', Nickname = N'" + currentNickname + "' WHERE PhoneNumber = '" + oldPhoneNumber + "';";
+            string query = "UPDATE Clients SET FirstName = N'" + currentName + "', LastName = N'" + currentLastName + "', PhoneNumber = N'" + currentPhoneNumber + "', Nickname = N'" + currentNickname + "' WHERE PhoneNumber = '" + oldPhoneNumber + "';";
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
             connection.Close();
@@ -838,7 +847,7 @@ namespace VehicleServiceManagement
             SqlConnection connection = new SqlConnection(Main.currentConnectionString);
             connection.Open();
             string phoneNum = TextBoxPhoneNumber.Text;
-            string query = "SELECT * FROM Clients WHERE PhoneNumber = '" + phoneNum + "'";
+            string query = "SELECT * FROM Clients WHERE PhoneNumber = N'" + phoneNum + "'";
 
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader read = command.ExecuteReader();
@@ -1116,7 +1125,7 @@ namespace VehicleServiceManagement
 
             SqlDataReader read = (null);
             string query =
-                $"SELECT CONCAT(c.FirstName, ' ', c.LastName, ' | ', c.PhoneNumber) AS result " +
+                $"SELECT CONCAT(c.FirstName, ' ', c.LastName) AS result " +
                 "FROM Clients as c " +
                 "JOIN Vehicles as v ON c.ID = v.ClientID " +
                 "WHERE LicensePlate = N'" + licensePlate + "'";

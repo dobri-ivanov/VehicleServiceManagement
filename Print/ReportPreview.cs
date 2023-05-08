@@ -143,7 +143,7 @@ namespace VehicleServiceManagement.Print
 
             SqlDataReader read = (null);
             string query =
-                $"SELECT CONCAT(c.FirstName, ' ', c.LastName, ' | ', c.PhoneNumber) AS result " +
+                $"SELECT CONCAT(c.FirstName, ' ', c.LastName) AS result " +
                 "FROM Clients as c " +
                 "JOIN Vehicles as v ON c.ID = v.ClientID " +
                 "WHERE LicensePlate = N'" + licensePlate + "'";
