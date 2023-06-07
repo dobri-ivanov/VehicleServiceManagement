@@ -717,7 +717,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxModification.SelectionLength = 0;
             this.TextBoxModification.SelectionStart = 0;
             this.TextBoxModification.ShortcutsEnabled = true;
-            this.TextBoxModification.Size = new System.Drawing.Size(225, 52);
+            this.TextBoxModification.Size = new System.Drawing.Size(298, 52);
             this.TextBoxModification.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.TextBoxModification.TabIndex = 80;
             this.TextBoxModification.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -809,7 +809,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxVehicle.SelectionLength = 0;
             this.TextBoxVehicle.SelectionStart = 0;
             this.TextBoxVehicle.ShortcutsEnabled = true;
-            this.TextBoxVehicle.Size = new System.Drawing.Size(224, 43);
+            this.TextBoxVehicle.Size = new System.Drawing.Size(332, 43);
             this.TextBoxVehicle.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.TextBoxVehicle.TabIndex = 78;
             this.TextBoxVehicle.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

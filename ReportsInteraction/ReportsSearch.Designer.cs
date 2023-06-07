@@ -49,14 +49,14 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.TextBoxSearchReport = new Bunifu.UI.WinForms.BunifuTextBox();
             this.DataGridViewRaports = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleLicensePlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GetReport = new System.Windows.Forms.DataGridViewImageColumn();
-            this.reportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ButtonClose = new Bunifu.UI.WinForms.BunifuImageButton();
             this.LableTitle = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleLicensePlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewRaports)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportBindingSource)).BeginInit();
@@ -390,7 +390,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.DataGridViewRaports.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
             this.DataGridViewRaports.HeaderBgColor = System.Drawing.Color.Empty;
             this.DataGridViewRaports.HeaderForeColor = System.Drawing.Color.White;
-            this.DataGridViewRaports.Location = new System.Drawing.Point(3, 185);
+            this.DataGridViewRaports.Location = new System.Drawing.Point(6, 185);
             this.DataGridViewRaports.MaximumSize = new System.Drawing.Size(1900, 1900);
             this.DataGridViewRaports.MultiSelect = false;
             this.DataGridViewRaports.Name = "DataGridViewRaports";
@@ -402,7 +402,7 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.DataGridViewRaports.RowTemplate.ReadOnly = true;
             this.DataGridViewRaports.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGridViewRaports.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewRaports.Size = new System.Drawing.Size(662, 614);
+            this.DataGridViewRaports.Size = new System.Drawing.Size(656, 614);
             this.DataGridViewRaports.TabIndex = 22;
             this.DataGridViewRaports.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             this.DataGridViewRaports.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewRaports_CellContentClick);
@@ -417,30 +417,6 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.FillWeight = 340.5018F;
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Заглавие";
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vehicleLicensePlateDataGridViewTextBoxColumn
-            // 
-            this.vehicleLicensePlateDataGridViewTextBoxColumn.DataPropertyName = "VehicleLicensePlate";
-            this.vehicleLicensePlateDataGridViewTextBoxColumn.FillWeight = 126.1118F;
-            this.vehicleLicensePlateDataGridViewTextBoxColumn.HeaderText = "Рег. номер";
-            this.vehicleLicensePlateDataGridViewTextBoxColumn.Name = "vehicleLicensePlateDataGridViewTextBoxColumn";
-            this.vehicleLicensePlateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // creationDateDataGridViewTextBoxColumn
-            // 
-            this.creationDateDataGridViewTextBoxColumn.DataPropertyName = "CreationDate";
-            this.creationDateDataGridViewTextBoxColumn.FillWeight = 126.1118F;
-            this.creationDateDataGridViewTextBoxColumn.HeaderText = "Дата";
-            this.creationDateDataGridViewTextBoxColumn.Name = "creationDateDataGridViewTextBoxColumn";
-            this.creationDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // GetReport
             // 
             this.GetReport.FillWeight = 34.01015F;
@@ -449,10 +425,6 @@ namespace VehicleServiceManagement.ReportsInteraction
             this.GetReport.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.GetReport.Name = "GetReport";
             this.GetReport.ReadOnly = true;
-            // 
-            // reportBindingSource
-            // 
-            this.reportBindingSource.DataSource = typeof(VehicleServiceManagement.Report);
             // 
             // ButtonClose
             // 
@@ -510,6 +482,34 @@ namespace VehicleServiceManagement.ReportsInteraction
             // 
             this.bunifuElipse1.ElipseRadius = 25;
             this.bunifuElipse1.TargetControl = this;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.FillWeight = 340.5018F;
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Заглавие";
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vehicleLicensePlateDataGridViewTextBoxColumn
+            // 
+            this.vehicleLicensePlateDataGridViewTextBoxColumn.DataPropertyName = "VehicleLicensePlate";
+            this.vehicleLicensePlateDataGridViewTextBoxColumn.FillWeight = 126.1118F;
+            this.vehicleLicensePlateDataGridViewTextBoxColumn.HeaderText = "Рег. номер";
+            this.vehicleLicensePlateDataGridViewTextBoxColumn.Name = "vehicleLicensePlateDataGridViewTextBoxColumn";
+            this.vehicleLicensePlateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // creationDateDataGridViewTextBoxColumn
+            // 
+            this.creationDateDataGridViewTextBoxColumn.DataPropertyName = "CreationDate";
+            this.creationDateDataGridViewTextBoxColumn.FillWeight = 126.1118F;
+            this.creationDateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.creationDateDataGridViewTextBoxColumn.Name = "creationDateDataGridViewTextBoxColumn";
+            this.creationDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // reportBindingSource
+            // 
+            this.reportBindingSource.DataSource = typeof(VehicleServiceManagement.Report);
             // 
             // ReportsSearch
             // 

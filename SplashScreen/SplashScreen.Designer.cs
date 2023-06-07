@@ -87,7 +87,6 @@ namespace VehicleServiceManagement
             this.LabelTitle.Text = "VEHICLE SERVICE MANAGEMENT";
             this.LabelTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.LabelTitle.Click += new System.EventHandler(this.bunifuLabel1_Click);
             // 
             // PictureBoxLogo
             // 
@@ -124,7 +123,6 @@ namespace VehicleServiceManagement
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VSM";
-            this.Load += new System.EventHandler(this.SplashScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

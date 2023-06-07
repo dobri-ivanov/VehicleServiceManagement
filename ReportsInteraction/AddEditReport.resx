@@ -772,10 +772,10 @@
   </data>
   <data name="TextBoxModification.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOEAAAA0CAYAAAB8QF/mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABgSURBVHhe7dW5DQAgDARBl0opdGZ3xpMjkUEyI20JpwsA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgIjPbqkv6U1TVkPSv/YTHdUp6
-        UfYJOqOq430evc0AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAASoAAAA0CAYAAAA9kXVwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABuSURBVHhe7dZLDQAwCERBpFYKzsBZP/cK4DCTPAubDQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGKmq1i0l
+        aWrR3VuSJvce1XfBJGlGlQfd5yfRSLnWwgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="LabelModification.BaseStylesheet" xml:space="preserve">
@@ -783,10 +783,10 @@
   </data>
   <data name="TextBoxVehicle.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOAAAAArCAYAAABhAoSWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABXSURBVHhe7dU7DQAgEERBpCIFZ3fO+NTQAs1M8iRstgAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAu4iosybpfSUzu6Q/rQc8LlPS7aINPhyiKnUf
-        PMUAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAUwAAAArCAYAAAAT6LEJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABqSURBVHhe7dZLDQAgDERBpCIFZ60zPrceCBiYSZ6FzTYA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoIqLvhiTpXcvM
+        KUn6dx7mdUklSbUYC23AUHJCDvTFAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="LabelVehicle.BaseStylesheet" xml:space="preserve">

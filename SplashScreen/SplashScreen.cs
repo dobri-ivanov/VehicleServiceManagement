@@ -17,16 +17,6 @@ namespace VehicleServiceManagement
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SplashScreen_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Timer_Tick(object sender, EventArgs e)
         {
             Timer.Enabled = true;
@@ -34,15 +24,12 @@ namespace VehicleServiceManagement
             if (ProgressBarLoading.Value == 200)
             {
                 Timer.Enabled = false;
-                Login login = new Login();
-                login.Show();
+                //Login login = new Login();
+                //login.Show();
+                Main m = new Main();
+                m.Show();
                 this.Hide();
             }
-        }
-
-        private void bunifuLabel1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
