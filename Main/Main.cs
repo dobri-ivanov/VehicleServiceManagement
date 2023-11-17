@@ -23,7 +23,7 @@ namespace VehicleServiceManagement
         private bool isMinimized = false;
 
         public static string currentConnectionString =
-            "Data Source=(localdb)\\LocalHost;Initial Catalog=VehicleServiceManagement;Integrated Security=True";
+            "";
         public Main()
         {
             InitializeComponent();
@@ -868,6 +868,7 @@ namespace VehicleServiceManagement
 
         public void ChangeVehicleSearchText(string text)
         {
+            TextBoxSearchVehicles.Text = String.Empty;
             TextBoxSearchVehicles.Text = text;
         }
         private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
