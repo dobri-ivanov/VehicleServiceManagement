@@ -105,6 +105,7 @@ namespace VehicleServiceManagement
             {
                 if (connection.State == System.Data.ConnectionState.Open)
                 {
+                    //Login query to db
                     SqlDataReader read = (null);
                     string query = "SELECT * FROM users WHERE Username = @user AND Password = @pass;";
                     SqlCommand command = new SqlCommand(query, connection);
@@ -170,6 +171,11 @@ namespace VehicleServiceManagement
         }
 
         private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel_Click(object sender, EventArgs e)
         {
 
         }

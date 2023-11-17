@@ -75,6 +75,7 @@ namespace VehicleServiceManagement
             this.Panel.ShowBorders = true;
             this.Panel.Size = new System.Drawing.Size(573, 619);
             this.Panel.TabIndex = 0;
+            this.Panel.Click += new System.EventHandler(this.Panel_Click);
             // 
             // DragPanel
             // 
