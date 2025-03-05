@@ -69,13 +69,13 @@ Vehicle Service Management System is a desktop application for managing vehicle 
 <h3>Main<h3/>
 
  - Home
-<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101778932434489424/image.png?ex=67c95517&is=67c80397&hm=6092865fdcd58290683c3496b8c5c03c514d418756ae8232da2c17d4f7cd13ab&" width="50%">
+<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101787315816374302/image.png?ex=67c95ce6&is=67c80b66&hm=161e2eece18172bf8d27223a4cac2a997007f46d357cb9e329b5962d04a3b0bc&" width="50%">
 
  - Customers
 <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101780118663335956/image.png?ex=67c95632&is=67c804b2&hm=d4434b3b5486ec696dcd7be0345ca76068036c5cdb0009fd77a01414b0112510&" width="50%">
 
  - Vehicles
-<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101780118663335956/image.png?ex=67c95632&is=67c804b2&hm=d4434b3b5486ec696dcd7be0345ca76068036c5cdb0009fd77a01414b0112510&" width="50%">
+<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101781945073008670/image.png?ex=67c957e5&is=67c80665&hm=af5f2209e48ce422b4436feb660fbb07f928bae0d1909ec0b210aeb80f6c42be&" width="50%">
 
  - Records
 <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101786582303903795/image.png?ex=67c95c37&is=67c80ab7&hm=28d2cc9e5bcae0585a9f6e3204a00704d9079c7e1ecbb617a73402b3016f0f00&" width="50%">
@@ -86,36 +86,36 @@ Vehicle Service Management System is a desktop application for managing vehicle 
 <h3>Interaction panels<h3/>
 
  - Customer's vehicles
- <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101787497119359016/image.png?ex=669a2411&is=6698d291&hm=0e3f69d220b4b58b529870d9ca1f501e9146c460b600b8336e6b5b7165a96658&" width="50%">
+ <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101787497119359016/image.png?ex=67c95d11&is=67c80b91&hm=2f9bec004db36e84fc463cff0077395048135a736ca59c1f11352a2aa3888fd2&" width="50%">
  
   - Vehicle's reports history
- <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101787621195251712/image.png?ex=669a242f&is=6698d2af&hm=a037558b85bd83aa1118fee97730ef5574334ed4bc17101bcafce374afdd02a2&" width="50%">
+ <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101787621195251712/image.png?ex=67c95d2f&is=67c80baf&hm=cfd917c94cedffc620c076dee88e59758638afb39d420787e75c5ceffb8fc2ac&" width="50%">
  
   - Vehicle options panel
- <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101787751105437696/image.png?ex=669a244e&is=6698d2ce&hm=954166c08b39c23a444e5c968cd6c2f236637719ecb9fc3aac78433137469039&" width="20%">
+ <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101787751105437696/image.png?ex=67c95d4e&is=67c80bce&hm=fa93fe7be2b7d93033b39c5e675f6cc55c906f21c6729c15b07e75869ab01e1c&" width="20%">
  
    - Add vehicle | search customers panel
- <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101788021147312198/image.png?ex=669a248e&is=6698d30e&hm=550d0b5622f8200d120ac04804379a2ac4b99fe2ae40c08218db161e8f17196e&" width="50%">
+ <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101787861629554739/image.png?ex=67c95d68&is=67c80be8&hm=343bc9a443e0af2a6bce6f94211d490473df7e923d4634730457aae7839cd178&" width="50%">
  
    - Add report | search vehicles panel
- <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101788134431281223/image.png?ex=669a24a9&is=6698d329&hm=56ed2e9b7c071c354fbfc93991a8df1f4ddc0c20308738644823764f1b37106d&" width="50%">
+ <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101788021147312198/image.png?ex=67c95d8e&is=67c80c0e&hm=2974cf2ecb20bbfa67791866c3075fda0bd499e138cfd672f84af8878566ffbf&" width="50%">
  
    - Add/Edit vehicle
  <div style = "display: grid;">
-    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101787861629554739/image.png?ex=669a2468&is=6698d2e8&hm=bdda2cb4f69bab9bf5b5ef751b69598a5fc0d8eab426b7aad3d9c87b4faf5386&" width="45%">
-    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101792307923124265/image.png?ex=669a288c&is=6698d70c&hm=580f988b1b0e83cd4332a988a1208ff2b6582834b83a99b9358e4dca7b906f4c&" width="45%">
+    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101787861629554739/image.png?ex=67c95d68&is=67c80be8&hm=343bc9a443e0af2a6bce6f94211d490473df7e923d4634730457aae7839cd178&" width="45%">
+    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101792307923124265/image.png?ex=67c8b8cc&is=67c7674c&hm=fc9c3e83064106a088b8fdd75f78e4385618c033532c271473b108304b9fcbf8&" width="45%">
  </div>
  
   - Add/Edit report
  <div style = "display: grid;">
-    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101788236533207040/image.png?ex=669a24c1&is=6698d341&hm=c40a975ec6e984a8f0321c2f519ff2f1b53ae020d014e6a44cab68c850172498&" width="48%">
-    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101788314987659334/image.png?ex=669a24d4&is=6698d354&hm=44f08cd0c903877621a4bf54fce83006c97923854087b725cb94b0e79c569023&" width="48%">
+    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101788236533207040/image.png?ex=67c95dc1&is=67c80c41&hm=36c13fb49b9a742778dc4c94fc98fa8973bca9d729172c86fcbfda99fbc7b780&" width="48%">
+    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101788314987659334/image.png?ex=67c95dd4&is=67c80c54&hm=3c4a8a50a5667cc486323d4c72052260ca07bd1c31d4d29a4281dfff892b6ff3&" width="48%">
  </div>
  
   - Add/Edit/Delete item to report
  <div style = "display: grid;">
-    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101797807989465168/image.png?ex=669a2dab&is=6698dc2b&hm=abaf113a88aef7b48f3a96b90f70cbb3413f937dc7b741991086b260d98c6093&" width="50%">
-    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101797853598318673/image.png?ex=669a2db6&is=6698dc36&hm=12661b1a9eed57ce9dd8ea38b41fc3c76d8cc2b7342291fb64538c4699caf86d&" width="50%">
+    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101797807989465168/image.png?ex=67c8bdeb&is=67c76c6b&hm=f9577fbf97f7ca714a93526da7a443535cd0699dbc537096ebaa15a3419e816c&" width="50%">
+    <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101797853598318673/image.png?ex=67c8bdf6&is=67c76c76&hm=12de00f4cbe4ac4cee8c9883529dc3981ea3bcb9a9d211e345aa7f7b9d9e769a&" width="50%">
  </div>
  
   - Report preview (ready to print)
