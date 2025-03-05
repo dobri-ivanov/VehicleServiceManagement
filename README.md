@@ -119,20 +119,20 @@ Vehicle Service Management System is a desktop application for managing vehicle 
  </div>
  
   - Report preview (ready to print)
- <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101788505564266536/image.png?ex=669a2501&is=6698d381&hm=91324d493b93254345bf9a282d57c1f55806f2cc159b47e3efcdfea59b15be1e&" width="50%">
+ <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101788505564266536/image.png?ex=67c95e01&is=67c80c81&hm=5a19690142e1315a91126d76b37d1796ef4ca655c6c94536f5205ca9e5bd07b2&" width="50%">
  
  <h3>Alerts<h3/>
-  <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101793567111921714/image.png?ex=669a29b8&is=6698d838&hm=6ec22323c657feb198a1d5fe8f0a8ffe5bf2c80c4fd841e0bd5ed769cdcba93c&" width="50%">
-  <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101793903386042448/image.png?ex=669a2a08&is=6698d888&hm=4e7f610bca9fdff1dadb3890373e3e912c0bf15ee733c9ad9c75de5115a14127&" width="30%">
-  <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101794222232830022/image.png?ex=669a2a54&is=6698d8d4&hm=ee24f9e2711e7e4cbfe6087c05ae898b4cebcc1cdbfeed4089ab57759295c474&" width="50%">
-  <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101794591885238322/image.png?ex=669a2aad&is=6698d92d&hm=e986f69acce15032eab41e1a434edd0bcfd1f2dbd4e480ab11acc5b1cadb780d&" width="50%">
+  <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101793567111921714/image.png?ex=67c8b9f8&is=67c76878&hm=dae6127fd51a7feca242d6d61c0986b90e4cd99a9093871ebd75eaff650f76db&" width="50%">
+  <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101793903386042448/image.png?ex=67c8ba48&is=67c768c8&hm=f23654ff980e948eb8ec6f430285818eaf6efcfc98f5f8b44855dc4684c1e565&" width="30%">
+  <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101794222232830022/image.png?ex=67c8ba94&is=67c76914&hm=c1521e95c9a4269e059f94aa210dd961497670d9af4f4f1bf1a65e1c142fce4e&" width="50%">
+  <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101794591885238322/image.png?ex=67c8baed&is=67c7696d&hm=72ef368818d5d774365350a5700c79d646fff34ebe4f2e5bbd9922459bcb49ea&" width="50%">
 
  <h3>Notifications<h3/>
-   <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101794930873094154/image.png?ex=669a2afd&is=6698d97d&hm=684687edc42eb54c18fbcaa0db69212cf2ec2b3a1f6a234fbd253411c487f275&" width="50%">
-   <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101795390413623367/image.png?ex=669a2b6b&is=6698d9eb&hm=196710b62017758037c40d2a76178c536b5fd4afde75939a5698ba474e5d5500&" width="50%">
+   <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101794930873094154/image.png?ex=67c8bb3d&is=67c769bd&hm=8cb21117c6d1257ddb7873f86d45ffc2f9e655cbe9a29edcf2cca4d5235cf79f&" width="50%">
+   <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101795390413623367/image.png?ex=67c8bbab&is=67c76a2b&hm=c8b867d7468798a912c6534d3d8a7346a0f9e8e95b34f2afea33ad949139b95c&" width="50%">
    
  <h3>Database diagram<h3/>
-   <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101797545086304336/image.png?ex=669a2d6d&is=6698dbed&hm=9bed65c6ac103d232d4b2f8af339baa36c788dedec09a9b217cb04b4998de229&" width="50%">
+   <img src="https://cdn.discordapp.com/attachments/837093180783722536/1101797545086304336/image.png?ex=67c8bdad&is=67c76c2d&hm=403e0920b42b3eb9f532cd2d545399a1b2b69c0c24e21f4039aea2a770fc992e&" width="50%">
 
 
 ## Contributing
