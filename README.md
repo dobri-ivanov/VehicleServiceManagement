@@ -61,27 +61,27 @@ Vehicle Service Management System is a desktop application for managing vehicle 
 ---
 ## Gallery
 <h3>Splash Screen<h3/>
-<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101778838498840636/image.png?ex=669a1c01&is=6698ca81&hm=5b035e0f483dd54be77290856a8ac995488689e2efff1bd8a6f22b71d41ecd58&" width="50%">
+<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101778838498840636/image.png?ex=67c95501&is=67c80381&hm=84dc9a9c6d2cac65a9ab163f09f2094d60dc3b0d9eaa4b9db48b58d334cf3a5c&" width="50%">
 
 <h3>Login Page<h3/>
-<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101778932434489424/image.png?ex=669a1c17&is=6698ca97&hm=b1b3418816df86199e5e6e40460506c903f61ce6171a6c1cc3d7bb34603331fa&" width="50%">
+<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101778932434489424/image.png?ex=67c95517&is=67c80397&hm=6092865fdcd58290683c3496b8c5c03c514d418756ae8232da2c17d4f7cd13ab&" width="50%">
 
 <h3>Main<h3/>
 
  - Home
-<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101787315816374302/image.png?ex=669a23e6&is=6698d266&hm=6bd249fce85b895765ec5b63070117a00fda5214372b46f0579b7c4ac2a09c75&" width="50%">
+<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101778932434489424/image.png?ex=67c95517&is=67c80397&hm=6092865fdcd58290683c3496b8c5c03c514d418756ae8232da2c17d4f7cd13ab&" width="50%">
 
  - Customers
-<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101780118663335956/image.png?ex=669a1d32&is=6698cbb2&hm=d878372466e433aafbf65a43205c084a0f683033cdcbf55ad28643dddd2077cd&" width="50%">
+<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101780118663335956/image.png?ex=67c95632&is=67c804b2&hm=d4434b3b5486ec696dcd7be0345ca76068036c5cdb0009fd77a01414b0112510&" width="50%">
 
  - Vehicles
-<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101781945073008670/image.png?ex=669a1ee5&is=6698cd65&hm=77cfc20b923131e2daa998479600df9e9382960de1bcea4b0582a014c079e066&" width="50%">
+<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101780118663335956/image.png?ex=67c95632&is=67c804b2&hm=d4434b3b5486ec696dcd7be0345ca76068036c5cdb0009fd77a01414b0112510&" width="50%">
 
  - Records
-<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101786582303903795/image.png?ex=669a2337&is=6698d1b7&hm=f68eb59195d2530fbdf6caca5324b67ef3904d02a72a2943f93cba7076f3a68a&" width="50%">
+<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101786582303903795/image.png?ex=67c95c37&is=67c80ab7&hm=28d2cc9e5bcae0585a9f6e3204a00704d9079c7e1ecbb617a73402b3016f0f00&" width="50%">
 
  - Calendar
-<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101786965696839700/image.png?ex=669a2392&is=6698d212&hm=4cdafe3789084775f6eaf24a6cfd630b7d6fbd5f66caca22bc0896715374573a&" width="50%">
+<img src="https://cdn.discordapp.com/attachments/837093180783722536/1101786965696839700/image.png?ex=67c95c92&is=67c80b12&hm=710f7626823da1ad17e90ac495c7c515f335757836da3658a815080c53b0b188&" width="50%">
 
 <h3>Interaction panels<h3/>
 
